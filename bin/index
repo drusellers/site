@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# https://forestry.io/blog/search-with-algolia-in-hugo/
+
+# generate json
+hugo
+
+# push to elasticsearch
+# curl -XPOST $ES_URL/posts/_bulk
+
+# FORMAT
+#{ "index" : { "_index" : "test", "_type" : "_doc", "_id" : "1" } }
+#{ "field1" : "value1" }
