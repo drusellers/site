@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html {{ with .Site.LanguageCode }}lang="{{ . }}" {{ end }}>
+
+  {{ partial "head.html" . }}
+
+  <body class="{{ .Site.Params.font }}">
+    {{ partial "nav.html" . }}
+    {{ partial "profile.html" . }}
+
+
+    <div class="mw8 center ph3-ns">
+      <article class="cf pv3">
+        <header class="fn fl-ns w-50-ns pr4-ns">
+          <div class="mb3 mt0 pt3 bt bw2">
+            <img src="{{ .Site.BaseURL }}images/dive.jpg" />
+          </div>
+          <h1 class="f3 lh-title ttu tracked black pv1">
+            Dive into the unknown
+          </h1>
+          <h2 class="f5 mid-gray ">
+            <i class="fal fa-camera"></i>
+            <a href="https://www.calebkerr.com/" class="link dark-gray" target="_blank">Caleb Kerr</a>
+          </h2>
+        </header>
+        <div class="fn fl-ns w-50-ns">
+          <h1 class="f1 mt0">Posts</h2>
+          {{ partial "post-list.html" . }}
+          {{ partial "pagination.html" . }}
+        </div>
+      </article>
+    </div>
+
+    {{ partial "footer.html" . }}
+    {{ partial "js.html" . }}
+  </body>
+
+</html>

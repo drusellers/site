@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html {{ with .Site.LanguageCode }}lang="{{ . }}" {{ end }}>
+
+  {{ partial "head.html" . }}
+  <body class="{{ .Site.Params.font }}">
+    {{ partial "nav.html" . }}
+    {{ partial "profile.html" . }}
+
+    <div class="mw8 center ph3-ns">
+      <article class="cf pv3">
+        <header class="fn fl-ns w-third-ns pr4-ns">
+          <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
+            Tags
+          </h1>
+        </header>
+        <div class="fn fl-ns w-two-thirds-ns">
+          <ul class="list">
+            {{ $data := .Data }}
+            {{ range $key, $value := .Data.Terms.ByCount }}
+              {{ if ($value.Name) }}
+                <li class="mv2">
+                  <a class="link blue" href="{{ $.Site.BaseURL }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
+                    <i class="fal fa-tag"></i>
+                    {{ $value.Name | urlize }} <span class="f6">({{ $value.Count }})</span>
+                  </a>
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </div>
+      </article>
+    </div>
+
+
+    {{ partial "footer.html" . }}
+    {{ partial "js.html" . }}
+  </body>
+</html>

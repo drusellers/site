@@ -1,0 +1,8 @@
+baseURL = "https://drusellers.com/"
+languageCode = "en-us"
+title = "A Curious Mind"
+
+[params]
+  startYear = 2001
+  enableSummary = true
+  font = "helvetica"

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html {{ with .Site.LanguageCode }}lang="{{ . }}" {{ end }}>
+
+  {{ partial "head.html" . }}
+
+  <body>
+    {{ partial "profile.html" . }}
+    {{ partial "nav.html" . }}
+
+    <div class="mw9 center ph3-ns">
+        <div class="cf ph2-ns">
+            <section id="wrapper" class="home">
+                {{ .Title }}
+                {{ .Content }}
+            </section>
+        </div>
+    </div>
+
+    {{ partial "footer.html" . }}
+    {{ partial "js.html" . }}
+  </body>
+
+</html>
