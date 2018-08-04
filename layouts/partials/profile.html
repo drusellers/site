@@ -1,8 +1,9 @@
-<div class="mw8 center">
-  <div class="cf ph2-ns">
+<div class="mw8 center ph3-ns">
+  <div class="cf pv3">
     <div class="fl w-100 w-50-ns pa2">
       <a href='{{ with .Site.Params.avatarLink }}{{ . }}{{ else }}{{ .Site.BaseURL }}about{{ end }}'>
-        <img id="avatar" src="{{ .Site.BaseURL }}images/logo-black.png" alt="{{ .Site.Title }}"/>
+        <img id="avatar" src="{{ .Site.BaseURL }}images/logo.svg" alt="{{ .Site.Title }}"
+        height="90px"/>
       </a>
     </div>
     <div class="fl w-100 w-50-ns pa2 tr black-60">

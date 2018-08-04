@@ -1,10 +1,11 @@
 {{ $url := replace .Permalink .Site.BaseURL "" }}
 {{ $color := "near-white" }}
 <div class="bg-dark-gray">
-  <div class="cf">
+
     <div class="mw8 center ph3-ns">
+      <div class="cf">
       <header class="pv2">
-        <nav class="dt w-100 border-box">
+        <nav class="dt w-100 border-box ph2">
           {{ if not .IsHome }}
               <a href='{{ .Site.BaseURL }}' class="dtc v-mid {{ $color }} link w-25" title="Home">
                 <span class="arrow">←</span>{{ with .Site.Params.home }}{{ . }}{{ else }}Home{{ end }}

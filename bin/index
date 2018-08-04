@@ -6,8 +6,5 @@
 hugo
 
 # push to elasticsearch
-# curl -XPOST $ES_URL/posts/_bulk
-
-# FORMAT
-#{ "index" : { "_index" : "test", "_type" : "_doc", "_id" : "1" } }
-#{ "field1" : "value1" }
+ES_URL=localhost:9200
+curl -H "Content-Type: application/x-ndjson" -XPOST $ES_URL/posts/_bulk --data-binary @public/bonsai.json

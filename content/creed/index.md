@@ -6,4 +6,8 @@ title: Creed
 
 First, be a man.
 
-An explanation
+This is the motto of my Fraternity and I have adopted it as my
+  personal motto as well. I will strive always to act as the ideal
+  of a Man. Someone who looks at for others and protects them. To base
+  a man in terms of being a human. To be compassionate and caring of
+  others
