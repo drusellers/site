@@ -6,6 +6,7 @@ title = "A Curious Mind"
   startYear = 2001
   enableSummary = true
   font = "helvetica"
+  useDescriptionReplaceSummary = true
 
 [outputs]
 home = ["HTML", "RSS", "Bonsai"]

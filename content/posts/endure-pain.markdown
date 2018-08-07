@@ -1,6 +1,6 @@
 ---
 title:  "Easier"
-date:   2014-08-08
+date:   2016-12-05 05:58:21
 categories: quotes
 tags:
 - Quotes
