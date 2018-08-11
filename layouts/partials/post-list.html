@@ -1,5 +1,5 @@
 <div id="post-list">
-    {{ range where (.Paginator 5).Pages "Params.hidden" "ne" "true" }}
+    {{ range where (.Paginator 6).Pages "Params.hidden" "ne" "true" }}
     {{ $url := replace .Permalink .Site.BaseURL "" }}
         {{ if ne $url "about/" }}
 
