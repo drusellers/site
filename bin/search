@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+curl -H "Content-Type: application/json" localhost:9200/hugo/_search\?pretty -d '{
+  "query": {
+    "term": { "kind": "page" }
+  },
+  "aggs": {
+    "tags": {
+      "terms": {"field": "tags"}
+    }
+  }
+}'

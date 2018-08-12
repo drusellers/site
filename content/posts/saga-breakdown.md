@@ -4,7 +4,7 @@ title:  "Automatonymous and an Order"
 date:   2016-11-05 05:58:21
 categories: Architecture
 tags:
-- Architecture
+- architecture
 disqus_id: 22ec0c92-bb3f-4d81-ad4f-b92820f08292
 draft: true
 ---

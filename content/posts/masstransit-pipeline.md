@@ -4,7 +4,7 @@ title:  "Building a Pipeline in MassTransit"
 date:   2014-01-03 05:58:21
 categories: masstransit
 tags:
-- Masstransit
+- masstransit
 disqus_id: b90bcc77-b92d-4c7e-b378-5dbbeafee31f
 draft: true
 ---

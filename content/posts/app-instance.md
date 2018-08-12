@@ -3,7 +3,7 @@ title:  "Application Instance"
 date:   2014-09-11 05:58:21
 categories: architecture
 tags:
-- Architecture
+- architecture
 disqus_id: 08ce23a5-687d-4dc0-8d9e-921ff8270590
 aliases: [
   "/architecture/2014/09/11/app-instance.html"

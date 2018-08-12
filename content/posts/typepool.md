@@ -3,7 +3,7 @@ title:  "Type Pool"
 date:   2014-09-10 05:58:21
 categories: architecture
 tags:
-- Architecture
+- architecture
 disqus_id: 548d3b4e-79a9-4f82-981e-5603ba89738e
 aliases: [
     "/architecture/2014/09/10/typepool.html"

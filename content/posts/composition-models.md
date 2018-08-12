@@ -3,7 +3,7 @@ title:  "Composing Application Styles"
 date:   2016-11-05 05:58:21
 categories: architecture
 tags:
-- Architecture
+- architecture
 disqus_id: 8301429b-f964-406d-8827-5317dc351a34
 ---
 
