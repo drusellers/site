@@ -1,0 +1,83 @@
+#!/usr/local/bin/node
+
+// You can run this script as part of your build step in your package.json
+// eg:
+// ...
+// "scripts": {
+//   "build": "node get-content.js && hugo"
+// }
+// ...
+
+var fs = require('fs'); //to access filewrite
+var toMarkdown = require('to-markdown'); //to convert HTML to Markdown
+var request = require("request"); //to request the JSON file from the server
+var YAML = require('json2yaml'); //to add the frontmatter
+
+var Prismic = require('prismic-javascript');
+var PrismicDOM = require('prismic-dom');
+var apiEndpoint = 'https://drusellers.prismic.io/api/v2/documents/search?ref=W5MvuyYAANqxiofI&q=[[at(document.type,"post")]]';
+
+//Request options
+var options = {
+  method: 'GET',
+  json: true,
+  url: apiEndpoint
+}
+
+//Request
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  var obj = body; //The actual JSON from the API
+  console.log("Start converting API to files");
+
+  //Split up the JSON response
+  for (var i = 0; i < obj.results.length; i++) {
+
+    const content = obj.results[i];
+
+    const tags = content.tags;
+    const date = content.first_publication_date.replace("+0000", '');
+    const title = content.data.title[0].text;
+    const subtitle = content.data.subtitle[0].text;
+    const description = content.data.description[0].text;
+    const htmlBody = content.data.body.map(html => {
+      if (html.type == 'paragraph') {
+        return `<p>${html.text}</p>`
+      } else if (html.type == 'heading1') {
+        return `<h1>${html.text}</h1>`
+      } else if (html.type == 'heading2') {
+        return `<h2>${html.text}</h2>`
+      } else {
+        console.log(html);
+        return '';
+      }
+    });
+    const htmlString = htmlBody.join('');
+    const slug = content.slugs[0];
+
+    var markdowntext = toMarkdown(htmlString); //The HTML conversion
+    var obj2 = YAML.stringify({
+      date,
+      title,
+      subtitle,
+      tags,
+      categories: [],
+      description,
+    }, {
+      delims: true
+    }); //Creating the frontmatter
+
+    obj2 = obj2 + "---\n" + markdowntext; //Putting it all togeter
+
+    var file = './content/posts/' + slug + '.md';
+
+    fs.writeFile(file, obj2, function (err) { //writing it out to the filesystem
+      if (err) {
+        console.error(err);
+      } else {
+        console.log("Done converting API", title);
+      }
+    });
+  }
+});

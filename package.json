@@ -1,0 +1,27 @@
+{
+  "name": "dru",
+  "version": "1.0.0",
+  "description": "Static site generated via [Hugo](https://gohugo.io/)",
+  "main": "get-content.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drusellers/site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drusellers/site/issues"
+  },
+  "homepage": "https://github.com/drusellers/site#readme",
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "json2yaml": "^1.1.0",
+    "prismic-dom": "^2.1.0",
+    "prismic-javascript": "^1.5.0",
+    "to-markdown": "^3.1.1",
+    "tomlify": "^0.2.2"
+  }
+}
