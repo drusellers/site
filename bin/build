@@ -1,7 +1,7 @@
 #!/bin/bash
 
-
-bin/get-content
+# Get content from prismatic
+#bin/get-content
 
 npm install
 npm run-script build

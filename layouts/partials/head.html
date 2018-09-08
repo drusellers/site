@@ -10,6 +10,8 @@
     {{ .Hugo.Generator }}
     <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
     <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.png">
+
+    <!-- TODO: pull in with webpack -->
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/tachyons.min.css">
     <link rel="stylesheet" href="http://unpkg.com/tachyons-cms@1.1.1/css/tachyons-cms.min.css" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-TXfwrfuHVznxCssTxWoPZjhcss/hp38gEOH8UPZG/JcXonvBQ6SlsIF49wUzsGno" crossorigin="anonymous">
