@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+bin/get-content
+
+npm install
+npm run-script build
+
+hugo
