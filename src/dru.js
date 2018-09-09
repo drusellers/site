@@ -1,6 +1,9 @@
 //import hljs from './js/highlight.min.js';
 import './css/highlight.css';
 import 'tachyons/css/tachyons.css';
+import retina from 'retinajs';
+
+window.addEventListener('load', retina);
 
 console.log("yo");
 
