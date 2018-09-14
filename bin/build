@@ -7,3 +7,5 @@ npm install
 npm run-script build
 
 hugo
+
+cp _headers ./public/
