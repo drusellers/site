@@ -2,6 +2,9 @@
 /
   Link: </css/tachyons.min.css>; rel=preload; as=style
 
+/index.html
+  Link: </images/logo.svg>; rel=preload; as=img
+
 /images/dive.png
   #Headers for the path:
   Content-Control: max-age=86400
