@@ -1,0 +1,11 @@
+#A path
+/
+  Link: </css/tachyons.min.css>; rel=preload; as=style
+
+/images/dive.png
+  #Headers for the path:
+  Content-Control: max-age=86400
+
+/images/dive@2x.png
+  #Headers for the path:
+  Content-Control: max-age=86400
