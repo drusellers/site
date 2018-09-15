@@ -2,6 +2,7 @@ var path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: 'production',
@@ -16,6 +17,10 @@ module.exports = {
       // used to read in the file path in hugo template
       fileName: '../data/manifest.json'
     }),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chuckFilename: "[id].css"
+    })
   ],
   output: {
     path: path.resolve(__dirname, 'static'),
@@ -36,8 +41,10 @@ module.exports = {
   module: {
     rules: [{
       test: /\.css$/,
-      use: [
-        'style-loader',
+      use: [{
+          loader: MiniCssExtractPlugin.loader,
+          options: {}
+        },
         'css-loader'
       ]
     }, {
