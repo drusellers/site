@@ -1,6 +1,7 @@
 //import hljs from './js/highlight.min.js';
-import './css/highlight.css';
+import './highlights/highlight.css';
 import './css/nested.css';
+import './search/index.js';
 
 // import '@fortawesome/fontawesome-pro/css/light.css';
 // import '@fortawesome/fontawesome-pro/css/brands.css';

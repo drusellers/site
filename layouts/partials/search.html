@@ -1,38 +1,24 @@
-<style>
-.dds-search {
-  position: relative;
-}
-.dds-search .dds-search-results {
-  position: absolute;
-  width: 100%;
-  background: white;
-  right: 0;
-  top: 36px;
-  max-height: 75vh;
-  z-index: 100;
-  border: 1px solid #000;
-}
-
-</style>
-
-<div class="mw8 center ph3-ns dds-search">
+<div class="mw8 center cf pv1-ns ph3-ns dds-search">
   <!-- need to stop using tachyons for layout, its too coarse -->
-  <div class="fl w-100 ba b--black-20 br1 dds-search-input">
-    <div class="fl pa2 bg-black-10" style="width: 7%">
-      Search
+  <div class="fl w-100 dds-search-input">
+    <div class="fl pa2" style="width: 4%">
+      <i class="far fa-search"></i>
     </div>
-    <div class="fl pt2 pl2" style="width: 89%">
-      <input type="text" class="input-reset ba b--white w-100 db" />
-    </div>
-    <div class="fl pa2 bg-black-10" style="width: 4%">
-      <i class="fas fa-search"></i>
+    <div class="fl pt2 pl2" style="width: 96%">
+      <input type="text" class="input-reset f5 ba b--white w-100 db" placeholder="Search Posts" />
     </div>
   </div>
 
-  <div class="dds-search-results" style="display:none;">
-    <ul>
-    <li>DRU</li>
-    <li>ABC</li>
+  <div class="dds-search-results ba b--black-10">
+    <ul class="list">
+      <li>
+        <h2><a href="#" class="link" >Title</a></h2>
+        <p>About</p>
+      </li>
+      <li>
+        <h2><a href="#" class="link" >Title</a></h2>
+        <p>About</p>
+      </li>
     </ul>
   </diV>
 </div>

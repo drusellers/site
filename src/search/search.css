@@ -1,0 +1,23 @@
+.dds-search {
+  position: relative;
+}
+
+.dds-search input {
+  border: none;
+}
+
+.dds-search input:focus {
+  outline: none;
+}
+
+.dds-search .dds-search-results {
+  position: absolute;
+  width: 100%;
+  background: white;
+  right: 0;
+  top: 36px;
+  max-height: 75vh;
+  z-index: 100;
+  display: none;
+  border-width: 1px;
+}
