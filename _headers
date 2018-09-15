@@ -8,14 +8,15 @@
 /
   Link: </images/dive.png>; rel=preload; as=img
 
+# set assets to expire in 1 year
 /images/logo.svg
-  Cache-Control: max-age=86400
+  Cache-Control: max-age=31536000
 
 /images/dive.png
-  Cache-Control: max-age=86400
+  Cache-Control: max-age=31536000
 
 /images/dive@2x.png
-  Cache-Control: max-age=86400
+  Cache-Control: max-age=31536000
 
 /js/*.js
-  Cache-Control: max-age=86400
+  Cache-Control: max-age=31536000
