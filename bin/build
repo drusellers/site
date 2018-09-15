@@ -8,4 +8,7 @@ npm run-script build
 
 hugo
 
+# index content into elasticsearch
+bin/index
+
 cp _headers ./public/

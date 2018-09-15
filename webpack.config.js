@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: './src/dru.js',
   plugins: [
     // keep the output dir clean
@@ -52,22 +52,28 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.css$/,
-      use: [
-        // this replaces the style-loader to
-        // group the css into an outbound file
-        // to avoid FOUC
-        {
-          loader: MiniCssExtractPlugin.loader,
-          options: {}
-        },
-        'css-loader'
-      ]
-    }, {
-      test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
-      use: [
-        'file-loader'
-      ]
-    }]
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      },
+      {
+        test: /\.css$/,
+        use: [
+          // this replaces the style-loader to
+          // group the css into an outbound file
+          // to avoid FOUC
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {}
+          },
+          'css-loader'
+        ]
+      }, {
+        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+        use: [
+          'file-loader'
+        ]
+      }
+    ]
   }
 };

@@ -1,7 +1,9 @@
 //import hljs from './js/highlight.min.js';
 import './highlights/highlight.css';
 import './css/nested.css';
-import './search/index.js';
+import SearchBox from './search/index.js';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 // import '@fortawesome/fontawesome-pro/css/light.css';
 // import '@fortawesome/fontawesome-pro/css/brands.css';
@@ -25,3 +27,6 @@ console.log("yo");
 
 // console.log(hljs);
 // hljs.initHighlightingOnLoad();
+
+const searchContainer = document.getElementById("search");
+ReactDOM.render(<SearchBox />, searchContainer);
