@@ -1,0 +1,22 @@
+      /* handle nested content */
+      .nested p {
+        /* f5 */
+        font-size: 1rem;
+
+        /* lh-copy */
+        line-height: 1.5;
+
+        /* measure */
+        max-width: 30em;
+
+
+      }
+
+      .nested blockquote p {
+        font-size: 1.5rem;
+      }
+
+      .nested>p {
+        /* mt0-ns */
+        margin-top: var(--spacing-none)
+      }

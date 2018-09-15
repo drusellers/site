@@ -15,43 +15,12 @@
     {{ if .Site.Params.enableTwitterCard }}
       {{ partial "twitter-cards.html" . }}
     {{ end }}
-    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    <meta name="author" content="Dru Sellers">
     {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
-    {{ .Hugo.Generator }}
     <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
     <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.png">
-
-    <!-- TODO: pull in with webpack -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-TXfwrfuHVznxCssTxWoPZjhcss/hp38gEOH8UPZG/JcXonvBQ6SlsIF49wUzsGno" crossorigin="anonymous">
 
     {{ if .Site.Params.enableRSS }}
     <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
-
-    {{ range .Site.Params.customCSS }}
-    <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
-    {{ end }}
-
-    <style>
-      /* handle nested content */
-      .nested p {
-        /* f5 */
-        font-size: 1rem;
-
-        /* lh-copy */
-        line-height: 1.5;
-
-        /* measure */
-        max-width: 30em;
-
-
-      }
-      .nested blockquote p {
-        font-size: 1.5rem;
-      }
-      .nested > p {
-        /* mt0-ns */
-        margin-top: var(--spacing-none)
-      }
-    </style>
   </head>
