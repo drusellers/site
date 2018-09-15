@@ -1,4 +1,9 @@
-#A path
-/
-  Link: </css/tachyons.min.css>; rel=preload; as=style
+# All pages need these
+/*
+  Link: </main.css>; rel=preload; as=style
+  Link: </vendors.css>; rel=preload; as=style
   Link: </images/logo.svg>; rel=preload; as=img
+
+# just the home page needs this
+/
+  Link: </images/dive.png>; rel=preload; as=img
