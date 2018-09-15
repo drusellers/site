@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -17,9 +18,20 @@ module.exports = {
       // used to read in the file path in hugo template
       fileName: '../data/manifest.json'
     }),
+    // used to compress the css
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chuckFilename: "[id].css"
+    }),
+    new OptimizeCssAssetsPlugin({
+      cssProcessor: require('cssnano'),
+      cssProcessorPluginOptions: {
+        preset: ['default', {
+          discardComments: {
+            removeAll: true
+          }
+        }],
+      }
     })
   ],
   output: {
@@ -41,7 +53,11 @@ module.exports = {
   module: {
     rules: [{
       test: /\.css$/,
-      use: [{
+      use: [
+        // this replaces the style-loader to
+        // group the css into an outbound file
+        // to avoid FOUC
+        {
           loader: MiniCssExtractPlugin.loader,
           options: {}
         },
