@@ -7,3 +7,15 @@
 # just the home page needs this
 /
   Link: </images/dive.png>; rel=preload; as=img
+
+/images/logo.svg
+  Cache-Control: max-age=86400
+
+/images/dive.png
+  Cache-Control: max-age=86400
+
+/images/dive@2x.png
+  Cache-Control: max-age=86400
+
+/js/*.js
+  Cache-Control: max-age=86400

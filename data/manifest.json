@@ -1,5 +1,7 @@
 {
-  "main.js": "js/main.e140dbd43aad6d7b4938.js",
-  "vendors.js": "js/vendors.e1de1cbc6763790723fd.js",
-  "runtime.js": "js/runtime.e836b07b4931d0f26153.js"
+  "main.css": "main.css",
+  "main.js": "js/main.83ad15cbaa3036b8bb6c.js",
+  "vendors.css": "vendors.css",
+  "vendors.js": "js/vendors.20710860ef3c6dddd634.js",
+  "runtime.js": "js/runtime.6bde826e84a18500e091.js"
 }
