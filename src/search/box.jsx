@@ -12,7 +12,8 @@ class SearchBox extends React.Component {
 
     this.state = {
       query: '',
-      hits: []
+      hits: [],
+      length: 0
     }
   }
 
@@ -53,7 +54,8 @@ class SearchBox extends React.Component {
     }).then((response) => response.json())
       .then((body) => {
         this.setState({
-          hits: body.hits.hits
+          hits: body.hits.hits,
+          length: body.hits.total
         })
       });
   }
@@ -88,13 +90,14 @@ class SearchBox extends React.Component {
       console.log('hit', hit);
       return (<li key={hit['_source']['_id']}>
         <h2><a href={hit['_source'].url} className="link blue" >{hit['_source'].title}</a></h2>
-        <p>{hit['_source'].summary}</p>
+        <p className="measure lh-copy f5">{hit['_source'].summary}</p>
       </li>);
     });
 
     return (
       <div className="dds-search-results ba b--black-10 shadow-5">
-        <ul className="list">
+        <div className="ph3 black-90 f5">{this.state.length} results found</div>
+        <ul className="list ma0 pb3">
           {hits}
         </ul>
       </div >
