@@ -88,7 +88,7 @@ class SearchBox extends React.Component {
 
     const hits = this.state.hits.map((hit) => {
       console.log('hit', hit);
-      return (<li key={hit['_source']['_id']}>
+      return (<li key={hit['_id']}>
         <h2><a href={hit['_source'].url} className="link blue" >{hit['_source'].title}</a></h2>
         <p className="measure lh-copy f5">{hit['_source'].summary}</p>
       </li>);
