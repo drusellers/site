@@ -44,7 +44,7 @@ class SearchBox extends React.Component {
     let headers = new Headers()
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
-    fetch(`${URL}/_search`, {
+    fetch(`${URL}/posts/_search`, {
       method: 'POST',
       body: JSON.stringify(this.getQuery(query)),
       headers: headers

@@ -1,9 +1,15 @@
 #!/bin/bash
 
-ES_URL=https://gnd9yp80cm:pdxqzy15pt@drusellers-com-4320113980.us-east-1.bonsaisearch.net
+if [ "${ES_URL}x" == "x" ]; then
+  echo "sourceing"
+  source .env
+fi
+
 curl -XDELETE \
-  $ES_URL/posts
+  "${ES_URL}/posts"
+
+echo ""
 
 curl -H "Content-Type: application/json" -XPUT \
-  $ES_URL/posts?pretty \
+  "${ES_URL}/posts?pretty" \
   --data-binary @bin/mapping.json
