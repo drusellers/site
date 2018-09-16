@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ES_URL=localhost:9200
+ES_URL=https://gnd9yp80cm:pdxqzy15pt@drusellers-com-4320113980.us-east-1.bonsaisearch.net
 curl -XDELETE \
   $ES_URL/posts
 
