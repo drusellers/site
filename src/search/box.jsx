@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-const URL = 'https://drusellers-com-4320113980.us-east-1.bonsaisearch.net';
-const USERNAME = '';
-const PASSWORD = '';
+const URL = process.env.ES_READ_URL;
 
 class SearchBox extends React.Component {
 
@@ -44,7 +42,6 @@ class SearchBox extends React.Component {
   search(query) {
     // send query to elasticsearch
     let headers = new Headers()
-    //headers.append('Authorization', 'Basic ' + Buffer.from(USERNAME + ":" + PASSWORD).toString('base64'));
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
     fetch(`${URL}/_search`, {

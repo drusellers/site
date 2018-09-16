@@ -5,5 +5,10 @@
 # generate json
 hugo
 
+if [ "${ES_URL}x" == "x" ]; then
+  echo "sourceing"
+  source .env
+fi
+
 # push to elasticsearch
 curl -H "Content-Type: application/x-ndjson" -XPOST "${ES_URL}/posts/_bulk?pretty" --data-binary @public/bonsai.json
