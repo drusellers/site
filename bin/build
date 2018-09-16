@@ -11,4 +11,4 @@ hugo
 # index content into elasticsearch
 bin/index
 
-cp _headers ./public/
+mv ./public/netlify.txt ./public/_headers

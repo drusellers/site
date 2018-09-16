@@ -5,3 +5,4 @@ static/js/main.*.js
 static/js/runtime.*.js
 static/js/vendors.*.js
 data/manifest.json
+.env

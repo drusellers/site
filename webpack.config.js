@@ -21,7 +21,7 @@ module.exports = {
     }),
     // used to compress the css
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "css/[name].[contenthash].css",
       chuckFilename: "[id].css"
     }),
     new OptimizeCssAssetsPlugin({

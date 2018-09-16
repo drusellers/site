@@ -1,0 +1,26 @@
+{{/* Generates hugo _heades content */}}
+{{- $assets := $.Site.Data.manifest }}
+/*
+{{ range $key, $value := $assets -}}
+  Link: </{{ $value }}>; rel=preload; as={{- if ( strings.HasSuffix $key "js" ) -}}
+      script
+  {{- else if ( strings.HasSuffix $key "css" ) -}}
+      style
+  {{- else -}}
+      img
+  {{- end }}
+{{ end }}
+
+# just the home page needs this
+/
+  Link: </images/dive.png>; rel=preload; as=img
+
+# set assets to expire in 1 year
+/images/*.svg
+  Cache-Control: max-age=31536000
+/images/*.png
+  Cache-Control: max-age=31536000
+/js/*.js
+  Cache-Control: max-age=31536000
+/css/*.css
+  Cache-Control: max-age=31536000

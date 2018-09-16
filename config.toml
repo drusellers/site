@@ -9,12 +9,18 @@ title = "A Curious Mind"
   useDescriptionReplaceSummary = true
 
 [outputs]
-home = ["HTML", "RSS", "Bonsai"]
+home = ["HTML", "RSS", "Bonsai", "Netlify"]
 
 [outputFormats.Bonsai]
 baseName = "bonsai"
 isPlainText = true
 mediaType = "application/json"
+notAlternative = true
+
+[outputFormats.Netlify]
+baseName = "netlify"
+isPlainText = true
+mediaType = "text/plain"
 notAlternative = true
 
 [params.bonsai]
