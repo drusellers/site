@@ -34,7 +34,9 @@ module.exports = {
         }],
       }
     }),
-    new Dotenv()
+    new Dotenv({
+      systemvars: true
+    })
   ],
   output: {
     path: path.resolve(__dirname, 'static'),
