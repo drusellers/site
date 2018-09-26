@@ -6,10 +6,57 @@
   "mappings": {
     "_doc": {
       "properties": {
+        "suggest": {
+          "type": "completion",
+          "preserve_position_increments": false
+        },
         "title": {
           "type": "text",
           "store": true
-
+        },
+        "description": {
+          "type": "text",
+          "store": true
+        },
+        "summary": {
+          "type": "text",
+          "store": true
+        },
+        "keywords": {
+          "type": "text"
+        },
+        "kind": {
+          "type": "keyword"
+        },
+        "section": {
+          "type": "keyword"
+        },
+        "type": {
+          "type": "keyword"
+        },
+        "permalink": {
+          "type": "keyword"
+        },
+        "relpermalink": {
+          "type": "keyword"
+        },
+        "url": {
+          "type": "keyword",
+          "store": true
+        },
+        "tags": {
+          "type": "keyword"
+        },
+        "categories": {
+          "type": "keyword"
+        },
+        "date": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "publishdate": {
+          "type": "date",
+          "format": "strict_date_optional_time||epoch_millis"
         }
       }
     }

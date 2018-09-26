@@ -2,13 +2,21 @@
 
 set -e
 
-curl -H "Content-Type: application/json" localhost:9200/hugo/_search\?pretty -d '{
-  "query": {
-    "term": { "kind": "page" }
-  },
-  "aggs": {
-    "tags": {
-      "terms": {"field": "tags"}
+curl -XPOST -H "Content-Type: application/json" 'localhost:9200/posts/_search?pretty' -d '
+{
+  "suggest": {
+    "title-suggest": {
+      "prefix": "ban",
+      "completion": {
+        "field": "suggest"
+      }
     }
-  }
+  },
+  "query": {
+    "multi_match": {
+      "query": "stor",
+      "fields": ["description", "summary", "title"]
+    }
+  },
+  "stored_fields": ["title", "description", "summary", "url"]
 }'

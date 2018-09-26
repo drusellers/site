@@ -31,6 +31,7 @@ class SearchBox extends React.Component {
           "fields": ["description", "summary", "title"]
         }
       },
+      "stored_fields": ['title', 'description', 'summary', 'url'],
       "highlight": {
         "fields": {
           "text": {}
@@ -61,13 +62,13 @@ class SearchBox extends React.Component {
     console.log("render");
     return (
       <div>
-        <div className="fl w-100 dds-search-input">
+        <div className="fl w-100 dds-search-input br2">
           <div className="fl pa2" style={{ width: '4%' }}>
             <i className="far fa-search"></i>
           </div>
-          <div className="fl pt2 pl2" style={{ width: '96%' }}>
+          <div className="fl pa2" style={{ width: '96%' }}>
             <input type="text"
-              className="input-reset f5 ba b--white w-100 db"
+              className="input-reset f4 ba b--white w-100 db"
               placeholder="Search Posts"
               onChange={this.handleQueryChange.bind(this)}
               value={this.state.query} />
@@ -86,15 +87,15 @@ class SearchBox extends React.Component {
     const hits = this.state.hits.map((hit) => {
       console.log('hit', hit);
       return (<li key={hit['_id']}>
-        <h2><a href={hit['_source'].url} className="link blue" >{hit['_source'].title}</a></h2>
-        <p className="measure lh-copy f5">{hit['_source'].summary}</p>
+        <h2><a href={hit.fields.url[0]} className="link blue" >{hit.fields.title[0]}</a></h2>
+        <p className="measure lh-copy f5">{hit.fields.summary[0]}</p>
       </li>);
     });
 
     return (
       <div className="dds-search-results ba b--black-10 shadow-5">
-        <div className="ph3 black-90 f5">{this.state.length} results found</div>
-        <ul className="list ma0 pb3">
+        <div className="pt3 ph3 black-60 f5">{this.state.length} results found</div>
+        <ul className="list ma0 ph3 pb3 cf">
           {hits}
         </ul>
       </div >

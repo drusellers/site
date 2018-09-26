@@ -2,8 +2,13 @@
   position: relative;
 }
 
+.dds-search-input {
+  background-color: #FFF;
+}
+
 .dds-search input {
   border: none;
+  background-color: #fff;
 }
 
 .dds-search input:focus {
@@ -15,7 +20,7 @@
   width: 700px;
   background: white;
   left: 0;
-  top: 36px;
+  top: 40px;
   max-height: 75vh;
   z-index: 100;
   border-width: 1px;

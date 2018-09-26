@@ -14,6 +14,9 @@
 
       .nested blockquote p {
         font-size: 1.5rem;
+
+        /* measure */
+        max-width: 18em;
       }
 
       .nested>p {

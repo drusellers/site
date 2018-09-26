@@ -1,22 +1,20 @@
 <div id="post-list">
-    {{ range where (.Paginator 5).Pages "Params.hidden" "ne" "true" }}
-    {{ $url := replace .Permalink .Site.BaseURL "" }}
-        {{ if ne $url "about/" }}
+    {{ range where (.Paginator 5).Pages "Type" "eq" "posts" }}
+        {{ $url := replace .Permalink .Site.BaseURL "" }}
+        <a class="link blue" href='{{ .Permalink }}'>
+            <h2 class="mt0" >
+                {{ .Title }}
+            </h2>
+        </a>
 
-            <a class="link blue" href='{{ .Permalink }}'>
-                <h2 >{{ .Title }}</h2>
-            </a>
-
-            {{ if .Site.Params.enableSummary }}
+        {{ if .Site.Params.enableSummary }}
             <p class="f5 lh-copy measure">
-                    {{ if .Site.Params.useDescriptionReplaceSummary }}
-                        {{ .Description | plainify }}
-                    {{ else }}
-                        {{ .Summary | plainify | htmlUnescape }}
-                    {{ end }}
-                    </p>
+                {{ if .Site.Params.useDescriptionReplaceSummary }}
+                    {{ .Description | plainify }}
+                {{ else }}
+                    {{ .Summary | plainify | htmlUnescape }}
                 {{ end }}
-
+            </p>
         {{ end }}
     {{ end }}
 </div>
