@@ -6,7 +6,7 @@ curl -XPOST -H "Content-Type: application/json" 'localhost:9200/posts/_search?pr
 {
   "suggest": {
     "title-suggest": {
-      "prefix": "ban",
+      "prefix": "stor",
       "completion": {
         "field": "suggest"
       }
@@ -14,7 +14,7 @@ curl -XPOST -H "Content-Type: application/json" 'localhost:9200/posts/_search?pr
   },
   "query": {
     "multi_match": {
-      "query": "stor",
+      "query": "story",
       "fields": ["description", "summary", "title"]
     }
   },

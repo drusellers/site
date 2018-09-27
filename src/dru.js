@@ -23,8 +23,6 @@ import 'tachyons-cms/css/tachyons-cms.css';
 import retina from 'retinajs';
 window.addEventListener('load', retina);
 
-console.log("yo");
-
 // console.log(hljs);
 // hljs.initHighlightingOnLoad();
 

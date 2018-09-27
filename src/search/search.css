@@ -21,7 +21,7 @@
   background: white;
   left: 0;
   top: 40px;
-  max-height: 75vh;
+  /* max-height: 75vh; */
   z-index: 100;
   border-width: 1px;
 }

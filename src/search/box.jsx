@@ -25,6 +25,14 @@ class SearchBox extends React.Component {
 
   getQuery(query) {
     return {
+      "suggest": {
+        "title-suggest": {
+          "prefix": query,
+          "completion": {
+            "field": "suggest"
+          }
+        }
+      },
       "query": {
         "multi_match": {
           "query": query,
@@ -51,15 +59,18 @@ class SearchBox extends React.Component {
       headers: headers
     }).then((response) => response.json())
       .then((body) => {
+
+        let hits = body.hits.hits || [];
+        let options = body.suggest['title-suggest'][0].options || [];
+
         this.setState({
-          hits: body.hits.hits,
-          length: body.hits.total
+          hits: hits.length == 0 ? options : hits,
+          length: hits.length == 0 ? 0 : body.hits.total
         })
       });
   }
 
   render() {
-    console.log("render");
     return (
       <div>
         <div className="fl w-100 dds-search-input br2">
@@ -93,8 +104,7 @@ class SearchBox extends React.Component {
     });
 
     return (
-      <div className="dds-search-results ba b--black-10 shadow-5">
-        <div className="pt3 ph3 black-60 f5">{this.state.length} results found</div>
+      <div className="dds-search-results ba b--black-10 shadow-5 cf">
         <ul className="list ma0 ph3 pb3 cf">
           {hits}
         </ul>
