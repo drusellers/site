@@ -11,7 +11,7 @@ module.exports = {
   entry: './src/dru.js',
   plugins: [
     // keep the output dir clean
-    new CleanWebpackPlugin(['static/js']),
+    new CleanWebpackPlugin(['static/js', 'static/css']),
     // improve the consistency of hashes on the output name
     new webpack.HashedModuleIdsPlugin(),
     // connect the hashed ids to hugo

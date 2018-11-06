@@ -4,5 +4,7 @@ node_modules
 static/js/main.*.js
 static/js/runtime.*.js
 static/js/vendors.*.js
+static/css/main.*.css
+static/css/vendors.*.css
 data/manifest.json
 .env
