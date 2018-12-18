@@ -8,6 +8,7 @@ hugo
 if [ "${ES_URL}x" == "x" ]; then
   echo "sourceing"
   source .env
+  echo ''
 fi
 
 # push to elasticsearch
