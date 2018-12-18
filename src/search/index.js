@@ -1,4 +1,4 @@
 import './search.css'
-import SearchBox from './box.jsx';
+import Search from './Search.jsx';
 
-export default SearchBox;
+export default Search;

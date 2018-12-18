@@ -1,7 +1,7 @@
 //import hljs from './js/highlight.min.js';
 import './highlights/highlight.css';
 import './css/nested.css';
-import SearchBox from './search/index.js';
+import Search from './search/index.js';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -27,4 +27,4 @@ window.addEventListener('load', retina);
 // hljs.initHighlightingOnLoad();
 
 const searchContainer = document.getElementById("search");
-ReactDOM.render(<SearchBox />, searchContainer);
+ReactDOM.render( < Search / > , searchContainer);

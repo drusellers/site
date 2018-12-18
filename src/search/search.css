@@ -1,9 +1,9 @@
-.dds-search {
-  position: relative;
-}
-
 .dds-search-input {
   background-color: #FFF;
+}
+
+.dds-search {
+  position: relative;
 }
 
 .dds-search input {
