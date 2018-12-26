@@ -1,9 +1,8 @@
 var path = require('path');
-const webpack = require('webpack');
+
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
@@ -12,27 +11,15 @@ module.exports = {
   plugins: [
     // keep the output dir clean
     new CleanWebpackPlugin(['static/js', 'static/css']),
-    // improve the consistency of hashes on the output name
-    new webpack.HashedModuleIdsPlugin(),
     // connect the hashed ids to hugo
     new ManifestPlugin({
       // used to read in the file path in hugo template
       fileName: '../data/manifest.json'
     }),
-    // used to compress the css
+    // used to compress and extract the css
     new MiniCssExtractPlugin({
-      filename: "css/[name].[contenthash].css",
+      filename: "css/[name].css",
       chuckFilename: "[id].css"
-    }),
-    new OptimizeCssAssetsPlugin({
-      cssProcessor: require('cssnano'),
-      cssProcessorPluginOptions: {
-        preset: ['default', {
-          discardComments: {
-            removeAll: true
-          }
-        }],
-      }
     }),
     new Dotenv({
       systemvars: true
@@ -40,7 +27,7 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'static'),
-    filename: 'js/[name].[contenthash].js'
+    filename: 'js/[name].js'
   },
   optimization: {
     runtimeChunk: 'single',

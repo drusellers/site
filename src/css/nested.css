@@ -12,11 +12,17 @@
 
       }
 
+      .nested blockquote {
+        border-left: 3px solid #357edd;
+        padding-left: 1rem;
+        margin-left: 0;
+      }
+
       .nested blockquote p {
         font-size: 1.5rem;
 
         /* measure */
-        max-width: 18em;
+        max-width: 21em;
       }
 
       .nested>p {

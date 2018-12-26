@@ -10,6 +10,18 @@ function getQuery(query) {
         }
       }
     },
+    "aggregations": {
+      "categories": {
+        "global": {},
+        "aggs": {
+          "categories": {
+            "terms": {
+              "field": "categories"
+            }
+          }
+        }
+      }
+    },
     "query": {
       "multi_match": {
         "query": query,
@@ -26,22 +38,41 @@ function getQuery(query) {
 }
 
 // should return a promise whose happy state is an array of hits
+// categories: [{ key: 'name', doc_count: 44 }]
 function query(query) {
-  const headers = new Headers()
-  headers.append('Content-Type', 'application/json');
-  headers.append('Accept', 'application/json');
-  return fetch(`${URL}/posts/_search`, {
-      method: 'POST',
-      body: JSON.stringify(getQuery(query)),
-      headers: headers
-    }).then(response => response.json())
+  if (query === '') {
+    return Promise.resolve({
+      hits: [],
+      categories: []
+    });
+  }
+
+  return request(query)
     .then(body => {
+      console.log(body);
       const hits = body.hits.hits || [];
-      const options = body.suggest['title-suggest'][0].options || [];
-      return Promise.resolve(hits.length == 0 ? options : hits);
+      const suggestions = body.suggest['title-suggest'][0].options || [];
+      const categories = body.aggregations.categories.categories.buckets;
+      const result = {
+        hits: hits.length == 0 ? suggestions : hits,
+        categories
+      };
+      return Promise.resolve(result);
     });
 }
 
 export default {
   query
+}
+
+// effectively private
+function request(query) {
+  const headers = new Headers()
+  headers.append('Content-Type', 'application/json');
+  headers.append('Accept', 'application/json');
+  return fetch(`${URL}/posts/_search`, {
+    method: 'POST',
+    body: JSON.stringify(getQuery(query)),
+    headers: headers
+  }).then(response => response.json())
 }
