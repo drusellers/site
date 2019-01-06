@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html {{ with .Site.LanguageCode }}lang="{{ . }}" {{ end }}>
+
+  {{ partial "head.html" . }}
+
+  <body class="{{ .Site.Params.font }}">
+    {{ partial "nav.html" . }}
+    {{ partial "profile.html" . }}
+    {{ partial "search.html" . }}
+
+    <div class="mw8 center ph3-ns">
+      <article class="cf pv3">
+        <header class="fn fl-ns w-third-ns pr4-ns">
+          <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
+            {{ if .Params.SectionTitle }}
+              {{ .Params.SectionTitle }}
+            {{ else }}
+              {{ .Title }}
+            {{ end }}
+          </h1>
+          {{ if .Params.subtitle }}
+            <h2 class="f3 mid-gray lh-title">
+              {{ .Params.subtitle }}
+            </h2>
+          {{ end}}
+
+          {{ if .Params.noStats }}
+          {{ else }}
+            <div class="f6 ttu tracked gray pv1">
+              {{ if lt 1 .WordCount }}{{ .WordCount }} words{{ else }}{{ .WordCount }} word{{ end }}
+              · {{ .ReadingTime }} minute read
+            </div>
+            <time class="f6 ttu tracked gray">
+              {{ .Date.Format "Jan 2, 2006" }}
+            </time>
+          {{ end }}
+
+          {{ with .Params.tags }}
+            <div class="mt4 tags">
+              {{ if ge (len .) 1 }}
+                <ul class="list pl0">
+                  {{ range . }}
+                    <li>
+                      <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="link blue lh-title">
+                        <i class="fal fa-tag"></i> <span class="fw7 underline-hover">{{ . | urlize }}</span>
+                      </a>
+                    </li>
+                  {{ end }}
+                </ul>
+              {{ end }}
+            </div>
+          {{ end }}
+
+          {{ if .Params.toc }}
+            <hr />
+            {{ if .TableOfContents }}
+              <div id="toc">
+                {{ .TableOfContents }}
+              </div>
+            {{ end }}
+          {{ end }}
+        </header>
+        <div class="fn fl-ns w-two-thirds-ns">
+          {{ block "main" . }}
+          <!-- content -->
+          {{ end }}
+        </div>
+      </article>
+    </div>
+
+    {{ partial "footer.html" . }}
+    {{ partial "js.html" . }}
+  </body>
+
+</html>
