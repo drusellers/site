@@ -26,10 +26,12 @@
 
           {{ if .Params.noStats }}
           {{ else }}
-            <div class="f6 ttu tracked gray pv1">
-              {{ if lt 1 .WordCount }}{{ .WordCount }} words{{ else }}{{ .WordCount }} word{{ end }}
-              · {{ .ReadingTime }} minute read
-            </div>
+            {{ if gt .WordCount 0 }}
+              <div class="f6 ttu tracked gray pv1">
+                {{ if lt 1 .WordCount }}{{ .WordCount }} words{{ else }}{{ .WordCount }} word{{ end }}
+                · {{ .ReadingTime }} minute read
+              </div>
+            {{ end }}
             <time class="f6 ttu tracked gray">
               {{ .Date.Format "Jan 2, 2006" }}
             </time>
