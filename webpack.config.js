@@ -4,13 +4,18 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const Dotenv = require('dotenv-webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   entry: './src/dru.js',
   plugins: [
+    new CopyWebpackPlugin([{
+      from: 'src/images',
+      to: 'images'
+    }]),
     // keep the output dir clean
-    new CleanWebpackPlugin(['static/js', 'static/css']),
+    new CleanWebpackPlugin(),
     // connect the hashed ids to hugo
     new ManifestPlugin({
       // used to read in the file path in hugo template
