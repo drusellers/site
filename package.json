@@ -32,7 +32,7 @@
     "eslint": "^5.15.3",
     "file-loader": "^3.0.0",
     "json2yaml": "^1.1.0",
-    "mini-css-extract-plugin": "^0.5.0",
+    "mini-css-extract-plugin": "^0.6.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "prismic-dom": "^2.1.0",
     "prismic-javascript": "^2.0.2",
