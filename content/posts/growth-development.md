@@ -1,6 +1,6 @@
 ---
 title: "Growth vs Development"
-date: 2018-12-23
+date: 2019-04-23
 categories: notes
 draft: true
 tags:
@@ -14,4 +14,3 @@ description: >
 > The following represents notes transcribed while reading the book "[Creating the Corporate Future](https://www.amazon.com/Creating-Corporate-Future-Plan-Planned/dp/0471090093)"
 
 In the book it is argued that the [machine age](/posts/machine-age-system-age/) was all about growth. About getting "mo' bigger" where as the systems age is more about "development" or getting more output per pound of muscle.
-
