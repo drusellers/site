@@ -1,9 +1,9 @@
 {{/* Generates a valid Elasticsearch _bulk index payload */}}
-{{- $section := $.Site.GetPage "section" .Section }}
 {{- range .Site.AllPages -}}
-  {{- if or (and (.IsDescendant $section) (and (not .Draft) (not .Params.private))) $section.IsHome -}}
+  {{- $section := $.Site.GetPage "section" .Section }}
+  {{- if or (and (.IsDescendant $section) (and (not .Draft) (and (not (eq .Kind "section")) (not (eq .Kind "taxonomyTerm")) (not (eq .Kind "taxonomy"))) (not .Params.private))) ($section.IsHome) -}}
     {{/* action / metadata */}}
     {{ (dict "index" (dict "_index" "posts" "_type" "_doc"  "_id" .File.UniqueID)) | jsonify }}
-    {{ (dict "date" .Date.UTC.Unix "description" .Description "fuzzywordcount" .FuzzyWordCount "keywords" .Keywords "kind" .Kind "permalink" .Permalink "publishdate" .PublishDate "readingtime" .ReadingTime "relpermalink" .RelPermalink "summary" .Summary "title" .Title "type" .Type "url" .URL "wordcount" .WordCount "section" .Section "tags" .Params.Tags "categories" .Params.Categories "suggest" .Title) | jsonify }}
+    {{ (dict "date" .Date.UTC.Unix "description" .Description "fuzzywordcount" .FuzzyWordCount "keywords" .Keywords "dru" $section.IsHome "kind" .Kind "permalink" .Permalink "publishdate" .PublishDate "readingtime" .ReadingTime "relpermalink" .RelPermalink "summary" .Summary "title" .Title "type" .Type "url" .URL "wordcount" .WordCount "section" .Section "tags" .Params.Tags "categories" .Params.Categories "suggest" .Title) | jsonify }}
   {{- end -}}
 {{- end }}
