@@ -9,6 +9,7 @@ function SearchBox({ query, onQueryChange }) {
       <div className="fl pa2" style={{ width: '96%' }}>
         <input type="text"
           className="input-reset f4 ba b--white w-100 db"
+          aria-label="Search Posts"
           placeholder="Search Posts"
           onChange={e => {
             var q = e.target.value;
