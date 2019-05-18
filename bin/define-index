@@ -5,11 +5,11 @@ if [ "${ES_URL}x" == "x" ]; then
   source .env
 fi
 
-curl -XDELETE \
-  "${ES_URL}/posts"
+curl -s -XDELETE \
+  "${ES_URL}/posts" > /dev/null
 
 echo ""
 
-curl -H "Content-Type: application/json" -XPUT \
+curl -s -H "Content-Type: application/json" -XPUT \
   "${ES_URL}/posts?pretty" \
-  --data-binary @bin/mapping.json
+  --data-binary @bin/mapping.json > /dev/null
