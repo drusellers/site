@@ -40,6 +40,8 @@ function getQuery(query) {
 // should return a promise whose happy state is an array of hits
 // categories: [{ key: 'name', doc_count: 44 }]
 function query(query) {
+  // TODO: if we get known keywords + 'enter'
+  // we should go to that page
   if (query === '') {
     return Promise.resolve({
       hits: [],
