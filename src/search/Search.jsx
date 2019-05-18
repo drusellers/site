@@ -10,7 +10,7 @@ export default function Search() {
   const [hits, setHits] = useState([]);
   const [categories, setCategories] = useState([]);
 
-  const debouncedQuery = useDebounce(query, 500);
+  const [debouncedQuery] = useDebounce(query, 500);
 
   useEffect(() => {
     es.query(debouncedQuery, setHits)
