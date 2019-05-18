@@ -19,7 +19,11 @@ module.exports = {
     // connect the hashed ids to hugo
     new ManifestPlugin({
       // used to read in the file path in hugo template
-      fileName: '../data/manifest.json'
+      fileName: '../data/manifest.json',
+      filter: function (fd) {
+        return fd.name.endsWith(".js") ||
+          fd.name.endsWith('.css');
+      }
     }),
     // used to compress and extract the css
     new MiniCssExtractPlugin({
