@@ -1,2 +1,40 @@
 [context.production.environment]
   HUGO_VERSION = "0.55.5"
+
+# every html page needs this
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+  Link = [
+  "</css/main.css>; rel=preload; as=style",
+  "</js/main.js>; rel=preload; as=script",
+  "</js/runtime.js>; rel=preload; as=script",
+  "</css/vendors.css>; rel=preload; as=style",
+  "</js/vendors.js>; rel=preload; as=script"
+  ]
+
+# Needed for the home page
+[[headers]]
+  for = "/"
+  [headers.values]
+  Link = "</images/dive.png>; rel=preload; as=img"
+
+[[headers]]
+  for = "/images/*.svg"
+  [headers.values]
+  Cache-Control = "max-age=31536000"
+
+[[headers]]
+  for = "/images/*.png"
+  [headers.values]
+  Cache-Control = "max-age=31536000"
+
+[[headers]]
+  for = "/js/*.js"
+  [headers.values]
+  Cache-Control = "max-age=31536000"
+
+[[headers]]
+  for = "/css/*.css"
+  [headers.values]
+  Cache-Control = "max-age=31536000"

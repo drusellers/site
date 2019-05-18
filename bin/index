@@ -12,4 +12,6 @@ if [ "${ES_URL}x" == "x" ]; then
 fi
 
 # push to elasticsearch
-curl -H "Content-Type: application/x-ndjson" -XPOST "${ES_URL}/posts/_bulk?pretty" --data-binary @public/bonsai.json
+echo "Indexing now"
+curl -s -H "Content-Type: application/x-ndjson" -XPOST "${ES_URL}/posts/_bulk" --data-binary @public/bonsai.json > /dev/null
+echo "Indexing complete"

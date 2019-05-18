@@ -11,5 +11,3 @@ hugo
 # index content into elasticsearch
 bin/define-index
 bin/index
-
-mv ./public/netlify.txt ./public/_headers

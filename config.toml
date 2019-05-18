@@ -9,18 +9,12 @@ font = "helvetica"
 useDescriptionReplaceSummary = true
 
 [outputs]
-home = ["HTML", "RSS", "Bonsai", "Netlify"]
+home = ["HTML", "RSS", "Bonsai"]
 
 [outputFormats.Bonsai]
 baseName = "bonsai"
 isPlainText = true
 mediaType = "application/json"
-notAlternative = true
-
-[outputFormats.Netlify]
-baseName = "netlify"
-isPlainText = true
-mediaType = "text/plain"
 notAlternative = true
 
 [params.bonsai]
