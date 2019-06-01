@@ -27,4 +27,4 @@ window.addEventListener('load', retina);
 // hljs.initHighlightingOnLoad();
 
 const searchContainer = document.getElementById("search");
-ReactDOM.render( < Search / > , searchContainer);
+ReactDOM.render(< Search />, searchContainer);
