@@ -30,6 +30,18 @@
   margin-top: var(--spacing-none)
 }
 
+.nested>ul {
+  padding: 0;
+  max-width: 30em;
+}
+
+.nested>ul ul {
+  padding: 0;
+  padding-left: 1rem;
+}
+
+.nested li {}
+
 
 /* TOC */
 #TableOfContents>ul {
