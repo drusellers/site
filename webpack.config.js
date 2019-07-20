@@ -1,6 +1,6 @@
 var path = require('path');
 
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const Dotenv = require('dotenv-webpack');
@@ -52,28 +52,28 @@ module.exports = {
   },
   module: {
     rules: [{
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: "babel-loader"
-      },
-      {
-        test: /\.css$/,
-        use: [
-          // this replaces the style-loader to
-          // group the css into an outbound file
-          // to avoid FOUC
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {}
-          },
-          'css-loader'
-        ]
-      }, {
-        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
-        use: [
-          'file-loader'
-        ]
-      }
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      loader: "babel-loader"
+    },
+    {
+      test: /\.css$/,
+      use: [
+        // this replaces the style-loader to
+        // group the css into an outbound file
+        // to avoid FOUC
+        {
+          loader: MiniCssExtractPlugin.loader,
+          options: {}
+        },
+        'css-loader'
+      ]
+    }, {
+      test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+      use: [
+        'file-loader'
+      ]
+    }
     ]
   }
 };
