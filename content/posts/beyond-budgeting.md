@@ -17,7 +17,9 @@ One of the biggest take aways I got from reading Beyond Budgeting is that we nee
 
 ## Existing Set Up
 
-When I really started to bring the Beyond Budgeting principles into the company, we had just gotten our P&L and Chart of Accounts dialed in. We wanted to improve our ability to forecast and budget to effectively manage our finances. For a brief (1 hr) overview of what I was hoping to build out I really like [this talk](https://youtu.be/NwqG5W9b37o) by Bjarte Bogsne on Beyond Budgeting. Our General Ledger system was in [xero.com](https://xero.com) which has an API that I knew I could use. Its current budgeting system is limited in that you have to "create" the months so we only had the current 12 months available to us, and this got shorter as each month progressed. We knew we wanted to be able to project out 15 months at any time. We managed our current forecasts in Google Spreadsheets which were getting increasingly complex and getting harder to manipulate and to remember what "plans" had been included in the projections.
+When I really started to bring the Beyond Budgeting principles into the company, we had just gotten our P&L and Chart of Accounts dialed in. We wanted to improve our ability to forecast and budget to effectively manage our finances. For a brief (1 hr) overview of what I was inspired by I really like [this talk](https://youtu.be/NwqG5W9b37o) by Bjarte Bogsne on Beyond Budgeting. Our General Ledger system was in [xero.com](https://xero.com) which has an API that I knew I could use. Its current budgeting system is limited in that you have to "create" the months so we only had the current 12 months available to us, and this got shorter as each month progressed. We knew we wanted to be able to project out 15 months at any time. We managed our current forecasts in Google Spreadsheets which were getting increasingly complex and getting harder to manipulate and to remember what "plans" had been included in the projections.
+
+It should be noted that we are a very small company, and for the most part, budgeting was already pretty iterative. We use cash accounting methods, and are just starting to dabble in accrual based accounting methods. The typical practice was to redo an existing forecast with any new data we might have, and then refer to that one until we "lost it" and needed to do another one.
 
 ## The Goal
 
@@ -48,11 +50,11 @@ We can now import actual data from our GL the same day as close, and in about 10
 
 ## Next Steps
 
-- Forecasts vs Targets
-- Storing KPI's
+- **Forecasts vs Targets:** Forecasts are about where we think we might be going. Forecasts should be "brutal." Targets are where we want to be, and understanding the variance from the target. These should be more optimistic in nature. The budget has traditionally played both roles, its my hope we can have two distinct processes for tracking these.
+- **Storing KPI's**
   - Automatically providing financial based KPI's
   - Ability to store manually entered KPIs
-- Visualization of KPI's over time
-- More denormalizations to speed up page render speeds
+  - Visualization of KPI's over time
+- **Application Performance:** More denormalizations to speed up page render speeds
 - Dig deeper into a budget, vs cash flow forecasting
 - Adding some permissions so that employees can see their budgets, and control how payroll data is accessed
