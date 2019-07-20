@@ -1,0 +1,28 @@
+import React, { useState, useEffect } from 'react';
+import { useDebounce } from 'use-debounce';
+
+import SearchBox from '../search/SearchBox.jsx';
+import RelevancyResultList from './RelevancyResultList.jsx';
+import es from '../search/es.js';
+
+export default function Search() {
+  const [query, setQuery] = useState('');
+  const [hits, setHits] = useState([]);
+
+  const [debouncedQuery] = useDebounce(query, 500);
+
+  useEffect(() => {
+    es.query(debouncedQuery, setHits)
+      .then(result => {
+        console.log("result", result)
+        setHits(result.hits);
+      });;
+  }, [debouncedQuery]);
+
+  return (
+    <div>
+      <SearchBox query={query} onQueryChange={setQuery} />
+      <RelevancyResultList hits={hits} />
+    </div>
+  );
+}

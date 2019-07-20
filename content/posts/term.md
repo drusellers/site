@@ -1,7 +1,7 @@
 ---
 title: "Terms"
 subtitle: "The Atom of Search"
-date: 2019-05-03T20:31:52-05:00
+date: 2019-05-18T20:31:52-05:00
 tags: ['search']
 categories: 'search'
 description: >

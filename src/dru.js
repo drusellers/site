@@ -2,6 +2,7 @@
 import './highlights/highlight.css';
 import './css/nested.css';
 import Search from './search/index.js';
+import Relevancy from './relevancy/index.js'
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -28,3 +29,8 @@ window.addEventListener('load', retina);
 
 const searchContainer = document.getElementById("search");
 ReactDOM.render(< Search />, searchContainer);
+
+const relevancyContainer = document.getElementById("relevancy");
+if (relevancyContainer != null) {
+  ReactDOM.render(< Relevancy />, relevancyContainer);
+}
