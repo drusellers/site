@@ -53,7 +53,7 @@ module.exports = {
   module: {
     rules: [{
       test: /\.jsx?$/,
-      exclude: /node_modules/,
+      include: path.resolve(__dirname, 'src'),
       loader: "babel-loader"
     },
     {
