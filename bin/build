@@ -3,8 +3,8 @@
 # Get content from prismatic
 #bin/get-content
 
-npm install
-npm run-script build
+yarn install
+yarn build
 
 hugo
 
