@@ -58,3 +58,5 @@ We can now import actual data from our GL the same day as close, and in about 10
 - **Application Performance:** More denormalizations to speed up page render speeds
 - Dig deeper into a budget, vs cash flow forecasting
 - Adding some permissions so that employees can see their budgets, and control how payroll data is accessed
+
+[Further Reading](https://corporate-rebels.com/how-to-manage-cost/)
