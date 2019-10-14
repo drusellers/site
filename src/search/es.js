@@ -49,6 +49,19 @@ function query(query) {
     });
   }
 
+  // fire and forget ga event to track search
+  try {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Interactions',
+      eventAction: 'Search',
+      eventLabel: (window.location || {}).pathname,
+      eventValue: query,
+    })
+  } catch (error) {
+    console.log('GA Error:', error);
+  }
+
   return request(query)
     .then(body => {
       console.log(body);
