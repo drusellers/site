@@ -38,9 +38,15 @@ I'm a productivity wonk. I have been for a very long time. I would track every c
 
 > This is probably what you really wanted
 
-- Things
-- iMessages - this just works between iPad, iPhone, and my Mac. No _bs_ just works.
-- Superhuman for email. I like having a dedicated app for things so that I can `CMD+TAB` to the app i want or use my window manager. Can't do that with Google or Firefox tabs
+- **Things**
+    - tweaked the quick add feature to facilitate getting items into the inbox
+    - leverage repeating tasks to help jog my day
+    - Wishes - how to get things + preferred calendar tool to work together
+- **iMessages** this just works between iPad, iPhone, and my Mac. No _bs_ just works.
+- **Superhuman** for email. I like having a dedicated app for things so that I can `CMD+TAB` to the app i want or use my window manager. Can't do that with Google or Firefox tabs
 - **Fantastical 2** not a huge game changer here, this entry is still contested
+- **Evernote** this is slowly dieing off as I move content to either my gitbook hosted system or 1Password for secure things but its image capture of notes is still one of the best
+- **Paper** The Mac drawing app (not Dropbox Paper)
+- **1Password** for secrets
 
 
