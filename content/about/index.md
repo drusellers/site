@@ -2,4 +2,9 @@
 title: About
 ---
 
-Yo
+Core Values: Open, Acheivement, Respect, Intellect
+
+
+
+
+
