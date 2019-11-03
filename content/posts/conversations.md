@@ -2,7 +2,6 @@
 title: "Conversations"
 date: 2019-11-02
 categories: notes
-draft: true
 tags:
   - notes
 disqus_id: efce717a-8ddd-41ec-bdae-5ed1b30bf88b
