@@ -12,10 +12,10 @@
       <article class="cf pv0">
         <header class="fn fl-ns w-third-ns pr4-ns pb3">
           <h1 class="f2 lh-title fw9 mb1 mt0 pt3 bt bw2">
-            {{ if .Params.SectionTitle }}
-              {{ .Params.SectionTitle }}
+            {{ if .Params.Title }}
+              {{ .Params.Title }}
             {{ else }}
-              {{ .Title }}
+              {{ .Site.Params.description }}
             {{ end }}
           </h1>
           {{ if .Params.subtitle }}

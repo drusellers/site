@@ -7,7 +7,7 @@ startYear = 2001
 enableSummary = true
 font = "helvetica"
 useDescriptionReplaceSummary = true
-description = "The personal musings of Dru Sellers"
+description = "Weaving Business and Technology"
 
 [outputs]
 home = ["HTML", "RSS", "Bonsai"]

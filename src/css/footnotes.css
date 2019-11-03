@@ -1,0 +1,26 @@
+.footnotes hr {
+  border: 1px dotted #ccc;
+  border-left: 0;
+  border-right: 0;
+}
+
+.footnotes ol {
+
+}
+
+.footnotes li {
+
+}
+
+.footnotes .footnote-return {
+  text-decoration: none;
+}
+
+/* the inline link */
+sup.footnote-ref {
+
+}
+
+sup.footnote-ref a {
+  text-decoration: none;
+}

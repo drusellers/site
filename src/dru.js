@@ -1,6 +1,7 @@
 //import hljs from './js/highlight.min.js';
 import './highlights/highlight.css';
 import './css/nested.css';
+import './css/footnotes.css';
 import Search from './search/index.js';
 import Relevancy from './relevancy/index.js'
 import React from 'react';
