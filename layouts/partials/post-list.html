@@ -1,5 +1,6 @@
 <div id="post-list">
-    {{ range where (.Paginator 5).Pages "Type" "eq" "posts" }}
+    {{ $paginator := .Paginate (where (where .Site.Pages "Type" "posts") "IsPage" true) }}
+    {{ range $paginator.Pages }}
         {{ $url := replace .Permalink .Site.BaseURL "" }}
         <a class="link blue" href='{{ .Permalink }}'>
             <h2 class="mt0" >
