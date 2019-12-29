@@ -9,7 +9,6 @@
   /* measure */
   max-width: 30em;
 
-
 }
 
 .nested blockquote {
@@ -30,7 +29,7 @@
   margin-top: var(--spacing-none)
 }
 
-.nested>ul {
+.nested>ul, .nested>ol {
   padding: 0;
   max-width: 30em;
 }

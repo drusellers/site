@@ -1,5 +1,6 @@
 .dds-search-input {
   background-color: #FFF;
+  box-shadow: inset 0px 1px 6px 0px #eee;
 }
 
 .dds-search {
