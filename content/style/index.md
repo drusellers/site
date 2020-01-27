@@ -7,19 +7,24 @@ title: Style Guide
 
 Serious
 
-I tend to like Simple.com's brand. Clean whites with a bit of color
+I tend to like [Simple.com's](https://simple.com) brand. Clean whites with a bit of color
 
 Openness, Empathy, Experience, Emotion
 
 The balance of warm and cool - not just cool
-
-Tattoos and Business and Deadlifts and Code
-
 Balance Masculine images with feminine colors?
 
 - Lotus Flower SVG
 - Flat Irons SVG
 
+The balance of masculine and feminine is particularly interesting to me.
+
+## Words
+
+- Tattoos - edgey
+- Business - let's make money
+- deadlifts - heavy, hard, big boy/girl shit
+- code - intellect, thoughtfulness, optimization
 
 ## Design
 
@@ -36,7 +41,7 @@ Body Copy: Helvetica - same, same
 
 # 1. Colors
 
-Blues / Blacks
+Blues / Blacks - Blue is a core part of the internet. Links are blue. While the OG blue is a bit too dark for me I want to maintain that history of blue links. So, blue should be an accent color in some ways at least.
 
 https://www.pinterest.com/pin/83879611797634474/
 
@@ -44,11 +49,13 @@ But shouldn't shy away from Pinks
 
 https://www.pinterest.com/pin/9781324169464026/
 
-Always like the idea of finding a way to work femine colors in. What is the femine version of serious? I feel like the blues of IBM, dark tones are what makes a manly serious.
+Always like the idea of finding a way to work femine colors in. What is the femine version of serious? I feel like the blues of IBM, dark tones are what makes a manly color serious.
 
 How could you do a "Dark Mode" that wasn't black? Purples? Navy? Greens.
 
 # 2.  Taglines
+
+Curiosity is life.
 
 Fusing Business and Technology
 
