@@ -2,7 +2,9 @@
 The goal of this css module is style lists in a pleasing way. The goal is to make them feel organized and thought full above and beyond what the default styles provide.
 */
 
-ul {
+/* scoping to nested to prevent resume mixups */
+
+.nested ul {
   /* we want a custom bullet so blank out the browser based one */
   list-style-type: none;
 
@@ -10,22 +12,22 @@ ul {
   list-style-position: outside;
 }
 
-ul, ol {
+.nested ul, .nested ol {
   padding: 0;
   max-width: 30em;
 }
 
 /* nested ul */
-ul ul {
+.nested ul ul {
   padding: 0;
   padding-left: 1rem;
 }
 
-li {
+.nested li {
   position: relative;
 }
 
-li::before {
+.nested li::before {
   content: "○";
   left: -2.5rem;
   width: 2rem;
