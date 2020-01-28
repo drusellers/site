@@ -37,7 +37,7 @@
   margin-top: var(--spacing-none)
 }
 
-.nested>ul, .nested>ol {
+/* .nested>ul, .nested>ol {
   padding: 0;
   max-width: 30em;
 }
@@ -47,7 +47,9 @@
   padding-left: 1rem;
 }
 
-.nested li {}
+.nested li:before {
+  color: rgba(0, 0, 0, 0.3);
+} */
 
 
 /* TOC */

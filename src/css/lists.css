@@ -1,0 +1,36 @@
+/*
+The goal of this css module is style lists in a pleasing way. The goal is to make them feel organized and thought full above and beyond what the default styles provide.
+*/
+
+ul {
+  /* we want a custom bullet so blank out the browser based one */
+  list-style-type: none;
+
+  /* we want the item to hang in the gutter */
+  list-style-position: outside;
+}
+
+ul, ol {
+  padding: 0;
+  max-width: 30em;
+}
+
+/* nested ul */
+ul ul {
+  padding: 0;
+  padding-left: 1rem;
+}
+
+li {
+  position: relative;
+}
+
+li::before {
+  content: "○";
+  left: -2.5rem;
+  width: 2rem;
+  display: block;
+  position: absolute;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.7);
+}

@@ -2,6 +2,7 @@
 import './highlights/highlight.css';
 import './css/nested.css';
 import './css/footnotes.css';
+import './css/lists.css'
 import Search from './search/index.js';
 import Relevancy from './relevancy/index.js'
 import React from 'react';
@@ -29,9 +30,10 @@ window.addEventListener('load', retina);
 // hljs.initHighlightingOnLoad();
 
 const searchContainer = document.getElementById("search");
-ReactDOM.render(< Search />, searchContainer);
+ReactDOM.render(<Search />, searchContainer);
 
-const relevancyContainer = document.getElementById("relevancy");
-if (relevancyContainer != null) {
-  ReactDOM.render(< Relevancy />, relevancyContainer);
-}
+window.React = React;
+window.ReactDOM = ReactDOM;
+
+// expose components
+window.Relevancy = Relevancy;
