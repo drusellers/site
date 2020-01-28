@@ -6,6 +6,7 @@ tags:
 - notes
 - Creating the Corporate Future
 disqus_id: cfba0d45-ece3-49a1-bbb0-3e674c4a451b
+withStats: true
 description: >
               Notes on Machine vs System ages while reading "Creating the Corporate Future"
 ---

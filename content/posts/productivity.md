@@ -4,6 +4,7 @@ subtitle: "An update on practices"
 date: 2019-01-01
 tags: []
 categories: []
+withStats: true
 description: >
               An overview on my own personal productivity
               habits

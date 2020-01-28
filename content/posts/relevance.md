@@ -5,6 +5,7 @@ date: 2019-05-18T20:31:52-05:00
 draft: true
 tags: ['search']
 categories: 'search'
+withStats: true
 description: >
               In my attempt to learn more about full text search I'm going
               through and documenting in my own words some of the key elements

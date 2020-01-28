@@ -9,6 +9,7 @@ tags:
 disqus_id: 55ad975d-31d3-4062-bc78-6dbed690f99c
 aliases: []
 toc: true
+withStats: true
 description: >
               My progress in deploying Beyond Budgeting at OMC in July of 2019
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Departments vs Systems"
 date: 2018-08-06T20:44:46-05:00
+withStats: true
 description: >
               How you structure your organization into departments
               can impact how you are able to deliver on the value

@@ -6,6 +6,7 @@ categories:
   - random
   - post
 disqus_id: ff81e2ae-56a6-4749-8f57-728f6851b740
+withStats: true
 aliases: [
   "/random/post/2013/06/08/warming-up.html"
 ]

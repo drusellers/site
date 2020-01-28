@@ -7,6 +7,7 @@ tags:
   - notes
   - Creating the Corporate Future
 disqus_id: febda5a4-f63b-481e-9fba-8cf8c3f4db6c
+withStats: true
 description: >
               Notes on Growth vs Development while reading "Creating the Corporate Future"
 ---

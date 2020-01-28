@@ -4,6 +4,7 @@ date:   2018-09-23 05:58:21
 categories: patterns
 tags:
 - patterns
+withStats: true
 description: >
               An under utilized goal to prevent fraud
 

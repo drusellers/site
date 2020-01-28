@@ -7,6 +7,7 @@ tags:
 disqus_id: d74948dc-627e-4125-92fd-9293ec09affa
 aliases: []
 toc: true
+withStats: true
 description: >
               Why do novel changes to existing practices drive me crazy?
 ---

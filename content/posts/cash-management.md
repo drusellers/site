@@ -8,6 +8,7 @@ tags:
 disqus_id: 27b9830d-052e-485b-ae22-588fe7f65814
 aliases: []
 toc: true
+withStats: true
 description: >
               My non-Finance mindset attempts to solve how we should manage our cash
 ---

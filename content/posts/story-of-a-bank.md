@@ -4,6 +4,7 @@ subtitle: "A pen, notepad, and 4 data points"
 date: 2018-08-03T20:31:52-05:00
 tags: []
 categories: []
+withStats: true
 description: >
               Looking for key abstractions can lead to powerful insights.
 

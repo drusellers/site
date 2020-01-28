@@ -4,7 +4,6 @@ logo: logo-black
 bodyId: health
 title: Health
 subtitle: Transcribed notes from conversations with Dr. House Ph. D.
-noStats: true
 ---
 
 Current Weight: 210 lbs

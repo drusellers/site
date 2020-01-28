@@ -4,6 +4,7 @@ date:   2017-01-28 05:58:21
 categories: Architecture
 published: false
 disqus_id: 150e5c91-183a-42a5-8a03-a60e01b20851
+withStats: true
 ---
 
 Architecture. Such a grand term. It evokes sweeping views of buildings, the intricate plans of a building. Wiring diagrams and blueprints. Its a romantic idea, and one I would love to be a part of. The trick is, I build software systems.

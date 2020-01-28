@@ -5,6 +5,7 @@ categories: notes
 tags:
   - notes
 disqus_id: efce717a-8ddd-41ec-bdae-5ed1b30bf88b
+withStats: true
 description: >
               The power is in the conversation, not the tool.
 ---

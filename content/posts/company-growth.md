@@ -5,6 +5,7 @@ date: 2018-08-01T12:45:10-05:00
 tags:
 - business
 categories: []
+withStats: true
 description: >
               How can a model of company growth assist you in
               designing systems for your company?

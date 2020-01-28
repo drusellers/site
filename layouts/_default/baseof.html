@@ -24,8 +24,7 @@
             </h2>
           {{ end}}
 
-          {{ if .Params.noStats }}
-          {{ else }}
+          {{ if .Params.withStats }}
             {{ if gt .WordCount 0 }}
               <div class="f6 ttu tracked gray pv1">
                 {{ if lt 1 .WordCount }}{{ .WordCount }} words{{ else }}{{ .WordCount }} word{{ end }}

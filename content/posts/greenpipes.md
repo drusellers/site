@@ -8,6 +8,7 @@ tags:
 disqus_id: 6bb5bfc7-56d2-493a-9faf-e9bd678f190f
 analytics_category: blog
 analytics_name: greenpipes
+withStats: true
 aliases: [
   "/greenpipes/2016/10/30/greenpipes.html"
 ]

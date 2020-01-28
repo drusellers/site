@@ -6,6 +6,7 @@ categories: Architecture
 tags:
 - architecture
 disqus_id: 22ec0c92-bb3f-4d81-ad4f-b92820f08292
+withStats: true
 draft: true
 ---
 

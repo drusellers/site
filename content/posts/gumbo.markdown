@@ -4,6 +4,7 @@ date:   2013-06-08 09:58:21
 tags:
 - Idea
 disqus_id: 714f8e9c-780d-4d22-83b4-8d8bedc455ef
+withStats: true
 aliases: [
   "/idea/2013/06/08/gumbo.html"
 ]

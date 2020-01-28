@@ -5,7 +5,16 @@
         <p class="f5 f4-m f3-l lh-copy measure mt0">
           {{ .Content }}
         </p>
-        <cite class="f6 ttu tracked fs-normal">- {{ .Params.author | markdownify }}</cite>
+        {{ if .Params.author_link }}
+          <cite class="f6 ttu tracked fs-normal">
+            -
+            <a href="{{ .Params.author_link }}" target="_blank" rel="noopener">
+              {{ .Params.author | markdownify }}
+            </a>
+          </cite>
+        {{ else }}
+          <cite class="f6 ttu tracked fs-normal">- {{ .Params.author | markdownify }}</cite>
+        {{ end }}
       </blockquote>
     </div>
 

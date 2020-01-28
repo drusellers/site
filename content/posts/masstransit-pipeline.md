@@ -6,6 +6,7 @@ categories: masstransit
 tags:
 - masstransit
 disqus_id: b90bcc77-b92d-4c7e-b378-5dbbeafee31f
+withStats: true
 draft: true
 ---
 

@@ -5,6 +5,7 @@ categories: architecture
 tags:
 - architecture
 disqus_id: 548d3b4e-79a9-4f82-981e-5603ba89738e
+withStats: true
 aliases: [
     "/architecture/2014/09/10/typepool.html"
 ]
