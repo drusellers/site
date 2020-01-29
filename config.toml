@@ -7,7 +7,7 @@ startYear = 2001
 enableSummary = true
 font = "helvetica"
 useDescriptionReplaceSummary = true
-description = "Weaving Business and Technology"
+description = "Curiosity is Life"
 
 [outputs]
 home = ["HTML", "RSS", "Bonsai"]
@@ -21,3 +21,6 @@ notAlternative = true
 [params.bonsai]
 vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
 params = ["categories", "tags"]
+
+[markup.goldmark.renderer]
+unsafe = true

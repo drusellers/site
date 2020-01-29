@@ -18,7 +18,7 @@
 }
 
 .nested blockquote p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 
   /* measure */
   max-width: 21em;
@@ -28,8 +28,8 @@
   margin: 0;
 }
 
-.nested blockquote cite {
-  font-size: 1em;
+.nested blockquote p cite {
+  font-size: 0.75rem;
 }
 
 .nested>p {
