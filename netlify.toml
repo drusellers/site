@@ -17,7 +17,7 @@
 [[headers]]
   for = "/"
   [headers.values]
-  Link = "</images/dive.png>; rel=preload; as=img"
+  Link = "</images/dive.png>; rel=preload; as=image"
 
 [[headers]]
   for = "/images/*.svg"
