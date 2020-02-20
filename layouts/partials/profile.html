@@ -1,25 +1,28 @@
-<div class="mw8 center ph3-ns">
-  <div class="cf pv3">
-    <div class="fl w-100 w-50-ns pa2">
-      <a href='{{ with .Site.Params.avatarLink }}{{ . }}{{ else }}{{ .Site.BaseURL }}about{{ end }}'>
-        <img id="avatar" src="{{ .Site.BaseURL }}images/logo.svg" alt="{{ .Site.Title }}"
-        height="90px"/>
-      </a>
+<header>
+  <switcher-l>
+    <div>
+      <div>
+        <a href='{{ with .Site.Params.avatarLink }}{{ . }}{{ else }}{{ .Site.BaseURL }}about{{ end }}'>
+          <img id="avatar" src="{{ .Site.BaseURL }}images/logo.svg" alt="{{ .Site.Title }}"
+          height="90px"/>
+        </a>
+      </div>
+      <div>
+        <div id="hcard-Dru-Sellers" style="float:right;">
+          <span class="fn">Dru Sellers</span>
+          <div class="email"><a class="link" href="mailto:dru@drusellers.com">dru@drusellers.com</a></div>
+          <div class="twitter"><a class="link" href="http://twitter.com/drusellers">@drusellers</a></div>
+          <div class="adr">
+              <div class="street-address"></div>
+              <span class="locality">Austin</span>,
+              <span class="region">TX</span>
+              <span class="postal-code">78745</span>
+              <span class="country-name">USA</span>
+          </div>
+          <div class="tel">+1 785/371-4589</div>
+        </div><!-- /hcard -->
+      </div>
     </div>
-    <div class="fl w-100 w-50-ns pa2 tr black-60">
-      <div id="hcard-Dru-Sellers">
-        <span class="fn">Dru Sellers</span>
-        <div class="email"><a class="link blue" href="mailto:dru@drusellers.com">dru@drusellers.com</a></div>
-        <div class="twitter"><a class="link blue" href="http://twitter.com/drusellers">@drusellers</a></div>
-        <div class="adr">
-            <div class="street-address"></div>
-            <span class="locality">Austin</span>,
-            <span class="region">TX</span>
-            <span class="postal-code">78745</span>
-            <span class="country-name">USA</span>
-        </div>
-        <div class="tel">+1 785/371-4589</div>
-      </div><!-- /hcard -->
-    </div>
-  </div>
-</div>
+  </switcher-l>
+</header>
+

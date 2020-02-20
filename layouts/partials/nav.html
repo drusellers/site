@@ -1,33 +1,26 @@
 {{ $url := replace .Permalink .Site.BaseURL "" }}
-{{ $color := "mid-gray" }}
-<div class="bg-white shadow-2">
+<header>
+  <nav>
+    {{ if not .IsHome }}
+        <a href='{{ .Site.BaseURL }}' title="Home">
+          <span class="arrow">←</span>{{ with .Site.Params.home }}{{ . }}{{ else }}Home{{ end }}
+        </a>
+    {{ end }}
 
-    <div class="mw8 center ph3-ns">
-      <div class="cf">
-      <header class="pv2">
-        <nav class="dt w-100 border-box ph2">
-          {{ if not .IsHome }}
-              <a href='{{ .Site.BaseURL }}' class="dtc v-mid {{ $color }} link w-25" title="Home">
-                <span class="arrow">←</span>{{ with .Site.Params.home }}{{ . }}{{ else }}Home{{ end }}
-              </a>
-          {{ end }}
+    <aside>
+      <a href='{{ .Site.BaseURL }}posts' title="Archive">
+        Archive
+      </a>
+      <a href='{{ .Site.BaseURL }}iron' title="Iron and the Soul">
+        Iron and the Soul
+      </a>
+      <a href='{{ .Site.BaseURL }}tags' title="Tags">
+        Tags
+      </a>
+      <a href='{{ .Site.BaseURL }}resume' title="Resume">
+        Resume
+      </a>
+    </aside>
+  </nav>
+</header>
 
-          <div class="dtc v-mid w-75 tr">
-            <a class="link dim {{ $color }} f6 f5-ns dib mr3 mr4-ns" href='{{ .Site.BaseURL }}posts' title="Archive">
-              Archive
-            </a>
-            <a class="link dim {{ $color }} f6 f5-ns dib mr3 mr4-ns" href='{{ .Site.BaseURL }}iron' title="Archive">
-              Iron and the Soul
-            </a>
-            <a class="link dim {{ $color }} f6 f5-ns dib mr3 mr4-ns" href='{{ .Site.BaseURL }}tags' title="Tags">
-              Tags
-            </a>
-            <a class="link dim {{ $color }} f6 f5-ns dib" href='{{ .Site.BaseURL }}resume' title="Resume">
-              Resume
-            </a>
-          </div>
-        </nav>
-      </header>
-    </div>
-  </div>
-</div>

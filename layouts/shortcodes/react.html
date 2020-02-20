@@ -1,0 +1,11 @@
+<div>
+  <script>
+    var parentElement = document.currentScript.parentElement;
+    window.onload = function() {
+      ReactDOM.render(
+        React.createElement(window[{{ .Get 0 }}]),
+        parentElement
+      );
+    }
+  </script>
+</div>

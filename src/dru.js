@@ -1,8 +1,16 @@
 //import hljs from './js/highlight.min.js';
 import './highlights/highlight.css';
-import './css/nested.css';
+import './css/base.css';
+import './css/nav.css';
+import './css/toc.css';
+import './elo';
+import './css/markdown.css';
 import './css/footnotes.css';
-import './css/lists.css'
+import './css/lists.css';
+import './css/quotes.css';
+import './css/archive.css';
+import './css/resume.css';
+import './css/article.css';
 import Search from './search/index.js';
 import Relevancy from './relevancy/index.js'
 import React from 'react';
@@ -21,7 +29,6 @@ import ReactDOM from 'react-dom';
 // fas fa-search
 
 import 'tachyons/css/tachyons.css';
-import 'tachyons-cms/css/tachyons-cms.css';
 
 import retina from 'retinajs';
 window.addEventListener('load', retina);

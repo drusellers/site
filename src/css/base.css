@@ -1,0 +1,82 @@
+:root {
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio)); /* 0.131 */
+  --s-4: calc(var(--s-3) / var(--ratio)); /* 0.197 */
+  --s-3: calc(var(--s-2) / var(--ratio)); /* 0.296 */
+  --s-2: calc(var(--s-1) / var(--ratio)); /* 0.444 */
+  --s-1: calc(var(--s0) / var(--ratio));  /* 0.666 */
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio)); /* 1.500 */
+  --s2: calc(var(--s1) * var(--ratio)); /* 2.250 */
+  --s3: calc(var(--s2) * var(--ratio)); /* 3.375 */
+  --s4: calc(var(--s3) * var(--ratio)); /* 5.062 */
+  --s5: calc(var(--s4) * var(--ratio)); /* 7.593 */
+
+  /* Font Size */
+  --headline-size: 6rem;
+  --subheadline-size: 5rem;
+  --font-s4: 3rem;
+  --font-s3: 2.25rem;
+  --font-s2: 1.5rem;
+  --font-s1: 1.25rem;
+  --font-s0: 1rem;
+  --font-s-1: 0.875rem;
+  --font-s-2: 0.75rem; /* Small and hard to read for many people so use with extreme caution */
+
+  /* font weights */
+  --weight-1: 100;
+  --weight-2: 200;
+  --weight-3: 300;
+  --weight-4: 400;
+  --weight-5: 500;
+  --weight-6: 600;
+  --weight-7: 700;
+  --weight-8: 800;
+  --weight-9: 900;
+
+  /* max width */
+  /* --measure: 60ch; elo measure, why again? */
+  --measure: 30rem; /* ~66 char */
+  --measure-wide: 34rem; /* ~80 char */
+  --measure-narrow: 20rem; /* ~45 char */
+
+  /* line-height */
+  --leading-copy: 1.5;
+  --leading-title: 1.25;
+  --leading-solid: 1;
+
+  --title-font-family: ‘Abc’;
+  --copy-font-family: ‘abc’;
+
+  /* from tachyons */
+  --document-width: 64rem;
+
+  /* https://absolutely.every-layout.dev/layouts/sidebar/#the-component */
+  --sidebar-side-width: 280px;
+  --sidebar-content-min: 60%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+}
+
+a, a:visited, a:link {
+  color: #357edd;
+  text-decoration: none;
+}
+
+ul {
+  padding:0;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.list li {
+  margin: var(--s-2) 0;
+}
