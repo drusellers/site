@@ -1,24 +1,22 @@
 {{ define "main" }}
 
-<div class="mw6 mw6-ns center">
+<div class="resume">
   <!-- play with print styles here -->
 
-  <div class="body">
-
-
-    <h2 class="measure mt0 lh-title">Resume</h2>
+  <div>
+    <h2>Resume</h2>
 
     <!-- <div class="pic"><img src="/images/pic.png" /></div> -->
 
-    <blockquote class="ml4 measure lh-copy">
+    <blockquote>
       {{ .Params.summary }}
     </blockquote>
 
-    <h3 class="measure lh-title">Work Experience</h3>
+    <h3>Work Experience</h3>
 
     {{ range .Params.jobs }}
-      <div class="experience ml4">
-        <h4 class="measure lh-title mb2">
+      <div class="experience">
+        <h4>
           {{ .employer }}
           {{ if .url }}
           <small>
@@ -26,19 +24,15 @@
           </small>
           {{ end }}
         </h4>
-        <ul  class="list ma0 pa0 cf">
-          <li class="title measure lh-title fl w-50">
-            {{ .title }}
-          </li>
-          <li class="time measure lh-title fl w-50 f6 tr">
-            {{ .start }} - {{ .end }}
-          </li>
-        </ul>
-
-        <div style="clear:both;"></div>
+        <switcher-l>
+          <div>
+            <div class="title">{{ .title }}</div>
+            <div class="duration">{{ .start }} - {{ .end }}</div>
+          </div>
+        </switcher-l>
 
         {{ range .description }}
-        <p class="measure lh-copy">
+        <p>
           {{ . | markdownify }}
         </p>
         {{ end }}
@@ -50,28 +44,31 @@
     {{ range .Params.education }}
       <div class="education">
         <h4>{{ .school }} <small><a href="{{ .url }}" target="_blank">{{ .urllabel }} <i class="far fa-external-link-square"></i></a></small></h4>
-        <ul class="ml4 list pa0 list">
-          <li class="title measure lh-title">
-            {{ .major }}
-            <br /><small> {{ .minor }}</small>
-          </li>
-          <li class="time measure lh-title f5">
-            {{ .start }} - {{ .end }}
-          </li>
-        </ul>
+        <switcher-l>
+          <div>
+            <div>
+              {{ .major }}
+              <br />
+              <small> {{ .minor }}</small>
+            </div>
+            <div>
+              {{ .start }} - {{ .end }}
+            </div>
+          </div>
+        </switcher-l>
       </div>
     {{ end }}
 
     <div style="clear:both;"></div>
 
-    <h3 class="measure lh-title">Community Activities</h3>
-    <ul class="list pa0 ml4">
+    <h3>Community Activities</h3>
+    <stack-l>
     {{ range .Params.activities }}
-      <li class=" measure lh-copy mv2">
+      <div class="activity">
         {{ . }}
-      </li>
+      </div>
     {{ end}}
-    </ul>
+    </stack-l>
 
   </div>
 

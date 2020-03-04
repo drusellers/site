@@ -1,5 +1,6 @@
 {
   "files.associations": {
     "*.html": "gohtml",
+    "*.ndjson": "gotemplate"
   }
 }

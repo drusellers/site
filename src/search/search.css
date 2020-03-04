@@ -1,15 +1,37 @@
 .dds-search-input {
   background-color: #FFF;
   box-shadow: inset 0px 1px 6px 0px #eee;
+  display: flex;
+  width: 100%;
+  float: left;
+  border-radius: 0.25rem;
+}
+
+.dds-search-icon {
+  float: left;
+  width: 35px;
+  padding-top: 11px;
+  padding-left: 1rem;
 }
 
 .dds-search {
   position: relative;
 }
 
+.dds-search-input-wrapper {
+  float: left;
+  padding: 0.5rem;
+  flex: 1;
+}
+
 .dds-search input {
   border: none;
   background-color: #fff;
+  font-size: 1.25rem;
+  width: 100%;
+  -webkit-appearance: none;
+  display: block;
+  
 }
 
 .dds-search input:focus {

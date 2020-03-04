@@ -1,11 +1,10 @@
-baseURL = "https://drusellers.com/"
+baseURL = "https://drusellers.com"
 languageCode = "en-us"
 title = "A Curious Mind"
 
 [params]
 startYear = 2001
 enableSummary = true
-font = "helvetica"
 useDescriptionReplaceSummary = true
 description = "Curiosity is Life"
 
@@ -15,7 +14,7 @@ home = ["HTML", "RSS", "Bonsai"]
 [outputFormats.Bonsai]
 baseName = "bonsai"
 isPlainText = true
-mediaType = "application/json"
+mediaType = "application/ndjson"
 notAlternative = true
 
 [params.bonsai]
@@ -24,3 +23,7 @@ params = ["categories", "tags"]
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[mediaTypes]
+  [mediaTypes."application/ndjson"]
+    suffixes = ['ndjson']

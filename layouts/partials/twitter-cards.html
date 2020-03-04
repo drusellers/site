@@ -5,7 +5,7 @@
       <meta name="twitter:image:src" content="{{ index . 0 | absURL }}"/>
     {{ else }}
       <meta name="twitter:card" content="summary"/>
-      <meta name="twitter:image" content="{{ .Site.BaseURL }}images/logo.svg" />
+      <meta name="twitter:image" content="{{ .Site.BaseURL }}/images/logo.svg" />
     {{ end }}
     <!-- Twitter Card data -->
     <meta name="twitter:title" content="{{ .Title }}"/>
@@ -19,5 +19,5 @@
     <meta name="twitter:creator" content="@drusellers"/>
     <meta name="twitter:title" content="{{ .Site.Title }}"/>
     <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"/>
-    <meta name="twitter:image" content="{{ .Site.BaseURL }}images/logo.svg" />
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}/images/logo.svg" />
 {{ end }}

@@ -1,34 +1,17 @@
 {{ define "main" }}
-  <div class="nested nested-copy-line-height nested-links nested-copy-separator">
-    <div class="pa4">
-      <blockquote class="athelas ml0 mt0 pl4 black-90">
-        <p class="f5 f4-m f3-l lh-copy measure mt0">
-          {{ .Content }}
-        </p>
-        {{ if .Params.author_link }}
-          <cite class="f6 ttu tracked fs-normal">
-            -
-            <a href="{{ .Params.author_link }}" target="_blank" rel="noopener">
-              {{ .Params.author | markdownify }}
-            </a>
-          </cite>
-        {{ else }}
-          <cite class="f6 ttu tracked fs-normal">- {{ .Params.author | markdownify }}</cite>
-        {{ end }}
-      </blockquote>
-    </div>
-
+  <div class="quote">
+    <blockquote>
+      {{ .Content }}
+      {{ if .Params.author_link }}
+        <cite>
+          -
+          <a href="{{ .Params.author_link }}" target="_blank" rel="noopener">
+            {{ .Params.author | markdownify }}
+          </a>
+        </cite>
+      {{ else }}
+        <cite>- {{ .Params.author | markdownify }}</cite>
+      {{ end }}
+    </blockquote>
   </div>
-
-  {{ if .Site.Params.enableShare }}
-    {{ partial "share.html" . }}
-  {{ end }}
-
-  {{ if .Site.Params.enableDisqus }}
-    {{ partial "disqus.html" . }}
-  {{ end }}
-
-  {{ if .Site.Params.showLatestPosts }}
-    {{ partial "latest-posts.html" . }}
-  {{ end }}
 {{ end }}
