@@ -28,11 +28,6 @@ import ReactDOM from 'react-dom';
 // fab fa-creative-commons
 // fas fa-search
 
-import 'tachyons/css/tachyons.css';
-
-import retina from 'retinajs';
-window.addEventListener('load', retina);
-
 // console.log(hljs);
 // hljs.initHighlightingOnLoad();
 
