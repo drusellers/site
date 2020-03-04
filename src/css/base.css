@@ -45,8 +45,8 @@
   --leading-title: 1.25;
   --leading-solid: 1;
 
-  --title-font-family: ‘Abc’;
-  --copy-font-family: ‘abc’;
+  --title-font-family: 'Nunito', sans-serif;
+  --copy-font-family: 'Open Sans', sans-serif;
 
   /* from tachyons */
   --document-width: 64rem;
@@ -58,6 +58,11 @@
 
 * {
   box-sizing: border-box;
+  font-family: var(--copy-font-family);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--title-font-family);
 }
 
 body {

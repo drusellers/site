@@ -1,0 +1,58 @@
+.resume {
+
+}
+
+.resume h2 {
+  font-size: var(--font-s3);
+  line-height: var(--leading-title);
+  margin-top: 0;
+}
+
+.resume blockquote {
+  margin-left: var(--s2);
+  max-width: var(--measure);
+  line-height: var(--leading-copy);
+}
+
+.resume h3 {
+  font-size: var(--font-s2);
+  line-height: var(--leading-title);
+  max-width: var(--measure);
+}
+
+.resume .experience {
+  margin-left: var(--s2);
+}
+.resume .experience h4 {
+  max-width: var(--measure);
+  line-height: var(--leading-title);
+  font-size: var(--font-s1);
+  margin-bottom: var(--s-1);
+}
+.resume .experience p {
+  max-width: var(--measure);
+  line-height: var(--leading-copy);
+}
+.resume .experience .details {
+  margin: 0;
+  padding: 0;
+}
+.resume .experience .title,
+.resume .experience .duration {
+  max-width: var(--measure);
+  line-height: var(--leading-title);
+}
+
+.resume .experience .duration {
+  font-size: var(--font-s-1);
+  text-align: right;
+}
+.resume .education h4 {
+  max-width: var(--measure);
+  line-height: var(--leading-title);
+}
+
+.resume .activity {
+  max-width: var(--measure);
+  line-height: var(--leading-copy);
+}
