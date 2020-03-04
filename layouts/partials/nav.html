@@ -2,22 +2,22 @@
 <header>
   <nav>
     {{ if not .IsHome }}
-        <a href='{{ .Site.BaseURL }}' title="Home">
+        <a href='{{ .Site.BaseURL }}/' title="Home">
           <span class="arrow">←</span>{{ with .Site.Params.home }}{{ . }}{{ else }}Home{{ end }}
         </a>
     {{ end }}
 
     <aside>
-      <a href='{{ .Site.BaseURL }}posts' title="Archive">
+      <a href='{{ .Site.BaseURL }}/posts' title="Archive">
         Archive
       </a>
-      <a href='{{ .Site.BaseURL }}iron' title="Iron and the Soul">
+      <a href='{{ .Site.BaseURL }}/iron' title="Iron and the Soul">
         Iron and the Soul
       </a>
-      <a href='{{ .Site.BaseURL }}tags' title="Tags">
+      <a href='{{ .Site.BaseURL }}/tags' title="Tags">
         Tags
       </a>
-      <a href='{{ .Site.BaseURL }}resume' title="Resume">
+      <a href='{{ .Site.BaseURL }}/resume' title="Resume">
         Resume
       </a>
     </aside>

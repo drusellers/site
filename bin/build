@@ -1,12 +1,14 @@
 #!/bin/bash
 
+echo "HUGO: $(hugo version)"
 # Get content from prismatic
 #bin/get-content
 
 yarn install
 yarn build
 
-hugo
+echo "hugo --gc --minify $@"
+hugo --gc --minify "$@"
 
 # index content into elasticsearch
 bin/define-index

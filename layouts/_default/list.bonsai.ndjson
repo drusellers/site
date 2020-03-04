@@ -1,0 +1,9 @@
+{{/* Generates a valid Elasticsearch _bulk index payload */}}
+{{- range .Site.AllPages -}}
+  {{- $section := $.Site.GetPage "section" .Section }}
+  {{- if or (and (.IsDescendant $section) (and (not .Draft) (and (not (eq .Kind "section")) (not (eq .Kind "taxonomyTerm")) (not (eq .Kind "taxonomy"))) (not .Params.private))) ($section.IsHome) -}}
+    {{/* action / metadata */}}
+    {{ (dict "index" (dict "_index" "posts" "_type" "_doc")) | jsonify }}
+    {{ (dict "date" .Date.UTC.Unix "description" .Description "fuzzywordcount" .FuzzyWordCount "keywords" .Keywords "dru" $section.IsHome "kind" .Kind "permalink" .Permalink "publishdate" .PublishDate "readingtime" .ReadingTime "relpermalink" .RelPermalink "summary" .Summary "title" .Title "type" .Type "url" .Permalink "wordcount" .WordCount "section" .Section "tags" .Params.Tags "categories" .Params.Categories "suggest" .Title) | jsonify }}
+  {{- end -}}
+{{- end }}

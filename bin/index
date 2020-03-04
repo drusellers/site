@@ -3,7 +3,7 @@
 # https://forestry.io/blog/search-with-algolia-in-hugo/
 
 # generate json
-hugo
+# hugo
 
 if [ "${ES_URL}x" == "x" ]; then
   echo "sourceing"
