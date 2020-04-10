@@ -1,20 +1,21 @@
 //import hljs from './js/highlight.min.js';
-import './highlights/highlight.css';
-import './css/base.css';
-import './css/nav.css';
-import './css/toc.css';
-import './elo';
-import './css/markdown.css';
-import './css/footnotes.css';
-import './css/lists.css';
-import './css/quotes.css';
-import './css/archive.css';
-import './css/resume.css';
-import './css/article.css';
-import Search from './search/index.js';
-import Relevancy from './relevancy/index.js'
-import React from 'react';
-import ReactDOM from 'react-dom';
+import "./highlights/highlight.css";
+import "./css/base.css";
+import "./css/nav.css";
+import "./css/toc.css";
+import "./elo";
+import "./css/markdown.css";
+import "./css/footnotes.css";
+import "./css/lists.css";
+import "./css/quotes.css";
+import "./css/archive.css";
+import "./css/resume.css";
+import "./css/article.css";
+import "./css/allegory.css";
+import Search from "./search/index.js";
+import Relevancy from "./relevancy/index.js";
+import React from "react";
+import ReactDOM from "react-dom";
 
 // import '@fortawesome/fontawesome-pro/css/light.css';
 // import '@fortawesome/fontawesome-pro/css/brands.css';
@@ -24,9 +25,9 @@ import ReactDOM from 'react-dom';
 // fontawesome.dom.i2svg();
 
 // fa fa-external-link-square | fa-external-link
-// fal fa-camera
-// fab fa-creative-commons
-// fas fa-search
+// fal fa-camera fa-tag
+// fab fa-creative-commons fa-creative-commons-by
+// far fa-search (socials...)
 
 // console.log(hljs);
 // hljs.initHighlightingOnLoad();
