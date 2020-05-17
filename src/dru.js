@@ -1,17 +1,27 @@
 //import hljs from './js/highlight.min.js';
 import "./highlights/highlight.css";
-import "./css/base.css";
-import "./css/nav.css";
-import "./css/toc.css";
+
+// baseline
+import "./css/layout.css";
+import "./css/typography.css";
 import "./elo";
+// brand
+import "./css/brand.css";
+// components
+import "./css/components/nav.css";
+import "./css/components/toc.css";
+
 import "./css/markdown.css";
 import "./css/footnotes.css";
 import "./css/lists.css";
 import "./css/quotes.css";
 import "./css/archive.css";
-import "./css/resume.css";
 import "./css/article.css";
-import "./css/allegory.css";
+
+// pages
+import "./css/pages/resume.css";
+import "./css/pages/allegory.css";
+
 import Search from "./search/index.js";
 import Relevancy from "./relevancy/index.js";
 import React from "react";

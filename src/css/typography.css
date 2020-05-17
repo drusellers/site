@@ -1,0 +1,33 @@
+:root {
+  /* Font Size */
+  --headline-size: 6rem;
+  --subheadline-size: 5rem;
+  --font-s4: 3rem;
+  --font-s3: 2.25rem;
+  --font-s2: 1.5rem;
+  --font-s1: 1.25rem;
+  --font-s0: 1rem;
+  --font-s-1: 0.875rem;
+  --font-s-2: 0.75rem; /* Small and hard to read for many people so use with extreme caution */
+
+  /* font weights */
+  --weight-1: 100;
+  --weight-2: 200;
+  --weight-3: 300;
+  --weight-4: 400;
+  --weight-5: 500;
+  --weight-6: 600;
+  --weight-7: 700;
+  --weight-8: 800;
+  --weight-9: 900;
+
+  /* line-height */
+  --leading-copy: 1.5;
+  --leading-title: 1.25;
+  --leading-solid: 1;
+
+  --title-font-family: "Nunito", sans-serif;
+  --copy-font-family: "Open Sans", sans-serif;
+
+  --link-color: #f00;
+}
