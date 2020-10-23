@@ -10,10 +10,11 @@ module.exports = {
   mode: 'development',
   entry: './src/dru.js',
   plugins: [
-    new CopyWebpackPlugin([{
+    new CopyWebpackPlugin({
+      patterns: [{
       from: 'src/images',
       to: 'images'
-    }]),
+    }]}),
     // keep the output dir clean
     new CleanWebpackPlugin(),
     // connect the hashed ids to hugo

@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 var config = require("./webpack.config.js");
-var merge = require("webpack-merge");
+var { mergeWithCustomize, unique } = require("webpack-merge");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -19,8 +19,6 @@ let prod = {
         }],
       }
     }),
-    // improve the consistency of hashes on the output name
-    new webpack.HashedModuleIdsPlugin(),
     // used to compress and extract the css
     new MiniCssExtractPlugin({
       filename: "css/[name].[contenthash].css",
@@ -30,8 +28,8 @@ let prod = {
 };
 
 
-const prodConfig = merge({
-  customizeArray: merge.unique(
+const prodConfig = mergeWithCustomize({
+  customizeArray: unique(
     'plugins',
     ['MiniCssExtractPlugin'],
     plugin => plugin.constructor && plugin.constructor.name
