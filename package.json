@@ -28,7 +28,7 @@
     "copy-webpack-plugin": "^6.0",
     "css-loader": "^5.0",
     "cssnano": "^4.1.10",
-    "dotenv-webpack": "^4.0.0",
+    "dotenv-webpack": "^5.0.0",
     "eslint": "^7.0.0",
     "file-loader": "^6.0.0",
     "json2yaml": "^1.1.0",

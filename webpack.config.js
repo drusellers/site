@@ -21,6 +21,7 @@ module.exports = {
     new ManifestPlugin({
       // used to read in the file path in hugo template
       fileName: '../data/manifest.json',
+      publicPath: '',
       filter: function (fd) {
         return fd.name.endsWith(".js") ||
           fd.name.endsWith('.css');
