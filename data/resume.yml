@@ -1,0 +1,131 @@
+---
+title: Resume
+startYear: 2001
+layout: resume
+summary: >
+  Application developer with over 18 years of broad business and technical
+  expertise. Experience is focused on building and architecting distributed
+  .Net applications
+jobs:
+  -
+    employer: One More Cloud
+    url: https://omc.io
+    urllabel: omc.io
+    title: Vice President of Operations
+    start: March 2017
+    end: Present
+    description:
+      - >
+        I choose this opportunity because it would allow me to explore a position
+        in a company's leadership. For years I've been reading books on business
+        startegy and leadership. I will now be in the position to both exercise that
+        knowledge and realize just how much I have to learn.
+      - >
+        This will also be my first job where .Net and Windows are not a core part
+        of my every day life. This is both exciting and scary at the same time. I
+        look forward to the firehose of learning.
+  -
+    employer: Motorsport Aftermarket Group
+    url: https://maggroup.com
+    urllabel: maggroup.com
+    title: Software Architect II
+    start: September 2014
+    end: March 2017
+    description:
+      - >
+        While at MAG, I worked with a distributed team located across the country
+        to build a multi-tenant fulfillment layer on top of two different ERP
+        systems allowing the heterogeneous environment of a $1 billion multi-divison
+        company to transition to the new ERP as it made business sense.
+      - >
+        I choose this opportunity becaues it would allow me to reexplore the larger
+        Enterprise Architecture concepts that only show up in large companies.
+        Additionally, it would build on top of my fulfillment domain knowledge
+        that I started with V23 Athletics and Amplifier. Lastly, I would
+        have the pleasure of finally working with some [long](https://twitter.com/dahlbyk)
+        time [friends](https://twitter.com/TimBarcz).
+  -
+    employer: V23 Athletics
+    title: Co-Owner
+    start: February 2012
+    end: December 2015
+    description:
+      - I was part of a small team that built a small, local athletic apparel company.
+      - >
+        I embarked on this journey to try and get a different perspective on the
+        software development lifecycle. Being the one that has to make the large
+        and sometimes boring decisions. How will that impact the company's bottom
+        line? What all do we REALLY need? Its was a great process of exploring
+        and understanding all aspects of running a business.
+  -
+    employer: Amplifier
+    url: https://amplifier.com
+    urllabel: amplifier.com
+    title: Senior Software Engineer
+    start: November 2013
+    end: September 2014
+    description:
+      - >
+        I worked closely with a small team to produce and support Amplifier.com.
+        My responsibilities include product feature work, support, and product analysis.
+      - >
+        I choose to take this job because I would be working on problems that involved
+        the 'real' world. Amplifier ships products around the world and having actual
+        people and physical plants involved in the process brings about new and unique
+        challenges.
+  -
+    employer: Dovetail Software
+    url: https://dovetailsoftware.com
+    urllabel: dovetailsoftware.com
+    title: Senior Software Engineer
+    start: April 2011
+    end: November 2013
+    description:
+      - >
+        I worked closely with a small team to produce and support the Dovetail Employee
+        Engagement Suite. My responsibilities included product feature work, mentoring
+        staff, providing technical architecture direction, streamlining deployments and
+        UI work.
+      - >
+        I choose to take this job because of the team's reputation for a high commitment
+        to software development quality, an intense focus on testing, and compositional
+        programming. I was pushed to grow as a developer, and in return I was able to
+        bring the architectural and people skills from my former position.
+  -
+    employer: Federal Home Loan Bank of Topeka
+    url: https://fhlbtopeka.com/
+    urllabel: fhlbtopeka.com
+    title: Solution Architect
+    start: May 2007
+    end: April 2011
+    description:
+      - >
+        I worked with the Enterprise Architect to plan and build over 90 different internal
+        applications to support various business processes; including a data warehouse, various
+        data retention plans, and several line of business applications. I supervised the code
+        quality of 15 different developers to make sure our software principles were maintained
+        while still meeting the business’ need for applications to be delivered. As a staff
+        position I had to provide a business value reason for most of my recommendations,
+        rather than direct edicts.
+      - >
+        I choose this job because I would be leading a team of developers in producing
+        software that managed $56 billion in assets. While at the bank, I was pushed to
+        explain technical concepts in terms that CXOs and VPs could understand, while at
+        the same time making sure technical decisions were in lock step with the business’s
+        long term goals.
+education:
+  -
+    school: Baker University
+    url: https://www.bakeru.edu/
+    urllabel: bakeru.edu
+    start: Fall 1997
+    end: Spring 2001
+    major: Bachelors of Arts in International Business
+    minor: with a minor in Economics
+activities:
+  - Presenter at local, regional, and international conferences on software development practices
+  - Recognized as a INETA Community Champion Q2 2010 for my OSS work
+  - Avid contributor to and maintainer of open source projects
+  - Member of local .Net user groups.
+  - Trustee to my fraternity 2005 - 2011
+  - Member of the Baker University Alumni Board 2007-2011

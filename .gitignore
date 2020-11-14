@@ -1,6 +1,7 @@
-public
 static
 .DS_Store
 node_modules
 data/manifest.json
 .env
+.next
+yarn-error.log
