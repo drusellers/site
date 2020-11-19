@@ -28,11 +28,9 @@ export default function Tags({allTags}) {
   );
 }
 
-export async function getStaticProps() {
-  // group by year
-  // then sort by date
+export function getStaticProps() {
   const allTags = getAllTags();
-  console.log('tags', allTags);
+
   return {
     props: {
       allTags,
