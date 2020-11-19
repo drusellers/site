@@ -12,4 +12,6 @@ echo ""
 
 curl -s -H "Content-Type: application/json" -XPUT \
   "${ES_URL}/posts?pretty" \
-  --data-binary @bin/mapping.json > /dev/null
+  --data-binary @bin/mapping.json
+
+echo 'done'

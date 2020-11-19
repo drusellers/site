@@ -28,7 +28,7 @@ export default function Sidebar(props) {
           <ul className="list">
             {props.tags.map((t) => {
               return (
-                <li id={t} className="tag">
+                <li key={t} className="tag">
                   <Link href="/tags/{t}">
                     <a>
                       <i className="fal fa-tag"></i>{" "}

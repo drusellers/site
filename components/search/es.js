@@ -82,13 +82,19 @@ export default {
 
 // effectively private
 function request(query) {
-  const headers = new Headers()
+  console.log('request', request);
+  const headers = new Headers();
   headers.append('Content-Type', 'application/json');
   headers.append('Accept', 'application/json');
   return fetch(`${URL}/posts/_search`, {
     method: 'POST',
-    mode: 'no-cors',
     body: JSON.stringify(getQuery(query)),
-    headers: headers
-  }).then(response => response.json())
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    console.log(response);
+    return response.json()
+  })
 }
