@@ -1,34 +1,52 @@
-import Nav from './nav';
-import Profile from './profile';
-import Sidebara from './sidebar';
-import Footer from './footer';
-import { Stack, Center, Sidebar } from './elo';
-import Search from './search';
+import Nav from "./nav";
+import Logo from "./logo";
+import Footer from "./footer";
+import Search from "./search";
+import TagList from "./tagList";
+import TitleSubtitle from "./titleSubtitle";
+import Stats from "./stats";
+import Date from "./date";
 
-export default function Layout({ title, subtitle, children, tags, date, isHome, wordCount, readingTime }) {
+// This component carves out sections of the page, and applies sensible padding to
+// them.
+export default function Layout({
+  title,
+  subtitle,
+  children,
+  tags,
+  date,
+  wordCount,
+  readingTime,
+}) {
   return (
-    <Center max="var(--document-width)" gutters="var(--s0)">
-      <Stack>
-        <Nav isHome={isHome || false} />
-        <Profile />
+    <>
+      <header className="container mx-auto flex h-24 max-w-document pt-6">
+        <div>
+          <Logo />
+        </div>
+        <div className="flex-grow">
+          <Nav />
+        </div>
+      </header>
+
+      <div className="container mx-auto h-6 max-w-document">
         <Search />
-        <Sidebar sideWidth="var(--sidebar-side-width)" contentMin="var(--sidebar-content-min)">
-          <div>
-            <Sidebara
-              tags={tags || []}
-              title={title}
-              subtitle={subtitle}
-              date={date}
-              wordCount={wordCount}
-              readingTime={readingTime}
-              />
-            <article>
-              {children}
-            </article>
-          </div>
-        </Sidebar>
-        <Footer />
-      </Stack>
-    </Center>
+      </div>
+
+      {/* This is the main stage for showing content */}
+      <div className="container mx-auto pt-6 flex max-w-document">
+        <div className="w-1/3 border-t-4 border-black pt-6 space-y-4">
+          <TitleSubtitle title={title} subtitle={subtitle} />
+          <Stats wordCount={wordCount} readingTime={readingTime} />
+          <Date dateString={date} />
+          <TagList tags={tags || []} />
+        </div>
+        <div>
+          <article className="max-w-prose p-6">{children}</article>
+        </div>
+      </div>
+
+      <Footer />
+    </>
   );
 }

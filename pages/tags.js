@@ -11,12 +11,12 @@ export default function Tags({allTags}) {
         return (
             <li key={tag}>
               <Link href={`/tags/${tag}`}>
-                <a >
+                <a className="text-blue-500">
                   <i className="fal fa-tag"></i>{" "}
                   {tag}
                 </a>
               </Link>{" "}
-              <span style={{'fontSize': 'var(--font-s-2)'}}>
+              <span className="text-xs">
                 ({allTags[tag]})
               </span>
             </li>

@@ -1,25 +1,22 @@
 import Layout from '../components/layout';
 import { getSortedPostsData } from '../lib/posts';
-import ShortDate from "../components/shortDate";
-import Link from "next/link";
+import YearHeading from '../components/yearHeading';
+import DateTitle from '../components/dateTitle';
 
 export default function Posts({allPosts}) {
   return (
     <Layout title="Posts">
       {Object.keys(allPosts).reverse().map((year) => {
         return (
-          <div className="archive">
-            <h3>{year}</h3>
+          <div key={year} className="my-8">
+            <YearHeading year={year} />
+            <div className="mt-4 space-y-1">
             {allPosts[year].map((q) => {
               return (
-                  <div id={q.id}>
-                    <ShortDate dateString={q.date} />
-                    <Link href={`/posts/${q.id}`}>
-                      <a>{q.title}</a>
-                    </Link>
-                  </div>
+                <DateTitle key={q.id} date={q.date} href={`/posts/${q.id}`} title={q.title} />
               );
             })}
+            </div>
           </div>
         );
       })}

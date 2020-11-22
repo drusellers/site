@@ -6,11 +6,11 @@ export default function Post({id, title, description}){
     d = <p>{description}</p>
   }
   return (
-    <>
+    <div>
       <Link href={`/posts/${id}`}>
-        <a><h2>{title}</h2></a>
+        <a className="text-blue-500 text-2xl font-heading"><h2>{title}</h2></a>
       </Link>
       {d}
-    </>
+    </div>
   )
 }

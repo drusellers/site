@@ -191,7 +191,7 @@ export default function Iron() {
           pounds is always two hundred pounds.
         </p>
 
-        <p class="source">
+        <p className="source">
           <a href="http://en.wikipedia.org/wiki/Henry_Rollins">Henry Rollins'</a>{" "}
           essay was originally published in Details magazine in 1994
         </p>

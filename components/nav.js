@@ -1,42 +1,26 @@
-import Link from 'next/link';
-import styles from './nav.module.scss';
+import Link from "next/link";
 
-export default function Nav({isHome}) {
-  let homeLink = <></>;
-  if(!isHome) {
-    homeLink = (
-    <Link href="/">
-      <a title="Home">
-          <span className="arrow">←</span>Home
-        </a>
-    </Link>
-    );
-  }
+export default function Nav() {
+  let linkStyle = "text-gray-500";
   return (
-    <header className={styles.nav}>
-      <nav>
-      {homeLink}
-      <aside>
+    <nav className="float-right">
+      <aside className="space-x-4">
+      <Link href="/about">
+          <a title="About" className={linkStyle}>About</a>
+        </Link>{" "}
         <Link href="/posts">
-          <a title="Archive">Archive</a>
+          <a title="Archive" className={linkStyle}>Archive</a>
         </Link>{" "}
         <Link href="/iron">
-          <a title="Iron and the Soul">
-            Iron and the Soul
-          </a>
+          <a title="Iron and the Soul" className={linkStyle}>Iron and the Soul</a>
         </Link>{" "}
         <Link href="/tags">
-          <a title="Tags">
-            Tags
-          </a>
+          <a title="Tags" className={linkStyle}>Tags</a>
         </Link>{" "}
         <Link href="/resume">
-          <a title="Resume">
-            Resume
-          </a>
+          <a title="Resume" className={linkStyle}>Resume</a>
         </Link>
       </aside>
-      </nav>
-    </header>
+    </nav>
   );
 }

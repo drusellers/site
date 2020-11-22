@@ -5,7 +5,7 @@ export default function Allegory() {
   return (
     <Layout title="Allegory of the Cave">
       <Center>
-        <div class="allegory">
+        <div className="allegory">
           <h1>The Republic - Book VII</h1>
           <h3>
             by Plato{" "}
@@ -253,7 +253,7 @@ export default function Allegory() {
           </p>
           <hr />
 
-          <p class="source">
+          <p className="source">
             <a href="http://en.wikipedia.org/wiki/Plato">Plato's</a> Book VII is
             a part of The Republic (514a–520a)
           </p>

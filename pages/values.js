@@ -8,7 +8,7 @@ export default function Values({ allValues }) {
     <Layout title="Values">
       {allValues.map((v) => {
         return (
-          <div class="archive">
+          <div className="archive">
             <ul>
               <div className="mv2">
                 <Link href={`/values/${v.id}`}>

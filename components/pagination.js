@@ -17,7 +17,7 @@ export default function Pagination({ hasPrev, prevUrl, hasNext, nextUrl }) {
       next = (
         <span className="next">
           <a className="link blue" href={nextUrl}>
-            Older Posts <span class="arrow">→</span>
+            Older Posts <span className="arrow">→</span>
           </a>
         </span>
       );

@@ -6,5 +6,5 @@ export default function ShortDate({ dateString }) {
   }
 
   const date = parseISO(dateString)
-  return <time dateTime={dateString}>{format(date, 'LLL dd')}</time>
+  return <time className="font-mono text-gray-400 text-sm" dateTime={dateString}>{format(date, 'LLL dd')}</time>
 }

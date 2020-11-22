@@ -1,23 +1,18 @@
 import { getSortedQuotesData } from "../lib/quotes";
-import ShortDate from "../components/shortDate";
-import Link from "next/link";
 import Layout from '../components/layout';
+import YearHeading from '../components/yearHeading';
+import DateTitle from '../components/dateTitle';
 
 export default function Quotes({ allQuotes }) {
   return (
     <Layout title="Quotes">
       {Object.keys(allQuotes).reverse().map((year) => {
         return (
-          <div className="archive">
-            <h3>{year}</h3>
+          <div>
+            <YearHeading year={year} />
             {allQuotes[year].map((q) => {
               return (
-                  <div id={q.id}>
-                    <ShortDate dateString={q.date} />
-                    <Link href={`/quotes/${q.id}`}>
-                      <a>{q.title}</a>
-                    </Link>
-                  </div>
+                <DateTitle key={q.id} date={q.date} href={`/quotes/${q.id}`} title={q.title} />
               );
             })}
           </div>

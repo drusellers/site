@@ -1,80 +1,36 @@
 import Layout from "../components/layout";
 import { getResumeData } from "../lib/data";
-import styles from './resume.module.css';
-import { Switcher, Stack } from '../components/elo';
+import Experience from "../components/resume/experience";
+import Education from "../components/resume/education";
 
 export default function Resume({ resumeData }) {
+  let headingClasses = "text-2xl my-4 font-bold font-heading";
   return (
     <Layout title="Resume">
-      <div className={styles.resume}>
-        <div>
-          <blockquote>{resumeData.summary}</blockquote>
+      <div className="space-y-6">
+        <blockquote className="ml-6">{resumeData.summary}</blockquote>
 
-          <h3>Work Experience</h3>
-          {resumeData.jobs.map((j) => {
-            return (
-              <div key={j.employeer} className={styles.experience}>
-                <h4>
-                  {j.employer}{" "}
-                  <small>
-                    <a href={j.url} target="_blank">
-                      {j.urllabel}{" "}
-                      <i className="far fa-external-link-square"></i>
-                    </a>
-                  </small>
-                </h4>
-                <Switcher>
-                  <div>
-                    <div className={styles.title}>{j.title}</div>
-                    <div className={styles.duration}>
-                      {j.start} - {j.end}
-                    </div>
-                  </div>
-                </Switcher>
-                {j.description.map((d,i) => {
-                  {
-                    /* markdown ify */
-                  }
-                  return <p key={i}>{d}</p>;
-                })}
-              </div>
-            );
-          })}
-          <h3 className="measure lh-title">Education</h3>
+        <h3 className={headingClasses}>Work Experience</h3>
+        {resumeData.employeers.map((j) => {
+          return <Experience job={j} />;
+        })}
+
+        <h3 className={headingClasses}>Education</h3>
+        <div className="ml-6">
           {resumeData.education.map((e) => {
+            return <Education school={e} />;
+          })}
+        </div>
+
+        <h3 className={headingClasses}>Community Activities</h3>
+        <div className="ml-6 space-y-4">
+          {resumeData.activities.map((a, i) => {
             return (
-              <div key={e.school} className={styles.education}>
-                <h4>
-                  {e.school}{" "}
-                  <small>
-                    <a href={e.url} target="_blank">
-                      {e.urllabel}{" "}
-                      <i className="far fa-external-link-square"></i>
-                    </a>
-                  </small>
-                </h4>
-                <Switcher>
-                  <div>
-                    <div>
-                      {e.major}
-                      <br />
-                      <small> {e.minor}</small>
-                    </div>
-                    <div className={styles.resumeDuration}>
-                      {e.start} - {e.end}
-                    </div>
-                  </div>
-                </Switcher>
+              <div key={i}>
+                {a}
               </div>
             );
           })}
-
-          <h3>Community Activities</h3>
-          <Stack>
-            {resumeData.activities.map((a, i) => {
-              return <div key={i} className={styles.activity}>{a}</div>;
-            })}
-          </Stack>
         </div>
       </div>
     </Layout>
