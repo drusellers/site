@@ -1,14 +1,15 @@
 import Layout from "../components/layout";
-import Link from 'next/link';
 
-// core: Open, Acheivement, Respect, Intellect
+// core: Open, Achievement, Respect, Intellect
 export default function About() {
+  let now = new Date();
+  let start = new Date('1997-08-01')
   return (
     <Layout title="About">
       <div className="space-y-8">
         <p>
-          <img className="float-right" src="/images/pic.png" />
-          With over 20 years of experience blending technology and business, I
+          <img className="rounded-md mb-6" src="/images/planning.jpg" />
+          With over {now.getFullYear() - start.getFullYear()} years of experience blending technology and business, I
           can explain in both technical terms and non-technical terms why a
           variety of technology choices can or should be made. I'm just as
           comfortable analyzing a P&amp;L as I am dissecting an architectural
@@ -24,13 +25,6 @@ export default function About() {
           I have multiple systems in multiple companies that continue to produce
           positive business value even after 10 years of service.
         </p>
-        <div className="bg-blue-100 p-4 my-4 rounded border border-blue-400">
-          <Link href="/resume">
-            <a>
-              Resume
-            </a>
-          </Link>
-        </div>
       </div>
     </Layout>
   );

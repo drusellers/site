@@ -3,7 +3,8 @@ import Link from "next/link";
 export default function Nav() {
   let linkStyle = "text-gray-500";
   return (
-    <nav className="float-right">
+    <div>
+    <nav className="sm:float-right">
       <aside className="space-x-4">
       <Link href="/about">
           <a title="About" className={linkStyle}>About</a>
@@ -22,5 +23,6 @@ export default function Nav() {
         </Link>
       </aside>
     </nav>
+    </div>
   );
 }

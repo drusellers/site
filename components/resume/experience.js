@@ -12,9 +12,9 @@ export default function Experience({ job }) {
       {job.roles.map((role) => {
         return (
           <div key={role.title} className="space-y-3">
-            <div className="flex">
+            <div className="flex flex-col sm:flex-row">
               <div className="flex-1">{role.title}</div>
-              <div className="flex-1 text-right">
+              <div className="flex-1 sm:text-right">
                 {role.start} - {role.end}
               </div>
             </div>

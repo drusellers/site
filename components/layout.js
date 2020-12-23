@@ -20,22 +20,22 @@ export default function Layout({
 }) {
   return (
     <>
-      <header className="container mx-auto flex h-24 max-w-document pt-6">
+      <header className="container mx-auto flex flex-col sm:flex-row h-24 max-w-document p-6">
         <div>
           <Logo />
         </div>
-        <div className="flex-grow">
+        <div className="flex-grow my-6">
           <Nav />
         </div>
       </header>
 
-      <div className="container mx-auto h-6 max-w-document">
+      {/* <div className="container mx-auto max-w-document my-6 p-3">
         <Search />
-      </div>
+      </div> */}
 
       {/* This is the main stage for showing content */}
-      <div className="container mx-auto pt-6 flex max-w-document">
-        <div className="w-1/3 border-t-4 border-black pt-6 space-y-4">
+      <div className="container mx-auto flex flex-col sm:flex-row max-w-document my-6 min-h-page">
+        <div className="sm:w-1/3 border-t-4 border-black pt-6 space-y-4">
           <TitleSubtitle title={title} subtitle={subtitle} />
           <Stats wordCount={wordCount} readingTime={readingTime} />
           <Date dateString={date} />

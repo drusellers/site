@@ -1,5 +1,4 @@
 import Layout from "../components/layout";
-import { Center } from '../components/elo'
 
 export default function Iron() {
   return (

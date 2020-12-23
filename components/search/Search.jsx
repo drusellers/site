@@ -21,9 +21,11 @@ export default function Search() {
   }, [debouncedQuery]);
 
   return (
+    <div className="block">
     <div style={{'position':'relative'}}>
       <SearchBox query={query} onQueryChange={setQuery} />
       <SearchResultList hits={hits} />
+    </div>
     </div>
   );
 }

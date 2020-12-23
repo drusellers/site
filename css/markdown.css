@@ -50,6 +50,14 @@
   margin-top: var(--spacing-none)
 }
 
+.markdown blockquote+p {
+  margin-top: 1.5rem;
+}
+
+.markdown em {
+  margin-right: 0.1rem;
+}
+
 /* .markdown>ul, .markdown>ol {
   padding: 0;
   max-width: 30em;

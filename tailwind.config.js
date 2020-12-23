@@ -4,9 +4,12 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    minHeight: {
+      'page': '50vh'
+    },
     extend: {
       fontFamily: {
-        heading: ["Nunito"],
+        heading: ["Nunito", 'sans-serif'],
         copy: ['"Open Sans"'],
       },
       maxWidth: {

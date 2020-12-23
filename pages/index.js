@@ -10,9 +10,9 @@ export default function Home({ beforeFold, afterFold }) {
         {beforeFold.map(({ id, date, title, description }) => (
             <Post key={id} id={id} title={title} description={description} />
         ))}
-      </div>
-      <Placard />
-      <div className="space-y-4">
+      {/*</div>
+       insert something here 5 posts in
+      <div className="space-y-4">*/}
         {afterFold.map(({ id, date, title, description }) => (
             <Post key={id} id={id} title={title} description={description} />
         ))}
