@@ -5,7 +5,7 @@ import remark from 'remark'
 import html from 'remark-html'
 import { parseISO } from 'date-fns'
 
-const postsDirectory = path.join(process.cwd(), 'posts')
+const postsDirectory = path.join(process.cwd(), 'src/posts')
 
 export function getSortedPostsData() {
   // Get file names under /posts

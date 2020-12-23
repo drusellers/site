@@ -3,11 +3,10 @@ import path from "path";
 import matter from "gray-matter";
 import remark from "remark";
 import html from "remark-html";
-import { parseISO } from 'date-fns'
 
-const postsDirectory = path.join(process.cwd(), "data", "quotes");
+const postsDirectory = path.join(process.cwd(), 'src', "values");
 
-export function getSortedQuotesData() {
+export function getSortedValuesData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
@@ -21,12 +20,9 @@ export function getSortedQuotesData() {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
 
-    const year = parseISO(matterResult.data.date).getFullYear();
-
     // Combine the data with the id
     return {
       id,
-      year: year,
       ...matterResult.data,
     };
   });
@@ -40,7 +36,7 @@ export function getSortedQuotesData() {
   });
 }
 
-export function getAllQuotesIds() {
+export function getAllValuesIds() {
   const fileNames = fs.readdirSync(postsDirectory);
 
   // Returns an array that looks like this:
@@ -65,7 +61,7 @@ export function getAllQuotesIds() {
   });
 }
 
-export async function getQuoteData(id) {
+export async function getValueData(id) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
