@@ -6,3 +6,4 @@ data/manifest.json
 .next
 yarn-error.log
 .idea
+out
