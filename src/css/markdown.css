@@ -9,11 +9,23 @@
   /* measure */
   max-width: 30em;
 
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+
 }
 
-.markdown p+p {
-  /* Do I need this? */
+.markdown>p:first-child {
+  /* mt0-ns */
+  margin-top: 0;
+}
+
+.markdown h1 {
+  font-size: 2rem;
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.markdown h2 {
+  font-size: 1.5rem;
 }
 
 .markdown ul, .markdown ol {
@@ -24,10 +36,17 @@
   transition: color .15s ease-in;
 }
 
+.markdown table {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .markdown blockquote {
   border-left: 3px solid #357edd;
   padding-left: 1rem;
   margin-left: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .markdown blockquote p {
@@ -45,10 +64,7 @@
   font-size: 0.75rem;
 }
 
-.markdown>p {
-  /* mt0-ns */
-  margin-top: var(--spacing-none)
-}
+
 
 .markdown blockquote+p {
   margin-top: 1.5rem;
@@ -58,16 +74,22 @@
   margin-right: 0.1rem;
 }
 
-/* .markdown>ul, .markdown>ol {
+.markdown ul, .markdown ol {
   padding: 0;
   max-width: 30em;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.markdown>ul ul {
-  padding: 0;
-  padding-left: 1rem;
+.markdown ul {
+  list-style-type: disc;
 }
+.markdown li {
+  display: list-item;
+}
+
+
 
 .markdown li:before {
   color: rgba(0, 0, 0, 0.3);
-} */
+}
