@@ -1,3 +1,0 @@
----
-SectionTitle: Quotes
----

@@ -1,1 +1,3 @@
-hugo server -D
+#!/bin/bash
+
+yarn next dev

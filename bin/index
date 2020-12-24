@@ -1,17 +1,3 @@
 #!/bin/bash
 
-# https://forestry.io/blog/search-with-algolia-in-hugo/
-
-# generate json
-# hugo
-
-if [ "${ES_URL}x" == "x" ]; then
-  echo "sourceing"
-  source .env
-  echo ''
-fi
-
-# push to elasticsearch
-echo "Indexing now"
-curl -s -H "Content-Type: application/x-ndjson" -XPOST "${ES_URL}/posts/_bulk" --data-binary @public/bonsai.json > /dev/null
-echo "Indexing complete"
+yarn index

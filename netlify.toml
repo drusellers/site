@@ -1,3 +1,5 @@
+[build]
+  publish = "out"
 [context.branch-deploy]
   command = "bin/build -b \"${DEPLOY_PRIME_URL}\""
 
