@@ -1,4 +1,4 @@
-import Layout from "../../components/layout";
+import Layout from "../../layouts/layout";
 import { getAllValuesIds, getValueData } from "../../lib/values";
 
 export default function Post({ postData }) {

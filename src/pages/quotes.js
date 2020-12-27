@@ -1,5 +1,5 @@
 import { getSortedQuotesData } from "../lib/quotes";
-import Layout from '../components/layout';
+import Layout from '../layouts/layout';
 import YearHeading from '../components/yearHeading';
 import DateTitle from '../components/dateTitle';
 

@@ -1,7 +1,7 @@
 import { getSortedValuesData } from "../lib/values";
 import ShortDate from "../components/shortDate";
 import Link from "next/link";
-import Layout from "../components/layout";
+import Layout from "../layouts/layout";
 
 export default function Values({ allValues }) {
   return (

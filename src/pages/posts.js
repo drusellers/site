@@ -1,4 +1,4 @@
-import Layout from '../components/layout';
+import Layout from '../layouts/layout';
 import { getSortedPostsData } from '../lib/posts';
 import YearHeading from '../components/yearHeading';
 import DateTitle from '../components/dateTitle';
@@ -8,9 +8,9 @@ export default function Posts({allPosts}) {
     <Layout title="Posts">
       {Object.keys(allPosts).reverse().map((year) => {
         return (
-          <div key={year} className="my-8">
+          <div key={year} className="mb-8">
             <YearHeading year={year} />
-            <div className="mt-4 space-y-1">
+            <div className="mt-2 space-y-1">
             {allPosts[year].map((q) => {
               return (
                 <DateTitle key={q.id} date={q.date} href={`/posts/${q.id}`} title={q.title} />

@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../layouts/layout";
 import { getResumeData } from "../lib/data";
 import Experience from "../components/resume/experience";
 import Education from "../components/resume/education";

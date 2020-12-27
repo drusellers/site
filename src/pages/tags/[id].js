@@ -1,4 +1,4 @@
-import Layout from "../../components/layout";
+import Layout from "../../layouts/layout";
 import { getAllTagIds, getTagData } from "../../lib/posts";
 import ShortDate from "../../components/shortDate";
 import Link from "next/link";

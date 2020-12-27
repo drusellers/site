@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../layouts/layout";
 
 //title: Code
 // subtitle: Adapted from Jocko Willink

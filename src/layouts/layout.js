@@ -1,11 +1,11 @@
-import Nav from "./nav";
-import Logo from "./logo";
-import Footer from "./footer";
-import Search from "./search";
-import TagList from "./tagList";
-import TitleSubtitle from "./titleSubtitle";
-import Stats from "./stats";
-import Date from "./date";
+import Nav from "../components/nav";
+import Logo from "../components/logo";
+import Footer from "../components/footer";
+import Search from "../components/search";
+import TagList from "../components/tagList";
+import TitleSubtitle from "../components/titleSubtitle";
+import Stats from "../components/stats";
+import Date from "../components/date";
 
 // This component carves out sections of the page, and applies sensible padding to
 // them.
@@ -20,7 +20,7 @@ export default function Layout({
 }) {
   return (
     <>
-      <header className="container mx-auto flex flex-col sm:flex-row h-24 max-w-document p-6">
+      <header className="container mx-auto flex flex-col max-w-document sm:flex-row sm:h-24 pt-6 px-6">
         <div>
           <Logo />
         </div>
@@ -35,14 +35,14 @@ export default function Layout({
 
       {/* This is the main stage for showing content */}
       <div className="container mx-auto flex flex-col sm:flex-row max-w-document my-6 min-h-page">
-        <div className="sm:w-1/3 border-t-4 border-black pt-6 space-y-4">
+        <div className="px-6 my-6 space-y-4 sm:w-1/3 sm:border-t-4 sm:border-black">
           <TitleSubtitle title={title} subtitle={subtitle} />
           <Stats wordCount={wordCount} readingTime={readingTime} />
           <Date dateString={date} />
           <TagList tags={tags || []} />
         </div>
-        <div>
-          <article className="max-w-prose p-6">{children}</article>
+        <div className="px-6 my-6">
+          <article className="max-w-prose">{children}</article>
         </div>
       </div>
 

@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../layouts/layout";
 
 // core: Open, Achievement, Respect, Intellect
 export default function About() {

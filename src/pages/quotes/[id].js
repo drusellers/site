@@ -1,4 +1,4 @@
-import Layout from "../../components/layout";
+import Layout from "../../layouts/layout";
 import { getAllQuotesIds, getQuoteData } from "../../lib/quotes";
 
 export default function Post({ postData }) {

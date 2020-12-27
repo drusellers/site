@@ -1,6 +1,8 @@
 import Link from 'next/link';
 
 export default function TagList({ tags }) {
+  if (tags.length === 0) return <></>
+
   return (
     <ul className="list">
       {tags.map((t) => {

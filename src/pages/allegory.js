@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../layouts/layout";
 import {getAllegoryData} from "../lib/data";
 import remark from "remark";
 import html from "remark-html";
