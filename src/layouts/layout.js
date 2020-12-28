@@ -35,7 +35,7 @@ export default function Layout({
 
       {/* This is the main stage for showing content */}
       <div className="container mx-auto flex flex-col sm:flex-row max-w-document my-6 min-h-page">
-        <div className="px-6 my-6 space-y-4 sm:w-1/3 sm:border-t-4 sm:border-black">
+        <div className="px-6 my-6 space-y-4 sm:pt-6 sm:w-1/3 sm:border-t-4 sm:border-black">
           <TitleSubtitle title={title} subtitle={subtitle} />
           <Stats wordCount={wordCount} readingTime={readingTime} />
           <Date dateString={date} />

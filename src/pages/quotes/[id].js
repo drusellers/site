@@ -15,7 +15,7 @@ export default function Post({ postData }) {
   }
   return (
     <Layout title={postData.title}>
-      <div className="quote">
+      <div className="quote markdown">
         <blockquote
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         ></blockquote>

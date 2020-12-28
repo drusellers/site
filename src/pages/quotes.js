@@ -8,7 +8,7 @@ export default function Quotes({ allQuotes }) {
     <Layout title="Quotes">
       {Object.keys(allQuotes).reverse().map((year) => {
         return (
-          <div>
+          <div className="mb-8">
             <YearHeading year={year} />
             {allQuotes[year].map((q) => {
               return (
