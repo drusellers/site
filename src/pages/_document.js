@@ -11,10 +11,10 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <script src="https://kit.fontawesome.com/d76d002214.js" crossOrigin="anonymous"></script>
-           <meta charSet="utf-8" />
+          <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-
+          <link rel="icon" type="image/png" href="/images/favicon.png" />
           <meta name="author" content="Dru Sellers"></meta>
           <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans&display=swap" rel="stylesheet"></link>
 
