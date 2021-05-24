@@ -39,7 +39,7 @@
     "sass": "^1.28.0",
     "styled-components": "^5.2.1",
     "tailwindcss": "^2.0.1",
-    "use-debounce": "^5.0.0",
+    "use-debounce": "^6.0.0",
     "yaml": "^1.10.0"
   }
 }
