@@ -43,3 +43,8 @@
   for = "/css/*.css"
   [headers.values]
   Cache-Control = "max-age=31536000"
+
+[[redirects]]
+  from = "/greenpipes/2016/10/30/greenpipes.html"
+  to = "/posts/greenpipes"
+  status = 301
