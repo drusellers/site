@@ -27,7 +27,7 @@
     "autoprefixer": "^10.0.2",
     "date-fns": "^2.16.1",
     "gray-matter": "^4.0.2",
-    "next": "^10.0.0",
+    "next": "^11.0.0",
     "postcss": "^8.1.7",
     "postcss-preset-env": "^6.7.0",
     "react": "^17.0",
@@ -39,7 +39,7 @@
     "sass": "^1.28.0",
     "styled-components": "^5.2.1",
     "tailwindcss": "^2.0.1",
-    "use-debounce": "^6.0.0",
+    "use-debounce": "^7.0.0",
     "yaml": "^1.10.0"
   }
 }
