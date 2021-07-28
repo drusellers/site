@@ -28,7 +28,6 @@ class MyDocument extends Document {
               gtag('config', 'G-81R9YYS482');
               `,
             }} />
-            <title>Dru Sellers</title>
         </Head>
         <body>
           <Main />
