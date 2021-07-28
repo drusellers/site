@@ -7,7 +7,6 @@ const platoClassNames = "font-semibold";
 const glauconClassNames = "font-semibold";
 
 export default function Allegory({data}) {
-  console.log(data)
   return (
     <Layout title="Allegory of the Cave">
         <div className="allegory">
