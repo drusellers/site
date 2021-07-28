@@ -22,7 +22,7 @@ Today, I will reproduce his examples using the recently extracted pipeline from 
 
 ## The Simplest Pipeline
 
-{{< gist drusellers cda975d202e263dc7f6ee31c1d906404 "BlankPipeline.cs" >}}
+<script src="https://gist.github.com/drusellers/cda975d202e263dc7f6ee31c1d906404.js?file=BlankPipeline.cs"></script>
 
 In this example what we are seeing is the creation of a brand new pipeline, now since GreenPipes is a different approach, the code will look different. The pipe isn't interesting _at all yet_, and we have this new thing called a _[Context](http://blog.phatboyg.com/GreenPipes/texts/contexts/)_. The context in this example, `BusinessContext`, is a silly name for our demo but what it represents is the context of the request, follow the link to read more about contexts in depth via the budding GreenPipes documentation. But for now we can just think about it as our custom `HttpContext` like object.
 
@@ -30,7 +30,7 @@ In this example what we are seeing is the creation of a brand new pipeline, now 
 
 Ok, so step one is to add Serilog integration.
 
-{{< gist drusellers cda975d202e263dc7f6ee31c1d906404 "SerilogFilter.cs" >}}
+<script src="https://gist.github.com/drusellers/cda975d202e263dc7f6ee31c1d906404.js?file=SerilogFilter.cs"></script>
 
 Here we can see a divergence from MediatR. In GreenPipes you compose your pipeline by building up a [set of filters for your pipeline](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PipesAndFilters.html). In this simple case I am using the `InlineFilter` extension method which is great for prototyping out new filters. I will build the rest of the examples out using this method, but at the end I will share the suggested approach for building a reusable and sharable filter.
 
@@ -38,7 +38,7 @@ On line #5 above we are opening up this new `InlineFilter` which allows us to pa
 
 How about some metrics?
 
-{{< gist drusellers cda975d202e263dc7f6ee31c1d906404 "MetricsPipeline.cs" >}}
+<script src="https://gist.github.com/drusellers/cda975d202e263dc7f6ee31c1d906404.js?file=MetricsPipeline.cs"></script>
 
 > Note, I am not sure what library Mr. Bogard is using, so this is just some fake code at this point.
 
@@ -46,7 +46,7 @@ How about some metrics?
 
 Alright, lets get to something meaty! Let's follow Jimmy's lead and bake in some Fluent Validation support.
 
-{{< gist drusellers cda975d202e263dc7f6ee31c1d906404 "ValidationPipeline.cs" >}}
+<script src="https://gist.github.com/drusellers/cda975d202e263dc7f6ee31c1d906404.js?file=ValidationPipeline.cs"></script>
 
 Just like Jimmy's example we have a way to apply validation logic in consistent manner with just a single location at play. One thing that is not directly obvious in my example is how we end up handling the _contravariant_ aspect of validation that Jimmy points out. For that, we will have to dive into how GreenPipes does dynamic message dispatch in another blog post. For now I'll have to tempt you with a [unit test](https://github.com/phatboyg/GreenPipes/blob/develop/src/GreenPipes.Tests/Dispatch_Specs.cs) from the code base. You can see some of how it all works at the end in the filter creation at the end.
 
@@ -56,7 +56,7 @@ If the context passes validation, we then call `next.Send(cxt)` other wise we th
 
 ## Authorization
 
-{{< gist drusellers cda975d202e263dc7f6ee31c1d906404 "AuthorizingPipeline.cs" >}}
+<script src="https://gist.github.com/drusellers/cda975d202e263dc7f6ee31c1d906404.js?file=AuthorizingPipeline.cs"></script>
 
 Authorization is similar to Fluent Validation above, so not much to explain here.
 
@@ -68,7 +68,7 @@ By now I hope you can see where this is going. Jimmy lays out a great approach t
 
 In the end you might have something like this that you can hand off to the rest of the team. Not the prettiest thing out there, and not nearly as pretty as what Jimmy has laid out.
 
-{{< gist drusellers cda975d202e263dc7f6ee31c1d906404 "Final.cs" >}}
+<script src="https://gist.github.com/drusellers/cda975d202e263dc7f6ee31c1d906404.js?file=Final.cs"></script>
 
 ## Finally, The Deep Dive
 
@@ -84,13 +84,13 @@ And here is how we could build a complete filter for Fluent Validation with an e
 
 #### The Context
 
-{{< gist drusellers 27c1834368ebd7fa6425b21912da8358 "0_ValidationFailureContext.cs" >}}
+<script src="https://gist.github.com/drusellers/27c1834368ebd7fa6425b21912da8358.js?file=0_ValidationFailureContext.cs"></script>
 
 The context for any GreenPipes pipeline is the heavy lifter of the data. In MassTransit we work a lot with the `ReceiveContext<TMessage>` which has, as one of its properties, the venerable `Message`. Now, in our scenario, we wrap the existing context and then attach the validation failures. We do this so that the downstream `ValidationFailurePipe` can decide what to do with them. That's right, its another pipe. We will get to that in more detail a bit further down.
 
 #### The Extension Method
 
-{{< gist drusellers 27c1834368ebd7fa6425b21912da8358 "0_FluentValidationExtensionMethods.cs" >}}
+<script src="https://gist.github.com/drusellers/27c1834368ebd7fa6425b21912da8358.js?file=0_FluentValidationExtensionMethods.cs"></script>
 
 Like all things in MassTransit, the extensions to the core framework show up as extension methods. In this case GreenPipes exposes some very low level functions that are pretty chatty and abstract. The recommended approach is to provide an extension method that papers over this complexity for your users. You can see this pattern in TopShelf, MassTransit and now GreenPipes.
 
@@ -98,7 +98,7 @@ Like all things in MassTransit, the extensions to the core framework show up as 
 
 #### The Specification
 
-{{< gist drusellers 27c1834368ebd7fa6425b21912da8358 "1_FluentValidationSpecification.cs" >}}
+<script src="https://gist.github.com/drusellers/27c1834368ebd7fa6425b21912da8358.js?file=1_FluentValidationSpecification.cs"></script>
 
 This is one of my favorite pieces of the puzzle. GreenPipes forces you to make a specification class. This object holds the data from the extension method and allows you to populate your filter with that data. This by itself was pretty annoying for me, it felt like SRP for the sake of SRP. Until I wrote my first complex filter and came to _REALLY_ appreciate the `Validate()` method.
 
@@ -108,11 +108,11 @@ The `Validate()` method gives you a chance to validate the user's input in build
 
 I know it's taken a while to get here, but we have finally arrived at the actual filter. At first blush this should seem very familiar as its almost a verbatim copy of what Mr. Bogard wrote up. I'd rather instead focus on the two further differences in the GreenPipe filter.
 
-{{< gist drusellers 27c1834368ebd7fa6425b21912da8358 "2_FluentValidationFilter.cs" >}}
+<script src="https://gist.github.com/drusellers/27c1834368ebd7fa6425b21912da8358.js?file=2_FluentValidationFilter.cs"></script>
 
 First, we have the `Probe` method. This method provides a mechanism for dynamically inspecting the pipe at run time. This is the heart of the diagnostics in MassTransit and it was pulled out so that any one building on top of MassTransit can use it. Here's some example output from a unit test.
 
-{{< gist drusellers 27c1834368ebd7fa6425b21912da8358 "9_probe.json" >}}
+<script src="https://gist.github.com/drusellers/27c1834368ebd7fa6425b21912da8358.js?file=9_probe.json"></script>
 
 Above, we can see the results of our Serilog filter, our FluentValidation filter and the inline filter that I'm using for the security concern. By taking the extra time to build our filters the GreenPipes' way we can expose a dynamically rich amount of data in a structured format. Currently, this uses JSON.Net to serialize data and you could easily use JSON.Net to then deserialize this data back into C# objects for use in your project's dashboard.
 
@@ -122,7 +122,7 @@ Above, we can see the results of our Serilog filter, our FluentValidation filter
 
 If you were to follow this process to its logical conclusion, your final pipe could look as minimal as this on the surface of the pipe.
 
-{{< gist drusellers cda975d202e263dc7f6ee31c1d906404 "clean.cs" >}}
+<script src="https://gist.github.com/drusellers/cda975d202e263dc7f6ee31c1d906404.js?file=clean.cs"></script>
 
 ## A parting note
 
