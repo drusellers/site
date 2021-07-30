@@ -1,6 +1,5 @@
 import Layout from "../../layouts/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import { indexPost } from '../../lib/es';
 
 export default function Post({ postData }) {
   return (
@@ -15,6 +14,8 @@ export default function Post({ postData }) {
   );
 }
 
+// Support Static Site Generation
+// https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation
 export async function getStaticPaths() {
   const paths = getAllPostIds();
   return {
@@ -26,8 +27,8 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   // Fetch necessary data for the blog post using params.id
   const postData = await getPostData(params.id);
-  await indexPost(postData);
-
+  // TODO: Comment out when searching is solved
+  // await indexPost(postData);
   return {
     props: {
       postData,
