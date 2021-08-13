@@ -89,8 +89,8 @@ export default function Footer() {
             <i className="fab fa-creative-commons-by"></i> Content on this site
             is licensed under a{" "}
             <a
-              rel="license"
-              href="http://creativecommons.org/licenses/by/4.0/"
+              rel="noreferrer"
+              href="https://creativecommons.org/licenses/by/4.0/"
               target="_blank"
             >
               Creative Commons Attribution 4.0 International License

@@ -3,10 +3,10 @@ import Link from "next/link";
 export default function Logo() {
   return (
       <Link href="/">
-        <a className="block">
+        <a className="block h-12">
           <img
-            className="h-12"
-            height="90"
+            width="143"
+            height="48"
             src="/images/logo.svg"
             alt="Dru Sellers"
           />

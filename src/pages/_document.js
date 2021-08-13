@@ -16,6 +16,7 @@ class MyDocument extends Document {
 
           <link rel="icon" type="image/png" href="/images/favicon.png" />
           <meta name="author" content="Dru Sellers"></meta>
+          <meta name="description" content="Dru's thoughts"></meta>
           <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans&display=swap" rel="stylesheet"></link>
 
           {/* !-- Global site tag (gtag.js) - Google Analytics -- */}
