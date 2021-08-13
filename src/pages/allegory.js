@@ -1,6 +1,6 @@
 import Layout from "../layouts/layout";
 import {getAllegoryData} from "../lib/data";
-import remark from "remark";
+import { remark } from "remark";
 import html from "remark-html";
 
 const platoClassNames = "font-semibold";
