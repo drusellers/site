@@ -11,18 +11,8 @@
   for = "/*.html"
   [headers.values]
   Link = [
-  "</css/main.css>; rel=preload; as=style",
-  "</js/main.js>; rel=preload; as=script",
-  "</js/runtime.js>; rel=preload; as=script",
-  "</css/vendors.css>; rel=preload; as=style",
-  "</js/vendors.js>; rel=preload; as=script"
+    "</images/logo.svg>; rel=preload; as=image"
   ]
-
-# Needed for the home page
-[[headers]]
-  for = "/"
-  [headers.values]
-  Link = "</images/dive.png>; rel=preload; as=image"
 
 [[headers]]
   for = "/images/*.svg"
