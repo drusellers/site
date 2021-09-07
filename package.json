@@ -35,7 +35,7 @@
     "react-resize-observer-hook": "^0.0.2",
     "remark": "^14.0.0",
     "remark-gfm": "^2.0.0",
-    "remark-html": "^14.0.0",
+    "remark-html": "^14.0.1",
     "sass": "^1.28.0",
     "styled-components": "^5.2.1",
     "tailwindcss": "^2.0.1",
