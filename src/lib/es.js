@@ -21,7 +21,7 @@ export function indexPost(post) {
     'date': post.date,
     'publishdate': post.date
   };
-  request(doc);
+  return request(doc);
 }
 
 
