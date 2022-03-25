@@ -1,10 +1,9 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  purge: [
+  content: [
     './src/**/*.js'
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     minHeight: {
       'page': '50vh'
