@@ -1,9 +1,9 @@
 ---
-title:  "Comfort"
-date:   '2013-06-24'
+title: 'Comfort'
+date: '2013-06-24'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Dean Karnazes
 type: quote
 ---

@@ -1,9 +1,9 @@
 ---
-title:  "Normality"
-date:   '2020-10-31'
+title: 'Normality'
+date: '2020-10-31'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Vincent van Gogh
 type: quote
 ---

@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Automatonymous and an Order"
-date:   '2016-11-05'
+title: 'Automatonymous and an Order'
+date: '2016-11-05'
 categories: Architecture
 tags:
-- architecture
+  - architecture
 disqus_id: 22ec0c92-bb3f-4d81-ad4f-b92820f08292
 withStats: true
 draft: true

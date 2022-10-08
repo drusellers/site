@@ -1,14 +1,12 @@
 ---
-title:  "Type Pool"
-date:   '2014-09-10'
+title: 'Type Pool'
+date: '2014-09-10'
 categories: architecture
 tags:
-- architecture
+  - architecture
 disqus_id: 548d3b4e-79a9-4f82-981e-5603ba89738e
 withStats: true
-aliases: [
-    "/architecture/2014/09/10/typepool.html"
-]
+aliases: ['/architecture/2014/09/10/typepool.html']
 ---
 
 The Type Pool concept comes from working with the [Fubu code base](https://github.com/DarthFubuMVC/fubumvc/blob/master/src/FubuMVC.Core/Registration/TypePool.cs)
@@ -17,11 +15,11 @@ its a pretty simple class that I find makes type scanning much simpler.
 {{< highlight csharp >}}
 namespace v23athletics.infrastructure.types
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Reflection;
-    using Fasterflect;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using Fasterflect;
 
     public class TypePool
     {
@@ -75,6 +73,7 @@ namespace v23athletics.infrastructure.types
             return Scan(t => t.Implements<TInterface>());
         }
     }
+
 }
 {{< /highlight >}}
 
@@ -91,37 +90,36 @@ they tend to lack is a way to pass around the 'Application Assemblies' which is
 is something the TypePool can do. By passing the TypePool into the lower services
 or IoC 'Registries' I can use there scanning capabilities or I can use my own.
 
-
 {{< highlight csharp >}}
 
 public class MySubRegistry : Registry
 {
-    public MySubRegistry(TypePool pool)
-    {
-        Scan(scanner =>
-        {
-            scanner.AddAllTypes<IService>();
-            foreach(var ass in pool.Assemblies)
-                scanner.Assembly(ass);
-        })
-    }
+public MySubRegistry(TypePool pool)
+{
+Scan(scanner =>
+{
+scanner.AddAllTypes<IService>();
+foreach(var ass in pool.Assemblies)
+scanner.Assembly(ass);
+})
+}
 }
 
 public class MySubModule : Module
 {
-  TypePool _pool;
+TypePool \_pool;
 
-  public MySubModule(TypePool pool)
-  {
-    _pool = pool;
-  }
+public MySubModule(TypePool pool)
+{
+\_pool = pool;
+}
 
-  public void RegisterComponents(ContainerBuilder builder)
-  {
-      var types = _pool.Query().Where( t => t.Implements<IService>());
-      builder.RegisterTypes(types)
-          .As<IService>();
-  }
+public void RegisterComponents(ContainerBuilder builder)
+{
+var types = \_pool.Query().Where( t => t.Implements<IService>());
+builder.RegisterTypes(types)
+.As<IService>();
+}
 }
 }
 {{< /highlight >}}

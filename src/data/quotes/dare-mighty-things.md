@@ -1,9 +1,9 @@
 ---
-title:  "Dare Mighty Things"
-date:   '2012-01-16'
+title: 'Dare Mighty Things'
+date: '2012-01-16'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Theodore Roosevelt
 type: quote
 ---

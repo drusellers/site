@@ -1,13 +1,12 @@
 ---
-title:  "Non-Repudiation"
-date:   '2018-09-23'
+title: 'Non-Repudiation'
+date: '2018-09-23'
 categories: patterns
 tags:
-- patterns
+  - patterns
 withStats: true
 description: >
-              An under utilized goal to prevent fraud
-
+  An under utilized goal to prevent fraud
 ---
 
 Non-repudiation is a property of a software system that ensures that a party in dispute

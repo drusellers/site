@@ -1,11 +1,11 @@
 ---
-title: "Departments vs Systems"
+title: 'Departments vs Systems'
 date: '2018-08-06'
 withStats: true
 description: >
-              How you structure your organization into departments
-              can impact how you are able to deliver on the value
-              chain
+  How you structure your organization into departments
+  can impact how you are able to deliver on the value
+  chain
 ---
 
 A company exists to provide a value to its customers. In school we would talk about how to look at the value chain in a company. Simplistically, the value chain is a manufacturing term that discusses how value is added to the component pieces to arrive at a valuable output. Many organizations will then optimize this chain of steps to either decrease cost or increase the value of the offering.

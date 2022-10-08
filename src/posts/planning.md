@@ -1,14 +1,14 @@
 ---
-title:  "Planning"
-date:   '2019-12-30'
+title: 'Planning'
+date: '2019-12-30'
 disqus_id: d86dd236-23a7-44db-9fda-dddc60b95fab
 aliases: []
 withStats: true
 draft: true
 description: >
-              I'm enamored with both iteration and long term planning. I don't
-              see these things as mutually exclusive but how can we do it that
-              doesn't drive us and our colleagues crazy?
+  I'm enamored with both iteration and long term planning. I don't
+  see these things as mutually exclusive but how can we do it that
+  doesn't drive us and our colleagues crazy?
 ---
 
 While I was on my retreat I took some time to reread [Creating the Corporate Future](https://www.amazon.com/Creating-Corporate-Future-Plan-Planned/dp/0471090093). In the book they define the following words in the following ways.
@@ -29,12 +29,11 @@ Ok, so in addition to tracking the quarterly "anchor" forecasts we need to have 
 
 Ok, back to our ideals, objectives, and goals. Ideals are our macro level planning items. These are things that probably won't change all that often because they can never be acheived, they are things that we value and are a touch stone for us to come back to time and time again. We need to constantly revisit our macro level goals to make sure we are driving our smaller goals into the right directions. From there we have objectives, which are things we hope to obtain later. For this I like the kind of yearly time horizon. We will get them at some point, but it will take a couple of cycles in order to get there. Finally, we have our goals. Goals we will want to hit this period so these become our micro cycles. At my current job we focus our micro cycles in 6 week blocks of time. In my current fitness program a micro cycle is a week. _If I was to go full ludicrous we could say a nano-cycle is a single week, still not sold on it._
 
-
 - talk about types of planning:
-    - Inactivism: just manage what is going on right in front of my face
-    - Reactivism: manage based on the past
-    - Pre-actvisim: manage based on the future
-    - Interactivism: manage based on all three based on need
+  - Inactivism: just manage what is going on right in front of my face
+  - Reactivism: manage based on the past
+  - Pre-actvisim: manage based on the future
+  - Interactivism: manage based on all three based on need
 
 ```txt
             | Means | Goals | Objectives | Ideals |
@@ -45,11 +44,12 @@ normative   |   o   |   o   |     o      |   o    | Interactvism
 ```
 
 Discontinuous Planning = a five year plan updated annually
+
 - this is less awesome
-Continuous Planning - done 'all the time'
-Plan at all levels simultaneously - coordination
-Plan with all parts of the system - integration
-Coordination + Integration = Holistic
+  Continuous Planning - done 'all the time'
+  Plan at all levels simultaneously - coordination
+  Plan with all parts of the system - integration
+  Coordination + Integration = Holistic
 
 Page 74-75 - describes a process
 

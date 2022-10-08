@@ -1,8 +1,8 @@
 ---
-title:  "Patience"
+title: 'Patience'
 categories: values
 tags:
-- Values
+  - Values
 type: value
 author: dru
 ---

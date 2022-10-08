@@ -1,11 +1,11 @@
 ---
-title:  "Easier"
-date:   '2015-12-23'
+title: 'Easier'
+date: '2015-12-23'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 disqus_id: 5ffcaa7d-4e80-4b36-8c84-b3aee9499e3b
-aliases: ["/quotes/2014/08/08/endure-pain.html"]
+aliases: ['/quotes/2014/08/08/endure-pain.html']
 author: Julius Caesar
 type: quote
 ---

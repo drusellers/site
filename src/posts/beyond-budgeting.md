@@ -1,17 +1,17 @@
 ---
-title:  "Beyond Budgeting (2019Q3)"
-date:   '2019-07-20'
+title: 'Beyond Budgeting (2019Q3)'
+date: '2019-07-20'
 categories: strategy
 tags:
-- strategy
-- business
-- beyond budgeting
+  - strategy
+  - business
+  - beyond budgeting
 disqus_id: 55ad975d-31d3-4062-bc78-6dbed690f99c
 aliases: []
 toc: true
 withStats: true
 description: >
-              My progress in deploying Beyond Budgeting at OMC in July of 2019
+  My progress in deploying Beyond Budgeting at OMC in July of 2019
 ---
 
 One of the biggest take aways I got from reading Beyond Budgeting is that we need to "do budgeting" in an iterative process. This came to me so easily after having studied and lived agile management practices. I also love the quote "The bank is open year round, not just in october", meaning we should be able to get money out of the business as the business needs it, not just during the annual budget cycle. When I joined OMC I was determined to take these practices and establish them as a central framework for running the business. The following is a bit of a diary entry about my progress so far

@@ -1,9 +1,9 @@
 ---
-title:  "Be at War"
-date:   '2012-01-16'
+title: 'Be at War'
+date: '2012-01-16'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Benjamin Franklin
 type: quote
 ---

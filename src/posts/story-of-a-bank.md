@@ -1,13 +1,12 @@
 ---
-title: "Story of a Bank"
-subtitle: "A pen, notepad, and 4 data points"
+title: 'Story of a Bank'
+subtitle: 'A pen, notepad, and 4 data points'
 date: '2018-08-03'
 tags: []
 categories: []
 withStats: true
 description: >
-              Looking for key abstractions can lead to powerful insights.
-
+  Looking for key abstractions can lead to powerful insights.
 ---
 
 I can remember working at a bank and sitting down with one of the employees who had been at the bank for over 20 years. We were talking about how the bank worked at some level and she had this amazing breakdown of what it took. It was simple, and she remembered when the bank actually ran that way.

@@ -1,12 +1,12 @@
 ---
-title: "System Thinking"
-subtitle: "Its never as simple as we make it."
+title: 'System Thinking'
+subtitle: 'Its never as simple as we make it.'
 date: '2018-08-03'
 tags: []
 categories: []
 withStats: true
 description: >
-              Looking for key abstractions can lead to powerful insights.
+  Looking for key abstractions can lead to powerful insights.
 draft: true
 ---
 
@@ -24,10 +24,10 @@ New: Organization - systems, synthesis
 Grow: bigger, not necessarily better
 Develop: do more with less. "Punch above our weight"
 
-* Machine Age vs System Age
-* Organism vs Organization
-* Analysis vs Synthesis
-* Grow vs Develop
+- Machine Age vs System Age
+- Organism vs Organization
+- Analysis vs Synthesis
+- Grow vs Develop
 
 Environment -> Company -> Processes -> Code -> Functions, Classes, Methods (Behavior) -> Data
 
@@ -45,7 +45,6 @@ Info      Data
 ["Foresight Obesity System Map"](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/296290/obesity-map-full-hi-res.pdf)
 
 [Write Up](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6298210/)
-
 
 `money in = money out`
 

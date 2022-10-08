@@ -1,9 +1,9 @@
 ---
-title:  "Stand Straight"
-date:   '2021-07-04'
+title: 'Stand Straight'
+date: '2021-07-04'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Marcus Aurelius
 type: quote
 ---

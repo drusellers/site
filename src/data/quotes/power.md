@@ -1,9 +1,9 @@
 ---
-title:  "Power"
-date:   '2018-09-09'
+title: 'Power'
+date: '2018-09-09'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Erich Fromm
 type: quote
 ---

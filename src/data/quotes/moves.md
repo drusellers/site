@@ -1,9 +1,9 @@
 ---
-title:  "Moves"
-date:   '2015-08-02'
+title: 'Moves'
+date: '2015-08-02'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Aikido
 type: quote
 ---

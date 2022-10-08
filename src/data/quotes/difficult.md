@@ -1,9 +1,9 @@
 ---
-title:  "Difficult"
-date:   '2012-11-13'
+title: 'Difficult'
+date: '2012-11-13'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Seneca
 type: quote
 ---

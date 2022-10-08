@@ -1,9 +1,9 @@
 ---
-title:  "Ready to Win"
-date:   '2020-12-27'
+title: 'Ready to Win'
+date: '2020-12-27'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Antiope (Wonder Woman 84)
 type: quote
 ---

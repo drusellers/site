@@ -1,9 +1,9 @@
 ---
-title:  "True Happiness"
-date:   '2019-01-13'
+title: 'True Happiness'
+date: '2019-01-13'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Seneca
 type: quote
 ---

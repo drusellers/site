@@ -1,4 +1,4 @@
-import Layout from "../layouts/layout";
+import Layout from '../layouts/layout'
 
 //title: Code
 // subtitle: Adapted from Jocko Willink
@@ -38,12 +38,12 @@ export default function Code() {
           friends and family and treat other people with respect.
         </li>
         <li>
-          {" "}
+          {' '}
           I will be ready to protect my friends and family. My gear will be
           ready. I will train and prepare to defend myself and others.
         </li>
         <li>
-          {" "}
+          {' '}
           I will experience my emotions, I will not bury them but nor will I let
           them control me.
         </li>
@@ -56,5 +56,5 @@ export default function Code() {
         Book
       </a>
     </Layout>
-  );
+  )
 }

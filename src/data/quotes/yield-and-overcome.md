@@ -1,9 +1,9 @@
 ---
-title:  "Yield and Overcome"
-date:   '2011-11-28'
+title: 'Yield and Overcome'
+date: '2011-11-28'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Tao-te Ching
 type: quote
 ---

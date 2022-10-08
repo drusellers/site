@@ -1,19 +1,22 @@
-import Social from "./footer/social";
+import Social from './footer/social'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faCreativeCommons,
+  faCreativeCommonsBy,
+} from '@fortawesome/free-brands-svg-icons'
 
 export default function Footer() {
-  let data = getData();
-
   return (
-    <footer className="bg-gray-800 mt-12" aria-labelledby="footerHeading">
+    <footer className="mt-12 bg-gray-800" aria-labelledby="footerHeading">
       <h2 id="footerHeading" className="sr-only">
         Footer
       </h2>
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           {/* Logo */}
           <div className="space-y-8 xl:col-span-1">
             <svg
-              className="fill-current text-gray-400 h-24"
+              className="h-24 fill-current text-gray-400"
               id="logo"
               data-name="logo"
               xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +36,7 @@ export default function Footer() {
                 transform="translate(-50.64 -20.1)"
               />
             </svg>
-            <p className="text-gray-500 text-base">Curiosity is life.</p>
+            <p className="text-base text-gray-500">Curiosity is life.</p>
             <div className="flex space-x-6">
               <Social platform="instagram" username="drusellers" />
               <Social platform="twitter" username="drusellers" />
@@ -42,7 +45,7 @@ export default function Footer() {
           </div>
 
           {/* 4 columns of stuff */}
-          <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+          <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div></div>
               <div className="mt-12 md:mt-0"></div>
@@ -50,14 +53,14 @@ export default function Footer() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div></div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400">
                   Contact
                 </h3>
                 <div
                   id="hcard-Dru-Sellers"
                   className="mt-4 text-base text-gray-500"
                 >
-                  <span style={{ float: "none" }}>Dru Sellers</span>
+                  <span style={{ float: 'none' }}>Dru Sellers</span>
                   <div className="email">
                     <a className="link" href="mailto:dru@drusellers.com">
                       dru@drusellers.com
@@ -70,9 +73,9 @@ export default function Footer() {
                   </div>
                   <div className="adr">
                     <div className="street-address"></div>
-                    <span className="locality">Austin</span>,{" "}
-                    <span className="region">TX</span>{" "}
-                    <span className="postal-code">78745</span>{" "}
+                    <span className="locality">Austin</span>,{' '}
+                    <span className="region">TX</span>{' '}
+                    <span className="postal-code">78745</span>{' '}
                     <span className="country-name">USA</span>
                   </div>
                   <div className="tel">+1 785/371-4589</div>
@@ -85,9 +88,9 @@ export default function Footer() {
         {/* Legal */}
         <div className="mt-12 border-t border-gray-200 pt-8">
           <p className="text-base text-gray-400 xl:text-center">
-            <i className="fab fa-creative-commons"></i>{" "}
-            <i className="fab fa-creative-commons-by"></i> Content on this site
-            is licensed under a{" "}
+            <FontAwesomeIcon icon={faCreativeCommons} />
+            <FontAwesomeIcon icon={faCreativeCommonsBy} /> Content on this site
+            is licensed under a{' '}
             <a
               rel="noreferrer"
               href="https://creativecommons.org/licenses/by/4.0/"
@@ -100,22 +103,22 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }
 
-function getData() {
-  return {
-    social: {},
-    links: [
-      {
-        title: "Abc",
-        items: [
-          {
-            name: "abc",
-            link: "abc",
-          },
-        ],
-      },
-    ],
-  };
-}
+// function getData() {
+//   return {
+//     social: {},
+//     links: [
+//       {
+//         title: "Abc",
+//         items: [
+//           {
+//             name: "abc",
+//             link: "abc",
+//           },
+//         ],
+//       },
+//     ],
+//   };
+// }

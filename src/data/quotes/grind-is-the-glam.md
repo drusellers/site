@@ -1,9 +1,9 @@
 ---
-title:  "The Grind is the Glam"
-date:   '2011-12-12'
+title: 'The Grind is the Glam'
+date: '2011-12-12'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Me via Jeff McKinney and Carl Paoli
 type: quote
 ---

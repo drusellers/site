@@ -1,9 +1,9 @@
 ---
-title:  "Old Ideas"
-date:   '2018-01-08'
+title: 'Old Ideas'
+date: '2018-01-08'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Greg Young
 type: quote
 ---

@@ -1,9 +1,9 @@
 ---
-title:  "Remember the Lotus Flower"
-date:   '2019-09-28'
+title: 'Remember the Lotus Flower'
+date: '2019-09-28'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Clayton Micallef
 author_link: https://claytonmicallef.com/the-lotus-flower-and-the-mud-of-life/
 type: quote

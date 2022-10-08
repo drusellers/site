@@ -1,17 +1,21 @@
-import Layout from "../../layouts/layout";
-import { getAllQuotesIds, getQuoteData } from "../../lib/quotes";
+import Layout from '../../layouts/layout'
+import { getAllQuotesIds, getQuoteData } from '../../lib/quotes'
 
 export default function Post({ postData }) {
-  let cite = <cite>- {postData.author}</cite>;
+  let cite = <cite>- {postData.author}</cite>
   if (postData.author_link) {
     cite = (
       <cite>
-        -{" "}
-        <a href={postData.author_link} target="_blank" rel="noopener">
+        -{' '}
+        <a
+          href={postData.author_link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {postData.author}
         </a>
       </cite>
-    );
+    )
   }
   return (
     <Layout title={postData.title}>
@@ -22,23 +26,23 @@ export default function Post({ postData }) {
         <cite>{postData.author}</cite>
       </div>
     </Layout>
-  );
+  )
 }
 
 export async function getStaticPaths() {
-  const paths = getAllQuotesIds();
+  const paths = getAllQuotesIds()
   return {
     paths,
     fallback: false,
-  };
+  }
 }
 
 export async function getStaticProps({ params }) {
   // Fetch necessary data for the blog post using params.id
-  const postData = await getQuoteData(params.id);
+  const postData = await getQuoteData(params.id)
   return {
     props: {
       postData,
     },
-  };
+  }
 }

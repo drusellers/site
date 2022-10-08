@@ -1,9 +1,9 @@
 ---
-title:  "Lost Friend"
-date:   '2020-10-01'
+title: 'Lost Friend'
+date: '2020-10-01'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Tupac Shakur
 type: quote
 ---

@@ -1,12 +1,20 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExternalLinkSquare } from '@fortawesome/pro-light-svg-icons'
+
 export default function Education({ school }) {
-  let e = school;
+  let e = school
   return (
     <div key={e.school} className="space-y-3">
-      <h4 className="text-xl font-heading font-bold">
-        {e.school}{" "}
+      <h4 className="font-heading text-xl font-bold">
+        {e.school}{' '}
         <small>
-          <a href={e.url} className="text-blue-500" target="_blank">
-            {e.urllabel} <i className="far fa-external-link-square"></i>
+          <a
+            href={e.url}
+            className="text-blue-500"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {e.urllabel} <FontAwesomeIcon icon={faExternalLinkSquare} />
           </a>
         </small>
       </h4>
@@ -21,5 +29,5 @@ export default function Education({ school }) {
         </div>
       </div>
     </div>
-  );
+  )
 }

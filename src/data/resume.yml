@@ -7,20 +7,31 @@ summary: >
   expertise. Experience is focused on building and architecting distributed
   .Net applications
 employeers:
+  - employer: Message Aid
+    url: https://messageaid.com
+    urllabel: messageaid.com
+    roles:
+      - title: Founder
+        start: April 2022
+        end: Present
+        description:
+          - >
+            Building and providing a SaaS based tool that helps teams managed MQ based systems
   -
-    employer: One More Cloud
+    employer: One More Cloud, Inc.
     url: https://omc.io
     urllabel: omc.io
     roles:
       -
         title: President & Chief Operations Officer
         start: July 2020
-        end: Present
+        end: March 2022
         description:
           - >
-            Goals include increasing annual revenue from $5MM to $6MM ARR
-          - >
-            Expand the general understanding of search and search based tools
+            Worked closely with the head of sales to build out a unique product offering
+            that would help companies better manage their search infrastructure. In the process
+            of working with the head of sales we were able to increase the average deal size
+            from $500/mth to $8,000/mth
 
       -
         title: Vice President of Operations

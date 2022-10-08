@@ -1,9 +1,9 @@
 ---
-title:  "Fate"
-date:   '2019-07-29'
+title: 'Fate'
+date: '2019-07-29'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Carl Jung
 type: quote
 ---

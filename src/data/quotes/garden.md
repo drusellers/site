@@ -1,9 +1,9 @@
 ---
-title:  "Warrior in a garden"
-date:   '2015-12-22'
+title: 'Warrior in a garden'
+date: '2015-12-22'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Unknown
 type: quote
 ---

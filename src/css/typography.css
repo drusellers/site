@@ -26,8 +26,8 @@
   --leading-title: 1.25;
   --leading-solid: 1;
 
-  --title-font-family: "Nunito", sans-serif;
-  --copy-font-family: "Open Sans", sans-serif;
+  --title-font-family: 'Nunito', sans-serif;
+  --copy-font-family: 'Open Sans', sans-serif;
 
   --link-color: #f00;
 }

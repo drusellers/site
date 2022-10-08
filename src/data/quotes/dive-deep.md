@@ -1,9 +1,9 @@
 ---
-title:  "Dive Deep"
-date:   '2021-06-29'
+title: 'Dive Deep'
+date: '2021-06-29'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Alexander den Heijer
 type: quote
 ---

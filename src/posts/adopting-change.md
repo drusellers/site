@@ -1,15 +1,15 @@
 ---
-title:  "Adopting Change"
-date:   '2019-04-10'
+title: 'Adopting Change'
+date: '2019-04-10'
 categories: strategy
 tags:
-- strategy
+  - strategy
 disqus_id: d74948dc-627e-4125-92fd-9293ec09affa
 aliases: []
 toc: true
 withStats: true
 description: >
-              Why do novel changes to existing practices drive me crazy?
+  Why do novel changes to existing practices drive me crazy?
 ---
 
 One thing that I've been learning about myself at this conference is that when

@@ -1,11 +1,20 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExternalLinkSquare } from '@fortawesome/pro-light-svg-icons'
+import Markdoc from '@markdoc/markdoc'
+
 export default function Experience({ job }) {
   return (
     <div key={job.employeer} className="ml-6 space-y-3">
-      <h4 className="text-xl font-bold font-heading">
-        {job.employer}{" "}
+      <h4 className="font-heading text-xl font-bold">
+        {job.employer}{' '}
         <small>
-          <a href={job.url} className="text-blue-500" target="_blank">
-            {job.urllabel} <i className="far fa-external-link-square"></i>
+          <a
+            href={job.url}
+            className="text-blue-500"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {job.urllabel} <FontAwesomeIcon icon={faExternalLinkSquare} />
           </a>
         </small>
       </h4>
@@ -20,14 +29,21 @@ export default function Experience({ job }) {
             </div>
 
             {role.description.map((d, i) => {
-              {
-                /* markdown ify */
-              }
-              return <p key={i} className="ml-6">{d}</p>;
+              const ast = Markdoc.parse(d)
+              const content = Markdoc.transform(ast)
+              const html = Markdoc.renderers.html(content)
+
+              return (
+                <p
+                  key={i}
+                  className="ml-6"
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
+              )
             })}
           </div>
-        );
+        )
       })}
     </div>
-  );
+  )
 }

@@ -1,9 +1,9 @@
 ---
-title:  "Focus"
-date:   '2011-10-15'
+title: 'Focus'
+date: '2011-10-15'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Steve Jobs
 type: quote
 ---

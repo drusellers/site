@@ -1,9 +1,9 @@
 ---
-title:  "Easy Day"
-date:   '2012-04-28'
+title: 'Easy Day'
+date: '2012-04-28'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Unknown
 type: quote
 ---

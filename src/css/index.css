@@ -2,3 +2,13 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 @import './markdown.css';
+
+body {
+  /*https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient()*/
+  /* matte-white */
+  /*background: radial-gradient(circle at 100%, #ECE9E6, #ECE9E6 50%, #fff 75%, #ECE9E6 75%);*/
+
+  /* clouds */
+  /*background: radial-gradient(ellipse at top, #ECE9E6, transparent),*/
+  /*radial-gradient(ellipse at bottom, #fff, transparent);*/
+}

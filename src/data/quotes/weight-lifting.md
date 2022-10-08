@@ -1,9 +1,9 @@
 ---
-title:  "Lifting the Impossible"
-date:   '2014-10-22'
+title: 'Lifting the Impossible'
+date: '2014-10-22'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Chasers Holmes
 type: quote
 ---

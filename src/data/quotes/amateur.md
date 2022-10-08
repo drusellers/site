@@ -1,9 +1,9 @@
 ---
-title:  "Amateur"
-date:   '2012-08-08'
+title: 'Amateur'
+date: '2012-08-08'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Socarates
 type: quote
 ---

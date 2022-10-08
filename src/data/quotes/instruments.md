@@ -1,9 +1,9 @@
 ---
-title:  "Instruments"
-date:   '2017-08-29'
+title: 'Instruments'
+date: '2017-08-29'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Rich Hickey
 type: quote
 ---

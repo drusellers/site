@@ -1,9 +1,9 @@
 ---
-title:  "Losing Weight"
-date:   '2011-06-12 05:58:21'
+title: 'Losing Weight'
+date: '2011-06-12 05:58:21'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Me
 type: quote
 ---

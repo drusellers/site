@@ -1,9 +1,9 @@
 ---
-title:  "The world"
-date:   '2014-08-12'
+title: 'The world'
+date: '2014-08-12'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Unknown
 type: quote
 ---

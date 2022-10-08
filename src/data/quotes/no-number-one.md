@@ -1,9 +1,9 @@
 ---
-title:  "No Number One"
-date:   '2012-10-03'
+title: 'No Number One'
+date: '2012-10-03'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Bruce Lee
 type: quote
 ---

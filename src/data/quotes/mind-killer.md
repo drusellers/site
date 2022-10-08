@@ -1,9 +1,9 @@
 ---
-title:  "Mind Killer"
-date:   '2014-10-05'
+title: 'Mind Killer'
+date: '2014-10-05'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Bene Gesserit, “Litany Against Fear,” from Frank Herbert’s Dune
 type: quote
 ---

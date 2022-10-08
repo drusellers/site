@@ -1,4 +1,4 @@
-import Layout from "../layouts/layout";
+import Layout from '../layouts/layout'
 
 export default function Creed() {
   return (
@@ -15,5 +15,5 @@ export default function Creed() {
         others
       </p>
     </Layout>
-  );
+  )
 }

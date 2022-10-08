@@ -1,9 +1,9 @@
 ---
-title:  "A Room without Books"
-date:   '2020-01-02'
+title: 'A Room without Books'
+date: '2020-01-02'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Marcus Tullius Cicero
 type: quote
 ---

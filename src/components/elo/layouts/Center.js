@@ -1,38 +1,42 @@
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 const CenterPropTypes = {
-    andText: PropTypes.bool,
-    gutters: PropTypes.string,
-    intrinsic: PropTypes.bool,
-    max: PropTypes.string,
-};
+  andText: PropTypes.bool,
+  gutters: PropTypes.string,
+  intrinsic: PropTypes.bool,
+  max: PropTypes.string,
+}
 const CenterDefaultProps = {
-    andText: false,
-    gutters: '0',
-    intrinsic: false,
-    max: 'var(--measure)',
-};
-const Center = styled.div `
+  andText: false,
+  gutters: '0',
+  intrinsic: false,
+  max: 'var(--measure)',
+}
+const Center = styled.div`
   box-sizing: content-box;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: ${props => props.max};
+  max-width: ${(props) => props.max};
 
-  ${props => props.intrinsic ? `
+  ${(props) =>
+    props.intrinsic
+      ? `
     align-items: center;
     display: flex;
     flex-direction: column;`
-    : ''}
+      : ''}
 
-  ${({ gutters }) => gutters ? `
+  ${({ gutters }) =>
+    gutters
+      ? `
     padding-left: ${gutters};
     padding-right: ${gutters};`
-    : ''}
+      : ''}
 
-  ${props => props.andText ? `text-align: center;` : ''}
-`;
-Center.propTypes = CenterPropTypes;
-Center.defaultProps = CenterDefaultProps;
-export default Center;
+  ${(props) => (props.andText ? `text-align: center;` : '')}
+`
+Center.propTypes = CenterPropTypes
+Center.defaultProps = CenterDefaultProps
+export default Center
 //# sourceMappingURL=Center.js.map

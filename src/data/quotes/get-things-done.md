@@ -1,9 +1,9 @@
 ---
-title:  "Get Things Done"
-date:   '2014-11-11'
+title: 'Get Things Done'
+date: '2014-11-11'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Henry Rollins
 type: quote
 ---

@@ -1,6 +1,9 @@
-import Head from 'next/head';
+import Head from 'next/head'
 import '../css/index.css'
-import {GlobalContext} from  '../contexts/GlobalContext'
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import { GlobalContext } from '../contexts/GlobalContext'
+config.autoAddCss = false
 // import '../css/base.css';
 // import '../css/typography.css';
 
@@ -18,10 +21,7 @@ import {GlobalContext} from  '../contexts/GlobalContext'
 // import "../css/pages/resume.css";
 // import "../css/pages/allegory.css";
 
-
-
 function MyApp({ Component, pageProps }) {
-
   return (
     <>
       <Head>

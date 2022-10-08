@@ -1,1 +1,1 @@
-export default function selectSpace(space: string): string;
+export default function selectSpace(space: string): string

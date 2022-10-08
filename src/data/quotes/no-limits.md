@@ -1,9 +1,9 @@
 ---
-title:  "No Limits"
-date:   '2011-07-01'
+title: 'No Limits'
+date: '2011-07-01'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Unknown
 type: quote
 ---

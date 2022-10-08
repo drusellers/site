@@ -1,12 +1,12 @@
 ---
-title: "Stories and Pedagogy"
-subtitle: "A pen, notepad, and 4 data points"
+title: 'Stories and Pedagogy'
+subtitle: 'A pen, notepad, and 4 data points'
 date: '2018-08-03'
 tags: []
 categories: []
 withStats: true
 description: >
-              Looking for key abstractions can lead to powerful insights.
+  Looking for key abstractions can lead to powerful insights.
 draft: true
 ---
 

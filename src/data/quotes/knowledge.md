@@ -1,9 +1,9 @@
 ---
-title:  "Wealth of Knowledge"
-date:   '2014-01-02'
+title: 'Wealth of Knowledge'
+date: '2014-01-02'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Peter Schwartz
 type: quote
 ---

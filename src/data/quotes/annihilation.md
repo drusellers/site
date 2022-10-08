@@ -1,9 +1,9 @@
 ---
-title:  "Annihilation"
-date:   '2021-05-02'
+title: 'Annihilation'
+date: '2021-05-02'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Pema Chödrön
 type: quote
 ---

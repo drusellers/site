@@ -1,9 +1,9 @@
 ---
-title:  "Alchemist"
-date:   '2013-01-06'
+title: 'Alchemist'
+date: '2013-01-06'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: The Power of Now
 type: quote
 ---

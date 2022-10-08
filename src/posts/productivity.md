@@ -1,13 +1,13 @@
 ---
-title: "Productivity"
-subtitle: "An update on practices"
+title: 'Productivity'
+subtitle: 'An update on practices'
 date: '2019-01-01'
 tags: []
 categories: []
 withStats: true
 description: >
-              An overview on my own personal productivity
-              habits
+  An overview on my own personal productivity
+  habits
 ---
 
 Every now and again I like to take stock of my processes for being productive. The goal, of course, to identify new areas of unproductivity or inefficiency and then remind myself of the tools I've learned and why I use them. The hope being to get myself "back on track."

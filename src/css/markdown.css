@@ -11,10 +11,9 @@
 
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-
 }
 
-.markdown>p:first-child {
+.markdown > p:first-child {
   /* mt0-ns */
   margin-top: 0;
 }
@@ -28,12 +27,13 @@
   font-size: 1.5rem;
 }
 
-.markdown ul, .markdown ol {
+.markdown ul,
+.markdown ol {
   line-height: 1.5;
 }
 
 .markdown a {
-  transition: color .15s ease-in;
+  transition: color 0.15s ease-in;
 }
 
 .markdown table {
@@ -64,9 +64,7 @@
   font-size: 0.75rem;
 }
 
-
-
-.markdown blockquote+p {
+.markdown blockquote + p {
   margin-top: 1.5rem;
 }
 
@@ -74,7 +72,8 @@
   margin-right: 0.1rem;
 }
 
-.markdown ul, .markdown ol {
+.markdown ul,
+.markdown ol {
   padding: 0;
   max-width: 30em;
   margin-top: 1.5rem;
@@ -87,8 +86,6 @@
 .markdown li {
   display: list-item;
 }
-
-
 
 .markdown li:before {
   color: rgba(0, 0, 0, 0.3);

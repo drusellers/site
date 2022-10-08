@@ -1,5 +1,5 @@
 ---
-title: "Conversations"
+title: 'Conversations'
 date: '2019-11-02'
 categories: notes
 tags:
@@ -7,7 +7,7 @@ tags:
 disqus_id: efce717a-8ddd-41ec-bdae-5ed1b30bf88b
 withStats: true
 description: >
-              The power is in the conversation, not the tool.
+  The power is in the conversation, not the tool.
 ---
 
 After this most recent conference about Wardley Map's I was reminded that the

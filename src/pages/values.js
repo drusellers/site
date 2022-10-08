@@ -1,14 +1,14 @@
-import { getSortedValuesData } from "../lib/values";
-import ShortDate from "../components/shortDate";
-import Link from "next/link";
-import Layout from "../layouts/layout";
+import { getSortedValuesData } from '../lib/values'
+import ShortDate from '../components/shortDate'
+import Link from 'next/link'
+import Layout from '../layouts/layout'
 
 export default function Values({ allValues }) {
   return (
     <Layout title="Values">
       {allValues.map((v) => {
         return (
-          <div className="archive">
+          <div key={v.id} className="archive">
             <ul>
               <div className="mv2">
                 <Link href={`/values/${v.id}`}>
@@ -17,17 +17,17 @@ export default function Values({ allValues }) {
               </div>
             </ul>
           </div>
-        );
+        )
       })}
     </Layout>
-  );
+  )
 }
 
 export async function getStaticProps() {
-  const allValues = getSortedValuesData();
+  const allValues = getSortedValuesData()
   return {
     props: {
       allValues,
     },
-  };
+  }
 }

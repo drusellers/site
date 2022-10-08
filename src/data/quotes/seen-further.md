@@ -1,9 +1,9 @@
 ---
-title:  "Seen Further"
-date:   '2011-06-01'
+title: 'Seen Further'
+date: '2011-06-01'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Isaac Newton
 type: quote
 ---

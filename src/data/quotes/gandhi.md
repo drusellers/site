@@ -1,9 +1,9 @@
 ---
-title:  "Dangerous"
-date:   '2011-09-14'
+title: 'Dangerous'
+date: '2011-09-14'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Humilitas by John Dickson
 type: quote
 ---

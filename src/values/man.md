@@ -1,8 +1,8 @@
 ---
-title:  "First, be a Man"
+title: 'First, be a Man'
 categories: values
 tags:
-- Values
+  - Values
 type: value
 author: dru
 ---

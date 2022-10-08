@@ -1,14 +1,14 @@
 ---
-title: "Company Growth"
+title: 'Company Growth'
 subtitle: "How does a company's growth affect its future?"
 date: '2018-08-01'
 tags:
-- business
+  - business
 categories: []
 withStats: true
 description: >
-              How can a model of company growth assist you in
-              designing systems for your company?
+  How can a model of company growth assist you in
+  designing systems for your company?
 ---
 
 Most small companies start with either a very small team, or just one person. As the company starts to grow, it will start to experience new pains or a desire to grow outside of the Entrepreneur's skill set. At this point the company can either slow down its current progress, and learn a new skill to handle the pain or grow to a new depth of understanding to tackle harder projects. But at some point, the company will have to hire something to do the job better than the founder, or simple to offload the work.

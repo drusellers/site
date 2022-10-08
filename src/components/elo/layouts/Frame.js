@@ -1,17 +1,17 @@
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 const FramePropTypes = {
-    ratio: PropTypes.string.isRequired,
-};
+  ratio: PropTypes.string.isRequired,
+}
 const FrameDefaultProps = {
-    ratio: '6:9',
-};
-const Frame = styled.div `
+  ratio: '6:9',
+}
+const Frame = styled.div`
   display: block;
   padding-bottom: ${({ ratio }) => {
-    const [ratioNumerator, ratioDenominator] = selectRatioArray(ratio);
-    return `calc(${ratioNumerator} / ${ratioDenominator} * 100%)`;
-}};
+    const [ratioNumerator, ratioDenominator] = selectRatioArray(ratio)
+    return `calc(${ratioNumerator} / ${ratioDenominator} * 100%)`
+  }};
   position: relative;
 
   > * {
@@ -25,18 +25,18 @@ const Frame = styled.div `
     left: 0;
   }
 
-  > img, 
+  > img,
   > video {
     height: 100%;
     width: 100%;
     object-fit: cover;
   }
-`;
+`
 function selectRatioArray(ratio) {
-    const ratioParts = ratio.split(':', 2);
-    return [ratioParts[0], ratioParts[1]];
+  const ratioParts = ratio.split(':', 2)
+  return [ratioParts[0], ratioParts[1]]
 }
-Frame.propTypes = FramePropTypes;
-Frame.defaultProps = FrameDefaultProps;
-export default Frame;
+Frame.propTypes = FramePropTypes
+Frame.defaultProps = FrameDefaultProps
+export default Frame
 //# sourceMappingURL=Frame.js.map

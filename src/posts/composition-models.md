@@ -1,9 +1,9 @@
 ---
-title:  "Composing Application Styles"
-date:   '2016-11-05'
+title: 'Composing Application Styles'
+date: '2016-11-05'
 categories: architecture
 tags:
-- architecture
+  - architecture
 withStats: true
 disqus_id: 8301429b-f964-406d-8827-5317dc351a34
 ---
@@ -14,11 +14,13 @@ disqus_id: 8301429b-f964-406d-8827-5317dc351a34
 - compose through the constructor
 
 ## Service
+
 ```csharp
 public interface IRepository { void Save<T>(T entity); }
 ```
 
 ## Implementation
+
 ```csharp
 public class DatabaseRepository
 {

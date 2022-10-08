@@ -1,9 +1,9 @@
 ---
-title:  "Great minds"
-date:   '2011-12-26'
+title: 'Great minds'
+date: '2011-12-26'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Eleanor Roosevelt
 type: quote
 ---

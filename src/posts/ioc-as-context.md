@@ -1,11 +1,9 @@
 ---
-title:  "The Container is the Context"
-date:   '2013-12-09'
+title: 'The Container is the Context'
+date: '2013-12-09'
 disqus_id: 886929f5-804a-47c9-90f3-37cc870711b3
 withStats: true
-aliases: [
-  "/2013/12/09/ioc-as-context.html"
-]
+aliases: ['/2013/12/09/ioc-as-context.html']
 ---
 
 The container is the app context. When I am building a piece of sufficiently
@@ -21,16 +19,17 @@ _Context: C# and .Net_
 {{< highlight csharp >}}
 public class Program
 {
-  public static int main()
-  {
-    //autofac example
-    var builder = new ContainerBuilder();
+public static int main()
+{
+//autofac example
+var builder = new ContainerBuilder();
 
     //build the context/container up
     var container = builder.Build();
 
     return container.GetInstance<ITheProgram>().Run();
-  }
+
+}
 }
 {{< /highlight >}}
 
@@ -39,18 +38,19 @@ public class Program
 {{< highlight csharp >}}
 public class Global
 {
-  static IContainer _container;
+static IContainer \_container;
 
-  public void App_Start()
-  {
-    //autofac example
-    var builder = new ContainerBuilder();
+public void App_Start()
+{
+//autofac example
+var builder = new ContainerBuilder();
 
     //build the context/container up
     _container = builder.Build();
 
     container.GetInstance<ITheProgram>().Initialize();
-  }
+
+}
 }
 {{< /highlight >}}
 
@@ -65,16 +65,14 @@ It amazes me that having used an IoC container for as long as I have I have
 only scratech the surface of the power in child contexts. This post serves
 as a place for me to note, what I have since learned.
 
-
-
 My App Class
 {{< highlight csharp >}}
 public static class App
 {
-  public static int Run()
-  {
-    //autofac example
-    var builder = new ContainerBuilder();
+public static int Run()
+{
+//autofac example
+var builder = new ContainerBuilder();
 
     //build the context up
     var container = builder.Build();
@@ -85,12 +83,13 @@ public static class App
     var result = dispatcher.Dispatch(new CommandLineContext(Environment.CommandLine))
 
     return formatResultsForCommandLine(result);
-  }
 
-  static int formatResultsForCommandLine(DispatchResult result)
-  {
-    //stuff
-  }
+}
+
+static int formatResultsForCommandLine(DispatchResult result)
+{
+//stuff
+}
 }
 {{< /highlight >}}
 
@@ -132,10 +131,10 @@ would share the concept of request and response.
 {{< highlight csharp >}}
 public static class App
 {
-  public static int Run()
-  {
-    //autofac example
-    var builder = new ContainerBuilder();
+public static int Run()
+{
+//autofac example
+var builder = new ContainerBuilder();
 
     //build the context up
     var container = builder.Build();
@@ -151,19 +150,18 @@ public static class App
     IResponse response = dispatcher.Dispatch(request);
 
     return formatResultsForCommandLine(response);
-  }
 
-  static int formatResultsForCommandLine(IResponse response)
-  {
-    //stuff
-  }
+}
+
+static int formatResultsForCommandLine(IResponse response)
+{
+//stuff
+}
 }
 {{< /highlight >}}
 
 A Container is key to this whole process. It holds your application context,
 but after that its all about how we dispatch the request via our router.
-
-
 
 [fubumvc]: http://fubuworld.com/fubumvc
 [magnum]: http://github.com/phatboyg/magnum

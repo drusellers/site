@@ -1,9 +1,9 @@
 ---
-title:  "Beginners"
-date:   '2017-08-29'
+title: 'Beginners'
+date: '2017-08-29'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: JL Holdsworth
 type: quote
 ---

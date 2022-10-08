@@ -1,13 +1,11 @@
 ---
-title:  "Gumbo"
-date:   '2013-06-08'
+title: 'Gumbo'
+date: '2013-06-08'
 tags:
-- idea
+  - idea
 disqus_id: 714f8e9c-780d-4d22-83b4-8d8bedc455ef
 withStats: true
-aliases: [
-  "/idea/2013/06/08/gumbo.html"
-]
+aliases: ['/idea/2013/06/08/gumbo.html']
 draft: true
 ---
 
@@ -20,9 +18,10 @@ another project or application.
 
 One of these is what my product owner likes to call 'Flexible Attributes.' This
 is almost a text book case of something that you don't often do in static languages
+
 - add properties to your objects. But our team took the challenge on, and this
-is my attempt to document how we solved the problem using the C# language and
-building it on top of a relational database.
+  is my attempt to document how we solved the problem using the C# language and
+  building it on top of a relational database.
 
 ## Specs
 

@@ -1,9 +1,9 @@
 export default function Pagination({ hasPrev, prevUrl, hasNext, nextUrl }) {
   if (!hasPrev || !hasNext) {
-    return <></>;
+    return <></>
   }
 
-  let prev = <></>;
+  let prev = <></>
   if (hasPrev) {
     prev = (
       <span className="prev">
@@ -11,8 +11,8 @@ export default function Pagination({ hasPrev, prevUrl, hasNext, nextUrl }) {
           <span className="arrow">←</span>Newer Posts
         </a>
       </span>
-    );
-    let next = <></>;
+    )
+    let next = <></>
     if (hasNext) {
       next = (
         <span className="next">
@@ -20,13 +20,13 @@ export default function Pagination({ hasPrev, prevUrl, hasNext, nextUrl }) {
             Older Posts <span className="arrow">→</span>
           </a>
         </span>
-      );
+      )
     }
     return (
       <nav id="post-nav">
         {prev}
         {next}
       </nav>
-    );
+    )
   }
 }

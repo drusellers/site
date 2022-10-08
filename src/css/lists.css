@@ -12,7 +12,8 @@ The goal of this css module is style lists in a pleasing way. The goal is to mak
   list-style-position: outside;
 }
 
-.nested ul, .nested ol {
+.nested ul,
+.nested ol {
   padding: 0;
   max-width: 30em;
 }
@@ -28,7 +29,7 @@ The goal of this css module is style lists in a pleasing way. The goal is to mak
 }
 
 .nested li::before {
-  content: "○";
+  content: '○';
   left: -2.5rem;
   width: 2rem;
   display: block;

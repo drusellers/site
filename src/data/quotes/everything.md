@@ -1,9 +1,9 @@
 ---
-title:  "Everything"
-date:   '2013-09-16'
+title: 'Everything'
+date: '2013-09-16'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Pablo Picasso
 type: quote
 ---

@@ -1,13 +1,11 @@
 ---
 layout: post
-title:  "The Value of the Value Proposition"
-date:   '2013-06-12'
+title: 'The Value of the Value Proposition'
+date: '2013-06-12'
 categories: business
 disqus_id: d106b9a3-938d-49cb-b129-921e8a9d9414
 withStats: true
-aliases: [
-  "/business/2013/06/12/valueprop.html"
-]
+aliases: ['/business/2013/06/12/valueprop.html']
 ---
 
 Whenever I hear about some businesses 'Value Proposition' I almost always
@@ -30,6 +28,7 @@ organization to align with, but then we need to ask them to come up with a
 level of measurement or evaluation.
 
 ## Caveat
+
 You have to becare how you measure things, because it can lead to people doing
 the wrong thing just to game the system.
 

@@ -1,5 +1,5 @@
-import Layout from "../../layouts/layout";
-import { getAllValuesIds, getValueData } from "../../lib/values";
+import Layout from '../../layouts/layout'
+import { getAllValuesIds, getValueData } from '../../lib/values'
 
 export default function Post({ postData }) {
   return (
@@ -19,23 +19,23 @@ export default function Post({ postData }) {
         </div>
       </div>
     </Layout>
-  );
+  )
 }
 
 export async function getStaticPaths() {
-  const paths = getAllValuesIds();
+  const paths = getAllValuesIds()
   return {
     paths,
     fallback: false,
-  };
+  }
 }
 
 export async function getStaticProps({ params }) {
   // Fetch necessary data for the blog post using params.id
-  const postData = await getValueData(params.id);
+  const postData = await getValueData(params.id)
   return {
     props: {
       postData,
     },
-  };
+  }
 }

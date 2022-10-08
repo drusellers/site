@@ -1,9 +1,9 @@
 ---
-title:  "Rules"
-date:   '2013-07-05'
+title: 'Rules'
+date: '2013-07-05'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Chuck Yeager
 type: quote
 ---

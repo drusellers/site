@@ -1,9 +1,9 @@
 ---
-title:  "Adversity"
-date:   '2020-09-01'
+title: 'Adversity'
+date: '2020-09-01'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Josh Billings
 type: quote
 ---

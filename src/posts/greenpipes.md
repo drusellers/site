@@ -1,17 +1,15 @@
 ---
-title:  "Green Pipes"
-subtitle: "Welcome to the green"
-date:   '2016-10-30'
+title: 'Green Pipes'
+subtitle: 'Welcome to the green'
+date: '2016-10-30'
 categories: greenpipes
 tags:
-- green-pipes
+  - green-pipes
 disqus_id: 6bb5bfc7-56d2-493a-9faf-e9bd678f190f
 analytics_category: blog
 analytics_name: greenpipes
 withStats: true
-aliases: [
-  "/greenpipes/2016/10/30/greenpipes.html"
-]
+aliases: ['/greenpipes/2016/10/30/greenpipes.html']
 ---
 
 Earlier this month, my colleague, [Jimmy Bogard](https://lostechies.com/jimmybogard/) posted a fantastically concise [article](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/) about how he composes an application pipeline for processing an application's various requests using his [MediatR](https://github.com/jbogard/MediatR) framework. He walks through, step by step, how he brings in each separate concern with code examples.
@@ -130,8 +128,7 @@ The code for Fluent Validation looks just like MediatR but what is this other pi
 
 We can see that there is this other pipe for Validation Failures. If we fail validation, we immediately stop processing (by not calling `next.Send`) and divert down the `_validationFailurePipe`. Now this is a completely different pipe that can do all manner of things. I've used it to still save my users data, but then send out an email to that user alerting them to issues (please note, I rarely write UI oriented code). MassTransit has used this to take messages that have become poisonous and divert them to a poison message queue. All of this and more and you can control just how far and deep you want to go at each level. This is the power you get in exchange for the complexity of not having a direct return value.
 
-> That said, you may be looking at me ಠ_ಠ like, "Dru, I _NEED_ return values." I completely understand and I've felt that pain. Chris and I are still working on how to best make this a reusable pattern - but the whole picture looks a bit [like this](https://gist.github.com/phatboyg/0e3ef1029d29195997ca8d046d0d384f). The basic pattern is that your context has a way to "set" a return value. If that property is of type `Task<T>` you can then `await` on that property of your context. Then if you wrap that in an extension method your send can now be a `Request`.
-
+> That said, you may be looking at me ಠ*ಠ like, "Dru, I \_NEED* return values." I completely understand and I've felt that pain. Chris and I are still working on how to best make this a reusable pattern - but the whole picture looks a bit [like this](https://gist.github.com/phatboyg/0e3ef1029d29195997ca8d046d0d384f). The basic pattern is that your context has a way to "set" a return value. If that property is of type `Task<T>` you can then `await` on that property of your context. Then if you wrap that in an extension method your send can now be a `Request`.
 
 ## In closing
 

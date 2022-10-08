@@ -1,9 +1,9 @@
 ---
-title:  "Deepest Fear"
-date:   '2011-12-29'
+title: 'Deepest Fear'
+date: '2011-12-29'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Nelson Mandela
 type: quote
 ---

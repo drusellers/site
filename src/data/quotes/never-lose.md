@@ -1,9 +1,9 @@
 ---
-title:  "Never Lose"
-date:   '2018-01-08'
+title: 'Never Lose'
+date: '2018-01-08'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Unknown (via [Instagram](https://www.instagram.com/p/BAH42kIxxx1/))
 type: quote
 ---

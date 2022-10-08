@@ -1,9 +1,9 @@
 ---
-title:  "Years of Struggle"
-date:   '2020-01-04'
+title: 'Years of Struggle'
+date: '2020-01-04'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Sigmund Freud
 type: quote
 ---

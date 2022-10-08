@@ -1,14 +1,14 @@
 ---
-title: "Machine Age vs System Age"
+title: 'Machine Age vs System Age'
 date: '2018-12-22'
 categories: notes
 tags:
-- notes
-- books
+  - notes
+  - books
 disqus_id: cfba0d45-ece3-49a1-bbb0-3e674c4a451b
 withStats: true
 description: >
-              Notes on Machine vs System ages while reading "Creating the Corporate Future"
+  Notes on Machine vs System ages while reading "Creating the Corporate Future"
 ---
 
 > The following represents notes transcribed while reading the book "[Creating the Corporate Future](https://www.amazon.com/Creating-Corporate-Future-Plan-Planned/dp/0471090093)"

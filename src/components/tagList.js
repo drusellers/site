@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 export default function TagList({ tags }) {
   if (tags.length === 0) return <></>
@@ -14,8 +14,8 @@ export default function TagList({ tags }) {
               </a>
             </Link>
           </li>
-        );
+        )
       })}
     </ul>
-  );
+  )
 }

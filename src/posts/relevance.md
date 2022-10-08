@@ -1,16 +1,15 @@
 ---
-title: "Relevancy"
-subtitle: "The Crowbar of Search"
+title: 'Relevancy'
+subtitle: 'The Crowbar of Search'
 date: '2019-05-18'
 draft: true
 tags: ['search']
 categories: 'search'
 withStats: true
 description: >
-              In my attempt to learn more about full text search I'm going
-              through and documenting in my own words some of the key elements
-              supporting full text search analysis.
-
+  In my attempt to learn more about full text search I'm going
+  through and documenting in my own words some of the key elements
+  supporting full text search analysis.
 ---
 
 Relevancy starts in full text search indices with TF/IDF

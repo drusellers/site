@@ -1,14 +1,12 @@
 ---
-title:  "Application Instance"
-date:   '2014-09-11'
+title: 'Application Instance'
+date: '2014-09-11'
 categories: architecture
 tags:
-- architecture
+  - architecture
 disqus_id: 08ce23a5-687d-4dc0-8d9e-921ff8270590
 withStats: true
-aliases: [
-  "/architecture/2014/09/11/app-instance.html"
-]
+aliases: ['/architecture/2014/09/11/app-instance.html']
 ---
 
 So, if [IoC is the Context](% post_url 2013-12-09-ioc-as-context %}) how do we
@@ -23,10 +21,10 @@ assembly scanning, then passes a [TypePool](% post_url 2014-09-10-typepool %}) a
 {{< highlight csharp >}}
 public static class AppFactory
 {
-  public static Application Build<TApplication>()
-      where TApplication : ApplicationMarker, new()
-  {
-    //boot strap logging
+public static Application Build<TApplication>()
+where TApplication : ApplicationMarker, new()
+{
+//boot strap logging
 
     var pool = new TypePool();
     //collect all assemblies for this host
@@ -35,7 +33,8 @@ public static class AppFactory
     //build up container
 
     return new ApplicationInstance(container, pool);
-  }
+
+}
 }
 {{< /highlight >}}
 
@@ -44,10 +43,10 @@ The application instance looks like this
 {{< highlight csharp >}}
 public interface Application : IDisposable
 {
-  void Start();
-  TComponent Resolve<TComponent>();
-  void Scope(Action<ILifetimeScope> action);
-  void Dispatch(Request request);
+void Start();
+TComponent Resolve<TComponent>();
+void Scope(Action<ILifetimeScope> action);
+void Dispatch(Request request);
 }
 {{< /highlight >}}
 
@@ -56,24 +55,24 @@ The Start method looks like
 {{< highlight csharp >}}
 public class ApplicationInstance : Application
 {
-  public void Start()
-  {
-    //run db migrations
+public void Start()
+{
+//run db migrations
 
     //run all bootup code
-  }
 
-  //other stuff
+}
+
+//other stuff
 }
 {{< /highlight >}}
 
 The ApplicationMarker looks like
 
-
 {{< highlight csharp >}}
 public interface ApplicationMarker
 {
-  void ConfigureContainer(TypePool pool, ContainerBuilder builder);
+void ConfigureContainer(TypePool pool, ContainerBuilder builder);
 }
 {{< /highlight >}}
 
@@ -86,14 +85,14 @@ In integration tests I can say things like:
 {{< highlight csharp >}}
 public class SampleTest
 {
-  [Test]
-  public void Test()
-  {
-    var app = AppFactory.Build<MyApplication>();
-    var sut = app.Resolve<TheSystemToTest>();
-    var result = sut.TheMethodToTest(some, parameters);
-    result.ShouldNotBeNull();
-  }
+[Test]
+public void Test()
+{
+var app = AppFactory.Build<MyApplication>();
+var sut = app.Resolve<TheSystemToTest>();
+var result = sut.TheMethodToTest(some, parameters);
+result.ShouldNotBeNull();
+}
 }
 {{< /highlight >}}
 

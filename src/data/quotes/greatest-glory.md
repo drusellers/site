@@ -1,9 +1,9 @@
 ---
-title:  "Greatest Glory"
-date:   '2011-12-12'
+title: 'Greatest Glory'
+date: '2011-12-12'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Nelson Mandela
 type: quote
 ---

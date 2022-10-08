@@ -1,6 +1,6 @@
 ---
-title:  "What is Software Architecture?"
-date:   '2017-01-28'
+title: 'What is Software Architecture?'
+date: '2017-01-28'
 categories: Architecture
 published: false
 disqus_id: 150e5c91-183a-42a5-8a03-a60e01b20851
@@ -39,10 +39,6 @@ With this model in hand, I follow a basic template that has worked well across m
 
 This slow sorting approach gives me and the other contributors time to absorb those changes. Time to ask hard questions about what is going on and why we are doing it. With each move things generally become clearer and service boundaries become clearer. By far the best conversation at the development level is always about dependencies, and how much more obvious they become. In the Retail world people were surprised how many connections the Product section had, but on reflection it made a lot of sense, because it is the base of every other system.
 
-
-
-
-
 ---
 
 ### Drafty stuff
@@ -50,9 +46,5 @@ This slow sorting approach gives me and the other contributors time to absorb th
 At my latest job, I've been exploring a type of architecture that requires little pre-established building. It exists as little more than an idea. The idea is that we need to group software together. Ok, nothing too genius there. We have been grouping software together for a long time. We even have a word for it: _cohesion_.
 
 We want like bits to be together. But what makes something, _like_ something else. Well, lets take a look at the system I am working on. Its a retail system involving the sale of motorcycle parts. Let's start at the highest level of the business. It looks roughly like this.
-
-
-
-
 
 So, we started our architecture with a simple idea. We need for application buckets: Product, Commerce, ERP and Fulfillment. With those for repositories we can build the entire company, including how we integrate with our third party software. Each box above has one major system that is backing it and my work is about integrating those systems together to behave as one healthy system.

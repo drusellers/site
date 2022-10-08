@@ -1,11 +1,11 @@
-import Nav from "../components/nav";
-import Logo from "../components/logo";
-import Footer from "../components/footer";
-import Search from "../components/search";
-import TagList from "../components/tagList";
-import TitleSubtitle from "../components/titleSubtitle";
-import Stats from "../components/stats";
-import Date from "../components/date";
+import Nav from '../components/nav'
+import Logo from '../components/logo'
+import Footer from '../components/footer'
+import Search from '../components/search'
+import TagList from '../components/tagList'
+import TitleSubtitle from '../components/titleSubtitle'
+import Stats from '../components/stats'
+import Date from '../components/date'
 
 // This component carves out sections of the page, and applies sensible padding to
 // them.
@@ -20,11 +20,11 @@ export default function Layout({
 }) {
   return (
     <>
-      <header className="container mx-auto flex flex-col max-w-document sm:flex-row sm:h-24 pt-6 px-6">
+      <header className="container mx-auto flex max-w-document flex-col px-6 pt-6 sm:h-24 sm:flex-row">
         <div>
           <Logo />
         </div>
-        <div className="flex-grow my-6">
+        <div className="my-6 flex-grow">
           <Nav />
         </div>
       </header>
@@ -34,19 +34,19 @@ export default function Layout({
       </div> */}
 
       {/* This is the main stage for showing content */}
-      <div className="container mx-auto flex flex-col sm:flex-row max-w-document my-6 min-h-page">
-        <div className="px-6 my-6 space-y-4 sm:pt-6 sm:w-1/3 sm:border-t-4 sm:border-black">
+      <div className="container mx-auto my-6 flex min-h-page max-w-document flex-col sm:flex-row">
+        <div className="my-6 space-y-4 px-6 sm:w-1/3 sm:border-t-4 sm:border-black sm:pt-6">
           <TitleSubtitle title={title} subtitle={subtitle} />
           <Stats wordCount={wordCount} readingTime={readingTime} />
           <Date dateString={date} />
           <TagList tags={tags || []} />
         </div>
-        <div className="px-6 my-6">
+        <div className="my-6 px-6">
           <article className="max-w-prose">{children}</article>
         </div>
       </div>
 
       <Footer />
     </>
-  );
+  )
 }

@@ -1,18 +1,18 @@
 ---
-title:  "Mental Frameworks"
-date:   '2019-11-20'
+title: 'Mental Frameworks'
+date: '2019-11-20'
 categories: business
 tags:
-- strategy
-- business
-- beyond budgeting
+  - strategy
+  - business
+  - beyond budgeting
 disqus_id: a10be2a3-5842-497f-81eb-25c8233007b3
 aliases: []
 toc: true
 withStats: true
 draft: true
 description: >
-              A collection of frameworks/tools that I use when thinking about business.
+  A collection of frameworks/tools that I use when thinking about business.
 ---
 
 > This page will get updated from time to time as new things roll in.
@@ -39,7 +39,6 @@ This is a helpful framework to have in mind when thinking about the dots on a
 Wardley Map
 
 From the dot that is the customer, what "jobs" do they want done - can those be dots? What infrastructure is needed to get those jobs done? Dots being a process, code, or data.
-
 
 Let's look at the P&L
 
@@ -79,7 +78,6 @@ aoeu
 ## Beyond Budgeting
 
 - Rolling 5Q
-
 
 ## Porter's HBR Strategy Paper
 

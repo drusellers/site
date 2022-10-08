@@ -1,13 +1,13 @@
 ---
-title: "Being aware of the G/L"
-subtitle: "What I learned working on ERP and a 3PL taught me"
+title: 'Being aware of the G/L'
+subtitle: 'What I learned working on ERP and a 3PL taught me'
 date: '2019-01-01'
 tags: []
 categories: []
 withStats: true
 draft: true
 description: >
-              What I learned working on ERP and a 3PL and a SaaS Cloud
+  What I learned working on ERP and a 3PL and a SaaS Cloud
 ---
 
 A request for services is a "Sales Order" [^1]

@@ -1,9 +1,9 @@
 ---
-title:  "Water is fluid"
-date:   '2011-05-30'
+title: 'Water is fluid'
+date: '2011-05-30'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Lao-tzu
 type: quote
 ---

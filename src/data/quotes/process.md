@@ -1,9 +1,9 @@
 ---
-title:  "Focus on the process"
-date:   '2011-06-12'
+title: 'Focus on the process'
+date: '2011-06-12'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Think Twice, pg 133
 type: quote
 ---

@@ -1,12 +1,12 @@
 ---
-title:  "Rolling Forecasts"
-date:   '2019-12-29'
+title: 'Rolling Forecasts'
+date: '2019-12-29'
 disqus_id: 077c0afa-4d2d-4342-b02c-cc87eabc7ff2
 aliases: []
 withStats: true
 description: >
-              Working with rolling forecasts, some thoughts on the day to day nature of running a business
-              while moniting and measuring with rolling forecasts.
+  Working with rolling forecasts, some thoughts on the day to day nature of running a business
+  while moniting and measuring with rolling forecasts.
 ---
 
 So, we are going to try and have rolling budgetary forecasts. That has become an easy enough thing for the me to manage. But my new "issue" is the anchoring of my goals. What am I going to compare my rolling forecasts to if I'm constantly generating new ones?

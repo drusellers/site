@@ -1,13 +1,13 @@
 ---
-title: "Strategy"
-subtitle: "A choice"
+title: 'Strategy'
+subtitle: 'A choice'
 date: '2020-01-15'
 tags:
   - strategy
 categories: []
 withStats: true
 description: >
-              Yo, look. Strategy
+  Yo, look. Strategy
 draft: true
 ---
 

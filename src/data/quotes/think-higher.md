@@ -1,9 +1,9 @@
 ---
-title:  "Think Higher"
-date:   '2012-12-10'
+title: 'Think Higher'
+date: '2012-12-10'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Elie Wiesel
 type: quote
 ---

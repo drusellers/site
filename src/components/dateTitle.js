@@ -1,10 +1,10 @@
-import ShortDate from "../components/shortDate";
-import Link from "next/link";
+import ShortDate from '../components/shortDate'
+import Link from 'next/link'
 
 export default function DateTitle({ date, title, href }) {
   return (
     <div>
-      <div className="inline mr-4">
+      <div className="mr-4 inline">
         <ShortDate dateString={date} />
       </div>
       <div className="inline">
@@ -13,5 +13,5 @@ export default function DateTitle({ date, title, href }) {
         </Link>
       </div>
     </div>
-  );
+  )
 }

@@ -1,9 +1,9 @@
 ---
-title:  "The Great Ocean"
-date:   '2013-01-10'
+title: 'The Great Ocean'
+date: '2013-01-10'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Sir Isaac Newton
 type: quote
 ---

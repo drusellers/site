@@ -1,9 +1,9 @@
 ---
-title:  "Fight is won"
-date:   '2011-12-19'
+title: 'Fight is won'
+date: '2011-12-19'
 categories: quotes
 tags:
-- Quotes
+  - Quotes
 author: Muhammad Ali
 type: quote
 ---

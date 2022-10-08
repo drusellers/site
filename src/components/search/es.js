@@ -1,39 +1,39 @@
-const URL = process.env.NEXT_PUBLIC_ES_READ_URL;
+const URL = process.env.NEXT_PUBLIC_ES_READ_URL
 
 function getQuery(query) {
   return {
-    "suggest": {
-      "title-suggest": {
-        "prefix": query,
-        "completion": {
-          "field": "suggest"
-        }
-      }
+    suggest: {
+      'title-suggest': {
+        prefix: query,
+        completion: {
+          field: 'suggest',
+        },
+      },
     },
-    "aggregations": {
-      "categories": {
-        "global": {},
-        "aggs": {
-          "categories": {
-            "terms": {
-              "field": "categories"
-            }
-          }
-        }
-      }
+    aggregations: {
+      categories: {
+        global: {},
+        aggs: {
+          categories: {
+            terms: {
+              field: 'categories',
+            },
+          },
+        },
+      },
     },
-    "query": {
-      "multi_match": {
-        "query": query,
-        "fields": ["description", "summary", "title"]
-      }
+    query: {
+      multi_match: {
+        query: query,
+        fields: ['description', 'summary', 'title'],
+      },
     },
-    "stored_fields": ['title', 'description', 'summary', 'url'],
-    "highlight": {
-      "fields": {
-        "text": {}
-      }
-    }
+    stored_fields: ['title', 'description', 'summary', 'url'],
+    highlight: {
+      fields: {
+        text: {},
+      },
+    },
   }
 }
 
@@ -45,8 +45,8 @@ function query(query) {
   if (query === '') {
     return Promise.resolve({
       hits: [],
-      categories: []
-    });
+      categories: [],
+    })
   }
 
   // fire and forget ga event to track search
@@ -62,39 +62,38 @@ function query(query) {
   //   console.log('GA Error:', error);
   // }
 
-  return request(query)
-    .then(body => {
-      console.log(body);
-      const hits = body.hits.hits || [];
-      const suggestions = body.suggest['title-suggest'][0].options || [];
-      const categories = body.aggregations.categories.categories.buckets;
-      const result = {
-        hits: hits.length == 0 ? suggestions : hits,
-        categories
-      };
-      return Promise.resolve(result);
-    });
+  return request(query).then((body) => {
+    console.log(body)
+    const hits = body.hits.hits || []
+    const suggestions = body.suggest['title-suggest'][0].options || []
+    const categories = body.aggregations.categories.categories.buckets
+    const result = {
+      hits: hits.length == 0 ? suggestions : hits,
+      categories,
+    }
+    return Promise.resolve(result)
+  })
 }
 
 export default {
-  query
+  query,
 }
 
 // effectively private
 function request(query) {
-  console.log('request', request);
-  const headers = new Headers();
-  headers.append('Content-Type', 'application/json');
-  headers.append('Accept', 'application/json');
+  console.log('request', request)
+  const headers = new Headers()
+  headers.append('Content-Type', 'application/json')
+  headers.append('Accept', 'application/json')
   return fetch(`${URL}/posts/_search`, {
     method: 'POST',
     body: JSON.stringify(getQuery(query)),
     headers: {
       'Content-Type': 'application/json',
-      'Accept': 'application/json'
-    }
-  }).then(response => {
-    console.log(response);
+      Accept: 'application/json',
+    },
+  }).then((response) => {
+    console.log(response)
     return response.json()
   })
 }
