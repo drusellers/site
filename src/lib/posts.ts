@@ -6,7 +6,15 @@ import html from 'remark-html'
 import { parseISO } from 'date-fns'
 import gfm from 'remark-gfm'
 
-const postsDirectory = path.join(process.cwd(), 'src/posts')
+const postsDirectory = path.join(process.cwd(), 'content/posts')
+
+type PostHeader = {
+  id: string,
+  year: number,
+  draft: boolean,
+  date: string,
+  tags: string[],
+}
 
 export function getSortedPostsData() {
   // Get file names under /posts
@@ -24,12 +32,13 @@ export function getSortedPostsData() {
 
     const year = parseISO(matterResult.data.date).getFullYear()
 
+
     // Combine the data with the id
     return {
       id,
       year: year,
       ...matterResult.data,
-    }
+    } as PostHeader
   })
 
   var nonDrafts = allPostsData.filter((d) => !d.draft)
@@ -44,7 +53,7 @@ export function getSortedPostsData() {
   })
 }
 
-export function getAllTags() {
+export function getAllTags() : { [tag: string]: number} {
   return getSortedPostsData()
     .flatMap((p) => p.tags)
     .filter((t) => t != null)
@@ -80,7 +89,7 @@ export function getTagData(tag) {
   }
 }
 
-export function getAllPostIds() {
+export function getAllPostIds() : { params: { id: string}}[] {
   const fileNames = fs.readdirSync(postsDirectory)
 
   // Returns an array that looks like this:
@@ -105,7 +114,16 @@ export function getAllPostIds() {
   })
 }
 
-export async function getPostData(id) {
+type PostData = {
+  id: string,
+  _id: string,
+  contentHtml: string,
+  contentPlain: string,
+  wordCount: number,
+  readingTime: number,
+}
+
+export async function getPostData(id) : Promise<PostData> {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
@@ -134,6 +152,6 @@ export async function getPostData(id) {
   }
 }
 
-function wordyCount(content) {
+function wordyCount(content) : number {
   return content.trim().split(/\s+/).length
 }
