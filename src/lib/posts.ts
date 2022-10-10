@@ -8,12 +8,18 @@ import gfm from 'remark-gfm'
 
 const postsDirectory = path.join(process.cwd(), 'content/posts')
 
+type VideoProps = {
+  youtube?: string,
+  loom?: string
+}
+
 type PostHeader = {
   id: string,
   year: number,
   draft: boolean,
   date: string,
   tags: string[],
+  video?: VideoProps
 }
 
 export function getSortedPostsData() {
@@ -121,6 +127,7 @@ type PostData = {
   contentPlain: string,
   wordCount: number,
   readingTime: number,
+  video?: VideoProps
 }
 
 export async function getPostData(id) : Promise<PostData> {
@@ -148,7 +155,7 @@ export async function getPostData(id) : Promise<PostData> {
     contentPlain,
     wordCount,
     readingTime,
-    ...matterResult.data,
+    video: {}
   }
 }
 

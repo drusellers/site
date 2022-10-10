@@ -1,5 +1,5 @@
 import Layout from '../../layouts/layout'
-import { getAllPostIds, getPostData } from '../../lib/posts.ts'
+import { getAllPostIds, getPostData } from '../../lib/posts'
 
 export default function Post({ postData }) {
   return (
@@ -61,8 +61,6 @@ function Video({video}) {
                 className={'mb-5'}
     >
       <iframe src={video.loom} frameBorder="0"
-              webkitallowfullscreen
-              mozallowfullscreen
               allowFullScreen
               style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}></iframe>
     </div>

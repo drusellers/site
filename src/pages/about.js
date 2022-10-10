@@ -5,7 +5,7 @@ import { getAbout } from '../../lib/cms.ts'
 export default function About({ bio }) {
   return (
     <Layout title="About">
-      <img src={bio.frontMatter.img} />
+      <img src={bio.img} />
       <div
         className={'prose'}
         dangerouslySetInnerHTML={{ __html: bio.html }}
