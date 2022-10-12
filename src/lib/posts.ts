@@ -9,16 +9,16 @@ import gfm from 'remark-gfm'
 const postsDirectory = path.join(process.cwd(), 'content/posts')
 
 type VideoProps = {
-  youtube?: string,
+  youtube?: string
   loom?: string
 }
 
 type PostHeader = {
-  id: string,
-  year: number,
-  draft: boolean,
-  date: string,
-  tags: string[],
+  id: string
+  year: number
+  draft: boolean
+  date: string
+  tags: string[]
   video?: VideoProps
 }
 
@@ -37,7 +37,6 @@ export function getSortedPostsData() {
     const matterResult = matter(fileContents)
 
     const year = parseISO(matterResult.data.date).getFullYear()
-
 
     // Combine the data with the id
     return {
@@ -59,7 +58,7 @@ export function getSortedPostsData() {
   })
 }
 
-export function getAllTags() : { [tag: string]: number} {
+export function getAllTags(): { [tag: string]: number } {
   return getSortedPostsData()
     .flatMap((p) => p.tags)
     .filter((t) => t != null)
@@ -95,7 +94,7 @@ export function getTagData(tag) {
   }
 }
 
-export function getAllPostIds() : { params: { id: string}}[] {
+export function getAllPostIds(): { params: { id: string } }[] {
   const fileNames = fs.readdirSync(postsDirectory)
 
   // Returns an array that looks like this:
@@ -121,16 +120,16 @@ export function getAllPostIds() : { params: { id: string}}[] {
 }
 
 type PostData = {
-  id: string,
-  _id: string,
-  contentHtml: string,
-  contentPlain: string,
-  wordCount: number,
-  readingTime: number,
+  id: string
+  _id: string
+  contentHtml: string
+  contentPlain: string
+  wordCount: number
+  readingTime: number
   video?: VideoProps
 }
 
-export async function getPostData(id) : Promise<PostData> {
+export async function getPostData(id): Promise<PostData> {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
@@ -155,10 +154,10 @@ export async function getPostData(id) : Promise<PostData> {
     contentPlain,
     wordCount,
     readingTime,
-    video: matterResult.data.video
+    video: matterResult.data.video,
   }
 }
 
-function wordyCount(content) : number {
+function wordyCount(content): number {
   return content.trim().split(/\s+/).length
 }

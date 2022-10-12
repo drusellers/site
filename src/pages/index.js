@@ -8,14 +8,26 @@ export default function Home({ beforeFold, afterFold }) {
     <Layout title="Curiosity is Life" isHome={true}>
       <div className="space-y-4">
         {beforeFold.map(({ id, date, title, description, video }) => (
-          <Post key={id} id={id} title={title} description={description} video={video} />
+          <Post
+            key={id}
+            id={id}
+            title={title}
+            description={description}
+            video={video}
+          />
         ))}
         {/*</div>*/}
         {/*<Placard />*/}
         {/*insert something here 5 posts in*/}
         {/*<div className="space-y-4">*/}
         {afterFold.map(({ id, date, title, description, video }) => (
-          <Post key={id} id={id} title={title} description={description} video={video} />
+          <Post
+            key={id}
+            id={id}
+            title={title}
+            description={description}
+            video={video}
+          />
         ))}
       </div>
     </Layout>

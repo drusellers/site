@@ -6,7 +6,7 @@ import { parse, stringify } from 'yaml'
 const contentDirectory = path.join(process.cwd(), 'content')
 
 type VideoProps = {
-  youtube?: string,
+  youtube?: string
   loom?: string
 }
 
@@ -15,7 +15,7 @@ type AboutProps = {
   preview?: string
   html: string
   video?: VideoProps
-  img?: string,
+  img?: string
 }
 
 export function getAbout(): AboutProps {
@@ -54,7 +54,7 @@ export function getAbout(): AboutProps {
     preview: frontMatter.preview || null,
     img: frontMatter.img || null,
     html,
-    video: {}
+    video: {},
   }
 }
 
@@ -93,6 +93,6 @@ export function getStack(): AboutProps {
     title: frontMatter.title || null,
     preview: frontMatter.preview || null,
     html,
-    video: frontMatter.video ?? {}
+    video: frontMatter.video ?? {},
   }
 }
