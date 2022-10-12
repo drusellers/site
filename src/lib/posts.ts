@@ -154,7 +154,7 @@ export async function getPostData(id): Promise<PostData> {
     contentPlain,
     wordCount,
     readingTime,
-    video: matterResult.data.video,
+    video: matterResult.data.video || null,
   }
 }
 
