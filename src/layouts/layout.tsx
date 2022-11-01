@@ -7,6 +7,16 @@ import TitleSubtitle from '../components/titleSubtitle'
 import Stats from '../components/stats'
 import Date from '../components/date'
 
+type Props = {
+  title: string
+  subtitle?: string
+  children: any
+  tags?: string[]
+  date?: any
+  wordCount?: any
+  readingTime?: any
+}
+
 // This component carves out sections of the page, and applies sensible padding to
 // them.
 export default function Layout({
@@ -17,7 +27,7 @@ export default function Layout({
   date,
   wordCount,
   readingTime,
-}) {
+}: Props) {
   return (
     <>
       <header className="container mx-auto flex max-w-document flex-col px-6 pt-6 sm:h-24 sm:flex-row">

@@ -2,6 +2,8 @@ import Layout from '../../layouts/layout'
 import { getAllTagIds, getTagData } from '../../lib/posts'
 import ShortDate from '../../components/shortDate'
 import Link from 'next/link'
+import YearHeading from '../../components/yearHeading'
+import DateTitle from '../../components/dateTitle'
 
 export default function Tag({ tag, allPosts }) {
   return (
@@ -10,18 +12,20 @@ export default function Tag({ tag, allPosts }) {
         .reverse()
         .map((year) => {
           return (
-            <div key={year} className="archive">
-              <h3>{year}</h3>
-              {allPosts[year].map((q) => {
-                return (
-                  <div key={q.id} id={q.id}>
-                    <ShortDate dateString={q.date} />
-                    <Link href={`/posts/${q.id}`}>
-                      <a>{q.title}</a>
-                    </Link>
-                  </div>
-                )
-              })}
+            <div key={year} className="mb-8">
+              <YearHeading year={year} />
+              <div className={'mt-2 space-y-1'}>
+                {allPosts[year].map((q) => {
+                  return (
+                    <DateTitle
+                      key={q.id}
+                      date={q.date}
+                      href={`/posts/${q.id}`}
+                      title={q.title}
+                    />
+                  )
+                })}
+              </div>
             </div>
           )
         })}

@@ -9,10 +9,11 @@ export default function Post({ id, title, description, video }) {
   }
   return (
     <div>
-      <Link href={`/posts/${id}`}>
-        <a className="font-heading text-2xl text-blue-500">
-          <h2 className={'font-heading'}>{title}</h2>
-        </a>
+      <Link
+        href={`/posts/${id}`}
+        className="font-heading text-2xl text-blue-500"
+      >
+        <h2 className={'font-heading'}>{title}</h2>
       </Link>
       {d}
       {video ? (

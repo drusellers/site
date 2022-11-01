@@ -6,30 +6,20 @@ export default function Nav() {
     <div>
       <nav className="sm:float-right">
         <aside className="space-x-4">
-          <Link href="/about">
-            <a title="About" className={linkStyle}>
-              About
-            </a>
+          <Link href="/about" title="About" className={linkStyle}>
+            About
           </Link>{' '}
-          <Link href="/posts">
-            <a title="Archive" className={linkStyle}>
-              Archive
-            </a>
+          <Link href="/posts" title="Archive" className={linkStyle}>
+            Archive
           </Link>{' '}
-          <Link href="/iron">
-            <a title="Iron and the Soul" className={linkStyle}>
-              Iron and the Soul
-            </a>
+          <Link href="/iron" title="Iron and the Soul" className={linkStyle}>
+            Iron and the Soul
           </Link>{' '}
-          <Link href="/tags">
-            <a title="Tags" className={linkStyle}>
-              Tags
-            </a>
+          <Link href="/tags" title="Tags" className={linkStyle}>
+            Tags
           </Link>{' '}
-          <Link href="/resume">
-            <a title="Resume" className={linkStyle}>
-              Resume
-            </a>
+          <Link href="/resume" title="Resume" className={linkStyle}>
+            Resume
           </Link>
         </aside>
       </nav>

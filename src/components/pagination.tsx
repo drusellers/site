@@ -1,4 +1,16 @@
-export default function Pagination({ hasPrev, prevUrl, hasNext, nextUrl }) {
+type Props = {
+  hasPrev: boolean
+  prevUrl: string
+  hasNext: boolean
+  nextUrl: string
+}
+
+export default function Pagination({
+  hasPrev,
+  prevUrl,
+  hasNext,
+  nextUrl,
+}: Props) {
   if (!hasPrev || !hasNext) {
     return <></>
   }

@@ -1,6 +1,10 @@
 import { parseISO, format } from 'date-fns'
 
-export default function ShortDate({ dateString }) {
+type Props = {
+  dateString?: string
+}
+
+export default function ShortDate({ dateString }: Props) {
   if (dateString == undefined) {
     return <></>
   }

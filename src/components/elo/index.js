@@ -22,4 +22,4 @@ export {
   Stack,
   Switcher,
 }
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.tsx.map

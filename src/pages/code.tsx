@@ -49,7 +49,7 @@ export default function Code() {
         </li>
       </ol>
 
-      <a href="https://jockopodcast.com/2020/04/21/226-the-code-the-evaluation-the-protocols-the-path-with-dave-berke/">
+      <a href="https://jockopodcast.com/2020/04/21/226-the-code-the-evaluation-the-protocols-the-path-with-dave-berke/code.tsx">
         Podcast
       </a>
       <a href="https://www.amazon.com/Code-Evaluation-Protocols-Eminently-Qualified/dp/0981618820">

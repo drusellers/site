@@ -1,7 +1,7 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  content: ['./src/**/*.js'],
+  content: ['./src/**/*.js','./src/**/*.tsx'],
   theme: {
     minHeight: {
       page: '50vh',

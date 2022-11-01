@@ -18,10 +18,10 @@ that?
 ## Foundation
 
 -
-  <strong>Sleep</strong> I try to get 8-9 hours every night. Even when I
+  **Sleep** I try to get 8-9 hours every night. Even when I
   get up at 5am to go to the gym
 -
-  <strong>Exercise</strong> removes stress and helps me to stay healthy
+  **Exercise** removes stress and helps me to stay healthy
   and on task. This is also a bootstrapper for me of other valuable
   habits. Get up on time, invest in my health, and then set the path for
   the rest of the day.
@@ -105,14 +105,15 @@ dream. It should be subtle and ever present.
 - **Mac** when I started the foundational tool that I expected
 when I started, but now I have a hard time imagining alternatives, and
 moving to Ubuntu pulls at a lot of developer heart strings for me but I
-can't see my self being as productive sadly. - <strong>iCloud</strong>{' '}
+can't see my self being as productive sadly. - **iCloud** 
 makes backups just work across iPad, iPhone, and Mac. This is a pretty big
 form of "lock in" but I'm not expecting to migrate _any time soon._ I've
 cancelled Dropbox because it just doesn't have a compelling offering over
 iCloud for me (although I really like Paper and use that at work
-extensively). - <strong>Mulitple Desktops:</strong> a small feature that
-other OS's have, but it was the first implementation that just worked for
-me.
+extensively). 
+  - **Mulitple Desktops:** a small feature that
+  other OS's have, but it was the first implementation that just worked for
+  me.
 
 - **One Big Monitor**: I used to be a big double monitor kid,
 but now-a-days with 5k monitors I find that one is enough and using a
@@ -121,7 +122,7 @@ window manager type tool really helps me stay focused.
 - **3 subject spiral binder** my go to quick note taking
 device. `/dev/null` from note compaction. This way I don't have to have a
 computer open to take notes which leads to distractions (for me)
-<strong>Hemi Sync Music</strong> this may sound odd but something about
+**Hemi Sync Music** this may sound odd but something about
 working to music by [Hemi-Sync](https://hemi-sync.com) has a net positive
 effect for me. Placebo or not.
 
@@ -132,19 +133,15 @@ effect for me. Placebo or not.
 
 - **Things**
 - **iMessages** this just works between iPad, iPhone, and my Mac. No _bs_ just works.
-- **Superhuman**: for email. I like having a dedicated app
-for things so that I can `CMD+TAB` to the app i want or use my window
-manager. Can't do that with Google or Firefox tabs
+- **Superhuman**: for email. I like having a dedicated app for things so that I can `CMD+TAB` to the app i want or use my window  manager. Can't do that with Google or Firefox tabs
 
   
 - **Fantastical 2** not a huge game changer here, this
 entry is still contested
 
-**Evernote** this is slowly dieing off as I move content
-to either my gitbook hosted system or 1Password for secure things but
-its image capture of notes is still one of the best
+- **Evernote** this is slowly dieing off as I move content to either my gitbook hosted system or 1Password for secure things but its image capture of notes is still one of the best
 
 - **Paper** The Mac drawing app (not Dropbox Paper)
 - **1Password** for secrets
-- **[Karabiner](https://pqrs.org/osx/karabiner/) hot key manager utilized with [Slate](https://github.com/jigish/slate) for window management. I would be interested in a for-fee solution and  I could spend a bit more time here but I'm not sure its a major needle  mover, especially now.
+- **[Karabiner](https://pqrs.org/osx/karabiner/)** hot key manager utilized with [Slate](https://github.com/jigish/slate) for window management. I would be interested in a for-fee solution and  I could spend a bit more time here but I'm not sure its a major needle  mover, especially now.
 

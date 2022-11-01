@@ -1,9 +1,12 @@
-import { getSortedQuotesData } from '../lib/quotes'
+import { getSortedQuotesData, Quote } from '../lib/quotes'
 import Layout from '../layouts/layout'
 import YearHeading from '../components/yearHeading'
 import DateTitle from '../components/dateTitle'
 
-export default function Quotes({ allQuotes }) {
+type Props = {
+  allQuotes: { [key: string]: Quote[] }
+}
+export default function Quotes({ allQuotes }: Props) {
   return (
     <Layout title="Quotes">
       {Object.keys(allQuotes)
@@ -12,16 +15,18 @@ export default function Quotes({ allQuotes }) {
           return (
             <div key={year} className="mb-8">
               <YearHeading year={year} />
-              {allQuotes[year].map((q) => {
-                return (
-                  <DateTitle
-                    key={q.id}
-                    date={q.date}
-                    href={`/quotes/${q.id}`}
-                    title={q.title}
-                  />
-                )
-              })}
+              <div className={'mt-2 space-y-1'}>
+                {allQuotes[year].map((q) => {
+                  return (
+                    <DateTitle
+                      key={q.id}
+                      date={q.date}
+                      href={`/quotes/${q.id}`}
+                      title={q.title}
+                    />
+                  )
+                })}
+              </div>
             </div>
           )
         })}

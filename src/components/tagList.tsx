@@ -1,6 +1,10 @@
 import Link from 'next/link'
 
-export default function TagList({ tags }) {
+type Props = {
+  tags: string[]
+}
+
+export default function TagList({ tags }: Props) {
   if (tags.length === 0) return <></>
 
   return (
@@ -9,9 +13,7 @@ export default function TagList({ tags }) {
         return (
           <li key={t} className="tag">
             <Link href={`/tags/${t}`}>
-              <a>
-                <i className="fal fa-tag"></i> <span>{t}</span>
-              </a>
+              <i className="fal fa-tag"></i> <span>{t}</span>
             </Link>
           </li>
         )

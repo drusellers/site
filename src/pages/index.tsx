@@ -1,11 +1,11 @@
 import Layout from '../layouts/layout'
-import { getSortedPostsData } from '../lib/posts.ts'
+import { getSortedPostsData } from '../lib/posts'
 import Post from '../components/post'
 import Placard from '../components/placard'
 
 export default function Home({ beforeFold, afterFold }) {
   return (
-    <Layout title="Curiosity is Life" isHome={true}>
+    <Layout title="Curiosity is Life">
       <div className="space-y-4">
         {beforeFold.map(({ id, date, title, description, video }) => (
           <Post

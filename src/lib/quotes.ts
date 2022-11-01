@@ -5,9 +5,21 @@ import { remark } from 'remark'
 import html from 'remark-html'
 import { parseISO } from 'date-fns'
 
-const postsDirectory = path.join(process.cwd(), 'src', 'data', 'quotes')
+const postsDirectory = path.join(process.cwd(), 'content', 'quotes')
 
-export function getSortedQuotesData() {
+export interface Quote {
+  title: string
+  id: string
+  date: string
+  categories: string
+  tags: string[]
+  author: string
+  type: string
+  year: number
+  contentHtml?: string
+}
+
+export function getSortedQuotesData(): Quote[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map((fileName) => {
@@ -28,8 +40,9 @@ export function getSortedQuotesData() {
       id,
       year: year,
       ...matterResult.data,
-    }
+    } as Quote
   })
+
   // Sort posts by date
   return allPostsData.sort((a, b) => {
     if (a.date < b.date) {
@@ -40,7 +53,7 @@ export function getSortedQuotesData() {
   })
 }
 
-export function getAllQuotesIds() {
+export function getAllQuotesIds(): { params: { id: string } }[] {
   const fileNames = fs.readdirSync(postsDirectory)
 
   // Returns an array that looks like this:
@@ -65,7 +78,7 @@ export function getAllQuotesIds() {
   })
 }
 
-export async function getQuoteData(id) {
+export async function getQuoteData(id): Promise<Quote> {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
@@ -83,5 +96,5 @@ export async function getQuoteData(id) {
     id,
     contentHtml,
     ...matterResult.data,
-  }
+  } as Quote
 }

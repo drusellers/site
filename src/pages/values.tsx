@@ -11,8 +11,8 @@ export default function Values({ allValues }) {
           <div key={v.id} className="archive">
             <ul>
               <div className="mv2">
-                <Link href={`/values/${v.id}`}>
-                  <a className="link blue post-link">{v.title}</a>
+                <Link href={`/values/${v.id}`} className="link blue post-link">
+                  {v.title}
                 </Link>
               </div>
             </ul>

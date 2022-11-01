@@ -1,5 +1,5 @@
 import Layout from '../layouts/layout'
-import { getAbout } from '../../lib/cms.ts'
+import { getAbout } from '../../lib/cms'
 
 // core: Open, Achievement, Respect, Intellect
 export default function About({ bio }) {
