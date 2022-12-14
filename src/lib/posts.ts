@@ -126,7 +126,8 @@ type PostData = {
   contentPlain: string
   wordCount: number
   readingTime: number
-  video?: VideoProps
+  video?: VideoProps,
+  date: string
 }
 
 export async function getPostData(id): Promise<PostData> {
@@ -154,6 +155,7 @@ export async function getPostData(id): Promise<PostData> {
     contentPlain,
     wordCount,
     readingTime,
+    date: matterResult.data.date,
     video: matterResult.data.video || null,
   }
 }
