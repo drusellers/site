@@ -126,7 +126,7 @@ type PostData = {
   contentPlain: string
   wordCount: number
   readingTime: number
-  video?: VideoProps,
+  video?: VideoProps
   date: string
 }
 

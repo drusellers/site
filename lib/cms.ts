@@ -31,7 +31,7 @@ export function getAbout(): AboutProps {
   const config = {
     variables: {
       // variables need to be strings?
-      years: (now.getFullYear() - start.getFullYear()),
+      years: now.getFullYear() - start.getFullYear(),
     },
   }
 
