@@ -1,5 +1,5 @@
-import Layout from '../layouts/layout'
-import { getAllTags } from '../lib/posts'
+import Layout from '../../layouts/layout'
+import { getAllTags } from '../../lib/posts'
 import Link from 'next/link'
 
 export default function Tags({ allTags }) {

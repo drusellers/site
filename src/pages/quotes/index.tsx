@@ -1,24 +1,27 @@
-import Layout from '../layouts/layout'
-import { getSortedPostsData } from '../lib/posts'
-import YearHeading from '../components/yearHeading'
-import DateTitle from '../components/dateTitle'
+import { getSortedQuotesData, Quote } from '../../lib/quotes'
+import Layout from '../../layouts/layout'
+import YearHeading from '../../components/yearHeading'
+import DateTitle from '../../components/dateTitle'
 
-export default function Posts({ allPosts }) {
+type Props = {
+  allQuotes: { [key: string]: Quote[] }
+}
+export default function Index({ allQuotes }: Props) {
   return (
-    <Layout title="Posts">
-      {Object.keys(allPosts)
+    <Layout title="Index">
+      {Object.keys(allQuotes)
         .reverse()
         .map((year) => {
           return (
             <div key={year} className="mb-8">
               <YearHeading year={year} />
-              <div className="mt-2 space-y-1">
-                {allPosts[year].map((q) => {
+              <div className={'mt-2 space-y-1'}>
+                {allQuotes[year].map((q) => {
                   return (
                     <DateTitle
                       key={q.id}
                       date={q.date}
-                      href={`/posts/${q.id}`}
+                      href={`/quotes/${q.id}`}
                       title={q.title}
                     />
                   )
@@ -34,10 +37,10 @@ export default function Posts({ allPosts }) {
 export async function getStaticProps() {
   // group by year
   // then sort by date
-  const allPosts = getSortedPostsData()
+  const allQuotes = getSortedQuotesData()
   return {
     props: {
-      allPosts: groupBy(allPosts, 'year'),
+      allQuotes: groupBy(allQuotes, 'year'),
     },
   }
 }

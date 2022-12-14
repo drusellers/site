@@ -1,10 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkSquare } from '@fortawesome/pro-light-svg-icons'
 import Markdoc from '@markdoc/markdoc'
+import { Employer } from '../../../lib/types'
 
-export default function Experience({ job }) {
+type Props = {
+  job: Employer
+}
+export default function Experience({ job }: Props) {
   return (
-    <div key={job.employeer} className="ml-6 space-y-3">
+    <div key={job.employer} className="ml-6 space-y-3">
       <h4 className="font-heading text-xl font-bold">
         {job.employer}{' '}
         <small>
@@ -34,7 +38,7 @@ export default function Experience({ job }) {
               const html = Markdoc.renderers.html(content)
 
               return (
-                <p
+                <div
                   key={i}
                   className="ml-6"
                   dangerouslySetInnerHTML={{ __html: html }}

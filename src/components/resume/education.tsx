@@ -1,7 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkSquare } from '@fortawesome/pro-light-svg-icons'
+import { Education } from '../../../lib/types'
 
-export default function Education({ school }) {
+type Props = {
+  school: Education
+}
+
+export default function EducationUI({ school }) {
   let e = school
   return (
     <div key={e.school} className="space-y-3">

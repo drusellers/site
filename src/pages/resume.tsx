@@ -2,8 +2,12 @@ import Layout from '../layouts/layout'
 import { getResumeData } from '../lib/data'
 import Experience from '../components/resume/experience'
 import Education from '../components/resume/education'
+import { Resume } from '../../lib/types'
 
-export default function Resume({ resumeData }) {
+type Props = {
+  resumeData: Resume
+}
+export default function ResumeUI({ resumeData }) {
   let headingClasses = 'text-2xl my-4 font-bold font-heading'
   return (
     <Layout title="Resume">
@@ -11,7 +15,7 @@ export default function Resume({ resumeData }) {
         <blockquote className="ml-6">{resumeData.summary}</blockquote>
 
         <h3 className={headingClasses}>Work Experience</h3>
-        {resumeData.employeers.map((j) => {
+        {resumeData.employers.map((j) => {
           return <Experience key={j.employer} job={j} />
         })}
 
