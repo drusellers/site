@@ -4,7 +4,7 @@ date: '2022-11-01'
 categories: quotes
 tags:
   - Quotes
-author: @doc_amen on Instagram
+author: '@doc_amen on Instagram'
 type: quote
 ---
 
