@@ -14,6 +14,7 @@ export default function Home({ beforeFold, afterFold }) {
             title={title}
             description={description}
             video={video}
+            date={date}
           />
         ))}
         {/*</div>*/}
@@ -27,6 +28,7 @@ export default function Home({ beforeFold, afterFold }) {
             title={title}
             description={description}
             video={video}
+            date={date}
           />
         ))}
       </div>
