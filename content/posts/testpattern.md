@@ -36,26 +36,26 @@ of the parameters come from configuration or are overriden at test start.
 
 ## Usage
 
-{{< highlight csharp >}}
+```csharp
 [Test]
 public void TestSomething()
 {
-AppContext.Bootstrap();
+  AppContext.Bootstrap();
 }
-{{< /highlight >}}
+```
 
-{{< highlight csharp >}}
+```csharp
 public class AppBootstrapper
 {
-public static void Bootstrap()
-{
-//initialize the two members below
-}
+  public static void Bootstrap()
+  {
+    //initialize the two members below
+  }
 
-public Application Application {get;set;}
-public IContainer Container {get;set;}
+  public Application Application {get;set;}
+  public IContainer Container {get;set;}
 }
-{{< /highlight >}}
+```
 
 **UI Drivers**: these are focused pieces of code that interact directly with the
 raw API (this could be WatiR, selenium, the rest api, or the code api). The
@@ -66,47 +66,47 @@ class will be very small, but the datepicker might be a bit tricker and will
 depend highly on which datepicker you choose to use. This is the second level
 of abstraction (the first being a tool like Selenium).
 
-{{< highlight csharp >}}
+```csharp
 public class TextBoxDriver
 {
-IWebDriver \_driver;
-string \_selector;
+  IWebDriver _driver;
+  string _selector;
 
-public TextBoxDriver(IWebDriver driver, string selector)
-{
-\_driver = driver;
-\_selector = selector;
-}
+  public TextBoxDriver(IWebDriver driver, string selector)
+  {
+    _driver = driver;
+    _selector = selector;
+  }
 
-public void Value(string input)
-{
-\_driver.GetElement(\_selector).Text(input);
+  public void Value(string input)
+  {
+    _driver.GetElement(_selector).Text(input);
+  }
 }
-}
-{{< /highlight >}}
+```
 
 A more complex one might look like:
 
-{{< highlight csharp >}}
+```csharp
 public class DatePickerDriver
 {
-IWebDriver \_driver;
-string \_selector;
+  IWebDriver _driver;
+  string _selector;
 
-public NavigationDriver(IWebDriver driver, string selector)
-{
-\_driver = driver;
-}
+  public NavigationDriver(IWebDriver driver, string selector)
+  {
+    _driver = driver;
+  }
 
-public void Value(string input)
-{
-//where the input field is hidden in something else
-\_driver.GetElement(\_selector)
-.Find("input[type='hidden']")
-.Value(input);
+  public void Value(string input)
+  {
+    //where the input field is hidden in something else
+    _driver.GetElement(\_selector)
+      .Find("input[type='hidden']")
+      .Value(input);
+  }
 }
-}
-{{< /highlight >}}
+```
 
 So now, if you change your date time picker code, you only have to go to one
 place to update everything. Nice and dry.
@@ -118,60 +118,59 @@ is if you say you want to go to a given url and you are not logged in, it will
 take care of the login for you and then get you on that screen. This helps
 remove needless noise in your test code.
 
-{{< highlight csharp >}}
+```
 public class NavigationDriver
 {
-IWebDriver \_driver;
-LoginScreen \_login;
+  IWebDriver _driver;
+  LoginScreen _login;
 
-public NavigationDriver(IWebDriver driver, LoginScreen \_login)
-{
-\_driver = driver;
-\_login = login;
-}
+  public NavigationDriver(IWebDriver driver, LoginScreen login)
+  {
+    _driver = driver;
+    _login = login;
+  }
 
-public StatusCode NavigateToUrl<TScreen>()
-{
-var url = \_urls.GetUrlFor<TScreen>();
-\_driver.NavigateTo(url);
-//here it could check to see if on the logon screen
-//and it could deal with that.
-if(\_login.IsPresent())
-{
-\_login.LoginAsDefaultUser();
+  public StatusCode NavigateToUrl<TScreen>()
+  {
+    var url = _urls.GetUrlFor<TScreen>();
+    _driver.NavigateTo(url);
+    //here it could check to see if on the logon screen
+    //and it could deal with that.
+    if(_login.IsPresent())
+    {
+      _login.LoginAsDefaultUser();
+    }
+  
+    //verify that you were redirected
+    _driver.EnsureAtUrl(url);
+  }
 }
-
-      //verify that you were redirected
-      _driver.EnsureAtUrl(url);
-
-}
-}
-{{< /highlight >}}
+```
 
 **Converters**: Entity converters make testing life much easier as well by
 taking in simple text phrases and converting them into test objects.
 
-{{< highlight csharp >}}
+```csharp
 public interface IEntityConverter<TEntity>
 {
-TEntity Convert(string identifier);
+  TEntity Convert(string identifier);
 }
 
 public class CustomerConverter : IEntityConverter<Customer>
 {
-IRepository \_repository;
+  IRepository _repository;
 
-public CustomerConverter(IRepository repository)
-{
-\_repository = repository;
-}
+  public CustomerConverter(IRepository repository)
+  {
+    _repository = repository;
+  }
 
-public Customer Convert(string indentifier)
-{
-return \_repository.Find<Customer>(x=>x.Identifier == identifier);
+  public Customer Convert(string indentifier)
+  {
+    return _repository.Find<Customer>(x => x.Identifier == identifier);
+  }
 }
-}
-{{< /highlight >}}
+```
 
 This guys are a powerful part of the system, but they require a lot of baking
 to really become useful. You need to be able to express your testing commands
@@ -185,22 +184,20 @@ logon screen. This screen orchestrates entering a username and password and
 submitting the form. The screen can also check to see that login was successful
 or not and report back on errors visible on the screen.
 
-{{< highlight csharp >}}
-
+```csharp
 //LoginRequest is an 'input model' in FubuMVC speak
 public class LoginScreen : Screen<LoginRequest>
 {
-public LoginScreen(){}
+  public LoginScreen(){}
 
-//notice its action based - rather than UI element based
-public void Login(string username, string password)
-{
-GetDriverFor<TextboxDriver>(x=>x.Username).Value(username);
-GetDriverFor<PasswordDriver>(x => x.Password).Value(password);
+  //notice its action based - rather than UI element based
+  public void Login(string username, string password)
+  {
+    GetDriverFor<TextboxDriver>(x=>x.Username).Value(username);
+    GetDriverFor<PasswordDriver>(x => x.Password).Value(password);
+  }
 }
-}
-
-{{< /highlight >}}
+```
 
 There is a lot going on in the above example. Input models, our abstraction
 on top of input models for DOM querying, and .Net generics (if you are new to

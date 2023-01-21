@@ -46,7 +46,7 @@ extract some of the value from them with out a whole hog commitment.
 We can actually do the same thing for our core models as well. Lets take account, and make it a more
 protected system. The basic domain model will typically look like:
 
-```
+```sql
 CREATE TABLE accounts (
   id SERIAL NOT NULL PRIMARY KEY,
   slug TEXT NOT NULL UNIQUE,
@@ -56,7 +56,7 @@ CREATE TABLE accounts (
 
 But you could instead model it like this, and capture change over time:
 
-```
+```sql
 CREATE TABLE accounts (
   id SERIAL NOT NULL PRIMARY KEY,
 

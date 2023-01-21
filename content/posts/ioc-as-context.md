@@ -16,43 +16,41 @@ _Context: C# and .Net_
 
 ### For Consoles
 
-{{< highlight csharp >}}
+```csharp
 public class Program
 {
-public static int main()
-{
-//autofac example
-var builder = new ContainerBuilder();
+  public static int main()
+  {
+    // autofac example
+    var builder = new ContainerBuilder();
 
     //build the context/container up
     var container = builder.Build();
 
     return container.GetInstance<ITheProgram>().Run();
-
+  }
 }
-}
-{{< /highlight >}}
+```
 
 ### For Web Apps
 
-{{< highlight csharp >}}
+```csharp
 public class Global
 {
-static IContainer \_container;
+  static IContainer _container;
 
-public void App_Start()
-{
-//autofac example
-var builder = new ContainerBuilder();
+  public void App_Start()
+  {
+    // autofac example
+    var builder = new ContainerBuilder();
 
     //build the context/container up
     _container = builder.Build();
 
     container.GetInstance<ITheProgram>().Initialize();
-
+  }
 }
-}
-{{< /highlight >}}
+```
 
 By pushing the context/container to the start of the program, I can guarentee
 that every part of my application can be found and serviced through the container.
@@ -66,13 +64,14 @@ only scratech the surface of the power in child contexts. This post serves
 as a place for me to note, what I have since learned.
 
 My App Class
-{{< highlight csharp >}}
+
+```csharp
 public static class App
 {
-public static int Run()
-{
-//autofac example
-var builder = new ContainerBuilder();
+  public static int Run()
+  {
+    // autofac example
+    var builder = new ContainerBuilder();
 
     //build the context up
     var container = builder.Build();
@@ -83,15 +82,14 @@ var builder = new ContainerBuilder();
     var result = dispatcher.Dispatch(new CommandLineContext(Environment.CommandLine))
 
     return formatResultsForCommandLine(result);
+  }
 
+  static int formatResultsForCommandLine(DispatchResult result)
+  {
+    //stuff
+  }
 }
-
-static int formatResultsForCommandLine(DispatchResult result)
-{
-//stuff
-}
-}
-{{< /highlight >}}
+```
 
 Ok, there is a lot going on in here. The one thing that I'm gonna guess is new
 to most is the concept of a dispatcher. I am still working on this concept / name
@@ -128,13 +126,13 @@ would share the concept of request and response.
 
 #### A command line example
 
-{{< highlight csharp >}}
+```csharp
 public static class App
 {
-public static int Run()
-{
-//autofac example
-var builder = new ContainerBuilder();
+  public static int Run()
+  {
+    //autofac example
+    var builder = new ContainerBuilder();
 
     //build the context up
     var container = builder.Build();
@@ -150,15 +148,14 @@ var builder = new ContainerBuilder();
     IResponse response = dispatcher.Dispatch(request);
 
     return formatResultsForCommandLine(response);
+  }
 
+  static int formatResultsForCommandLine(IResponse response)
+  {
+    //stuff
+  }
 }
-
-static int formatResultsForCommandLine(IResponse response)
-{
-//stuff
-}
-}
-{{< /highlight >}}
+```
 
 A Container is key to this whole process. It holds your application context,
 but after that its all about how we dispatch the request via our router.

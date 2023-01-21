@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import Markdoc from '@markdoc/markdoc'
-import { parse, stringify } from 'yaml'
+import { parse } from 'yaml'
 
 const contentDirectory = path.join(process.cwd(), 'content')
 

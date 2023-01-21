@@ -1,10 +1,9 @@
 import fs from 'fs'
 import path from 'path'
-import matter from 'gray-matter'
-import { remark } from 'remark'
-import html from 'remark-html'
 import { parseISO } from 'date-fns'
-import gfm from 'remark-gfm'
+import Markdoc from "@markdoc/markdoc";
+import {parse} from "yaml";
+import {Fence} from "../components/fence";
 
 const postsDirectory = path.join(process.cwd(), 'content/posts')
 
@@ -22,7 +21,7 @@ type PostHeader = {
   video?: VideoProps
 }
 
-export function getSortedPostsData() {
+export function getSortedPostsData() : PostHeader[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map((fileName) => {
@@ -33,20 +32,32 @@ export function getSortedPostsData() {
     const fullPath = path.join(postsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
 
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents)
+    const ast = Markdoc.parse(fileContents)
 
-    const year = parseISO(matterResult.data.date).getFullYear()
+    const config = { }
+    const errors = Markdoc.validate(ast, config)
+
+    if (errors.length > 0) {
+      console.log('a', fileName, errors)
+    }
+
+    const content = Markdoc.transform(ast, config)
+
+    const frontMatter = ast.attributes.frontmatter
+        ? parse(ast.attributes.frontmatter)
+        : {}
+
+    const year = parseISO(frontMatter.date).getFullYear()
 
     // Combine the data with the id
     return {
       id,
       year: year,
-      ...matterResult.data,
+      ...frontMatter,
     } as PostHeader
   })
 
-  var nonDrafts = allPostsData.filter((d) => !d.draft)
+  const nonDrafts = allPostsData.filter((d) => !d.draft)
 
   // Sort posts by date
   return nonDrafts.sort((a, b) => {
@@ -128,24 +139,40 @@ type PostData = {
   readingTime: number
   video?: VideoProps
   date: string
+  title: string
 }
 
 export async function getPostData(id): Promise<PostData> {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
-  // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents)
-  const wordCount = wordyCount(matterResult.content)
+  const ast = Markdoc.parse(fileContents)
+
+
+
+  const config = {   }
+  const errors = Markdoc.validate(ast, config)
+
+  if (errors.length > 0) {
+    console.log(errors)
+  }
+
+
+
+
+  const content = Markdoc.transform(ast, config)
+  const frontMatter = ast.attributes.frontmatter
+      ? parse(ast.attributes.frontmatter)
+      : {}
+
+  const html = Markdoc.renderers.html(content)
+
+  const wordCount = wordyCount(fileContents)
   const readingTime = Math.round(wordCount / 200)
 
-  // Use remark to convert markdown into HTML string
-  const processedContent = await remark()
-    .use(html)
-    .use(gfm)
-    .process(matterResult.content)
-  const contentHtml = processedContent.toString()
-  const contentPlain = matterResult.content
+
+  const contentHtml = html
+  const contentPlain = fileContents
 
   // Combine the data with the id and contentHtml
   return {
@@ -155,11 +182,12 @@ export async function getPostData(id): Promise<PostData> {
     contentPlain,
     wordCount,
     readingTime,
-    date: matterResult.data.date,
-    video: matterResult.data.video || null,
+    title: frontMatter.title,
+    date: frontMatter.date,
+    video: frontMatter.video || null,
   }
 }
 
-function wordyCount(content): number {
+function wordyCount(content: string): number {
   return content.trim().split(/\s+/).length
 }

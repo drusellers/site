@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'Building a Pipeline in MassTransit'
 date: '2014-01-03'
 categories: masstransit
@@ -7,7 +6,6 @@ tags:
   - masstransit
 disqus_id: b90bcc77-b92d-4c7e-b378-5dbbeafee31f
 withStats: true
-draft: true
 ---
 
 At my new [employer](http://amplifier.com) we are rebuilding our order processing
@@ -20,11 +18,6 @@ _Context: C# and .Net_
 - [MassTransit](http://masstransit-project.com) (message routing)
 - [Automatonymous](https://github.com/MassTransit/Automatonymous) (state machines)
 - [MassTransit.Courier](https://github.com/MassTransit/MassTransit-Courier) (routing slips)
-
-Context Reading
-
-- [Message Interfaces]({% post_url 2014-01-01-masstransit-interfaces %})
-- [Message Context]({% post_url 2014-01-02-masstransit-context %})
 
 ## The pipeline
 
@@ -49,20 +42,20 @@ Context Reading
 At the edge is our company HTTP API, here we accept incoming commands from our
 integration partners and convert them into our internal model.
 
-{{< highlight csharp >}}
+```csharp
 public class SalesOrderEndpoint
 {
-MassTransit.IServiceBus \_bus;
+  MassTransit.IServiceBus _bus;
 
-public HttpResponse Post(HttpRequest request)
-{
-var command = ConvertToRegisterSalesOrderCommand(request);
-var endpointAddress = GetPriorityBasedEndpoint(command);
-\_bus.GetEndpoint(endpointAddress)
-.Send(command);
+  public HttpResponse Post(HttpRequest request)
+  {
+    var command = ConvertToRegisterSalesOrderCommand(request);
+    var endpointAddress = GetPriorityBasedEndpoint(command);
+    _bus.GetEndpoint(endpointAddress)
+      .Send(command);
+  }
 }
-}
-{{< /highlight >}}
+```
 
 Nothing too surprising here I hope. We simply convert it from the integration
 partner model into our internal model. Then we get a priority appropriate input
@@ -85,23 +78,22 @@ code.
 I often get asked how I do idempotency in my messages. Well here at the
 beginning of the pipeline is the best way i think.
 
-{{< highlight csharp >}}
+```csharp
 public class RegisterSalesOrderConsumer :
-Consumes<RegisterSalesOrder>.Context
+  Consumes<RegisterSalesOrder>.Context
 {
-public void Consume(IConsumeContext<RegisterSalesOrder> context)
-{
-if(AlreadyProcessed(context))
-{
-\_log.Info("Ignoring Order, already processed");
-return;
-}
+  public void Consume(IConsumeContext<RegisterSalesOrder> context)
+  {
+    if(AlreadyProcessed(context))
+    {
+      _log.Info("Ignoring Order, already processed");
+      return;
+    }
 
     ProcessOrder(context);
-
+  }
 }
-}
-{{< /highlight >}}
+```
 
 ## Getting everyone to play nice
 
@@ -111,66 +103,62 @@ on it. We are going to use Courier to orchestrate the various steps in our pipel
 
 Here we define some sample activities similar to what we might see in real code.
 
-{{< highlight csharp >}}
+```csharp
 public class RegisterSalesOrderActivity :
-Activity<RegisterSalesOrder, UndoSalesOrder>
+  Activity<RegisterSalesOrder, UndoSalesOrder>
 {
-public ExecutionResult Execute(Execution<RegisterSalesOrder> execution)
-{
-var order = execution.Arguments;
+  public ExecutionResult Execute(Execution<RegisterSalesOrder> execution)
+  {
+    var order = execution.Arguments;
 
     var id = StoreOrder(order);
     return execution.Completed(new UndoSalesOrder{ OrderId = id });
+  }
 
-}
-
-public CompensationResult Compensate(Compensation<UndoSalesOrder> compensation)
-{
-var log = compensation.Log;
-CancelOrder(log.OrderId);
-
-}
+  public CompensationResult Compensate(Compensation<UndoSalesOrder> compensation)
+  {
+    var log = compensation.Log;
+    CancelOrder(log.OrderId);
+  }
 }
 
 public class AllocateOrderActivity :
-Activity<AllocateOrder, DeallocateOrder>
+  Activity<AllocateOrder, DeallocateOrder>
 {
-public ExecutionResult Execute(Execution<AllocateOrder> execution)
-{
-var order = execution.Arguments;
+  public ExecutionResult Execute(Execution<AllocateOrder> execution)
+  {
+    var order = execution.Arguments;
 
     var allocationId = AllocateOrder(order);
 
     return execution.Completed(new DeallocateOrder{ AllocationId = allocationId });
+  }
 
+  public CompensationResult Compensate(Compensation<DeallocateOrder> compensation)
+  {
+    var log = compensation.Log;
+    DeallocateOrder(log.AllocationId);
+  }
 }
-
-public CompensationResult Compensate(Compensation<DeallocateOrder> compensation)
-{
-var log = compensation.Log;
-DeallocateOrder(log.AllocationId);
-
-}
-}
-{{< /highlight >}}
+```
 
 Now that we have the Activities that we want to orchestrate, we can build a
 routing slip that will be executed on the bus.
 
-{{< highlight csharp >}}
+```csharp
 public class BuildSlipAndExecute
 {
-IServiceBus \_bus;
+  IServiceBus _bus;
 
-//init in ctor
+  //init in ctor
 
-public void Execute()
-{
-var routingSlip = //build it up
-\_bus.Execute(routingSlip);
+  public void Execute()
+  {
+    var routingSlip = //build it up
+    _bus.Execute(routingSlip);
+  }
 }
-}
-{{< /highlight >}}
+```
 
 So, we use routing slips and activities from corourier to automate the various
 steps in our process and ensure that they get completed.
@@ -182,60 +170,59 @@ steps in our process and ensure that they get completed.
 
 ## State Machines
 
-{{< highlight csharp >}}
+```csharp
 public class OrderState : StateMachineInstance
 {
-public State CurrentState { get; set; }
-
-public DateTime ReceivedOn { get; set; }
-public DateTime? ShippedOn { get; set; }
-public string TrackingNumber { get; set; }
+  public State CurrentState { get; set; }
+  
+  public DateTime ReceivedOn { get; set; }
+  public DateTime? ShippedOn { get; set; }
+  public string TrackingNumber { get; set; }
 }
-
+  
 public class OrderWorkflow :
-AutomatonymousStateMachine<OrderState>
-{
-public OrderWorkflow()
-{
-Event(() => Received);
-Event(() => Allocated);
-Event(() => Picked);
-Event(() => Shipped);
+  AutomatonymousStateMachine<OrderState>
+  {
+    public OrderWorkflow()
+    {
+      Event(() => Received);
+      Event(() => Allocated);
+      Event(() => Picked);
+      Event(() => Shipped);
+  
+      State(() => AllocatingOrder);
+      State(() => PickingOrder);
+      State(() => PackingOrder);
+      State(() => PendingShipment);
+      State(() => Complete);
+  
+      Initially(
+        When(Received).TransitionTo(AllocatingOrder),
+        When(Allocated).TransitionTo(PickingOrder),
+        When(Picked).TransitionTo(PackingOrder),
+        When(Packed).TransitionTo(PendingShipment),
+        When(Shipped)
+          .Then((instance,data) =>
+          {
+            instance.TrackingNumber = data.TrackingNumber;
+            instance.ShippedOn = DateTime.Now;
+          })
+          .TransitionTo(Shipped)
+        );
+  }
 
-    State(() => AllocatingOrder);
-    State(() => PickingOrder);
-    State(() => PackingOrder);
-    State(() => PendingShipment);
-    State(() => Complete);
-
-    Initially(
-      When(Received).TransitionTo(AllocatingOrder),
-      When(Allocated).TransitionTo(PickingOrder),
-      When(Picked).TransitionTo(PackingOrder),
-      When(Packed).TransitionTo(PendingShipment),
-      When(Shipped)
-        .Then((instance,data) =>
-        {
-          instance.TrackingNumber = data.TrackingNumber;
-          instance.ShippedOn = DateTime.Now;
-        })
-        .TransitionTo(Shipped)
-      );
-
+  public State AllocatingOrder { get; set; }
+  public State PickingOrder { get; set; }
+  public State PackingOrder { get; set; }
+  public State PendingShipment { get; set; }
+  public State Complete { get; set; }
+  
+  public Event<SalesOrderReceived> Received { get; set; }
+  public Event<SalesOrderAllocated> Allocated { get; set; }
+  public Event<SalesOrderPicked> Picked { get; set; }
+  public Event<SalesOrderShipped> Shipped { get; set; }
 }
-
-public State AllocatingOrder { get; set; }
-public State PickingOrder { get; set; }
-public State PackingOrder { get; set; }
-public State PendingShipment { get; set; }
-public State Complete { get; set; }
-
-public Event<SalesOrderReceived> Received { get; set; }
-public Event<SalesOrderAllocated> Allocated { get; set; }
-public Event<SalesOrderPicked> Picked { get; set; }
-public Event<SalesOrderShipped> Shipped { get; set; }
-}
-{{< /highlight >}}
+```
 
 Because we can persist Automatonymous state machines to a database with
 their state, we can easily query these guys back out to see where our 'orders'
