@@ -14,7 +14,7 @@ credits, and after **bolding** my name in the browser I absolutely lost my mind.
 I went back to the dorms, that night and started building my web page. I don't recall
 getting dinner, after who knows how many can's of Mountain Dew I found GeoCities and
 uploaded my gif laden, under-construction, single page website with the amazingly 
-clever background color `#123456`.
+clever background color  {% chip color="#123456" /%} `#123456` _(its a dark slate blue)_.
 
 The next class, I hurriedly walk into class and proudly showed my professor what I had done
 over the last two days at which point my professor let me know that I was done with the class.

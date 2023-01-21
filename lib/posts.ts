@@ -3,7 +3,6 @@ import path from 'path'
 import { parseISO } from 'date-fns'
 import Markdoc from "@markdoc/markdoc";
 import {parse} from "yaml";
-import {Fence} from "../components/fence";
 
 const postsDirectory = path.join(process.cwd(), 'content/posts')
 
