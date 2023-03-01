@@ -9,10 +9,10 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "format": "prettier --write \"{src,lib}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md,mdx}\"",
-    "format:check": "prettier --check '{src,lib}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md,mdx}'",
-    "lint": "eslint --fix 'src/**/*.js' 'src/**/*.ts' 'lib/**/*.ts'",
-    "lint:check": "eslint 'src/**/*.js' 'src/**/*.ts' 'lib/**/*.ts'"
+    "format": "prettier --write \"{app,components,pages,lib}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md,mdx}\"",
+    "format:check": "prettier --check '{app,components,pages,lib}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md,mdx}'",
+    "lint": "eslint --fix './{app,components,pages,lib}/**/*.{ts,js,tsx}'",
+    "lint:check": "eslint './{app,components,pages,lib}/**/*.{ts,js,tsx}'"
   },
   "repository": {
     "type": "git",

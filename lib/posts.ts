@@ -1,8 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 import { parseISO } from 'date-fns'
-import Markdoc from "@markdoc/markdoc";
-import {parse} from "yaml";
+import Markdoc from '@markdoc/markdoc'
+import { parse } from 'yaml'
 
 const postsDirectory = path.join(process.cwd(), 'content/posts')
 
@@ -20,7 +20,7 @@ type PostHeader = {
   video?: VideoProps
 }
 
-export function getSortedPostsData() : PostHeader[] {
+export function getSortedPostsData(): PostHeader[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map((fileName) => {
@@ -33,7 +33,7 @@ export function getSortedPostsData() : PostHeader[] {
 
     const ast = Markdoc.parse(fileContents)
 
-    const config = { }
+    const config = {}
     const errors = Markdoc.validate(ast, config)
 
     if (errors.length > 0) {
@@ -43,8 +43,8 @@ export function getSortedPostsData() : PostHeader[] {
     const content = Markdoc.transform(ast, config)
 
     const frontMatter = ast.attributes.frontmatter
-        ? parse(ast.attributes.frontmatter)
-        : {}
+      ? parse(ast.attributes.frontmatter)
+      : {}
 
     const year = parseISO(frontMatter.date).getFullYear()
 
@@ -147,28 +147,22 @@ export async function getPostData(id): Promise<PostData> {
 
   const ast = Markdoc.parse(fileContents)
 
-
-
-  const config = {   }
+  const config = {}
   const errors = Markdoc.validate(ast, config)
 
   if (errors.length > 0) {
     console.log(errors)
   }
 
-
-
-
   const content = Markdoc.transform(ast, config)
   const frontMatter = ast.attributes.frontmatter
-      ? parse(ast.attributes.frontmatter)
-      : {}
+    ? parse(ast.attributes.frontmatter)
+    : {}
 
   const html = Markdoc.renderers.html(content)
 
   const wordCount = wordyCount(fileContents)
   const readingTime = Math.round(wordCount / 200)
-
 
   const contentHtml = html
   const contentPlain = fileContents

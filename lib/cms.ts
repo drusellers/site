@@ -36,26 +36,24 @@ export function getAbout(): AboutProps {
       // console.log('n', node, 'o', options)
       // console.log('color', node.attributes.color)
       return {
-        "$$mdtype": "Tag",
-        "name": "span",
-        "attributes": {
-          "style": `background:${node.attributes.color};width:1rem;height:1rem;display:inline-block;margin-bottom:-3px`
+        $$mdtype: 'Tag',
+        name: 'span',
+        attributes: {
+          style: `background:${node.attributes.color};width:1rem;height:1rem;display:inline-block;margin-bottom:-3px`,
         },
-        "children": [
-
-        ],
+        children: [],
       }
     },
     attributes: {
       color: {
         type: String,
-      }
-    }
+      },
+    },
   }
 
   const config = {
     tags: {
-      chip
+      chip,
     },
     variables: {
       // variables need to be strings?

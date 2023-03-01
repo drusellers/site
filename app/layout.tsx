@@ -1,0 +1,47 @@
+import Nav from '../components/nav'
+import Logo from '../components/logo'
+import Footer from '../components/footer'
+import { Metadata } from 'next'
+import '../css/index.css'
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import React from 'react'
+config.autoAddCss = false
+
+export const metadata: Metadata = {
+  title: 'Dru Sellers',
+  authors: [{ name: 'Dru Sellers', url: 'https://drusellers.com' }],
+  description: "Dru's thoughts",
+  icons: [{ rel: 'icon', url: '/images/favicon.png' }],
+}
+
+type Props = {
+  children: React.ReactNode
+}
+
+// This component carves out sections of the page, and applies sensible padding to
+// them.
+export default function Layout({ children }: Props) {
+  return (
+    <html lang={'en'}>
+      <body>
+        <header className="container mx-auto flex max-w-document flex-col px-6 pt-6 sm:h-24 sm:flex-row">
+          <div>
+            <Logo />
+          </div>
+          <div className="my-6 flex-grow">
+            <Nav />
+          </div>
+        </header>
+
+        {/* <div className="container mx-auto max-w-document my-6 p-3">
+        <Search />
+      </div> */}
+
+        {children}
+
+        <Footer />
+      </body>
+    </html>
+  )
+}

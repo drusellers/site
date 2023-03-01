@@ -6,7 +6,8 @@ export default function Xyz() {
       <ul>
         <li>[Programming Sucks](http://stilldrinking.org/programming-sucks)</li>
         <li>
-          [A nerd in a cave](http://randsinrepose.com/archives/a-nerd-in-a-cave/)
+          [A nerd in a
+          cave](http://randsinrepose.com/archives/a-nerd-in-a-cave/)
         </li>
       </ul>
     </Layout>
