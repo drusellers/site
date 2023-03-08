@@ -1,11 +1,16 @@
-import Layout from '../components/layouts/layout'
-import { getSortedPostsData } from '../lib/posts'
-import Post from '../components/post'
+import { getSortedPostsData } from '@/lib/posts'
+import Post from '@/components/post'
 import Placard from '../components/placard'
+import PagePage from '@/components/PagePage'
 
-export default function Home({ beforeFold, afterFold }) {
+export default function Home() {
+  const posts = getSortedPostsData()
+  const beforeFold = posts.slice(0, 5)
+  const afterFold = posts.slice(5, 10)
+  const allPostsData = getSortedPostsData().slice(0, 5)
+
   return (
-    <Layout title="Curiosity is Life">
+    <PagePage title="Curiosity is Life">
       <div className="space-y-4">
         {beforeFold.map(({ id, date, title, description, video }) => (
           <Post
@@ -32,20 +37,6 @@ export default function Home({ beforeFold, afterFold }) {
           />
         ))}
       </div>
-    </Layout>
+    </PagePage>
   )
-}
-
-export async function getStaticProps() {
-  const posts = getSortedPostsData()
-  const beforeFold = posts.slice(0, 5)
-  const afterFold = posts.slice(5, 10)
-  const allPostsData = getSortedPostsData().slice(0, 5)
-  return {
-    props: {
-      allPostsData,
-      beforeFold,
-      afterFold,
-    },
-  }
 }

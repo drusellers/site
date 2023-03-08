@@ -1,14 +1,26 @@
-import Layout from '../components/layouts/layout'
-import { getAllegoryData } from '../lib/data'
+import { getAllegoryData } from '@/lib/data'
 import { remark } from 'remark'
 import html from 'remark-html'
+import PagePage from '@/components/PagePage'
 
 const platoClassNames = 'font-semibold'
 const glauconClassNames = 'font-semibold'
 
-export default function Allegory({ data }) {
+export default function Allegory({}) {
+  const data = getAllegoryData()
+
+  async function processNote(p) {
+    if (p.characterNote) {
+      let x = await remark().use(html).process(p.characterNote)
+      let y = x.toString().replace('<p>', '').replace('</p>', '')
+      p.characterNote = ` (${y})`
+    }
+  }
+
+  data.prose.forEach(processNote)
+
   return (
-    <Layout title="Allegory of the Cave">
+    <PagePage title="Allegory of the Cave">
       <div className="allegory">
         <header className="mb-6">
           <h1 className="font-heading text-3xl">The Republic - Book VII</h1>
@@ -57,26 +69,6 @@ export default function Allegory({ data }) {
           </p>
         </footer>
       </div>
-    </Layout>
+    </PagePage>
   )
-}
-
-export async function getStaticProps() {
-  const data = getAllegoryData()
-
-  async function processNote(p) {
-    if (p.characterNote) {
-      let x = await remark().use(html).process(p.characterNote)
-      let y = x.toString().replace('<p>', '').replace('</p>', '')
-      p.characterNote = ` (${y})`
-    }
-  }
-
-  data.prose.forEach(processNote)
-
-  return {
-    props: {
-      data,
-    },
-  }
 }

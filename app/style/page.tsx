@@ -1,8 +1,8 @@
-import Layout from '../components/layouts/layout'
+import PagePage from '@/components/PagePage'
 
 export default function Style() {
   return (
-    <Layout title="Style Guide">
+    <PagePage title="Style Guide">
       <h2>Brand Introduction</h2>
       <p>Serious</p>
       <p>
@@ -81,6 +81,6 @@ export default function Style() {
       <p>1/3 text - 2/3 image? (print media me thinks)</p>
       <h1>4. Do&apos;s and Dont&apos;s</h1>
       <p>Words we do like / Words we don&apos;t like</p>
-    </Layout>
+    </PagePage>
   )
 }

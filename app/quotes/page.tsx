@@ -1,14 +1,18 @@
-import { getSortedQuotesData, Quote } from '../../lib/quotes'
-import Layout from '../../components/layouts/layout'
-import YearHeading from '../../components/yearHeading'
-import DateTitle from '../../components/dateTitle'
+import { getSortedQuotesData, Quote } from '@/lib/quotes'
+import YearHeading from '@/components/yearHeading'
+import DateTitle from '@/components/dateTitle'
+import PagePage from '@/components/PagePage'
 
 type Props = {
   allQuotes: { [key: string]: Quote[] }
 }
-export default function Index({ allQuotes }: Props) {
+export default function Index() {
+  // group by year
+  // then sort by date
+  const allQuotes = groupBy(getSortedQuotesData(), 'year')
+
   return (
-    <Layout title="Index">
+    <PagePage title="Index">
       {Object.keys(allQuotes)
         .reverse()
         .map((year) => {
@@ -30,19 +34,8 @@ export default function Index({ allQuotes }: Props) {
             </div>
           )
         })}
-    </Layout>
+    </PagePage>
   )
-}
-
-export async function getStaticProps() {
-  // group by year
-  // then sort by date
-  const allQuotes = getSortedQuotesData()
-  return {
-    props: {
-      allQuotes: groupBy(allQuotes, 'year'),
-    },
-  }
 }
 
 function groupBy(items, key) {

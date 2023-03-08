@@ -1,11 +1,15 @@
-import Layout from '../../components/layouts/layout'
-import { getSortedPostsData } from '../../lib/posts'
-import YearHeading from '../../components/yearHeading'
-import DateTitle from '../../components/dateTitle'
+import { getSortedPostsData } from '@/lib/posts'
+import YearHeading from '@/components/yearHeading'
+import DateTitle from '@/components/dateTitle'
+import PagePage from '@/components/PagePage'
 
-export default function Posts({ allPosts }) {
+export default function Posts({}) {
+  // group by year
+  // then sort by date
+  const allPosts = groupBy(getSortedPostsData(), 'year')
+
   return (
-    <Layout title="Posts">
+    <PagePage title="Posts">
       {Object.keys(allPosts)
         .reverse()
         .map((year) => {
@@ -27,19 +31,8 @@ export default function Posts({ allPosts }) {
             </div>
           )
         })}
-    </Layout>
+    </PagePage>
   )
-}
-
-export async function getStaticProps() {
-  // group by year
-  // then sort by date
-  const allPosts = getSortedPostsData()
-  return {
-    props: {
-      allPosts: groupBy(allPosts, 'year'),
-    },
-  }
 }
 
 function groupBy(items, key) {

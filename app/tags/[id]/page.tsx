@@ -1,13 +1,18 @@
-import Layout from '../../components/layouts/layout'
-import { getAllTagIds, getTagData } from '../../lib/posts'
-import ShortDate from '../../components/shortDate'
+import Layout from '@/components/layouts/layout'
+import { getAllTagIds, getTagData } from '@/lib/posts'
+import ShortDate from '@/components/shortDate'
 import Link from 'next/link'
-import YearHeading from '../../components/yearHeading'
-import DateTitle from '../../components/dateTitle'
+import YearHeading from '@/components/yearHeading'
+import DateTitle from '@/components/dateTitle'
+import PagePage from '@/components/PagePage'
 
-export default function Tag({ tag, allPosts }) {
+export default async function Tag({ params }) {
+  const postData = await getTagData(params.id)
+  const allPosts = groupBy(postData.posts, 'year')
+  const tag = params.id
+
   return (
-    <Layout title={tag}>
+    <PagePage title={tag}>
       {Object.keys(allPosts)
         .reverse()
         .map((year) => {
@@ -29,29 +34,8 @@ export default function Tag({ tag, allPosts }) {
             </div>
           )
         })}
-    </Layout>
+    </PagePage>
   )
-}
-
-export async function getStaticPaths() {
-  const paths = getAllTagIds()
-
-  return {
-    paths,
-    fallback: false,
-  }
-}
-
-export async function getStaticProps({ params }) {
-  // Fetch necessary data for the blog post using params.id
-  const postData = await getTagData(params.id)
-
-  return {
-    props: {
-      tag: params.id,
-      allPosts: groupBy(postData.posts, 'year'),
-    },
-  }
 }
 
 function groupBy(items, key) {

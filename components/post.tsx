@@ -2,12 +2,13 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilm } from '@fortawesome/pro-light-svg-icons'
 import Date from './date'
+import { VideoProps } from '@/lib/posts'
 
 type Props = {
   id: string
   title: string
   description?: string
-  video?: string
+  video?: VideoProps
   date: string
 }
 export default function Post({ id, title, description, video, date }: Props) {
@@ -38,7 +39,7 @@ export default function Post({ id, title, description, video, date }: Props) {
   )
 }
 
-function Video({ video }) {
+function Video({ video }: { video?: VideoProps }) {
   if (!video) return <></>
 
   return (

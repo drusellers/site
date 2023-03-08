@@ -3,10 +3,22 @@ import Logo from '../components/logo'
 import Footer from '../components/footer'
 import { Metadata } from 'next'
 import '../css/index.css'
+import localFont from 'next/font/local'
+import { Open_Sans } from '@next/font/google'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import React from 'react'
+
 config.autoAddCss = false
+
+const nunito = localFont({
+  src: '../public/fonts/Nunito-VariableFont_wght.ttf',
+  variable: '--font-nunito',
+})
+const osans = Open_Sans({
+  subsets: ['latin'],
+  variable: '--font-open-sans',
+})
 
 export const metadata: Metadata = {
   title: 'Dru Sellers',
@@ -24,7 +36,7 @@ type Props = {
 export default function Layout({ children }: Props) {
   return (
     <html lang={'en'}>
-      <body>
+      <body className={`${nunito.variable} ${osans.variable}`}>
         <header className="container mx-auto flex max-w-document flex-col px-6 pt-6 sm:h-24 sm:flex-row">
           <div>
             <Logo />

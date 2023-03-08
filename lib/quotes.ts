@@ -14,9 +14,10 @@ export interface Quote {
   categories: string
   tags: string[]
   author: string
+  author_link: string
   type: string
   year: number
-  contentHtml?: string
+  contentHtml: string
 }
 
 export function getSortedQuotesData(): Quote[] {

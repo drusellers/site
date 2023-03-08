@@ -6,18 +6,20 @@ import { parse } from 'yaml'
 
 const postsDirectory = path.join(process.cwd(), 'content/posts')
 
-type VideoProps = {
+export type VideoProps = {
   youtube?: string
   loom?: string
 }
 
-type PostHeader = {
+export type PostHeader = {
   id: string
   year: number
   draft: boolean
   date: string
   tags: string[]
   video?: VideoProps
+  title: string
+  description: string
 }
 
 export function getSortedPostsData(): PostHeader[] {
@@ -139,6 +141,8 @@ type PostData = {
   video?: VideoProps
   date: string
   title: string
+  subtitle: string
+  tags: string[]
 }
 
 export async function getPostData(id): Promise<PostData> {
@@ -178,6 +182,8 @@ export async function getPostData(id): Promise<PostData> {
     title: frontMatter.title,
     date: frontMatter.date,
     video: frontMatter.video || null,
+    subtitle: frontMatter.subtitle,
+    tags: frontMatter.tags,
   }
 }
 

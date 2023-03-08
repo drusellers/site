@@ -1,10 +1,11 @@
-import Layout from '../../components/layouts/layout'
-import { getAllTags } from '../../lib/posts'
+import { getAllTags } from '@/lib/posts'
 import Link from 'next/link'
+import PagePage from '@/components/PagePage'
 
-export default function Tags({ allTags }) {
+export default function Tags({}) {
+  const allTags = getAllTags()
   return (
-    <Layout title="Tags">
+    <PagePage title="Tags">
       <ul className="list">
         {Object.keys(allTags).map((tag) => {
           return (
@@ -17,16 +18,6 @@ export default function Tags({ allTags }) {
           )
         })}
       </ul>
-    </Layout>
+    </PagePage>
   )
-}
-
-export function getStaticProps() {
-  const allTags = getAllTags()
-
-  return {
-    props: {
-      allTags,
-    },
-  }
 }

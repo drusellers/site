@@ -1,8 +1,8 @@
-import Layout from '../components/layouts/layout'
+import PagePage from '@/components/PagePage'
 
 export default function Iron() {
   return (
-    <Layout title="Iron and the Soul" subtitle="by Henry Rollins">
+    <PagePage title="Iron and the Soul" subtitle="by Henry Rollins">
       <div className="markdown">
         <p>
           I believe that the definition of definition is reinvention. To not be
@@ -202,6 +202,6 @@ export default function Iron() {
           essay was originally published in Details magazine in 1994
         </p>
       </div>
-    </Layout>
+    </PagePage>
   )
 }

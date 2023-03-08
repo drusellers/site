@@ -1,15 +1,20 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  content: ['./components/**/*.js','./components/**/*.tsx',,'./pages/**/*.tsx'],
+  content: [
+      './components/**/*.js',
+      './components/**/*.tsx',
+      './app/**/*.tsx',
+      './pages/**/*.tsx'
+  ],
   theme: {
     minHeight: {
       page: '50vh',
     },
     extend: {
       fontFamily: {
-        heading: ['Nunito', 'sans-serif'],
-        copy: ['"Open Sans"'],
+        heading: ['var(--font-nunito)', 'sans-serif'],
+        copy: ['var(--font-open-sans)'],
       },
       maxWidth: {
         document: '64rem',

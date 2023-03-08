@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo "Next: $(yarn next --version)"
+echo "Next: $(pnpm next --version)"
 
-yarn install
-yarn build
+pnpm install
+pnpm build
 
 # # index content into elasticsearch
 # bin/define-index

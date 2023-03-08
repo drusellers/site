@@ -1,9 +1,11 @@
-import Layout from '../../components/layouts/layout'
-import { getAllPostIds, getPostData } from '../../lib/posts'
+import { getAllPostIds, getPostData } from '@/lib/posts'
+import PagePage from '@/components/PagePage'
 
-export default function Post({ postData }) {
+export default async function Post({ params }) {
+  const postData = await getPostData(params.id)
+
   return (
-    <Layout
+    <PagePage
       title={postData.title}
       subtitle={postData.subtitle}
       date={postData.date}
@@ -16,30 +18,8 @@ export default function Post({ postData }) {
         className="prose"
         dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
       />
-    </Layout>
+    </PagePage>
   )
-}
-
-// Support Static Site Generation
-// https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation
-export async function getStaticPaths() {
-  const paths = getAllPostIds()
-  return {
-    paths,
-    fallback: false,
-  }
-}
-
-export async function getStaticProps({ params }) {
-  // Fetch necessary data for the blog post using params.id
-  const postData = await getPostData(params.id)
-  // TODO: Comment out when searching is solved
-  // await indexPost(postData);
-  return {
-    props: {
-      postData,
-    },
-  }
 }
 
 function Video({ video }) {

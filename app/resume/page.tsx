@@ -1,16 +1,19 @@
-import Layout from '../components/layouts/layout'
-import { getResumeData } from '../lib/data'
-import Experience from '../components/resume/experience'
-import Education from '../components/resume/education'
-import { Resume } from '../lib/types'
+import Layout from '@/components/layouts/layout'
+import { getResumeData } from '@/lib/data'
+import Experience from '@/components/resume/experience'
+import Education from '@/components/resume/education'
+import { Resume } from '@/lib/types'
+import PagePage from '@/components/PagePage'
 
 type Props = {
   resumeData: Resume
 }
-export default function ResumeUI({ resumeData }) {
+export default function ResumeUI({}) {
+  const resumeData = getResumeData()
+
   let headingClasses = 'text-2xl my-4 font-bold font-heading'
   return (
-    <Layout title="Resume">
+    <PagePage title="Resume">
       <div className="space-y-6">
         <blockquote className="ml-6">{resumeData.summary}</blockquote>
 
@@ -33,15 +36,6 @@ export default function ResumeUI({ resumeData }) {
           })}
         </div>
       </div>
-    </Layout>
+    </PagePage>
   )
-}
-
-export async function getStaticProps() {
-  const resumeData = getResumeData()
-  return {
-    props: {
-      resumeData,
-    },
-  }
 }
