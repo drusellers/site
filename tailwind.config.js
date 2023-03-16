@@ -5,7 +5,8 @@ module.exports = {
       './components/**/*.js',
       './components/**/*.tsx',
       './app/**/*.tsx',
-      './pages/**/*.tsx'
+      './pages/**/*.tsx',
+      './lib/**/*.ts'
   ],
   theme: {
     minHeight: {

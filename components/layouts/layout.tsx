@@ -1,7 +1,6 @@
 import Nav from '../nav'
 import Logo from '../logo'
 import Footer from '../footer'
-import Search from '../search'
 import TagList from '../tagList'
 import TitleSubtitle from '../titleSubtitle'
 import Stats from '../stats'

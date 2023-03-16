@@ -1,0 +1,50 @@
+/*
+
+<label for="sidenote-safe_meanings" class="margin-toggle sidenote-number">
+  ::after
+</label>
+<input type="checkbox" id="sidenote-safe_meanings" class="margin-toggle">
+<span class="sidenote">
+    <p>
+    What we mean by "safe" depends on context, which is partly
+    what this post is about. Sometimes we even talk about safety and soundness
+    interchangeably, but here I want to emphasize the differences between them.
+    </p>
+</span>
+*/
+
+
+
+
+.sidenote p {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    display: inline;
+}
+.sidenote {
+    display: block;
+}
+
+/* how to get a counter? */
+.sidenote:before {
+    content: counter(sidenote-counter) " ";
+    font-size: 0.875rem;
+    top: -0.5rem;
+}
+
+.sidenote-number {
+    display: inline-block;
+    max-height: 2rem;
+    counter-increment: sidenote-counter;
+}
+.sidenote-number:after {
+    content: counter(sidenote-counter);
+    font-size: 1rem;
+    top: -0.5rem;
+    left: 0.1rem;
+}
+.sidenote-number:after,.sidenote::before {
+    /*font-family: et-book-roman-old-style;*/
+    position: relative;
+    vertical-align: baseline;
+}
