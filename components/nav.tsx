@@ -15,9 +15,6 @@ export default function Nav() {
           <Link href="/iron" title="Iron and the Soul" className={linkStyle}>
             Iron and the Soul
           </Link>{' '}
-          <Link href="/tags" title="Tags" className={linkStyle}>
-            Tags
-          </Link>{' '}
           <Link href="/resume" title="Resume" className={linkStyle}>
             Resume
           </Link>

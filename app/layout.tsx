@@ -46,10 +46,6 @@ export default function Layout({ children }: Props) {
           </div>
         </header>
 
-        {/* <div className="container mx-auto max-w-document my-6 p-3">
-        <Search />
-      </div> */}
-
         {children}
 
         <Footer />

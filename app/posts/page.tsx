@@ -9,7 +9,7 @@ export default function Posts({}) {
   const allPosts = groupBy(getSortedPostsData(), 'year')
 
   return (
-    <PagePage title="Posts">
+    <PagePage title="Posts" subtitle={'A collection of ramblings'}>
       {Object.keys(allPosts)
         .reverse()
         .map((year) => {

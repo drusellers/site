@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkSquare } from '@fortawesome/pro-light-svg-icons'
-import { Education } from '../../../lib/types'
+import { Education } from '@/lib/types'
 
 type Props = {
   school: Education

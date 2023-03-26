@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkSquare } from '@fortawesome/pro-light-svg-icons'
 import Markdoc from '@markdoc/markdoc'
-import { Employer } from '../../../lib/types'
+import { Employer } from '@/lib/types'
 
 type Props = {
   job: Employer

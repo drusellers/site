@@ -4,6 +4,7 @@ import {
   faCreativeCommons,
   faCreativeCommonsBy,
 } from '@fortawesome/free-brands-svg-icons'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -47,8 +48,14 @@ export default function Footer() {
           {/* 4 columns of stuff */}
           <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div></div>
-              <div className="mt-12 md:mt-0"></div>
+              <div>
+                <Link href={'/quotes'}>Collected Quotes</Link>
+              </div>
+              <div className="mt-12 md:mt-0">
+                <Link href="/tags" title="Tags">
+                  Tags
+                </Link>
+              </div>
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div></div>

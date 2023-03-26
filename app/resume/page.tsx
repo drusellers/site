@@ -1,14 +1,9 @@
-import Layout from '@/components/layouts/layout'
 import { getResumeData } from '@/lib/data'
 import Experience from '@/components/resume/experience'
 import Education from '@/components/resume/education'
-import { Resume } from '@/lib/types'
 import PagePage from '@/components/PagePage'
 
-type Props = {
-  resumeData: Resume
-}
-export default function ResumeUI({}) {
+export default function ResumeUI() {
   const resumeData = getResumeData()
 
   let headingClasses = 'text-2xl my-4 font-bold font-heading'
