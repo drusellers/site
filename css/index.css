@@ -13,3 +13,8 @@ body {
   /*background: radial-gradient(ellipse at top, #ECE9E6, transparent),*/
   /*radial-gradient(ellipse at bottom, #fff, transparent);*/
 }
+
+
+.bg-footer {
+    background: linear-gradient(-10deg, #000000, #2C3E50);
+}

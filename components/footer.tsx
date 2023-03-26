@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="mt-12 bg-gray-800" aria-labelledby="footerHeading">
+    <footer className="mt-12 bg-footer" aria-labelledby="footerHeading">
       <h2 id="footerHeading" className="sr-only">
         Footer
       </h2>
