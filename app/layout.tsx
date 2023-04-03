@@ -25,6 +25,21 @@ export const metadata: Metadata = {
   authors: [{ name: 'Dru Sellers', url: 'https://drusellers.com' }],
   description: "Dru's thoughts",
   icons: [{ rel: 'icon', url: '/images/favicon.png' }],
+  openGraph: {
+    title: 'Dru Sellers',
+    siteName: 'Dru Sellers',
+    description: 'Personal website for Dru Sellers',
+    url: 'https://drusellers.com',
+    authors: 'Dru Sellers',
+    images: [
+      {
+        url: 'https://drusellers.com/images/dru-serious-2x600.png',
+        width: 600,
+        height: 312,
+      },
+    ],
+    locale: 'en-US',
+  },
 }
 
 type Props = {
