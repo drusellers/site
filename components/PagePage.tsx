@@ -30,7 +30,7 @@ export default function PagePage({
         <Date dateString={date} />
         <TagList tags={tags || []} />
       </div>
-      <div className="my-6 px-6">
+      <div className="my-6 px-6 w-full">
         <article className="max-w-prose">{children}</article>
       </div>
     </div>
