@@ -48,8 +48,12 @@ export default function Footer() {
           {/* 4 columns of stuff */}
           <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
+              <div className={'flex flex-col space-y-4'}>
                 <Link href={'/quotes'}>Collected Quotes</Link>
+                <Link href={'https://elevatedplatform.com'}>
+                  Consulting Work
+                </Link>
+                <Link href={'https://messageaid.com'}>Product Work</Link>
               </div>
               <div className="mt-12 md:mt-0">
                 <Link href="/tags" title="Tags">
