@@ -50,6 +50,7 @@ export default function Footer() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div className={'flex flex-col space-y-4'}>
                 <Link href={'/quotes'}>Collected Quotes</Link>
+                <Link href={'/iron'}>Iron and the Soul</Link>
                 <Link href={'https://elevatedplatform.com'}>
                   Consulting Work
                 </Link>

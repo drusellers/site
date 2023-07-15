@@ -18,6 +18,12 @@ export interface Quote {
   type: string
   year: number
   contentHtml: string
+  href: string
+}
+
+export interface QuoteSiblings {
+  nextQuote?: Quote
+  prevQuote?: Quote
 }
 
 export function getSortedQuotesData(): Quote[] {
@@ -97,5 +103,29 @@ export async function getQuoteData(id): Promise<Quote> {
     id,
     contentHtml,
     ...matterResult.data,
+    href: `/quotes/${id}`
   } as Quote
+}
+
+export async function getSiblingQuotes(slug): Promise<QuoteSiblings> {
+  const posts = getSortedQuotesData()
+  const slugs = posts.map((p) => p.id)
+  const index = slugs.indexOf(slug)
+
+  let nextPost: Quote | null = null
+  if (index !== 0) {
+    const nextSlug = slugs[index - 1]
+    nextPost = await getQuoteData(nextSlug)
+  }
+
+  let prevPost: Quote | null = null
+  if (slugs.length - 1 >= index + 1) {
+    const prevSlug = slugs[index + 1]
+    prevPost = await getQuoteData(prevSlug)
+  }
+
+  return {
+    nextQuote: nextPost === null ? undefined : nextPost,
+    prevQuote: prevPost === null ? undefined : prevPost,
+  }
 }
