@@ -32,7 +32,7 @@ export default async function Post({ params }: PageParams) {
         <blockquote
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         ></blockquote>
-        <cite>{postData.author}</cite>
+        {cite}
       </div>
       <PageControls nextHref={siblings.nextQuote?.href} prevHref={siblings.prevQuote?.href} />
     </PagePage>
