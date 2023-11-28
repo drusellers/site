@@ -51,7 +51,7 @@ export default function Footer() {
               <div className={'flex flex-col space-y-4'}>
                 <Link href={'/quotes'}>Collected Quotes</Link>
                 <Link href={'/iron'}>Iron and the Soul</Link>
-                <Link href={'https://elevatedplatform.com'}>
+                <Link href={'https://elevatedplatform.io'}>
                   Consulting Work
                 </Link>
                 <Link href={'https://messageaid.com'}>Product Work</Link>
