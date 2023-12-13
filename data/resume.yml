@@ -32,7 +32,10 @@ employers:
             that would help companies better manage their search infrastructure. In the process
             of working with the head of sales we were able to increase the average deal size
             from $500/mth to $8,000/mth
-
+          - > 
+            Worked closely with the CEO to explore various modern ways to run a business including
+            the deployment of a 4 day work week, aggresively limiting the number of meetings and 
+            exploring options for async communication.
       -
         title: Vice President of Operations
         start: March 2017
@@ -43,10 +46,20 @@ employers:
             in a company's leadership. For years I've been reading books on business
             startegy and leadership. I will now be in the position to both exercise that
             knowledge and realize just how much I have to learn.
+          - > 
+            During this time I dived deep into how search engines work. Even going so far as to 
+            contribute some simple features to the Tantivy library. This gave me a fundamental
+            understanding of inverted indicies. Which removed another "magical" layer of how computers
+            work.
           - >
-            This will also be my first job where .Net and Windows are not a core part
-            of my every day life. This is both exciting and scary at the same time. I
-            look forward to the firehose of learning.
+            Learned how to operate and managed 8,000 plus servers in AWS and Google clouds.
+          - >
+            Working closely with the CEO and Head of Sales we developed a pricing model that allowed 
+            us to take advatage of our new automated provisioning process leading to a better understanding
+            of our cost model, and our customers needs.
+          - > 
+            The first task was to automate the process of provisioning our customer's clusters.
+            The project successfully reduced the time for custom clusters from two days to 15 minutes.
   -
     employer: Motorsport Aftermarket Group
     url: https://maggroup.com
