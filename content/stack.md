@@ -74,6 +74,8 @@ The boring stuff, that absolutely moves the biggest boulders possible.
   a highly effective tool for keeping my eye on the ball even when that
   ball is months or years away.
 
+
+
 > Wish list - how can I build a process that reinforces my existing habits
 and commitments. I keep wanting something that just works on my Apple
 Watch but I haven't found anything nor have I really invested the time
@@ -111,20 +113,26 @@ window manager type tool really helps me stay focused.
 
 - **Caffeine**: This is a tool that I probably abuse more than I really use. I'm usually using 1-2 cups of undiluted cold brew each day. My current flavor of choice is the [Onyx Cold Brew](https://onyxcoffeelab.com/products/cold-brew?variant=31888816078946) blend.
 
-## Key Tools
+## Communication
 
 - **Email** I'm currently in the Google Apps domain. It's not my favorite for personal work, but it works well with my preferred email app Superhuman.
-- **1Password** I manage all of my passwords in 1Password, and also include a variety of secret notes in this tool as well. For personal use, I like the user interface, I like the search, and I really like the various sharing options when I need to collobarate with family members that both do and don't have 1Password.
+  - **Unsubscribe** about once a month, I'll sit down and scrub my email of the inevitable trash that finds its way in there. I'm happy to spend about an hour doing this, and just hit the unsubscribe links. As more and more companies look to use 3rd party services to send their email, this leads to a concentration of of companies actually sending the email. These 3rd parties have a vested interest in not being flagged for spam, so I tend to find the unsubscribe systems better than in the early days where you couldn't trust it as much. 
 - **iMessages** this just works between iPad, iPhone, and my Mac. No _bs_ just works.
   - If I needed to be more cross platform I would look at [Signal](https://signal.org/)
+- **Superhuman**: for email. I like having a dedicated app for things so that I can `CMD+TAB` to the app i want or use my window  manager. Can't do that with Google or Firefox tabs
+- __Slack/Discord__: I would just as soon have some thing that is a bit more of an IM client, then having to have dedicade apps, but that's never going to happen.
+
+## Key Tools
+
+- **1Password** I manage all of my passwords in 1Password, and also include a variety of secret notes in this tool as well. For personal use, I like the user interface, I like the search, and I really like the various sharing options when I need to collobarate with family members that both do and don't have 1Password.
 
 ## Minor Tools
 
 - **Things**: A todo list manager. The key feature for me is the ease of adding new things.
-- **Superhuman**: for email. I like having a dedicated app for things so that I can `CMD+TAB` to the app i want or use my window  manager. Can't do that with Google or Firefox tabs
 - **Fantastical 2** not a huge game changer here, this
 entry is still contested. I'm currently falling in love with **Cron**, but I can't say that it is a major game changer. The key feature is that Cron will sync my meetings across calendars allowing me to better utilize tools like SavvyCal.
 - **Obsidian**: Note taking
+  - I do use Obsidian Sync to keep the iPhone, iPad, and Laptop up to date.
   - **Evernote** this is slowly dieing off as I move content to either my gitbook hosted system or 1Password for secure things but its image capture of notes is still one of the best
 - **Bartender** This application helps me manage my MacOS menu bar
 - **Paper** The Mac drawing app (not Dropbox Paper)

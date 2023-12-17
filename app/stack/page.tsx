@@ -11,7 +11,7 @@ export default function Stack({}) {
   const page = getStack()
 
   return (
-    <PagePage title="Stack" date="2023-04-02">
+    <PagePage title="Stack" date="2023-12-17">
       <div
         className={'prose'}
         dangerouslySetInnerHTML={{ __html: page.html }}
