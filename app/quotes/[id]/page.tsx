@@ -1,7 +1,6 @@
-import { getQuoteData, getSiblingQuotes } from "@/lib/quotes";
+import { getQuoteData, getSiblingQuotes } from '@/lib/quotes'
 import PagePage from '@/components/PagePage'
-import Link from "next/link";
-import PageControls from "@/components/PageControls";
+import PageControls from '@/components/PageControls'
 
 type PageParams = {
   params: {
@@ -34,7 +33,10 @@ export default async function Post({ params }: PageParams) {
         ></blockquote>
         {cite}
       </div>
-      <PageControls nextHref={siblings.nextQuote?.href} prevHref={siblings.prevQuote?.href} />
+      <PageControls
+        nextHref={siblings.nextQuote?.href}
+        prevHref={siblings.prevQuote?.href}
+      />
     </PagePage>
   )
 }

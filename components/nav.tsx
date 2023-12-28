@@ -12,7 +12,11 @@ export default function Nav() {
           <Link href="/posts" title="Archive" className={linkStyle}>
             Archive
           </Link>{' '}
-          <Link href="/iron" title="Iron and the Soul" className={`hidden sm:inline ${linkStyle}`}>
+          <Link
+            href="/iron"
+            title="Iron and the Soul"
+            className={`hidden sm:inline ${linkStyle}`}
+          >
             Iron and the Soul
           </Link>{' '}
           <Link href="/resume" title="Resume" className={linkStyle}>

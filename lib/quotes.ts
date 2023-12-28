@@ -103,7 +103,7 @@ export async function getQuoteData(id): Promise<Quote> {
     id,
     contentHtml,
     ...matterResult.data,
-    href: `/quotes/${id}`
+    href: `/quotes/${id}`,
   } as Quote
 }
 
