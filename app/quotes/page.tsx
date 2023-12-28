@@ -1,8 +1,10 @@
 import { getSortedQuotesData, Quote } from '@/lib/quotes'
 import YearHeading from '@/components/yearHeading'
 import DateTitle from '@/components/dateTitle'
-import TitleSubtitle from '@/components/titleSubtitle'
 import Link from 'next/link'
+import TwoColumn from '@/components/TwoColumn'
+import SideColumn from '@/components/SideColumn'
+import Header from '@/components/Header'
 
 export default function Index() {
   // group by year
@@ -13,19 +15,23 @@ export default function Index() {
   const randomQuote = allQuotes[randomIndex]
 
   return (
-    <div className="container mx-auto my-6 flex min-h-page max-w-document flex-col sm:flex-row">
-      <div className="my-6 space-y-4 px-6 sm:w-1/3 sm:border-t-4 sm:border-black sm:pt-6">
-        <TitleSubtitle
-          title={'Quotes'}
-          subtitle={'A collection of words that found me.'}
-        />
-
-        <div className={''}>
-          <div className={'text-gray-400'}>A random selection:</div>
-          <Link href={`/quotes/${randomQuote.id}`}>{randomQuote.title}</Link>
-        </div>
-      </div>
-      <div className="my-6 px-6">
+    <>
+      <Header />
+      <TwoColumn
+        left={
+          <SideColumn
+            title={'Quotes'}
+            subtitle={'A collection of words that found me'}
+          >
+            <div className={''}>
+              <div className={'text-gray-400'}>A random selection:</div>
+              <Link href={`/quotes/${randomQuote.id}`}>
+                {randomQuote.title}
+              </Link>
+            </div>
+          </SideColumn>
+        }
+      >
         <article className="max-w-prose">
           {Object.keys(groupedQuotes)
             .reverse()
@@ -49,8 +55,8 @@ export default function Index() {
               )
             })}
         </article>
-      </div>
-    </div>
+      </TwoColumn>
+    </>
   )
 }
 

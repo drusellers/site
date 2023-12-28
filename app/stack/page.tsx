@@ -1,6 +1,8 @@
 import { getStack } from '@/lib/cms'
-import PagePage from '@/components/PagePage'
 import { Metadata } from 'next'
+import Header from '@/components/Header'
+import TwoColumn from '@/components/TwoColumn'
+import SideColumn from '@/components/SideColumn'
 
 export const metadata: Metadata = {
   title: 'The Stack',
@@ -11,11 +13,14 @@ export default function Stack({}) {
   const page = getStack()
 
   return (
-    <PagePage title="Stack" date="2023-12-17">
-      <div
-        className={'prose'}
-        dangerouslySetInnerHTML={{ __html: page.html }}
-      />
-    </PagePage>
+    <>
+      <Header />
+      <TwoColumn left={<SideColumn title={'Stack'} date={'2023-12-17'} />}>
+        <div
+          className={'prose'}
+          dangerouslySetInnerHTML={{ __html: page.html }}
+        />
+      </TwoColumn>
+    </>
   )
 }

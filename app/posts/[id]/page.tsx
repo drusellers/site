@@ -1,24 +1,33 @@
-import { getAllPostIds, getPostData } from '@/lib/posts'
-import PagePage from '@/components/PagePage'
+import { getPostData } from '@/lib/posts'
+import Header from '@/components/Header'
+import TwoColumn from '@/components/TwoColumn'
+import SideColumn from '@/components/SideColumn'
 
 export default async function Post({ params }) {
   const postData = await getPostData(params.id)
 
   return (
-    <PagePage
-      title={postData.title}
-      subtitle={postData.subtitle}
-      date={postData.date}
-      tags={postData.tags}
-      wordCount={postData.wordCount}
-      readingTime={postData.readingTime}
-    >
-      <Video video={postData.video} />
-      <div
-        className="prose"
-        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-      />
-    </PagePage>
+    <>
+      <Header />
+      <TwoColumn
+        left={
+          <SideColumn
+            title={postData.title}
+            subtitle={postData.subtitle}
+            date={postData.date}
+            tags={postData.tags}
+            wordCount={postData.wordCount}
+            readingTime={postData.readingTime}
+          />
+        }
+      >
+        <Video video={postData.video} />
+        <div
+          className="prose"
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
+      </TwoColumn>
+    </>
   )
 }
 

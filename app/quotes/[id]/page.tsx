@@ -1,6 +1,8 @@
 import { getQuoteData, getSiblingQuotes } from '@/lib/quotes'
-import PagePage from '@/components/PagePage'
 import PageControls from '@/components/PageControls'
+import Header from '@/components/Header'
+import TwoColumn from '@/components/TwoColumn'
+import SideColumn from '@/components/SideColumn'
 
 type PageParams = {
   params: {
@@ -26,17 +28,20 @@ export default async function Post({ params }: PageParams) {
     )
   }
   return (
-    <PagePage title={postData.title}>
-      <div className="quote markdown mb-8">
-        <blockquote
-          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-        ></blockquote>
-        {cite}
-      </div>
-      <PageControls
-        nextHref={siblings.nextQuote?.href}
-        prevHref={siblings.prevQuote?.href}
-      />
-    </PagePage>
+    <>
+      <Header />
+      <TwoColumn left={<SideColumn title={postData.title} />}>
+        <div className="quote markdown mb-8">
+          <blockquote
+            dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+          ></blockquote>
+          {cite}
+        </div>
+        <PageControls
+          nextHref={siblings.nextQuote?.href}
+          prevHref={siblings.prevQuote?.href}
+        />
+      </TwoColumn>
+    </>
   )
 }

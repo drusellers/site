@@ -20,6 +20,12 @@ module.exports = {
       maxWidth: {
         document: '64rem',
       },
+      gridTemplateColumns: {
+        '2cols': '1fr 2fr'
+      },
+      gridTemplateRows: {
+        'outer': 'minmax(calc(100vh - 500px), max-content), 500px'
+      }
     },
   },
   variants: {

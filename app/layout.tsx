@@ -52,18 +52,12 @@ export default function Layout({ children }: Props) {
   return (
     <html lang={'en'}>
       <body className={`${nunito.variable} ${osans.variable}`}>
-        <header className="container mx-auto flex max-w-document flex-col px-6 pt-6 sm:h-24 sm:flex-row">
+        <div className={'grid grid-rows-outer'}>
+          <div className={'container mx-auto max-w-document'}>{children}</div>
           <div>
-            <Logo />
+            <Footer />
           </div>
-          <div className="my-6 flex-grow">
-            <Nav />
-          </div>
-        </header>
-
-        {children}
-
-        <Footer />
+        </div>
       </body>
     </html>
   )

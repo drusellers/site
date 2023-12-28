@@ -1,10 +1,9 @@
-import Layout from '@/components/layouts/layout'
-import { getAllTagIds, getTagData } from '@/lib/posts'
-import ShortDate from '@/components/shortDate'
-import Link from 'next/link'
+import { getTagData } from '@/lib/posts'
 import YearHeading from '@/components/yearHeading'
 import DateTitle from '@/components/dateTitle'
-import PagePage from '@/components/PagePage'
+import Header from '@/components/Header'
+import TwoColumn from '@/components/TwoColumn'
+import SideColumn from '@/components/SideColumn'
 
 export default async function Tag({ params }) {
   const postData = await getTagData(params.id)
@@ -12,29 +11,32 @@ export default async function Tag({ params }) {
   const tag = params.id
 
   return (
-    <PagePage title={tag}>
-      {Object.keys(allPosts)
-        .reverse()
-        .map((year) => {
-          return (
-            <div key={year} className="mb-8">
-              <YearHeading year={year} />
-              <div className={'mt-2 space-y-1'}>
-                {allPosts[year].map((q) => {
-                  return (
-                    <DateTitle
-                      key={q.id}
-                      date={q.date}
-                      href={`/posts/${q.id}`}
-                      title={q.title}
-                    />
-                  )
-                })}
+    <>
+      <Header />
+      <TwoColumn left={<SideColumn title={tag} />}>
+        {Object.keys(allPosts)
+          .reverse()
+          .map((year) => {
+            return (
+              <div key={year} className="mb-8">
+                <YearHeading year={year} />
+                <div className={'mt-2 space-y-1'}>
+                  {allPosts[year].map((q) => {
+                    return (
+                      <DateTitle
+                        key={q.id}
+                        date={q.date}
+                        href={`/posts/${q.id}`}
+                        title={q.title}
+                      />
+                    )
+                  })}
+                </div>
               </div>
-            </div>
-          )
-        })}
-    </PagePage>
+            )
+          })}
+      </TwoColumn>
+    </>
   )
 }
 
