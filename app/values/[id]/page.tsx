@@ -12,16 +12,12 @@ export default async function Post({ params }) {
       <TwoColumn left={<SideColumn title={postData.title} />}>
         <div className="nested nested-copy-line-height nested-links nested-copy-separator">
           <div className="pa4">
-            <blockquote className="athelas ml0 mt0 pl4 black-90">
+
               <div
-                className="f5 f4-m f3-l lh-copy measure mt0"
+                className="f5 f4-m f3-l lh-copy measure mt0 prose"
                 dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
               />
 
-              <cite className="f6 ttu tracked fs-normal">
-                - {postData.author}
-              </cite>
-            </blockquote>
           </div>
         </div>
       </TwoColumn>
