@@ -4,7 +4,6 @@ categories: values
 tags:
   - Values
 type: value
-author: dru
 ---
 
 While this was the creed of my fraternity "Primum, Vir Esto" First, be a Man, here Vir is a Masculine form I prefer to think of it instead as meaning the archaic English form of Man as in "Human"
