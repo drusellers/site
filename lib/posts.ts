@@ -158,8 +158,8 @@ export async function getPostData(id): Promise<PostData> {
       sidenote,
     },
     nodes: {
-      fence
-    }
+      fence,
+    },
   }
 
   const errors = Markdoc.validate(ast, config)

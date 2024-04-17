@@ -83,12 +83,18 @@ export const fence: Schema = {
     process: { type: Boolean, render: false, default: true },
   },
   transform(node, config) {
-    const attributes = node.transformAttributes(config);
+    const attributes = node.transformAttributes(config)
     const children = node.children.length
       ? node.transformChildren(config)
-      : [node.attributes.content];
+      : [node.attributes.content]
 
-      // not-prose prevents tailwind from styling
-    return new Tag('pre', {class: 'not-prose', ...attributes}, [new Tag('code', {'class': 'language-' + attributes['data-language']}, children)]);
+    // not-prose prevents tailwind from styling
+    return new Tag('pre', { class: 'not-prose', ...attributes }, [
+      new Tag(
+        'code',
+        { class: 'language-' + attributes['data-language'] },
+        children
+      ),
+    ])
   },
-};
+}

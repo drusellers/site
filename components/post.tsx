@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilm } from '@fortawesome/pro-light-svg-icons'
 import Date from './date'
 import { VideoProps } from '@/lib/posts'
-import { toMarkdown, toNakedMarkdown } from "@/lib/md";
+import { toMarkdown, toNakedMarkdown } from '@/lib/md'
 
 type Props = {
   id: string
@@ -16,7 +16,7 @@ export default function Post({ id, title, description, video, date }: Props) {
   let d = <></>
   if (description) {
     const md = toNakedMarkdown(description)
-    d = <p dangerouslySetInnerHTML={{__html: md}} className={'prose'} />
+    d = <p dangerouslySetInnerHTML={{ __html: md }} className={'prose'} />
   }
   return (
     <div>

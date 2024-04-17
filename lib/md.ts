@@ -1,11 +1,11 @@
-import Markdoc from "@markdoc/markdoc";
+import Markdoc from '@markdoc/markdoc'
 
-export function toMarkdown(input: string) : string {
+export function toMarkdown(input: string): string {
   const ast = Markdoc.parse(input)
   const config = {}
   const errors = Markdoc.validate(ast, config)
-  if(errors.length > 0) {
-    throw new Error("Error Parsing Markdoc")
+  if (errors.length > 0) {
+    throw new Error('Error Parsing Markdoc')
   }
 
   const content = Markdoc.transform(ast, config)
@@ -15,12 +15,12 @@ export function toMarkdown(input: string) : string {
   return html
 }
 
-export function toNakedMarkdown(input: string) : string {
+export function toNakedMarkdown(input: string): string {
   const ast = Markdoc.parse(input)
   const config = {}
   const errors = Markdoc.validate(ast, config)
-  if(errors.length > 0) {
-    throw new Error("Error Parsing Markdoc")
+  if (errors.length > 0) {
+    throw new Error('Error Parsing Markdoc')
   }
 
   const content = Markdoc.transform(ast, config)
