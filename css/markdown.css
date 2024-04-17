@@ -90,3 +90,9 @@
 .markdown li:before {
   color: rgba(0, 0, 0, 0.3);
 }
+
+
+/* Tailwind Customizations of Prose */
+.prose > article > p:first-child {
+  margin-top: 0;
+}

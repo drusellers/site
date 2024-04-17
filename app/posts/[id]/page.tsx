@@ -2,6 +2,7 @@ import { getPostData } from '@/lib/posts'
 import Header from '@/components/Header'
 import TwoColumn from '@/components/TwoColumn'
 import SideColumn from '@/components/SideColumn'
+import PostContent from '@/components/PostContent'
 
 export default async function Post({ params }) {
   const postData = await getPostData(params.id)
@@ -22,10 +23,7 @@ export default async function Post({ params }) {
         }
       >
         <Video video={postData.video} />
-        <div
-          className="prose"
-          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-        />
+        <PostContent postData={postData} />
       </TwoColumn>
     </>
   )

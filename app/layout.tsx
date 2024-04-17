@@ -9,6 +9,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import React from 'react'
 
+
 config.autoAddCss = false
 
 const nunito = localFont({

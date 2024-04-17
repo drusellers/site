@@ -3,7 +3,7 @@ import path from 'path'
 import { parseISO } from 'date-fns'
 import Markdoc from '@markdoc/markdoc'
 import { parse } from 'yaml'
-import { chip, sidenote } from '@/lib/markdocTags'
+import { chip, sidenote, fence } from '@/lib/markdocTags'
 
 const postsDirectory = path.join(process.cwd(), 'content/posts')
 
@@ -132,7 +132,7 @@ export function getAllPostIds(): { params: { id: string } }[] {
   })
 }
 
-type PostData = {
+export type PostData = {
   id: string
   _id: string
   contentHtml: string
@@ -157,6 +157,9 @@ export async function getPostData(id): Promise<PostData> {
       chip,
       sidenote,
     },
+    nodes: {
+      fence
+    }
   }
 
   const errors = Markdoc.validate(ast, config)

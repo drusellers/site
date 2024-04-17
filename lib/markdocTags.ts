@@ -72,3 +72,23 @@ export const sidenote: Schema = {
   },
   attributes: {},
 }
+
+// https://markdoc.dev/docs/nodes
+// https://github.com/markdoc/markdoc/blob/main/src/schema.ts#L52
+export const fence: Schema = {
+  render: 'pre',
+  attributes: {
+    content: { type: String, render: false, required: true },
+    language: { type: String, render: 'data-language' },
+    process: { type: Boolean, render: false, default: true },
+  },
+  transform(node, config) {
+    const attributes = node.transformAttributes(config);
+    const children = node.children.length
+      ? node.transformChildren(config)
+      : [node.attributes.content];
+
+      // not-prose prevents tailwind from styling
+    return new Tag('pre', {class: 'not-prose', ...attributes}, [new Tag('code', {'class': 'language-' + attributes['data-language']}, children)]);
+  },
+};
