@@ -11,56 +11,57 @@ description: |
   NUnit feature called __SetUpFixture__
 ---
 
-[SetUpTestFixture](https://docs.nunit.org/articles/nunit/writing-tests/attributes/setupfixture.html) is a wonderful feature of NUnit that allows you to run a bit of code once for every test in a namespace.
+[SetUpTestFixture](https://docs.nunit.org/articles/nunit/writing-tests/attributes/setupfixture.html) is a wonderful feature of NUnit that allows you to run a bit of code once for every test fixture in a namespace. Normally, in NUnit I would use the standard `[SetUp]` and `[OneTimeSetUp]` to control the setup of my tests. But I've really become a fan of the `WebApplicationFactory` to test my application from the outside-in. Additionally, I like writing tests that work against the database, and I need a way to control the running of my migrations and database resets.
 
-With this I've been able to speed up my tests by being able to easily control the lifecycle of database migrations.
+With `[SetUpTestFixture]` I can now delete the database, then run the migrations once at the very beginning of a test run, rather than at the top of each class (or `[TestFixture]`). This means that the only thing I need to do before my tests is to clean out the data in the database which is much faster than dropping and recreating the database. To clean up the data I'm using [Respawn](https://github.com/jbogard/Respawn), and then I have a bit of code that re-seeds the data needed between runs.
 
-Normally I would structure my tests to directly mirror my source project (in this case dotnet).
+My normal dotnet project setup looks roughly like this.
 
 ```
 ~/
-    src/
-        MyProject/
-            Api/
-                SomeController.cs
-            SomeClass.cs
-    tests/
-        MyProject.Tests/
-            Api/
-                SomeControllerTests.cs
-            SomeClassTests.cs
+  src/
+    MyProject/
+      Api/
+        SomeController.cs
+      SomeClass.cs
+  tests/
+    MyProject.Tests/
+      Api/
+        SomeControllerTests.cs
+      SomeClassTests.cs
 ```
 
-Before my discovery of this feature, I was running my migrations and data cleaning in each test's setup. This was slow, and I didn't like the constant inheritance that it required.
-
-With this newer approach I can add a class here:
+Now, I want to create my `WebApplicationFactory` / `TestServer` for all of my tests in the `MyProject.Tests.Api` namespace so I put the file in that location.
 
 ```diff
 ~/
-    src/
-        MyProject/
-            Api/
-                SomeController.cs
-+               ApiSetUpFixture.cs
-            SomeClass.cs
-    tests/
-        MyProject.Tests/
-            Api/
-                SomeControllerTests.cs
-            SomeClassTests.cs
+  src/
+    MyProject/
+      Api/
+        SomeController.cs
+        SomeClass.cs
+  tests/
+    MyProject.Tests/
+      Api/
++       ApiSetUpFixture.cs
+        SomeControllerTests.cs
+      SomeClassTests.cs
 ```
 
 That looks like
 
 ```csharp
 [SetUpFixture]
-public class ApiSetUpFixture
+public static class ApiSetUpFixture
 {
-    [OneTimeSetUp]
-    public async Task OneTime() 
-    {
-        // set up the database etc
-    }
+  [OneTimeSetUp]
+  public static async Task OneTime() 
+  {
+      // set up the WebApplicationFactory
+      // set up the database etc
+  }
+  
+  public static TestServer Server { get; set; }
 }
 ```
-And this setup code will run once for each test that exists under the `MyProject.Tests.Api` namespace.
+And this setup code will run once for the entire test run. When I want to use the server I can access the static `Server` property to use it. This `static` nature aligns with its lifecycle which I also like as an ergonomic.

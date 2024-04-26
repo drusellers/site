@@ -96,3 +96,7 @@
 .prose > article > p:first-child {
   margin-top: 0;
 }
+
+pre.not-prose code.hljs {
+  padding: 0;
+}

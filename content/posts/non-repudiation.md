@@ -50,7 +50,7 @@ protected system. The basic domain model will typically look like:
 CREATE TABLE accounts (
   id SERIAL NOT NULL PRIMARY KEY,
   slug TEXT NOT NULL UNIQUE,
-  ... other fields as needed
+  -- ... other fields as needed
 );
 ```
 
@@ -59,14 +59,14 @@ But you could instead model it like this, and capture change over time:
 ```sql
 CREATE TABLE accounts (
   id SERIAL NOT NULL PRIMARY KEY,
-
 );
+
 CREATE TABLE account_generations (
   id SERIAL NOT NULL PRIMARY KEY,
   account_id INT NOT NULL REFERENCES (accounts.id),
   slug TEXT NOT NULL,
   effective_at TIMESTAMP NOT NULL
-  ... other fields as needed
+  -- ... other fields as needed
 );
 
 CREATE FUNCTION unique_over_time() RETURNS trigger AS $unique_over_time$
@@ -87,12 +87,12 @@ CREATE TRIGGER unique_over_time BEFORE INSERT OR UPDATE ON account_generations
     FOR EACH ROW EXECUTE PROCEDURE unique_over_time();
 ```
 
-Notice we still keep the uniquness of the slugs at any point in time by using a trigger function.
+Notice we still keep the uniqueness of the slugs at any point in time by using a trigger function.
 This isn't the most compelling data model to work with from an OO/ORM perspective, but this
 does have a level of data integrity that is better than what most programming languages would give
 you.
 
 The trick left up to the reader is how to best leverage these kinds of features in your
 own applications. I don't imagine this is something that should be used on every
-model of your application, but for key entities/tables/etc, it can provide a wonderful
+model of your application, but for key entities, tables, etc: it can provide a wonderful
 amount of data to understand how your system's data evolved.

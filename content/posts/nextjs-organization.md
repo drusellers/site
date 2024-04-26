@@ -19,7 +19,7 @@ my current projects look like this.
     content/ # markdown files
     lib/     # random js functions
     public/
-    scripts/ # local automation / helper scripts
+    scripts/ # helper scripts
     src/
         pages/
             index.tsx
@@ -52,24 +52,24 @@ So, now I get to lean on the existing Next.js documentation about the `/app` fol
 
 ```
 ~/
-    app/
-    lib/
-        cms.ts
-    scripts/
-    package.json
+  app/
+  lib/
+    cms.ts
+  scripts/
+  package.json
 ```
 
 The next easy one is my `/content` directory which holds all of my markdown files. Since with next.js I can still easily access these files using `path.join(process.cwd(), 'content')` I'm happy to leave these files here as well. 
 
 ```
 ~/
-    app/
-    content/
-        post1.md
-        post2.md
-    lib/
-    scripts/
-    package.json
+  app/
+  content/
+    post1.md
+    post2.md
+  lib/
+  scripts/
+  package.json
 ```
 
 Ok, now I'm to the meat of the work I really want to think about. `src/components` and `src/layouts`. With new version of nextjs, I no longer need to think about layouts because that is a part of the new feature set. So we can do away with that. Now we have the `src/components`. Currently, my organization of this folder is very junk drawer like. I don't have any rules around it, and frankly any rule I come up with is just for my own use.
@@ -80,39 +80,39 @@ I wonder if I should organize my components in way that further supports that id
 
 ```
 ~/
-    components/
-        pdp/
-            ...detail components
-        plp/
-            ...list components
+  components/
+    pdp/
+      ...detail components
+    plp/
+      ...list components
 ```
 
 Simplistically, that works and all, but then I tend to get the junk drawer of stuff.
 
 ```
 ~/
-    components/
-        pdp/
-            ...detail components
-            actionBar/
-        plp/
-            ...list components
-            actionBar/
-            pagination/
-            filtering/
-        system/
-            buttons/
-            inputs/
+  components/
+    pdp/
+      ...detail components
+      actionBar/
+    plp/
+      ...list components
+      actionBar/
+      pagination/
+      filtering/
+    system/
+      buttons/
+      inputs/
 ```
 
 What if we did a system folder, that speaks to the "design system", this could hold things that are important to that design system.
 
 ```
 ~/
-    components/
-        system/
-            buttons/
-            inputs/
+  components/
+    system/
+      buttons/
+      inputs/
 ```
 
 I like that this tracks well with other concepts in the workflow. It also speaks to the idea that these are shared across page types.
@@ -121,15 +121,15 @@ The last item that I need to think about is how to organize items that are speci
 
 ```
 ~/
-    app/
-        queues/
-            [id]/
-                page.ts  # get a single queue
-            page.ts      # lists the queues
-        layout.tsx        # root app layout
-    lib/
-        models.ts        # interface Queue { ... }
-        client.ts        # http fetch to get and list queues
+  app/
+    queues/
+      [id]/
+        page.ts    # get a single queue
+      page.ts      # lists the queues
+    layout.tsx     # root app layout
+  lib/
+    models.ts      # interface Queue { ... }
+    client.ts      # http fetch to get and list queues
 ```
 
 For the common items, like navigation, breadcrumbs, that exist across the entirety of the application those would all exist in system which further helps explain that a change there should change across the entire application.
@@ -138,19 +138,19 @@ The components that represent the list of queues, and the queue "row" itself, an
 
 ```
 ~/
-    app/
-        queues/
-            [id]/
-                page.ts  # get a single queue
-            page.ts      # lists the queues
-            
-            # using the new /app allows colocation
-            _list.ts     # use the _ to help highlight the partial nature
-            _row.ts
+  app/
+    queues/
+      [id]/
+        page.ts  # get a single queue
+      page.ts      # lists the queues
+      
+      # using the new /app allows colocation
+      _list.ts     # use the _ to help highlight the partial nature
+      _row.ts
 ```
 
 I'm not sold on the `_` approach, but I like that I can now colocate the sub-components of a page rather than having to shuffle them all the way to components. This feels closer to the `feature folder` / `feature slice` model that I'm accustomed to from `dotnet`. 
 
 The next step is to take this and implement it and iterate from there.
 
-This did "complicate" my tailwind includes since everything is not in `/src` but that's a minor change.
+Update: Next.js now asks about a `/src` directory, so I've shifted back to that, which also makes my typescript imports a lot easier to configure. Winning.
