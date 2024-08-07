@@ -1,6 +1,10 @@
 ---
 title: About
 img: /images/planning.jpg
+sideBar: |
+  My name is Dru Sellers, and I'm a technologist that is also passionate about
+  the design and operations of a business. I originally went to college to study
+  business because, as my Dad said, "everyone needs business people."
 ---
 
 Hello 👋
@@ -41,7 +45,7 @@ that connection that reasonated deeply with me. It was around this time, that I 
 my software modeling to the way we would model businesses in school. This connected my two fields of
 understanding in a way that unlocked a new approach to software design/thinking.
 
-For the last {% $years %}, I have combined these twin passions in a way that has created a valuable
+For the last {% $years %} years, I have combined these twin passions in a way that has created a valuable
 mental model to solving problems for a business. This website is my poor attempt to catalog my ideas
 and models so that others can hopefully build off of my labors.
 

@@ -1,13 +1,11 @@
 ---
 title: 'Service'
-categories: values
-tags:
-  - Values
-type: value
+preview: |
+    Helping you, helps me
 ---
 
 
-> Be subject to one another out of reverence to Christ. "Be subject to one another." In this day and age of 24-hour cable crap, devoted to feeding the voyeuristic gluttony of the American public, hooked on a bad soap opera that's passing itself off as important, don't you think you might be able to find some relevance in verse 21? How do end the cycle? Be subject to one another!
+> Be subject to one another out of reverence to Christ. "Be subject to one another." In this day and age of 24-hour cable crap, devoted to feeding the voyeuristic gluttony of the American public, hooked on a bad soap opera that's passing itself off as important, don't you think you might be able to find some relevance in verse 21? How do we end the cycle? Be subject to one another!
 > Jed Bartlet from West Wing
 
 

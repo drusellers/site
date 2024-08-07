@@ -1,6 +1,6 @@
 type Props = {
-  wordCount?: string
-  readingTime?: string
+  wordCount?: number
+  readingTime?: number
 }
 
 export default function Stats({ wordCount, readingTime }: Props) {

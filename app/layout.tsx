@@ -1,13 +1,11 @@
-import Nav from '../components/nav'
-import Logo from '../components/logo'
-import Footer from '../components/footer'
 import { Metadata } from 'next'
 import '../css/index.css'
 import localFont from 'next/font/local'
-import { Open_Sans } from 'next/font/google'
+import { Open_Sans, Space_Grotesk } from 'next/font/google'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import React from 'react'
+import TailwindDebug from '@/components/TailwindDebug'
 
 config.autoAddCss = false
 
@@ -18,6 +16,14 @@ const nunito = localFont({
 const osans = Open_Sans({
   subsets: ['latin'],
   variable: '--font-open-sans',
+})
+const humane = localFont({
+  src: '../public/fonts/Humane-VF.ttf',
+  variable: '--font-humane',
+})
+const spaceG = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-g',
 })
 
 export const metadata: Metadata = {
@@ -50,14 +56,12 @@ type Props = {
 // them.
 export default function Layout({ children }: Props) {
   return (
-    <html lang={'en'}>
-      <body className={`${nunito.variable} ${osans.variable}`}>
-        <div className={'grid grid-rows-outer'}>
-          <div className={'container mx-auto max-w-document'}>{children}</div>
-          <div>
-            <Footer />
-          </div>
-        </div>
+    <html lang={'en'} className={`${spaceG.variable}`}>
+      <body
+        className={`${nunito.variable} ${osans.variable} ${humane.variable} bg-oxford-100`}
+      >
+        {children}
+        <TailwindDebug />
       </body>
     </html>
   )

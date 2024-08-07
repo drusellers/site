@@ -3,6 +3,7 @@
 @import 'tailwindcss/utilities';
 @import './markdown.css';
 @import './sidenote.css';
+@import './highlight.css';
 
 body {
   /*https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient()*/

@@ -1,0 +1,19 @@
+.hljs-string,
+.hljs-section,
+.hljs-selector-class,
+.hljs-template-variable,
+.hljs-keyword,
+.hljs-builtin,
+.hljs-deletion {
+    color: #E0EBE9;
+}
+
+.language-text,
+.language-yaml {
+    color: #E0EBE9;
+}
+
+.hljs {
+    color: #E0EBE9;
+    padding: theme('spacing.4') theme('spacing.2');
+}

@@ -14,8 +14,16 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        heading: ['var(--font-nunito)', 'sans-serif'],
-        copy: ['var(--font-open-sans)'],
+        sans: ['var(--font-space-g)'],
+        heading: ['var(--font-humane)', 'sans-serif'],
+      },
+      fontSize: {
+        xxs: ['0.5rem', {
+          lineHeight: '0.75rem'
+        }],
+        md: ['1rem', {
+          lineHeight: '150%'
+        }]
       },
       maxWidth: {
         document: '64rem',
@@ -25,6 +33,12 @@ module.exports = {
       },
       gridTemplateRows: {
         'outer': 'minmax(calc(100vh - 500px), max-content), 500px'
+      },
+      colors: {
+        oxford: {
+          500: '#314D65',
+          100: '#E0EBE9'
+        }
       }
     },
   },
@@ -37,7 +51,7 @@ module.exports = {
       addBase({
         a: {
           color: config('theme.colors.blue.500'),
-          fontFamily: config('theme.fontFamily.copy'),
+          fontFamily: config('theme.fontFamily.sans'),
         },
         p: { fontFamily: config('theme.fontFamily.copy') },
         h1: { fontFamily: config('theme.fontFamily.heading') },

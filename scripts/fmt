@@ -1,4 +1,4 @@
 #!/bin/bash
 
-pnpm format
-pnpm lint
+npm run format
+npm run lint

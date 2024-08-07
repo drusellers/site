@@ -17,7 +17,7 @@ With `[SetUpTestFixture]` I can now delete the database, then run the migrations
 
 My normal dotnet project setup looks roughly like this.
 
-```
+```text
 ~/
   src/
     MyProject/

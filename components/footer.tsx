@@ -1,4 +1,4 @@
-import Social from './footer/social'
+import Social from './Socials'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCreativeCommons,

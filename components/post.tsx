@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilm } from '@fortawesome/pro-light-svg-icons'
 import Date from './date'
-import { VideoProps } from '@/lib/posts'
+import { VideoProps } from '@/lib/cms.posts'
 import { toMarkdown, toNakedMarkdown } from '@/lib/md'
 
 type Props = {

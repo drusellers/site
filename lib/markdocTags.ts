@@ -88,13 +88,22 @@ export const fence: Schema = {
       ? node.transformChildren(config)
       : [node.attributes.content]
 
+    attributes.style = 'background: #2B4459;'
+
     // not-prose prevents tailwind from styling
-    return new Tag('pre', { class: 'not-prose', ...attributes }, [
-      new Tag(
-        'code',
-        { class: 'language-' + attributes['data-language'] },
-        children
-      ),
-    ])
+    return new Tag(
+      'pre',
+      {
+        class: 'not-prose px-4 py-4 rounded-lg text-md mb-4',
+        ...attributes,
+      },
+      [
+        new Tag(
+          'code',
+          { class: 'language-' + attributes['data-language'] },
+          children
+        ),
+      ]
+    )
   },
 }

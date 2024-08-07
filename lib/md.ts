@@ -1,8 +1,23 @@
 import Markdoc from '@markdoc/markdoc'
+import { parse } from 'yaml'
+import { chip, sidenote, fence } from '@/lib/markdocTags'
 
-export function toMarkdown(input: string): string {
+export function toMarkdown(
+  input: string,
+  variables: any | undefined = {}
+): MarkdownContents {
   const ast = Markdoc.parse(input)
-  const config = {}
+  const config = {
+    tags: {
+      chip,
+      sidenote,
+    },
+    nodes: {
+      fence
+    },
+    variables,
+  }
+
   const errors = Markdoc.validate(ast, config)
   if (errors.length > 0) {
     throw new Error('Error Parsing Markdoc')
@@ -12,10 +27,18 @@ export function toMarkdown(input: string): string {
 
   const html = Markdoc.renderers.html(content)
 
-  return html
+  const frontMatter = ast.attributes.frontmatter
+    ? parse(ast.attributes.frontmatter)
+    : {}
+
+  return {
+    html,
+    raw: input,
+    frontMatter,
+  }
 }
 
-export function toNakedMarkdown(input: string): string {
+export function toNakedMarkdown(input: string): MarkdownContents {
   const ast = Markdoc.parse(input)
   const config = {}
   const errors = Markdoc.validate(ast, config)
@@ -27,5 +50,19 @@ export function toNakedMarkdown(input: string): string {
 
   const html = Markdoc.renderers.html(content)
 
-  return html
+  const frontMatter = ast.attributes.frontmatter
+    ? parse(ast.attributes.frontmatter)
+    : {}
+
+  return {
+    html,
+    raw: input,
+    frontMatter,
+  }
+}
+
+export interface MarkdownContents {
+  html: string
+  raw: string
+  frontMatter: any
 }

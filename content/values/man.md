@@ -1,25 +1,30 @@
 ---
 title: 'First, be a Man'
-categories: values
-tags:
-  - Values
-type: value
+preview: |
+    The creed of my fraternity, a statement I often revisit, to see how it "fits" me today. 
 ---
 
-While this was the creed of my fraternity "Primum, Vir Esto" First, be a Man, here Vir is a Masculine form I prefer to think of it instead as meaning the archaic English form of Man as in "Human"
+> Primum, Vir Esto
 
-Yet, I retain some of the Stoic attributes as well.
+This is the creed of my fraternity Zeta Chi. "Primum, Vir Esto" roughly translated as "First, be a Man". In the context of the late 90's early 2000's the "Vir" was assuredly meant to be the Masculine Hetero Male. As I've grown, I prefer to think of it as the archaic English form, which I interpret as "Human". 
 
-Represents the Stoic attributes
+> First, be human
 
-That I am "human"
+Today I live this value, by trying to really see people. To connect with them as a human that is going through the same wild shit show that I am. Seeing many things for the first time. Feeling fragile, and acting robust.
 
-Side note: males used to be called "Werman" hence man meaning all humans.
 
-https://imgur.com/gallery/jEdy9
+[//]: # (I was once asked what does it mean to be Masculine?)
 
-This is the motto of my Alma Mater and my Fraternity and I have adopted
-it as my personal motto as well. I will strive always to act as the
-ideal of a Man. Someone who looks out for others and protects them. To
-judge a man in terms of being a human. To be compassionate and caring of
-others
+[//]: # ()
+[//]: # (This is the motto of my Alma Mater and my Fraternity and I have adopted)
+
+[//]: # (it as my personal motto as well. I will strive always to act as the)
+
+[//]: # (ideal of a Man. Someone who looks out for others and protects them. To)
+
+[//]: # (judge a man in terms of being a human. To be compassionate and caring of)
+
+[//]: # (others)
+
+[//]: # ()
+[//]: # (Side note: males used to be called "Werman" hence man meaning all humans.)

@@ -1,14 +1,20 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function Logo() {
+type Props = {
+  width?: number
+  height?: number
+}
+
+// 0.3356643357
+export default function Logo({ width = 143, height = 48 }: Props) {
   return (
-    <Link href="/" className="block h-12">
+    <Link href="/" className="block">
       <Image
-        src={'/images/logo.svg'}
+        src={'/images/logo-oxford.svg'}
         alt={'Dru Sellers'}
-        width={143}
-        height={48}
+        width={width}
+        height={height}
       />
     </Link>
   )
