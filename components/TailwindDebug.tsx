@@ -1,10 +1,10 @@
 'use client'
 
 // sits inside the chrome
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from 'next/navigation'
 
-export default function TailwindDebug() {
+function InnerTailwindDebug() {
   const qs = useSearchParams()
   const [width, setWidth] = useState(window.innerWidth)
   useEffect(() => {
@@ -111,5 +111,13 @@ export default function TailwindDebug() {
         </p>
       </div>
     </div>
+  )
+}
+
+export default function TailwindDebug() {
+  return (
+    <Suspense>
+      <InnerTailwindDebug />
+    </Suspense>
   )
 }

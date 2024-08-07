@@ -25,8 +25,7 @@ export type PostHeader = {
 export function getSortedPostsData(): PostHeader[] {
   // Get file names under /posts
   const fileNames = getFiles('posts')
-  
-  console.log(fileNames)
+
   const allPostsData = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '')
