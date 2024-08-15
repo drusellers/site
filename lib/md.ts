@@ -13,7 +13,7 @@ export function toMarkdown(
       sidenote,
     },
     nodes: {
-      fence
+      fence,
     },
     variables,
   }

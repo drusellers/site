@@ -10,7 +10,7 @@ export type VideoProps = {
 
 export function getFiles(dir: string): string[] {
   const fileNames = fs.readdirSync(path.join(contentDirectory, dir))
-  return fileNames.filter(n => !n.startsWith('_'));
+  return fileNames.filter((n) => !n.startsWith('_'))
 }
 
 export function getFile(file: string): string {

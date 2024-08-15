@@ -34,9 +34,7 @@ export function getSortedPostsData(): PostHeader[] {
     const fullPath = path.join(postsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
 
-    const md = toMarkdown(fileContents, {
-
-    })
+    const md = toMarkdown(fileContents, {})
 
     const year = parseISO(md.frontMatter.date).getFullYear()
 
@@ -112,13 +110,15 @@ export function getAllPostIds(): { params: { id: string } }[] {
   //     }
   //   }
   // ]
-  return fileNames.filter(n => !n.startsWith('_')).map((fileName) => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, ''),
-      },
-    }
-  })
+  return fileNames
+    .filter((n) => !n.startsWith('_'))
+    .map((fileName) => {
+      return {
+        params: {
+          id: fileName.replace(/\.md$/, ''),
+        },
+      }
+    })
 }
 
 export type PostData = {
@@ -139,9 +139,7 @@ export async function getPostData(id): Promise<PostData> {
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
-  const md = toMarkdown(fileContents, {
-
-  })
+  const md = toMarkdown(fileContents, {})
 
   const wordCount = wordyCount(fileContents)
   const readingTime = Math.round(wordCount / 200)

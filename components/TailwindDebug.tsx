@@ -1,12 +1,17 @@
 'use client'
 
 // sits inside the chrome
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 
 function InnerTailwindDebug() {
   const qs = useSearchParams()
-  const [width, setWidth] = useState(window.innerWidth)
+  const [width, setWidth] = useState(0)
+
+  useEffect(() => {
+    setWidth(window.innerWidth)
+  }, [])
+
   useEffect(() => {
     window.addEventListener('resize', () => {
       setWidth(window.innerWidth)

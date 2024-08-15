@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { classNames } from '@/components/oxford/PageTitle'
+import { classNames } from '@/lib/util'
 
 type Props = {
   prev?: {

@@ -6,8 +6,16 @@ tags:
 disqus_id: 1d83dc56-3941-4899-945e-00a5f2ccba45
 withStats: true
 description: >
-  How I'm thinkig about Repositories in 2024
+  How I'm thinking about Repositories in 2024
 ---
+
+GetAction<TId, TEntity, TResponse>
+  Repository<TId, TEntity>
+    Get()
+  
+TResponse Map(TEntity);
+
+
 
 - Query Objects (EF Core)
   - can contain filter options
@@ -22,12 +30,16 @@ description: >
   - can join multiple data sources
   - can easily include a cache
   - has DI
+  - baseQuery
 
 Could we use both? SOC
 
 repository.QueryOne.Filters
 repository.QueryOne.Sorts
 repository.QueryOne.Execute()
+
+repository.Filters
+repository.ListObject(page, perPage, filters, sort, ct)
 
 the repository can also contain mutations, but that was not the bigger focus in the original literature.
 

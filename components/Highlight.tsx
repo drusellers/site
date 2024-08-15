@@ -6,10 +6,13 @@ import csharp from 'highlight.js/lib/languages/csharp'
 import diff from 'highlight.js/lib/languages/diff'
 import ts from 'highlight.js/lib/languages/typescript'
 import sql from 'highlight.js/lib/languages/sql'
+import text from 'highlight.js/lib/languages/plaintext'
+
 hljs.registerLanguage('csharp', csharp)
 hljs.registerLanguage('diff', diff)
 hljs.registerLanguage('typescript', ts)
 hljs.registerLanguage('sql', sql)
+hljs.registerLanguage('text', text)
 
 export default function Highlight() {
   useEffect(() => {
