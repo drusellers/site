@@ -16,7 +16,39 @@ employers:
         end: Present
         description:
           - >
-            Building and providing a SaaS based tool that helps teams managed MQ based systems
+            Building and providing a SaaS based tool that can connect to MQ based systems, to provide
+            additional support and visibility to those systems. Supports multiple identity providers,
+            as well as multiple brokers.
+  - employer: Elevated Platform
+    url: https://elevatedplatform.io
+    urllabel: elevatedplatform.io
+    roles:
+      - title: "Project: ERP Migration"
+        start: July 2024
+        end: Present
+        description:
+        - >
+          This customer later ended up migrating to a new ERP, and we were able to maintain the existing
+          system, on the old ERP, and transitioned to the new ERP with no downtime while continuing to ship
+          new functionality at the same time. We also added on another API client that needed to help expose
+          customer quotes in their Adobe Commerce Edge implementation.
+      - title: "Project: Showroom"
+        start: April 2023
+        end: July 2024
+        description:
+          - >
+            Building on the success of the digital sinage project, we developed a new streamlined ERP front end 
+            in Nuxt.js for Showroom sales staff that integrated with Entra ID. To accomplish this we extended the
+            previous API to include their ERP, and Bloomreach Customer outreach tooling.
+      - title: "Project: Endless Aisle"
+        start: April 2022
+        end: April 2023
+        description:
+          - >
+            Rehabilitated an existing Vue.js, Couchbase, on-prem digital signage application that experienced
+            extended down times, and inaccurate information. We converted it to a .NET API, with 
+            a Nuxt.js front-end. This allowed us to quickly bring the application to a point where new 
+            features could be deployed.
   -
     employer: One More Cloud, Inc.
     url: https://omc.io

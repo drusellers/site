@@ -12,7 +12,7 @@ type Props = {
 export default function Layout({ children }: Props) {
   return (
     <div className={'h-full flex flex-col justify-between'}>
-      <div className={'flex-col md:flex divide-[#C6D3D5] divide-x'}>
+      <div className={'flex flex-col md:flex-row divide-[#C6D3D5] divide-x'}>
         <div className={'flex-1'}>
           {/* explore the 8 columns here at this level */}
           {children}

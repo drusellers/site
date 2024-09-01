@@ -18,7 +18,7 @@ export default function ResumeUI() {
 
       {/* Experience */}
       <div className={'grid grid-cols-8 gap-x-4 pr-4'}>
-        <div className={'col-span-3 text-right uppercase font-bold'}>
+        <div className={'col-span-3 text-right uppercase font-bold leading-8'}>
           Experience
         </div>
         <div className={'col-span-5 flex flex-col space-y-8'}>
@@ -30,7 +30,7 @@ export default function ResumeUI() {
 
       {/* Education */}
       <div className={'grid grid-cols-8 gap-x-4 pr-4'}>
-        <div className={'col-span-3 text-right uppercase font-bold'}>
+        <div className={'col-span-3 text-right uppercase font-bold leading-8'}>
           Education
         </div>
         <div className={'col-span-5 flex flex-col space-y-8'}>

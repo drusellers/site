@@ -33,7 +33,7 @@ export default function Experience({ job }: Props) {
       <div className={'flex flex-col space-y-8'}>
         {job.roles.map((r) => {
           return (
-            <div key={r.title} className={'flex flex-col'}>
+            <div key={r.title} className={'flex flex-col gap-y-1'}>
               <div className={'flex flex-row justify-between'}>
                 <div className={'font-bold'}>{r.title}</div>
                 <div className={'font-light'}>
@@ -41,7 +41,7 @@ export default function Experience({ job }: Props) {
                 </div>
               </div>
 
-              <div className={'flex flex-col space-y-4'}>
+              <div className={'flex flex-col space-y-4 pl-4'}>
                 {r.description.map((d, i) => {
                   return (
                     <div
