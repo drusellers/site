@@ -18,7 +18,7 @@ export default function Layout({ children }: Props) {
           {children}
           <Footer />
         </div>
-        <div className={'flex-none w-[270px]'}>
+        <div className={'flex-none w-[270px] print:hidden'}>
           <Sidebar />
         </div>
       </div>

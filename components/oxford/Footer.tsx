@@ -7,7 +7,7 @@ import {
 export default function Footer() {
   return (
     <div
-      className={'text-xs pb-4 text-left pl-8 grid grid-cols-7 gap-x-4 pt-8'}
+      className={'text-xs pb-4 text-left pl-8 grid grid-cols-7 gap-x-4 pt-8 print:hidden'}
     >
       <div className={'col-start-4 col-span-4'}>
         <FontAwesomeIcon icon={faCreativeCommons} />{' '}

@@ -2,10 +2,11 @@ import React from 'react'
 import { classNames } from '@/lib/util'
 
 type Props = {
-  children: React.ReactNode
+    children: React.ReactNode
+    className?: string
 }
 
-export default function PageTitle({ children }: Props) {
+export default function PageTitle({ children, className = '' }: Props) {
   let length = 0
   if (typeof children == 'string') {
     length = Math.max(...children.split(' ').map((w) => w.length))
@@ -18,5 +19,5 @@ export default function PageTitle({ children }: Props) {
 
   const base = 'font-bold font-heading text-oxford-500 uppercase'
 
-  return <div className={classNames(fontSize, base)}>{children}</div>
+  return <div className={classNames(fontSize, base, className)}>{children}</div>
 }
