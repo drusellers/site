@@ -1,9 +1,24 @@
 import { getQuoteData, getSiblingQuotes } from '@/lib/quotes'
 import PageLayout from '@/components/oxford/PageLayout'
+import type { Metadata, ResolvingMetadata } from 'next'
 
 type PageParams = {
   params: {
     id: string
+  }
+}
+
+export async function generateMetadata(
+  { params }: PageParams,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const id = params.id
+
+  const postData = await getQuoteData(params.id)
+
+  return {
+    title: `Quotes: ${postData.title}`,
   }
 }
 
