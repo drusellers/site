@@ -36,14 +36,15 @@ export default async function Sidebar() {
           </div>
         </div>
 
-        <div className={'flex flex-row justify-between px-6 py-4'}>
+        <div className={'flex flex-col gap-y-4 px-6 py-4'}>
           <div className={'flex flex-row space-x-3'}>
+            <Social platform="bluesky" username="@drusellers.com" />
             <Social platform="instagram" username="drusellers" />
             <Social platform="twitter" username="drusellers" />
             <Social platform="github" username="drusellers" />
             <Social platform="reddit" username="drusellers" />
           </div>
-          <div>Austin, TX</div>
+          <div className="text-gray-400">Austin, TX</div>
         </div>
       </div>
 
