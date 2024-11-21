@@ -9,23 +9,33 @@ description: >
   How I'm thinking about Repositories in 2024
 ---
 
+
 GetAction<TId, TEntity, TResponse>
   Repository<TId, TEntity>
     Get()
   
 TResponse Map(TEntity);
 
-
-
 - Query Objects (EF Core)
+  - Helps build initial includes  
   - can contain filter options
   - can tell you those filter and sort options (meta data)
   - CON: Some what hard to discover
   - CON: don't join systems
   - CON: harder to get at a cache (no DI)
 
+```csharp
+public class ListOrders: ListQuery<Order>
+{
+  override IQueryable<Order> Build(DbContext context)
+  {
+  }
+}
+```
+
 - Repository Objects
   - less meta data
+  - chunky
   - much better discoverability
   - can join multiple data sources
   - can easily include a cache
