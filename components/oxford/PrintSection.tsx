@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 type Props = {
   children: React.ReactNode
@@ -6,12 +6,13 @@ type Props = {
   show?: boolean
 }
 
-export default function PrintSection({ children, show, className = '' }: Props) {
+export default function PrintSection({
+  children,
+  show,
+  className = '',
+}: Props) {
   let css = 'hidden print:block'
-  if(show)
-    css = 'block'
+  if (show) css = 'block'
 
-  return <div className={css}>
-    {children}
-  </div>
+  return <div className={css}>{children}</div>
 }

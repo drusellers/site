@@ -1,5 +1,5 @@
-import React from "react";
-import { classNames } from "@/lib/util";
+import React from 'react'
+import { classNames } from '@/lib/util'
 
 type Props = {
   children: React.ReactNode
@@ -17,7 +17,8 @@ export default function PrintTitle({ children, className = '' }: Props) {
     fontSize = 'text-4xl leading-[75%] pb-4'
   }
 
-  const base = 'hidden print:block font-bold font-heading text-oxford-500 uppercase'
+  const base =
+    'hidden print:block font-bold font-heading text-oxford-500 uppercase'
 
   return <div className={classNames(fontSize, base, className)}>{children}</div>
 }

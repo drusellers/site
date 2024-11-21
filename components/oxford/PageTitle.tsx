@@ -2,8 +2,8 @@ import React from 'react'
 import { classNames } from '@/lib/util'
 
 type Props = {
-    children: React.ReactNode
-    className?: string
+  children: React.ReactNode
+  className?: string
 }
 
 export default function PageTitle({ children, className = '' }: Props) {
