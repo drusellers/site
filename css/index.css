@@ -19,3 +19,17 @@ body {
 .bg-footer {
     background: linear-gradient(-10deg, #000000, #2C3E50);
 }
+
+
+.deep {
+    height: 100%;
+    width: 100%;
+    background-color: #012345;
+    background-image: radial-gradient(circle farthest-corner at top left, rgba(1, 35, 69,1) 0%, rgba(1, 35, 69,0) 50%),
+        radial-gradient(circle farthest-side at top right, rgba(18, 52, 86,1) 0%, rgba(18, 52, 86,0) 10%),
+        radial-gradient(circle farthest-corner at bottom right, rgba(35, 69, 103,1) 0%, rgba(35, 69, 103, 0) 33%),
+        radial-gradient(circle farthest-corner at top right, rgba(52, 86, 120,1) 0%, rgba(52, 86, 120,0) 50%),
+        radial-gradient(ellipse at bottom center, rgba(1, 35, 69,1) 0%, rgba(1, 35, 69,0) 80%)
+        ;
+
+}
