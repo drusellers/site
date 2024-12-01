@@ -1,5 +1,6 @@
 import { getAbout } from '@/lib/cms.about'
 import PageTitle from '@/components/oxford/PageTitle'
+import Image from "next/image";
 
 export default function About() {
   const bio = getAbout()
@@ -9,7 +10,10 @@ export default function About() {
       <PageTitle>About</PageTitle>
       <div className={'grid grid-cols-1 lg:grid-cols-7 gap-x-4'}>
         <div className={'lg:col-span-3 text-right'}>
-          <img src={bio.img} alt={'Coffee, yum.'} />
+            <Image src={bio.img}
+                   width={2048}
+                   height={1365}
+                   alt={'Coffee, yum.'} />
         </div>
         <div className={'md:col-span-3'}>
           <div

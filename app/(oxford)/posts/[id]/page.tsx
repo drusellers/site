@@ -3,8 +3,13 @@ import PostContent from '@/components/PostContent'
 import PostMetadata from '@/components/oxford/PostMetadata'
 import PageTitle from '@/components/oxford/PageTitle'
 
-export default async function Post({ params }: { params: { id: string } }) {
-  const postData = await getPostData(params.id)
+type Props = {
+  params: Promise<{ id: string }>
+}
+
+export default async function Post({ params }: Props) {
+  const id = (await params).id
+  const postData = await getPostData(id)
 
   return (
     <div className={'flex flex-col pl-8 pt-9 gap-y-4'}>

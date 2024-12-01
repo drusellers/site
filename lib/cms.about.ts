@@ -6,7 +6,7 @@ type AboutProps = {
   preview?: string
   html: string
   video?: VideoProps
-  img?: string
+  img: string
   sideBar: string
 }
 

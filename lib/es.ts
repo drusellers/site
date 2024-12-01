@@ -1,7 +1,9 @@
+import { PostData } from "@/lib/cms.posts";
+
 const URL = process.env.ES_WRITE_URL
 const INDEX = 'posts'
 
-export function indexPost(post) {
+export function indexPost(post: PostData) {
   let doc = {
     _id: post.id,
     suggest: post.title,

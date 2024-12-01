@@ -13,6 +13,11 @@ This is the creed of my fraternity Zeta Chi. "Primum, Vir Esto" roughly translat
 Today I live this value, by trying to really see people. To connect with them as a human that is going through the same wild shit show that I am. Seeing many things for the first time. Feeling fragile, and acting robust.
 
 
+- Greet people by Name when you can
+- Find people in their eyes (don't be a creep)
+- Talk to more people
+- Have patience for them
+
 [//]: # (I was once asked what does it mean to be Masculine?)
 
 [//]: # ()

@@ -1,8 +1,13 @@
 import { getValueData } from '@/lib/cms.values'
 import PageTitle from '@/components/oxford/PageTitle'
 
-export default async function Post({ params }) {
-  const postData = await getValueData(params.id)
+type Props = {
+  params: Promise<{id: string}>
+}
+export default async function Post({ params }: Props) {
+  const id = (await params).id
+
+  const postData = await getValueData(id)
 
   return (
     <div className={'flex flex-col pl-8 pt-9 gap-y-4'}>
