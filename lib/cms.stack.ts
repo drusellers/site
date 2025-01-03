@@ -16,8 +16,8 @@ export function getStack(): AboutProps {
   const ast = Markdoc.parse(fileContents)
 
   // CUSTOM to this content
-  let now = new Date()
-  let start = new Date('1997-08-01')
+  const now = new Date()
+  const start = new Date('1997-08-01')
 
   const config = {
     variables: {

@@ -8,9 +8,9 @@ type Props = {
   subtitle?: string
   children: React.ReactNode
   tags?: string[]
-  date?: any
-  wordCount?: any
-  readingTime?: any
+  date?: string
+  wordCount?: number
+  readingTime?: number
 }
 
 export default function PagePage({

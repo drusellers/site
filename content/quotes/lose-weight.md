@@ -1,6 +1,6 @@
 ---
 title: 'Losing Weight'
-date: '2011-06-12 05:58:21'
+date: '2011-06-12'
 categories: quotes
 tags:
   - Quotes

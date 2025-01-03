@@ -5,17 +5,17 @@ import YAML from 'yaml'
 const dataDirectory = path.join(process.cwd(), 'data')
 
 export function getResumeData() {
-  let fullPath = path.join(dataDirectory, 'resume.yml')
+  const fullPath = path.join(dataDirectory, 'resume.yml')
   const fileContents = fs.readFileSync(fullPath, 'utf8')
-  let data = YAML.parse(fileContents)
+  const data = YAML.parse(fileContents)
 
   return data
 }
 
 export function getAllegoryData() {
-  let fullPath = path.join(dataDirectory, 'allegory.yml')
+  const fullPath = path.join(dataDirectory, 'allegory.yml')
   const fileContents = fs.readFileSync(fullPath, 'utf8')
-  let data = YAML.parse(fileContents)
+  const data = YAML.parse(fileContents)
 
   return data
 }

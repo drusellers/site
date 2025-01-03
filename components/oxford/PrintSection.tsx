@@ -2,14 +2,12 @@ import React from 'react'
 
 type Props = {
   children: React.ReactNode
-  className?: string
   show?: boolean
 }
 
 export default function PrintSection({
   children,
-  show,
-  className = '',
+  show
 }: Props) {
   let css = 'hidden print:block'
   if (show) css = 'block'

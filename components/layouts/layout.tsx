@@ -5,15 +5,16 @@ import TagList from '../tagList'
 import TitleSubtitle from '../titleSubtitle'
 import Stats from '../stats'
 import Date from '../date'
+import { ReactNode } from "react";
 
 type Props = {
   title: string
   subtitle?: string
-  children: any
+  children: ReactNode
   tags?: string[]
-  date?: any
-  wordCount?: any
-  readingTime?: any
+  date?: string
+  wordCount?: number
+  readingTime?: number
 }
 
 // This component carves out sections of the page, and applies sensible padding to

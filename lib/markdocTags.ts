@@ -4,7 +4,7 @@ export const chip: Schema = {
   render: 'span',
   children: [],
   selfClosing: true,
-  transform: (node, options) => {
+  transform: (node, _options) => {
     // console.log('n', node, 'o', options)
     // console.log('color', node.attributes.color)
     return {

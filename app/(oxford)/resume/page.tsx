@@ -7,7 +7,6 @@ import PrintSection from '@/components/oxford/PrintSection'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faLocationPin,
-  faMobileNotch,
   faPaperPlaneTop,
 } from '@fortawesome/pro-light-svg-icons'
 

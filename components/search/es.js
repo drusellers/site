@@ -68,16 +68,17 @@ function query(query) {
     const suggestions = body.suggest['title-suggest'][0].options || []
     const categories = body.aggregations.categories.categories.buckets
     const result = {
-      hits: hits.length == 0 ? suggestions : hits,
+      hits: hits.length === 0 ? suggestions : hits,
       categories,
     }
     return Promise.resolve(result)
   })
 }
 
-export default {
-  query,
+const exportable = {
+  query
 }
+export default exportable
 
 // effectively private
 function request(query) {

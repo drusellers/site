@@ -14,6 +14,6 @@ export function getFiles(dir: string): string[] {
 }
 
 export function getFile(file: string): string {
-  let fullPath = path.join(contentDirectory, file)
+  const fullPath = path.join(contentDirectory, file)
   return fs.readFileSync(fullPath, 'utf8')
 }

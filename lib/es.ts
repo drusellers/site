@@ -4,7 +4,7 @@ const URL = process.env.ES_WRITE_URL
 const INDEX = 'posts'
 
 export function indexPost(post: PostData) {
-  let doc = {
+  const doc = {
     _id: post.id,
     suggest: post.title,
     title: post.title,
@@ -27,7 +27,7 @@ export function indexPost(post: PostData) {
 
 // effectively private
 function request(doc) {
-  let url = `${URL}/${INDEX}/_doc/${doc['_id']}`
+  const url = `${URL}/${INDEX}/_doc/${doc['_id']}`
 
   delete doc['_id']
   // console.log('doc', Object.keys(doc));

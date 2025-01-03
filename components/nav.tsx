@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export default function Nav() {
-  let linkStyle = 'text-gray-500'
+  const linkStyle = 'text-gray-500'
   return (
     <div>
       <nav className="sm:float-right">

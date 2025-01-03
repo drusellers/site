@@ -11,7 +11,7 @@ export default function Footer() {
         'text-xs pb-4 text-left pl-8 grid grid-cols-7 gap-x-4 pt-8 print:hidden'
       }
     >
-      <div className={'col-start-4 col-span-4'}>
+      <div className={'md:col-start-4 col-span-full md:col-span-4'}>
         <FontAwesomeIcon icon={faCreativeCommons} />{' '}
         <FontAwesomeIcon icon={faCreativeCommonsBy} /> Content on this site is
         licensed under a{' '}

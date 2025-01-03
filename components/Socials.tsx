@@ -32,7 +32,7 @@ type Props = {
 }
 
 export default function Social({ platform, username }: Props) {
-  let info = platforms[platform]
+  const info = platforms[platform]
   return (
     <a
       href={info.url(username)}

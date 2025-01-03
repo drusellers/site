@@ -6,12 +6,14 @@ import { MDXModule } from "mdx/types";
 export interface MdxContent {
   Content: MDXModule
   raw: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   frontMatter: any
 }
 
 export async function toMarkdown(
     input: string,
-    variables: any | undefined = {}
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    _variables: any | undefined = {}
   ): Promise<MdxContent>
   {
 

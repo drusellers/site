@@ -8,12 +8,11 @@ type Props = {
   prev?: { title: string; href: string }
   next?: { title: string; href: string }
 }
+
 export default function PageLayout({
   title,
   sidebar,
   children,
-  prev,
-  next,
 }: Props) {
   return (
     <div className={'flex flex-col pl-8 pt-9 gap-y-4'}>

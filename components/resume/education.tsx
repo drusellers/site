@@ -6,8 +6,8 @@ type Props = {
   school: Education
 }
 
-export default function EducationUI({ school }) {
-  let e = school
+export default function EducationUI({ school }: Props) {
+  const e = school
   return (
     <div key={e.school} className="space-y-3">
       <h4 className="font-heading text-xl font-bold">

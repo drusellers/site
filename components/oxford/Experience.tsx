@@ -3,7 +3,6 @@ import { toMarkdown } from '@/lib/md'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faArrowUpRightFromSquare,
-  faExternalLinkSquare,
 } from '@fortawesome/pro-light-svg-icons'
 
 type Props = {

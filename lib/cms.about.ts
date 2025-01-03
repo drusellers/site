@@ -14,8 +14,8 @@ export function getAbout(): AboutProps {
   const fileContents = getFile('about.md')
 
   // CUSTOM to this content
-  let now = new Date()
-  let start = new Date('1997-08-01')
+  const now = new Date()
+  const start = new Date('1997-08-01')
 
   const md = toMarkdown(fileContents, {
     // variables need to be strings?

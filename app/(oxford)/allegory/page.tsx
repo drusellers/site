@@ -3,16 +3,16 @@ import { remark } from 'remark'
 import html from 'remark-html'
 import PageTitle from '@/components/oxford/PageTitle'
 
-const platoClassNames = 'font-semibold'
-const glauconClassNames = 'font-semibold'
+const _platoClassNames = 'font-semibold'
+const _glauconClassNames = 'font-semibold'
 
 export default function Allegory({}) {
   const data = getAllegoryData()
 
   async function processNote(p) {
     if (p.characterNote) {
-      let x = await remark().use(html).process(p.characterNote)
-      let y = x.toString().replace('<p>', '').replace('</p>', '')
+      const x = await remark().use(html).process(p.characterNote)
+      const y = x.toString().replace('<p>', '').replace('</p>', '')
       p.characterNote = ` (${y})`
     }
   }

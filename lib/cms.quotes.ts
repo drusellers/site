@@ -52,7 +52,10 @@ export function getSortedQuotesData(): Quote[] {
 
   // Sort posts by date
   return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
+    const aa = parseISO(a.date)
+    const bb = parseISO(b.date)
+
+    if (aa < bb) {
       return 1
     } else {
       return -1

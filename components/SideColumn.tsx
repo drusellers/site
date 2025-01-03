@@ -8,9 +8,9 @@ type Props = {
   title: string
   subtitle?: string
   tags?: string[]
-  date?: any
-  wordCount?: any
-  readingTime?: any
+  date?: string
+  wordCount?: number
+  readingTime?: number
   children?: React.ReactNode
 }
 

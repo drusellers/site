@@ -9,10 +9,19 @@ export default function ShortDate({ dateString }: Props) {
     return <></>
   }
 
-  const date = parseISO(dateString)
+  let date = parseISO('2022-01-01')
+  let formatted = ''
+  try {
+    date = parseISO(dateString)
+    formatted = format(date, 'LLL dd')
+  } catch (e) {
+    console.log(dateString, e)
+  }
+
+
   return (
     <time className="font-mono text-sm text-gray-400" dateTime={dateString}>
-      {format(date, 'LLL dd')}
+      {formatted}
     </time>
   )
 }

@@ -1,4 +1,4 @@
-import { getQuoteData, getSiblingQuotes } from '@/lib/quotes'
+import { getAllQuotesIds, getQuoteData, getSiblingQuotes } from "@/lib/cms.quotes";
 import PageLayout from '@/components/oxford/PageLayout'
 import type { Metadata, ResolvingMetadata } from 'next'
 
@@ -8,9 +8,17 @@ type PageParams = {
   }>
 }
 
+export async function generateStaticParams() {
+  const quotes = getAllQuotesIds()
+
+  return quotes.map((q) => ({
+    id: q.params.id,
+  }))
+}
+
 export async function generateMetadata(
   { params }: PageParams,
-  parent: ResolvingMetadata
+  _parent: ResolvingMetadata
 ): Promise<Metadata> {
   // read route params
   const id = (await params).id

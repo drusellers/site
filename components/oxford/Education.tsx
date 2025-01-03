@@ -7,7 +7,7 @@ type Props = {
 }
 
 export default function EducationUI({ school }: Props) {
-  let e = school
+  const e = school
 
   return (
     <div>

@@ -1,4 +1,4 @@
-import { getSortedQuotesData, Quote } from '@/lib/quotes'
+import { getSortedQuotesData, Quote } from '@/lib/cms.quotes'
 import YearHeading from '@/components/yearHeading'
 import DateTitle from '@/components/dateTitle'
 import Link from 'next/link'

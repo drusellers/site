@@ -4,6 +4,7 @@ import { chip, sidenote, fence } from '@/lib/markdocTags'
 
 export function toMarkdown(
   input: string,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   variables: any | undefined = {}
 ): MarkdownContents {
   const ast = Markdoc.parse(input)
@@ -64,5 +65,6 @@ export function toNakedMarkdown(input: string): MarkdownContents {
 export interface MarkdownContents {
   html: string
   raw: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   frontMatter: any
 }

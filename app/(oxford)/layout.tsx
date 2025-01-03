@@ -16,10 +16,17 @@ export default function Layout({ children }: Props) {
         <div className={'flex-1'}>
           {/* explore the 8 columns here at this level */}
           {children}
+        </div>
+        <div className={'flex-none w-full md:w-[270px] print:hidden'}>
+          <Sidebar />
+        </div>
+      </div>
+      <div className={'flex flex-col md:flex-row divide-[#C6D3D5] divide-x'}>
+        <div className={'flex-1'}>
           <Footer />
         </div>
-        <div className={'flex-none w-[270px] print:hidden'}>
-          <Sidebar />
+        <div className={'hidden md:flex flex-none w-[270px] print:hidden'}>
+
         </div>
       </div>
     </div>
