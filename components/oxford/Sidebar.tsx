@@ -43,6 +43,7 @@ export default async function Sidebar() {
             <Social platform="twitter" username="drusellers" />
             <Social platform="github" username="drusellers" />
             <Social platform="reddit" username="drusellers" />
+            <Social platform="work" username="drusellers" />
           </div>
           <div className="text-gray-400">Austin, TX</div>
         </div>
