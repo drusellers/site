@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import YAML from 'yaml'
 
-const dataDirectory = path.join(process.cwd(), 'data')
+const dataDirectory = path.join(process.cwd(), 'content')
 
 export function getResumeData() {
   const fullPath = path.join(dataDirectory, 'resume.yml')
