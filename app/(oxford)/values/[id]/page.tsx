@@ -2,7 +2,7 @@ import { getValueData } from '@/lib/cms.values'
 import PageTitle from '@/components/oxford/PageTitle'
 
 type Props = {
-  params: Promise<{id: string}>
+  params: Promise<{ id: string }>
 }
 export default async function Post({ params }: Props) {
   const id = (await params).id

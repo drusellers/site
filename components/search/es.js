@@ -76,7 +76,7 @@ function query(query) {
 }
 
 const exportable = {
-  query
+  query,
 }
 export default exportable
 

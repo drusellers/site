@@ -9,11 +9,7 @@ type Props = {
   next?: { title: string; href: string }
 }
 
-export default function PageLayout({
-  title,
-  sidebar,
-  children,
-}: Props) {
+export default function PageLayout({ title, sidebar, children }: Props) {
   return (
     <div className={'flex flex-col pl-8 pt-9 gap-y-4'}>
       <PageTitle>{title}</PageTitle>

@@ -5,10 +5,7 @@ type Props = {
   show?: boolean
 }
 
-export default function PrintSection({
-  children,
-  show
-}: Props) {
+export default function PrintSection({ children, show }: Props) {
   let css = 'hidden print:block'
   if (show) css = 'block'
 

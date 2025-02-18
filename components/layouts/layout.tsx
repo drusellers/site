@@ -5,7 +5,7 @@ import TagList from '../tagList'
 import TitleSubtitle from '../titleSubtitle'
 import Stats from '../stats'
 import Date from '../date'
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
 type Props = {
   title: string

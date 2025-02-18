@@ -1,9 +1,7 @@
 import { Employer } from '@/lib/types'
 import { toMarkdown } from '@/lib/md'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faArrowUpRightFromSquare,
-} from '@fortawesome/pro-light-svg-icons'
+import { faArrowUpRightFromSquare } from '@fortawesome/pro-light-svg-icons'
 
 type Props = {
   job: Employer

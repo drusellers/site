@@ -1,7 +1,7 @@
 import { evaluate } from '@mdx-js/mdx'
 import * as runtime from 'react/jsx-runtime'
 import matter from 'gray-matter'
-import { MDXModule } from "mdx/types";
+import { MDXModule } from 'mdx/types'
 
 export interface MdxContent {
   Content: MDXModule
@@ -11,20 +11,16 @@ export interface MdxContent {
 }
 
 export async function toMarkdown(
-    input: string,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    _variables: any | undefined = {}
-  ): Promise<MdxContent>
-  {
+  input: string,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  _variables: any | undefined = {}
+): Promise<MdxContent> {
+  const post = matter(input)
+  const html = await evaluate(post.content, runtime)
 
-    const post = matter(input)
-    const html = await evaluate(post.content, runtime)
-
-
-    return {
-        Content: html,
-        raw: input,
-        frontMatter: post.data
-    }
+  return {
+    Content: html,
+    raw: input,
+    frontMatter: post.data,
   }
-
+}

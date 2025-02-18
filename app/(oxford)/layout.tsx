@@ -25,9 +25,9 @@ export default function Layout({ children }: Props) {
         <div className={'flex-1'}>
           <Footer />
         </div>
-        <div className={'hidden md:flex flex-none w-[270px] print:hidden'}>
-
-        </div>
+        <div
+          className={'hidden md:flex flex-none w-[270px] print:hidden'}
+        ></div>
       </div>
     </div>
   )

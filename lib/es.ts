@@ -1,4 +1,4 @@
-import { PostData } from "@/lib/cms.posts";
+import { PostData } from '@/lib/cms.posts'
 
 const URL = process.env.ES_WRITE_URL
 const INDEX = 'posts'

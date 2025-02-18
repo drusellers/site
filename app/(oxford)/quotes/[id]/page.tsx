@@ -1,4 +1,8 @@
-import { getAllQuotesIds, getQuoteData, getSiblingQuotes } from "@/lib/cms.quotes";
+import {
+  getAllQuotesIds,
+  getQuoteData,
+  getSiblingQuotes,
+} from '@/lib/cms.quotes'
 import PageLayout from '@/components/oxford/PageLayout'
 import type { Metadata, ResolvingMetadata } from 'next'
 
@@ -27,6 +31,15 @@ export async function generateMetadata(
 
   return {
     title: `Quotes: ${postData.title}`,
+    description: `A quote by ${postData.author}`,
+    openGraph: {
+      title: `Quotes: ${postData.title}`,
+      description: `A quote by ${postData.author}`,
+    },
+    twitter: {
+      title: `Quotes: ${postData.title}`,
+      description: `A quote by ${postData.author}`,
+    },
   }
 }
 

@@ -18,7 +18,6 @@ export default function ShortDate({ dateString }: Props) {
     console.log(dateString, e)
   }
 
-
   return (
     <time className="font-mono text-sm text-gray-400" dateTime={dateString}>
       {formatted}
