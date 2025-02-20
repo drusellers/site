@@ -44,14 +44,14 @@ function InnerTailwindDebug() {
         </div>
       </div>
       <div className={'flex w-full space-x-2'}>
-        <div className={'flex-1 rounded bg-orange-200 p-2 text-center'}>
+        <div className={'flex-1 rounded-sm bg-orange-200 p-2 text-center'}>
           <pre className="text-sm">xs</pre>
           <pre className="text-xs text-orange-500">bg-orange-200</pre>
           <pre className="text-xs">&lt; 640</pre>
         </div>
         <div
           className={
-            'flex-1 rounded bg-gray-100 p-2 text-center sm:bg-orange-200'
+            'flex-1 rounded-sm bg-gray-100 p-2 text-center sm:bg-orange-200'
           }
         >
           <pre className="text-sm">sm</pre>
@@ -62,7 +62,7 @@ function InnerTailwindDebug() {
         </div>
         <div
           className={
-            'flex-1 rounded bg-gray-100 p-2 text-center md:bg-orange-200'
+            'flex-1 rounded-sm bg-gray-100 p-2 text-center md:bg-orange-200'
           }
         >
           <pre className="text-sm">md</pre>
@@ -73,7 +73,7 @@ function InnerTailwindDebug() {
         </div>
         <div
           className={
-            'flex-1 rounded bg-gray-100 p-2 text-center lg:bg-orange-200'
+            'flex-1 rounded-sm bg-gray-100 p-2 text-center lg:bg-orange-200'
           }
         >
           <pre className="text-sm">lg</pre>
@@ -84,7 +84,7 @@ function InnerTailwindDebug() {
         </div>
         <div
           className={
-            'flex-1 rounded bg-gray-100 p-2 text-center xl:bg-orange-200'
+            'flex-1 rounded-sm bg-gray-100 p-2 text-center xl:bg-orange-200'
           }
         >
           <pre className="text-sm">xl</pre>
@@ -95,7 +95,7 @@ function InnerTailwindDebug() {
         </div>
         <div
           className={
-            'flex-1 rounded bg-gray-100 p-2 text-center 2xl:bg-orange-200'
+            'flex-1 rounded-sm bg-gray-100 p-2 text-center 2xl:bg-orange-200'
           }
         >
           <pre className="text-sm">2xl</pre>

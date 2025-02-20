@@ -41,7 +41,7 @@ function PageButton({ href, text }: ButtonParams) {
   if (href == undefined) return <></>
 
   return (
-    <div className={'px-4 py-2 bg-oxford-100 rounded'}>
+    <div className={'px-4 py-2 bg-oxford-100 rounded-sm'}>
       <Link href={href}>{text}</Link>
     </div>
   )

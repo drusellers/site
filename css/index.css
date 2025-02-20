@@ -1,9 +1,70 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-@import './markdown.css';
-@import './sidenote.css';
-@import './highlight.css';
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@import './markdown.css' layer(utilities);
+@import './sidenote.css' layer(utilities);
+@import './highlight.css' layer(utilities);
+
+@theme {
+  --color-oxford-500: #314D65;
+  --color-oxford-100: #E0EBE9;
+
+  /* min height .. page ... 50vh */
+
+  /* fontFamily: {
+    sans: ['var(--font-space-g)'],
+    heading: ['var(--font-humane)', 'sans-serif'],
+  },
+  fontSize: {
+    xxs: ['0.5rem', {
+      lineHeight: '0.75rem'
+    }],
+    md: ['1rem', {
+      lineHeight: '150%'
+    }]
+  },
+  maxWidth: {
+    document: '64rem',
+  },
+  gridTemplateColumns: {
+    '2cols': '1fr 2fr'
+  },
+  gridTemplateRows: {
+    'outer': 'minmax(calc(100vh - 500px), max-content), 500px'
+  } */
+
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  a {
+    color: var(--color-blue-500);
+    font-family: var(--font-family-sans);
+  }
+
+  p {
+    font-family: var(--font-family-copy);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+  }
+}
 
 body {
   /*https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient()*/

@@ -8,7 +8,7 @@ export default function Header() {
       <div>
         <Logo />
       </div>
-      <div className="my-6 flex-grow">
+      <div className="my-6 grow">
         <Nav />
       </div>
     </header>
