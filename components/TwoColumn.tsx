@@ -7,7 +7,7 @@ type Props = {
 
 export default function TwoColumn({ left, children }: Props) {
   return (
-    <div className={'grid grid-cols-1 md:grid-cols-2cols'}>
+    <div className={'grid grid-cols-1 md:grid-cols-[1fr_2fr'}>
       <div>{left}</div>
       <div className={'my-2 sm:my-6 px-6 w-full'}>{children}</div>
     </div>

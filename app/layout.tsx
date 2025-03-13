@@ -9,18 +9,16 @@ import TailwindDebug from '@/components/TailwindDebug'
 
 config.autoAddCss = false
 
-const nunito = localFont({
-  src: '../public/fonts/Nunito-VariableFont_wght.ttf',
-  variable: '--font-nunito',
-})
 const osans = Open_Sans({
   subsets: ['latin'],
   variable: '--font-open-sans',
 })
+
 const humane = localFont({
   src: '../public/fonts/Humane-VF.ttf',
   variable: '--font-humane',
 })
+
 const spaceG = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-space-g',
@@ -56,9 +54,9 @@ type Props = {
 // them.
 export default function Layout({ children }: Props) {
   return (
-    <html lang={'en'} className={`${spaceG.variable}`}>
+    <html lang={'en'} className={``}>
       <body
-        className={`${nunito.variable} ${osans.variable} ${humane.variable} bg-oxford-100`}
+        className={`${osans.variable} ${humane.variable} ${spaceG.variable} bg-oxford-100`}
       >
         {children}
         <TailwindDebug />
