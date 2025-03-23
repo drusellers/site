@@ -73,7 +73,7 @@ export default async function Post({ params }: PageParams) {
       prev={siblings.prevQuote}
       next={siblings.nextQuote}
     >
-      <div className="quote markdown mb-8">
+      <div className="quote mb-8">
         <blockquote
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         ></blockquote>

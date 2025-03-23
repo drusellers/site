@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
-@import './markdown.css' layer(components);
+@import './quote-styles.css' layer(components);
 @import './sidenote.css' layer(components);
 @import './highlight.css' layer(components);
 
@@ -51,9 +51,17 @@
   }
 
     /* start my base */
+    /* links: https://frontendmasters.com/blog/chilled-out-text-underlines/ */
   a {
     color: var(--color-blue-500);
     font-family: var(--font-sans);
+      text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  a:not(:is(:hover, :focus)) {
+    text-decoration-color:
+            color-mix(in srgb, currentColor, transparent 75%);
   }
 
   p {

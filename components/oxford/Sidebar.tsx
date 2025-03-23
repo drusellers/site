@@ -21,7 +21,7 @@ export default async function Sidebar() {
           />
         </div>
         <div className={'px-6 py-4'}>
-          <div className={'grid grid-cols-3 gap-y-3 gap-x-4'}>
+          <div className={'grid grid-cols-2 gap-y-3 gap-x-4'}>
             {navItems.map((i) => {
               return (
                 <Link
