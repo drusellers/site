@@ -13,18 +13,20 @@ export default function Experience({ job }: Props) {
       <div className={'flex flex-row justify-between'}>
         <div className={'font-bold text-2xl'}>{job.employer}</div>
         <div>
-          <a
-            href={job.url}
-            className="text-blue-600"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {job.urllabel}{' '}
-            <FontAwesomeIcon
-              className={'text-xxs'}
-              icon={faArrowUpRightFromSquare}
-            />
-          </a>
+          {job.url ? (
+            <a
+              href={job.url}
+              className="text-blue-600 flex items-center gap-x-1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {job.urllabel}{' '}
+              <FontAwesomeIcon
+                className={'w-[10px] h-[10px]'}
+                icon={faArrowUpRightFromSquare}
+              />
+            </a>
+          ) : null}
         </div>
       </div>
       <div className={'flex flex-col space-y-8'}>
