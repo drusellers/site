@@ -7,8 +7,6 @@ sideBar: |
   business because, as my Dad said, "everyone needs business people."
 ---
 
-Hello 👋
-
 My name is Dru Sellers, and I'm a technologist that is also passionate about
 the design and operations of a business. I originally went to college to study 
 business because, as my Dad said, "everyone needs business people." 

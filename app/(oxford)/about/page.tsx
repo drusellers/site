@@ -18,6 +18,7 @@ export default function About() {
           />
         </div>
         <div className={'md:col-span-3'}>
+          <div>Hello 👋</div>
           <div
             className={'prose'}
             dangerouslySetInnerHTML={{ __html: bio.html }}
