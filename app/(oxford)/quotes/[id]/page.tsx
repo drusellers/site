@@ -5,6 +5,7 @@ import {
 } from '@/lib/cms.quotes'
 import PageLayout from '@/components/oxford/PageLayout'
 import type { Metadata, ResolvingMetadata } from 'next'
+import Quote from "@/components/Quote";
 
 type PageParams = {
   params: Promise<{
@@ -73,12 +74,7 @@ export default async function Post({ params }: PageParams) {
       prev={siblings.prevQuote}
       next={siblings.nextQuote}
     >
-      <div className="quote mb-8">
-        <blockquote
-          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-        ></blockquote>
-        {cite}
-      </div>
+      <Quote cite={cite} html={postData.contentHtml} />
     </PageLayout>
   )
 }
