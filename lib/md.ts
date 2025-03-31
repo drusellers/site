@@ -35,6 +35,7 @@ export function toMarkdown(
 
   return {
     html,
+    plain: input,
     raw: input,
     frontMatter,
   }
@@ -58,6 +59,7 @@ export function toNakedMarkdown(input: string): MarkdownContents {
 
   return {
     html,
+    plain: input,
     raw: input,
     frontMatter,
   }
@@ -65,6 +67,7 @@ export function toNakedMarkdown(input: string): MarkdownContents {
 
 export interface MarkdownContents {
   html: string
+  plain: string
   raw: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   frontMatter: any

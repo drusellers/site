@@ -9,7 +9,7 @@ export function indexPost(post: PostData) {
     suggest: post.title,
     title: post.title,
     subtitle: post.subtitle,
-    content: post.contentPlain,
+    content: post.rawContent,
 
     description: 'abc',
     summary: 'abc',

@@ -126,16 +126,24 @@ export type PostData = {
   _id: string
   contentHtml: string
   contentPlain: string
+  rawContent: string
   wordCount: number
   readingTime: number
   video?: VideoProps
   date: string
   title: string
   subtitle: string
-  tags: string[]
+  tags: string[],
+  format: 'text' | 'html'
 }
 
 export async function getPostData(id): Promise<PostData> {
+  let format : 'text' | 'html' = 'html'
+  if(id.endsWith('.txt')) {
+    id = id.substring(0, id.length - 4)
+    format = 'text'
+  }
+
   const fullPath = path.join(postsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
@@ -144,15 +152,13 @@ export async function getPostData(id): Promise<PostData> {
   const wordCount = wordyCount(fileContents)
   const readingTime = Math.round(wordCount / 200)
 
-  const contentHtml = md.html
-  const contentPlain = fileContents
-
   // Combine the data with the id and contentHtml
   return {
     id,
     _id: id,
-    contentHtml,
-    contentPlain,
+    rawContent: md.raw,
+    contentHtml: md.html,
+    contentPlain: md.plain,
     wordCount,
     readingTime,
     title: md.frontMatter.title,
@@ -160,6 +166,7 @@ export async function getPostData(id): Promise<PostData> {
     video: md.frontMatter.video || null,
     subtitle: md.frontMatter.subtitle,
     tags: md.frontMatter.tags,
+    format,
   }
 }
 
