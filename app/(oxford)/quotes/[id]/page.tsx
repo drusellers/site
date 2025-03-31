@@ -5,7 +5,7 @@ import {
 } from '@/lib/cms.quotes'
 import PageLayout from '@/components/oxford/PageLayout'
 import type { Metadata, ResolvingMetadata } from 'next'
-import Quote from "@/components/Quote";
+import Quote from '@/components/Quote'
 
 type PageParams = {
   params: Promise<{

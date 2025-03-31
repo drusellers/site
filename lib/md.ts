@@ -1,6 +1,6 @@
 import Markdoc from '@markdoc/markdoc'
 import { parse } from 'yaml'
-import { chip, sidenote, fence } from '@/lib/markdocTags'
+import { chip, sidenote, fence, youtube } from '@/lib/markdocTags'
 
 export function toMarkdown(
   input: string,
@@ -12,6 +12,7 @@ export function toMarkdown(
     tags: {
       chip,
       sidenote,
+      youtube,
     },
     nodes: {
       fence,
