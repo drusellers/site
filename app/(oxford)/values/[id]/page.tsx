@@ -1,9 +1,18 @@
-import { getValueData } from '@/lib/cms.values'
+import { getValues, getValueData } from '@/lib/cms.values'
 import PageTitle from '@/components/oxford/PageTitle'
+
+export async function generateStaticParams() {
+  const allValues = getValues()
+
+  return allValues.map((q) => ({
+    id: q.id
+  }))
+}
 
 type Props = {
   params: Promise<{ id: string }>
 }
+
 export default async function Post({ params }: Props) {
   const id = (await params).id
 

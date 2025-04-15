@@ -9,7 +9,7 @@ aliases: []
 toc: true
 withStats: true
 description: >
-  First impressions with MassTransit's Database Transport
+  First impressions with a postgres MCP server
 ---
 
 Lately, I've been working to get a better grip on how the newer Agentic IDE's can help me with my day to day tasks. I've specifically been working with JetBrain's [Junie](https://www.jetbrains.com/junie/) and I ran into a bug that I thought Junie could solve.
