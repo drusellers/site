@@ -1,6 +1,6 @@
 import PageLayout from '@/components/oxford/PageLayout'
 import YearHeading from '@/components/yearHeading'
-import DateTitle from '@/components/dateTitle'
+import AppearanceDisplay from '@/components/appearance'
 import { Appearance, getSortedAppearancesData } from '@/lib/cms.appearances'
 
 export default function Page() {
@@ -19,11 +19,12 @@ export default function Page() {
                 <div className={'mt-2 space-y-1'}>
                   {groupedItems[year].map((item) => {
                     return (
-                      <DateTitle
+                      <AppearanceDisplay
                         key={item.id}
                         date={item.date}
                         href={item.url}
                         title={item.title}
+                        mentionOnly={item.mentionOnly}
                       />
                     )
                   })}

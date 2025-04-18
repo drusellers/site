@@ -11,6 +11,7 @@ export interface Appearance {
   date: string
   year: number
   url: string
+  mentionOnly?: boolean
 }
 
 export function getSortedAppearancesData(): Appearance[] {

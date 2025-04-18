@@ -10,6 +10,8 @@
 
 .language-text,
 .language-javascript,
+.language-shell,
+.language-csharp,
 .language-yaml {
     color: #E0EBE9;
 }

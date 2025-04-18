@@ -1,7 +1,9 @@
 # Personal Website
 
-Static site generated via [Hugo](https://gohugo.io/)
+Static site generated via [Astro](https://astro.build/)
 
-CSS Framework: [Tachyons](http://tachyons.io/)
+CSS Framework: [Tailwind](https://tailwindcss.com/)
 
-Asset packing / mgt via tbd
+## Articles of Inspiration / Techniques
+
+https://thirty-five.com/overengineered-anchoring
