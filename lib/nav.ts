@@ -23,4 +23,8 @@ export const navItems: NavItem[] = [
     title: 'Resume',
     href: '/resume',
   },
+  {
+    title: 'Media',
+    href: '/media'
+  }
 ]

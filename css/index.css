@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+
 @plugin '@tailwindcss/typography';
 
 @import './quote-styles.css' layer(components);
@@ -34,43 +35,26 @@
 
 
 @layer base {
-    /*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
-
     /* start my base */
     /* links: https://frontendmasters.com/blog/chilled-out-text-underlines/ */
-  a {
-    color: var(--color-blue-500);
-    font-family: var(--font-sans);
-      text-decoration: underline;
-    text-underline-offset: 2px;
-  }
+    a {
+        color: var(--color-blue-500);
+        font-family: var(--font-sans);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
 
-  a:not(:is(:hover, :focus)) {
-    text-decoration-color:
-            color-mix(in srgb, currentColor, transparent 75%);
-  }
+    a:not(:is(:hover, :focus)) {
+        text-decoration-color: color-mix(in srgb, currentColor, transparent 75%);
+    }
 
-  p {
-    font-family: var(--font-sans);
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-space-g);
-  }
+    p {
+        font-family: var(--font-sans);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-space-g);
+    }
 
     body {
         /*https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient()*/
@@ -87,17 +71,20 @@
         background: linear-gradient(-10deg, #000000, #2C3E50);
     }
 
+    /* Tailwind Customizations of Prose */
+    .prose > article > p:first-child {
+        margin-top: 0;
+    }
 
     .deep {
         height: 100%;
         width: 100%;
         background-color: #012345;
-        background-image: radial-gradient(circle farthest-corner at top left, rgba(1, 35, 69,1) 0%, rgba(1, 35, 69,0) 50%),
-        radial-gradient(circle farthest-side at top right, rgba(18, 52, 86,1) 0%, rgba(18, 52, 86,0) 10%),
-        radial-gradient(circle farthest-corner at bottom right, rgba(35, 69, 103,1) 0%, rgba(35, 69, 103, 0) 33%),
-        radial-gradient(circle farthest-corner at top right, rgba(52, 86, 120,1) 0%, rgba(52, 86, 120,0) 50%),
-        radial-gradient(ellipse at bottom center, rgba(1, 35, 69,1) 0%, rgba(1, 35, 69,0) 80%)
-    ;
+        background-image: radial-gradient(circle farthest-corner at top left, rgba(1, 35, 69, 1) 0%, rgba(1, 35, 69, 0) 50%),
+        radial-gradient(circle farthest-side at top right, rgba(18, 52, 86, 1) 0%, rgba(18, 52, 86, 0) 10%),
+        radial-gradient(circle farthest-corner at bottom right, rgba(35, 69, 103, 1) 0%, rgba(35, 69, 103, 0) 33%),
+        radial-gradient(circle farthest-corner at top right, rgba(52, 86, 120, 1) 0%, rgba(52, 86, 120, 0) 50%),
+        radial-gradient(ellipse at bottom center, rgba(1, 35, 69, 1) 0%, rgba(1, 35, 69, 0) 80%);
 
     }
 }

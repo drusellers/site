@@ -20,3 +20,7 @@
     color: #E0EBE9;
     padding: --spacing(4) --spacing(2);
 }
+
+pre.not-prose code.hljs {
+    padding: 0;
+}
