@@ -14,25 +14,24 @@ description: >
 
 # Building a Model Context Protocol Server
 
-Now that I've played a bit with using a MCP Server through Junie, I'm curious to build out my own. So I sat down with the [Model Context Protocol](https://modelcontextprotocol.io/introduction) and started to work through what I would need to do to build one out. The following post content is a bit of a brain dump on what it would take to build out an MCP server for RabbitMQ in dotnet.
+Now that I've played a bit with using the [Model Context Protocol](https://modelcontextprotocol.io/introduction) through [Cursor](https://www.cursor.com/), to help the AI IDE solve a string parsing problem (see [post](/posts/mcp-intro)), I'm curious to build out my own. 
+
+With some excitement, I sat down with the [docs](https://modelcontextprotocol.io/introduction) and started to work through what would be required to build one. The following post content is a bit of a brain dump on what it would take to build out an MCP Server that would expose resources and tools from a RabbitMQ cluster for your AI Agent.
 
 An MCP Sever uses [JSON-RPC](https://www.jsonrpc.org/) to facilitate communication with the LLM Agent. The MCP server should respond to both `STDIO` and `HTTP SSE` to play well with the community. I thought about building out my own JSON-RPC support, as that would be an interesting (if exceedingly low value) bit of work, but as I dug deeper into the various details of the Model Context Protocol I realized I really didn't want to do that work. I settled on the hot and fresh [MCP C# SDK](https://github.com/modelcontextprotocol/csharp-sdk) which integrates beautifully with the existing ASP.Net Host builder model.
 
-> [!tip] logging and stdio
-> Building an MCP server that uses STDIO as the communication can have some issues with logging. I would suggest that all logs when in STDIO format either get piped to STDERR (confirm this) or look to a log file output.
-
-> [!tip] debugging
-> https://github.com/modelcontextprotocol/inspector was super helpful in getting the basics set up
-
-
+{% callout type="info" %}
+Building an MCP server that uses STDIO as the communication channel, will break if you write your logs to STDIO as well. The super helpful [inspector](https://github.com/modelcontextprotocol/inspector) will easily show the STDERR as your logs, so I would make sure to write your logs to STDERR or some place else, like a file.
+{% /callout %}
 
 ## Let's expose some capabilities
 
 Now that we have the basic server working, and its talking to the [inspector](https://github.com/modelcontextprotocol/inspector), we need to think about what we want our MCP server to actually do. Because the Tool and Prompt support is pretty solid in the SDK I'll start with them, and then we can look at Resources which have a bit more work to enable.
 
-> [!tip]
-> When using the inspector, you need a really clean STDIO, here are my flags with dotnet to help speed you along your journey.
-> 
+{% callout type="info" %}
+When using the inspector, you need a really clean STDIO, here are my flags with dotnet to help speed you along your journey.
+{% /callout %} 
+
 > ```shell
 > #!/bin/bash
 > 
