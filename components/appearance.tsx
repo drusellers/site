@@ -15,10 +15,10 @@ export default function Appearance({ date, title, href, mentionOnly }: Props) {
       </div>
       <div className={'flex flex-col'}>
         <Link href={href}>{title}</Link>
-        { mentionOnly ? <div className={'text-xs ml-1 text-gray-500'}>Mentioned</div>: null}
+        {mentionOnly ? (
+          <div className={'text-xs ml-1 text-gray-500'}>Mentioned</div>
+        ) : null}
       </div>
-
-
     </div>
   )
 }

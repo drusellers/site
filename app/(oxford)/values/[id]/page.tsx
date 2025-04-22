@@ -5,7 +5,7 @@ export async function generateStaticParams() {
   const allValues = getValues()
 
   return allValues.map((q) => ({
-    id: q.id
+    id: q.id,
   }))
 }
 

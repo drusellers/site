@@ -1,5 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { getPostData } from "@/lib/cms.posts";
+import { NextRequest, NextResponse } from 'next/server'
+import { getPostData } from '@/lib/cms.posts'
 
 type Props = {
   params: Promise<{ id: string }>
@@ -13,8 +13,8 @@ export async function GET(request: NextRequest, { params }: Props) {
   if (postData) {
     return new NextResponse(postData.contentPlain, {
       headers: { 'Content-Type': 'text/plain' },
-    });
+    })
   }
 
-  return new NextResponse('Not found', { status: 404 });
+  return new NextResponse('Not found', { status: 404 })
 }

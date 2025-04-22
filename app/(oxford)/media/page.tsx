@@ -2,13 +2,27 @@ import PageLayout from '@/components/oxford/PageLayout'
 import YearHeading from '@/components/yearHeading'
 import AppearanceDisplay from '@/components/appearance'
 import { Appearance, getSortedAppearancesData } from '@/lib/cms.appearances'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Media | Dru Sellers',
+  description: 'Media | Dru Sellers',
+  twitter: {
+    title: 'Media | Dru Sellers',
+    description: 'Media | Dru Sellers',
+  },
+  openGraph: {
+    title: 'Media | Dru Sellers',
+    description: 'Media | Dru Sellers',
+  },
+}
 
 export default function Page() {
   const allItems = getSortedAppearancesData()
   const groupedItems = groupBy(allItems, 'year')
 
   return (
-    <PageLayout title={'Appearances'} sidebar={<Sidebar />}>
+    <PageLayout title={'Media'} sidebar={<Sidebar />}>
       <article className="max-w-prose">
         {Object.keys(groupedItems)
           .reverse()

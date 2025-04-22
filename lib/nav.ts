@@ -25,6 +25,6 @@ export const navItems: NavItem[] = [
   },
   {
     title: 'Media',
-    href: '/media'
-  }
+    href: '/media',
+  },
 ]

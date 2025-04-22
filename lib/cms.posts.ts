@@ -133,13 +133,13 @@ export type PostData = {
   date: string
   title: string
   subtitle: string
-  tags: string[],
+  tags: string[]
   format: 'text' | 'html'
 }
 
 export async function getPostData(id): Promise<PostData> {
-  let format : 'text' | 'html' = 'html'
-  if(id.endsWith('.txt')) {
+  let format: 'text' | 'html' = 'html'
+  if (id.endsWith('.txt')) {
     id = id.substring(0, id.length - 4)
     format = 'text'
   }

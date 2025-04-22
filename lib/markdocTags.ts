@@ -1,33 +1,32 @@
 import { RenderableTreeNode, Schema, Tag } from '@markdoc/markdoc'
-import { classNames } from "@/lib/util";
+import { classNames } from '@/lib/util'
 
 export const callout: Schema = {
-    render: 'div',
-    attributes: {
-      type: {
-        type: 'String',
-        required: true,
-        errorLevel: 'info',
+  render: 'div',
+  attributes: {
+    type: {
+      type: 'String',
+      required: true,
+      errorLevel: 'info',
+    },
+  },
+  children: ['paragraph'],
+  transform: (node, config) => {
+    const _attributes = node.transformAttributes(config)
+    const children = node.transformChildren(config)
+
+    return new Tag(
+      'div',
+      {
+        'data-component': 'callout',
+        class: classNames(
+          'border rounded-sm py-1 px-2 mb-4',
+          'bg-gray-500/20 text-gray-700'
+        ),
       },
-    },
-    children: ['paragraph'],
-    transform: (node, config) => {
-      const _attributes = node.transformAttributes(config)
-      const children = node.transformChildren(config)
-
-      return new Tag(
-        'div',
-        {
-          'data-component': 'callout',
-          class: classNames(
-            'border rounded-sm py-1 px-2 mb-4',
-            'bg-gray-500/20 text-gray-700'
-            ),
-
-        },
-        children
-      )
-    },
+      children
+    )
+  },
 }
 
 export const chip: Schema = {

@@ -13,7 +13,7 @@ export function toMarkdown(
       chip,
       sidenote,
       youtube,
-      callout
+      callout,
     },
     nodes: {
       fence,
@@ -50,7 +50,7 @@ export function toNakedMarkdown(input: string): MarkdownContents {
       chip,
       sidenote,
       youtube,
-      callout
+      callout,
     },
   }
   const errors = Markdoc.validate(ast, config)
