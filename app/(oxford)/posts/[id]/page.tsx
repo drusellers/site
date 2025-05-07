@@ -15,7 +15,7 @@ export default async function Post({ params }: Props) {
     <div className={'flex flex-col pl-8 pt-9 gap-y-4'}>
       <PageTitle>{postData.title}</PageTitle>
       <div className={'grid grid-cols-8 gap-x-4'}>
-        <div className={'col-span-3 text-right'}>
+        <div className={'col-span-3 text-left md:text-right'}>
           <PostMetadata postData={postData} />
         </div>
         <div className={'col-span-4'}>

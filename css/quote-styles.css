@@ -1,3 +1,7 @@
+.quote {
+  container-type: inline-size;
+}
+
 /* handle nested content */
 .quote p {
   /* f5 */
@@ -50,7 +54,13 @@
 }
 
 .quote blockquote p {
-  font-size: 1.25rem;
+  /* 1rem = 16 px */
+
+  font-size: 1rem;
+
+  @container (width > 10rem) {
+    font-size: 1.25rem;
+  }
 
   /* measure */
   max-width: 21em;

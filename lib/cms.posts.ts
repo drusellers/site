@@ -135,6 +135,10 @@ export type PostData = {
   subtitle: string
   tags: string[]
   format: 'text' | 'html'
+  series?: {
+    name: string
+    order: number
+  }
 }
 
 export async function getPostData(id): Promise<PostData> {
