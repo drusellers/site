@@ -1,15 +1,19 @@
 ---
 title: 'MCP'
 date: '2025-04-21'
-categories: thoughts
+categories: AI
 tags:
-  - strategy
+  - AI
+  - dotnet
 disqus_id: 854e8c23-e47d-4fb4-a948-81018c484df5
 aliases: []
 toc: true
 withStats: true
 description: >
   What does it take to put together an MCP server? 
+series:
+  name: mcp
+  order: 1
 ---
 
 # Building a Model Context Protocol Server

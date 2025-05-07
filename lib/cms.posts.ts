@@ -20,6 +20,10 @@ export type PostHeader = {
   video?: VideoProps
   title: string
   description: string
+  series?: {
+    name: string
+    order: number
+  }
 }
 
 export function getSortedPostsData(): PostHeader[] {
@@ -170,10 +174,27 @@ export async function getPostData(id): Promise<PostData> {
     video: md.frontMatter.video || null,
     subtitle: md.frontMatter.subtitle,
     tags: md.frontMatter.tags,
+    series: md.frontMatter.series,
     format,
   }
 }
 
 function wordyCount(content: string): number {
   return content.trim().split(/\s+/).length
+}
+
+
+export function getSeries(name: string | undefined): PostHeader[] {
+  if(name === undefined) return []
+
+  const all = getSortedPostsData()
+
+  return all.filter(x => x.series?.name === name).sort((a, b) => {
+    if (a.series!.order < b.series!.order) {
+      return -1
+    } else {
+      return 1
+    }
+  })
+
 }

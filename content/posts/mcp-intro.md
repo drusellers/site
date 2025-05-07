@@ -4,12 +4,15 @@ date: '2025-04-10'
 categories: AI
 tags:
   - AI
-disqus_id: 
+disqus_id: a2ca080d-a976-47f5-81df-a4637ff4b562
 aliases: []
 toc: true
 withStats: true
 description: >
   First impressions with a postgres MCP server
+series:
+  name: mcp
+  order: 0
 ---
 
 Lately, I've been working to get a better grip on how the newer Agentic IDE's can help me with my day to day tasks. I've specifically been working with JetBrain's [Junie](https://www.jetbrains.com/junie/) and I ran into a bug that I thought Junie could solve.
