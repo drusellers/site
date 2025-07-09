@@ -5,10 +5,10 @@ export default function Iron() {
     <div className={'flex flex-col pl-8 pt-9 gap-y-4'}>
       <PageTitle>Iron and Soul</PageTitle>
       <div className={'grid grid-cols-7 gap-x-4'}>
-        <div className={'col-span-3 text-right flex flex-col'}>
+        <div className={'col-span-7 md:col-span-3 text-left md:text-right flex flex-col pb-6 md:pb-0'}>
           <div>By Henry Rollins</div>
         </div>
-        <div className={'col-span-3'}>
+        <div className={'col-span-7 md:col-span-3'}>
           <div className="prose">
             <p>
               I believe that the definition of definition is reinvention. To not
