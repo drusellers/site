@@ -19,6 +19,7 @@ export interface Quote {
   year: number
   contentHtml: string
   href: string
+  youtube?: string
 }
 
 export interface QuoteSiblings {

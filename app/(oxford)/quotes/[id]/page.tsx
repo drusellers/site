@@ -6,6 +6,7 @@ import {
 import PageLayout from '@/components/oxford/PageLayout'
 import type { Metadata, ResolvingMetadata } from 'next'
 import Quote from '@/components/Quote'
+import YouTube from '@/components/YouTube'
 
 type PageParams = {
   params: Promise<{
@@ -74,6 +75,7 @@ export default async function Post({ params }: PageParams) {
       prev={siblings.prevQuote}
       next={siblings.nextQuote}
     >
+      <YouTube src={postData.youtube} />
       <Quote cite={cite} html={postData.contentHtml} />
     </PageLayout>
   )
