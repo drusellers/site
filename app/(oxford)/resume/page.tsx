@@ -9,6 +9,9 @@ import {
   faLocationPin,
   faPaperPlaneTop,
 } from '@fortawesome/pro-light-svg-icons'
+import ResumeSection from '@/components/resume/ResumeSection'
+import Markdown from '@/components/Markdown'
+import { yearsOfExperience } from '@/lib/util'
 
 export default function ResumeUI() {
   const resumeData = getResumeData()
@@ -40,7 +43,11 @@ export default function ResumeUI() {
         </div>
       </PrintSection>
 
-      <ResumeSection title={'Intro'}>{resumeData.summary}</ResumeSection>
+      <ResumeSection title={'Intro'}>
+        <Markdown variables={{years: yearsOfExperience()}}>
+          {resumeData.summary}
+        </Markdown>
+      </ResumeSection>
 
       {/* Experience */}
       <ResumeSection title={'Experience'}>
@@ -68,29 +75,4 @@ export default function ResumeUI() {
   )
 }
 
-function ResumeSection({
-  title,
-  children,
-}: {
-  title: string
-  children: ReactNode
-}) {
-  return (
-    <div className={'grid grid-cols-8 print:grid-cols-1 gap-x-4 pr-4'}>
-      <div
-        className={
-          'col-span-3 print:col-span-1 text-right print:text-left uppercase font-bold  leading-8'
-        }
-      >
-        {title}
-      </div>
-      <div
-        className={
-          'col-span-5 print:col-span-1 flex flex-col space-y-8 print:space-y-4'
-        }
-      >
-        {children}
-      </div>
-    </div>
-  )
-}
+

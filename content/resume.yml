@@ -3,7 +3,7 @@ title: Resume
 startYear: 2001
 layout: resume
 summary: >
-  Engineer with over 24 years of broad technical and business experience.
+  Engineer with over {% $years %} years of broad technical and business experience.
   Has held roles in Operations, Sales, and Finance in addition to the traditional application
   development roles around cloud infrastructure, development, and technical leadership.
 #summary: >
@@ -11,18 +11,28 @@ summary: >
 #  expertise. Experience is focused on building and architecting distributed
 #  .Net applications
 employers:
-  - employer: Message Aid
-    url: https://messageaid.com
-    urllabel: messageaid.com
+  - employer: Pursuit
+    url: https://pursuit.us
+    urllabel: pursuit.us
     roles:
-      - title: Founder
-        start: April 2022
+      - title: Founding Search Engineer
+        start: May 2025
         end: Present
         description:
           - >
-            Building and providing a SaaS based tool that can connect to MQ based systems, to provide
-            additional support and visibility to those systems. Supports multiple identity providers,
-            as well as multiple brokers.
+            Working to build a humanistic search platform for SLED based sales discovery.
+#  - employer: Message Aid
+#    url: https://messageaid.com
+#    urllabel: messageaid.com
+#    roles:
+#      - title: Founder
+#        start: April 2022
+#        end: Present
+#        description:
+#          - >
+#            Building and providing a SaaS based tool that can connect to MQ based systems, to provide
+#            additional support and visibility to those systems. Supports multiple identity providers,
+#            as well as multiple brokers.
   - employer: A Curious Mind
     url: https://acuriousmind.com
     urllabel: acuriosmind.com

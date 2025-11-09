@@ -1,5 +1,6 @@
 import { getFile, VideoProps } from '@/lib/cms'
 import { toMarkdown } from '@/lib/md'
+import { yearsOfExperience } from '@/lib/util'
 
 type AboutProps = {
   title?: string
@@ -13,13 +14,9 @@ type AboutProps = {
 export function getAbout(): AboutProps {
   const fileContents = getFile('about.md')
 
-  // CUSTOM to this content
-  const now = new Date()
-  const start = new Date('1997-08-01')
-
   const md = toMarkdown(fileContents, {
     // variables need to be strings?
-    years: now.getFullYear() - start.getFullYear(),
+    years: yearsOfExperience(),
   })
 
   const sidebar = toMarkdown(md.frontMatter.sideBar)
