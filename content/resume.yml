@@ -11,41 +11,19 @@ summary: >
 #  expertise. Experience is focused on building and architecting distributed
 #  .Net applications
 employers:
-  - employer: Pursuit
-    url: https://pursuit.us
-    urllabel: pursuit.us
-    roles:
-      - title: Founding Search Engineer
-        start: May 2025
-        end: Present
-        description:
-          - >
-            Working to build a humanistic search platform for SLED based sales discovery.
-#  - employer: Message Aid
-#    url: https://messageaid.com
-#    urllabel: messageaid.com
-#    roles:
-#      - title: Founder
-#        start: April 2022
-#        end: Present
-#        description:
-#          - >
-#            Building and providing a SaaS based tool that can connect to MQ based systems, to provide
-#            additional support and visibility to those systems. Supports multiple identity providers,
-#            as well as multiple brokers.
   - employer: A Curious Mind
     url: https://acuriousmind.com
-    urllabel: acuriosmind.com
+    urllabel: acuriousmind.com
     roles:
       - title: "Project: ERP Migration"
         start: July 2024
-        end: January 2025
+        end: Present
         description:
-        - >
-          This customer later ended up migrating to a new ERP, and we were able to maintain the existing
-          system, on the old ERP, and transitioned to the new ERP with no downtime while continuing to ship
-          new functionality at the same time. We also added on another API client that needed to help expose
-          customer quotes in their Adobe Commerce Edge implementation.
+          - >
+            This customer later ended up migrating to a new ERP, and we were able to maintain the existing
+            system, on the old ERP, and transitioned to the new ERP with no downtime while continuing to ship
+            new functionality at the same time. We also added on another API client that needed to help expose
+            customer quotes in their Adobe Commerce Edge implementation.
       - title: "Project: Showroom"
         start: April 2023
         end: July 2024
@@ -63,6 +41,33 @@ employers:
             extended down times, and inaccurate information. We converted it to a .NET API, with 
             a Nuxt.js front-end. This allowed us to quickly bring the application to a point where new 
             features could be deployed.
+  - employer: Pursuit
+    url: https://pursuit.us
+    urllabel: pursuit.us
+    roles:
+      - title: Search Engineer
+        start: May 2025
+        end: Nov 2025
+        description:
+          - >
+            Worked with the engineering team to build out and grow the search infrastructure
+            to support searching web crawled data containing public sector information.
+          - > 
+            Learned a lot about web crawling, searching for documents that keyed on the primary
+            toponym (the "Bethel" in "Bethel Volunteer Fire Department") and other complexities in
+            dealing with 2nd and 3rd order government bodies.
+#  - employer: Message Aid
+#    url: https://messageaid.com
+#    urllabel: messageaid.com
+#    roles:
+#      - title: Founder
+#        start: April 2022
+#        end: Present
+#        description:
+#          - >
+#            Building and providing a SaaS based tool that can connect to MQ based systems, to provide
+#            additional support and visibility to those systems. Supports multiple identity providers,
+#            as well as multiple brokers.
   -
     employer: One More Cloud, Inc.
     url: https://omc.io
@@ -125,12 +130,13 @@ employers:
             systems allowing the heterogeneous environment of a $1 billion multi-divison
             company to transition to the new ERP as it made business sense.
           - >
-            I choose this opportunity becaues it would allow me to reexplore the larger
+            I choose this opportunity because it would allow me to reexplore the larger
             Enterprise Architecture concepts that only show up in large companies.
             Additionally, it would build on top of my fulfillment domain knowledge
             that I started with V23 Athletics and Amplifier. Lastly, I would
             have the pleasure of finally working with some [long](https://twitter.com/dahlbyk)
             time [friends](https://twitter.com/TimBarcz).
+archived_employers:
   -
     employer: V23 Athletics
     roles:

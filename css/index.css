@@ -73,11 +73,6 @@
         background: linear-gradient(-10deg, #000000, #2C3E50);
     }
 
-    /* Tailwind Customizations of Prose */
-    .prose > article > p:first-child {
-        margin-top: 0;
-    }
-
     .deep {
         height: 100%;
         width: 100%;
@@ -88,6 +83,13 @@
         radial-gradient(circle farthest-corner at top right, rgba(52, 86, 120, 1) 0%, rgba(52, 86, 120, 0) 50%),
         radial-gradient(ellipse at bottom center, rgba(1, 35, 69, 1) 0%, rgba(1, 35, 69, 0) 80%);
 
+    }
+}
+
+@layer utilities {
+    /* Tailwind Customizations of Prose */
+    .prose > article > p:first-child {
+        margin-top: 0;
     }
 }
 

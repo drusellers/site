@@ -28,6 +28,7 @@ export interface Resume {
   layout: string
   summary: string
   employers: Employer[]
+  archived_employers: Employer[]
   education: Education[]
   activities: string[]
 }

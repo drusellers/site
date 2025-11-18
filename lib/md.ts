@@ -43,7 +43,10 @@ export function toMarkdown(
   }
 }
 
-export function toNakedMarkdown(input: string): MarkdownContents {
+export function toNakedMarkdown(input: string,
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+variables: any | undefined = {}
+): MarkdownContents {
   const ast = Markdoc.parse(input)
   const config = {
     tags: {
@@ -52,6 +55,7 @@ export function toNakedMarkdown(input: string): MarkdownContents {
       youtube,
       callout,
     },
+    variables,
   }
   const errors = Markdoc.validate(ast, config)
   if (errors.length > 0) {

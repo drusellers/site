@@ -12,7 +12,7 @@ export default function Experience({ job }: Props) {
     <div className={'flex flex-col space-y-2'}>
       <div className={'flex flex-row justify-between'}>
         <div className={'font-bold text-2xl'}>{job.employer}</div>
-        <div>
+        <div className={'flex items-end'}>
           {job.url ? (
             <a
               href={job.url}
@@ -22,7 +22,7 @@ export default function Experience({ job }: Props) {
             >
               {job.urllabel}{' '}
               <FontAwesomeIcon
-                className={'w-[10px] h-[10px]'}
+                size={'xs'}
                 icon={faArrowUpRightFromSquare}
               />
             </a>
@@ -32,15 +32,15 @@ export default function Experience({ job }: Props) {
       <div className={'flex flex-col space-y-8'}>
         {job.roles.map((r) => {
           return (
-            <div key={r.title} className={'flex flex-col gap-y-1'}>
+            <div key={r.title} className={'flex flex-col gap-y-1 pl-4'}>
               <div className={'flex flex-row justify-between'}>
-                <div className={'font-bold'}>{r.title}</div>
-                <div className={'font-light'}>
+                <div className={'font-semibold text-md'}>{r.title}</div>
+                <div className={'font-light text-sm'}>
                   {r.start} - {r.end}
                 </div>
               </div>
 
-              <div className={'flex flex-col space-y-4 pl-4'}>
+              <div className={'flex flex-col space-y-4'}>
                 {r.description.map((d, i) => {
                   return (
                     <div

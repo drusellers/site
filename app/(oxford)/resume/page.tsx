@@ -10,8 +10,9 @@ import {
   faPaperPlaneTop,
 } from '@fortawesome/pro-light-svg-icons'
 import ResumeSection from '@/components/resume/ResumeSection'
-import Markdown from '@/components/Markdown'
+import Markdown, { NakedMarkdown } from '@/components/Markdown'
 import { yearsOfExperience } from '@/lib/util'
+import Archived from '@/components/resume/Archived'
 
 export default function ResumeUI() {
   const resumeData = getResumeData()
@@ -44,9 +45,9 @@ export default function ResumeUI() {
       </PrintSection>
 
       <ResumeSection title={'Intro'}>
-        <Markdown variables={{years: yearsOfExperience()}}>
+        <NakedMarkdown variables={{years: yearsOfExperience()}}>
           {resumeData.summary}
-        </Markdown>
+        </NakedMarkdown>
       </ResumeSection>
 
       {/* Experience */}
@@ -54,6 +55,11 @@ export default function ResumeUI() {
         {resumeData.employers.map((j) => {
           return <Experience key={j.employer} job={j} />
         })}
+        <Archived count={resumeData.archived_employers.length}>
+          {resumeData.archived_employers.map((j) => {
+            return <Experience key={j.employer} job={j} />
+          })}
+        </Archived>
       </ResumeSection>
 
       {/* Education */}
