@@ -110,20 +110,24 @@ export const fence: Schema = {
     content: { type: String, render: false, required: true },
     language: { type: String, render: 'data-language' },
     process: { type: Boolean, render: false, default: true },
+    size: { type: String, render: 'data-size', default: 'md'}
   },
   transform(node, config) {
     const attributes = node.transformAttributes(config)
+    console.log('attr', attributes)
+    console.log('node', node.attributes)
     const children = node.children.length
       ? node.transformChildren(config)
       : [node.attributes.content]
 
     attributes.style = 'background: #2B4459;'
 
+    const fontSize = node.attributes.size ?? 'text-md'
     // not-prose prevents tailwind from styling
     return new Tag(
       'pre',
       {
-        class: 'not-prose px-4 py-4 rounded-lg text-md mb-4',
+        class: `not-prose px-4 py-4 rounded-lg mb-4 ${fontSize}`,
         ...attributes,
       },
       [
