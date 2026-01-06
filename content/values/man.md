@@ -1,5 +1,5 @@
 ---
-title: 'First, be a Man'
+title: 'First, be a Human'
 preview: |
     The creed of my fraternity, a statement I often revisit, to see how it "fits" me today. 
 ---

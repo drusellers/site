@@ -1,7 +1,8 @@
 ---
-title: 'Open'
+title: 'Be Open'
 preview: |
-    Sharing is Caring
+    It's not a Zero Sum Game and Information wants to be free.
+    Don't hoard my knowledge, since I have gained too much from other being just as vulnerable.
 ---
 
 A defining moment for me was finding Open Source Software. The idea that people would freely share

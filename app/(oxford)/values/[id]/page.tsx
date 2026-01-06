@@ -22,8 +22,8 @@ export default async function Post({ params }: Props) {
     <div className={'flex flex-col pl-8 pt-9 gap-y-4'}>
       <PageTitle>{postData.title}</PageTitle>
       <div className={'grid grid-cols-7 gap-x-4'}>
-        <div className={'col-span-3 text-right'}></div>
-        <div className={'col-span-3'}>
+        <div className={'lg:col-span-3 text-right'}></div>
+        <div className={'col-span-5 lg:col-span-3'}>
           <div className="nested nested-copy-line-height nested-links nested-copy-separator">
             <div className="pa4">
               <div

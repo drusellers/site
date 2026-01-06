@@ -1,7 +1,7 @@
 ---
 title: 'Patience'
 preview: |
-  Goosfraba
+  Goos...fra...ba
 ---
 
 - Patience is a virtue. 
