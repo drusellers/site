@@ -1,9 +1,6 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import { parseISO } from "date-fns";
-
-const postsDirectory = path.join(process.cwd(), "content", "appearances");
+import matter from "gray-matter";
+import { getFile, getFiles } from "@/lib/cms";
 
 export interface Appearance {
 	title: string;
@@ -16,14 +13,12 @@ export interface Appearance {
 
 export function getSortedAppearancesData(): Appearance[] {
 	// Get file names under /posts
-	const fileNames = fs.readdirSync(postsDirectory);
-	const allPostsData = fileNames.map((fileName) => {
+	const allPostsData = getFiles("appearances").map((fileName) => {
 		// Remove ".md" from file name to get id
-		const id = fileName.replace(/\.md$/, "");
+		const id = fileName.slug;
 
 		// Read markdown file as string
-		const fullPath = path.join(postsDirectory, fileName);
-		const fileContents = fs.readFileSync(fullPath, "utf8");
+		const fileContents = getFile(fileName.path);
 
 		// Use gray-matter to parse the post metadata section
 		const matterResult = matter(fileContents);

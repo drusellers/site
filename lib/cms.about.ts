@@ -1,4 +1,4 @@
-import { getFile, VideoProps } from "@/lib/cms";
+import { getFile } from "@/lib/cms";
 import { toMarkdown } from "@/lib/md";
 import { yearsOfExperience } from "@/lib/util";
 
@@ -6,7 +6,6 @@ type AboutProps = {
 	title?: string;
 	preview?: string;
 	html: string;
-	video?: VideoProps;
 	img: string;
 	sideBar: string;
 };
@@ -26,7 +25,6 @@ export function getAbout(): AboutProps {
 		preview: md.frontMatter.preview || null,
 		img: md.frontMatter.img || null,
 		html: md.html,
-		video: {},
 		sideBar: sidebar.html,
 	};
 }

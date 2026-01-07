@@ -1,6 +1,6 @@
 import Markdoc from "@markdoc/markdoc";
 import { parse } from "yaml";
-import { getFile, VideoProps } from "@/lib/cms";
+import { getFile, type VideoProps } from "@/lib/cms";
 
 type AboutProps = {
 	title?: string;

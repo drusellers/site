@@ -1,11 +1,9 @@
-import fs from "fs";
-import path from "path";
+import path from "node:path";
+import { parseISO } from "date-fns";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
-import { parseISO } from "date-fns";
-
-const postsDirectory = path.join(process.cwd(), "content", "quotes");
+import { getFile, getFiles } from "@/lib/cms";
 
 export interface Quote {
 	title: string;
@@ -28,15 +26,12 @@ export interface QuoteSiblings {
 }
 
 export function getSortedQuotesData(): Quote[] {
-	// Get file names under /posts
-	const fileNames = fs.readdirSync(postsDirectory);
-	const allPostsData = fileNames.map((fileName) => {
-		// Remove ".md" from file name to get id
-		const id = fileName.replace(/\.md$/, "");
+	const files = getFiles("quotes");
+	const allPostsData = files.map((file) => {
+		const id = file.slug;
 
 		// Read markdown file as string
-		const fullPath = path.join(postsDirectory, fileName);
-		const fileContents = fs.readFileSync(fullPath, "utf8");
+		const fileContents = getFile(file.path);
 
 		// Use gray-matter to parse the post metadata section
 		const matterResult = matter(fileContents);
@@ -65,7 +60,7 @@ export function getSortedQuotesData(): Quote[] {
 }
 
 export function getAllQuotesIds(): { params: { id: string } }[] {
-	const fileNames = fs.readdirSync(postsDirectory);
+	const fileNames = getFiles("quotes");
 
 	// Returns an array that looks like this:
 	// [
@@ -83,15 +78,15 @@ export function getAllQuotesIds(): { params: { id: string } }[] {
 	return fileNames.map((fileName) => {
 		return {
 			params: {
-				id: fileName.replace(/\.md$/, ""),
+				id: fileName.slug,
 			},
 		};
 	});
 }
 
 export async function getQuoteData(id): Promise<Quote> {
-	const fullPath = path.join(postsDirectory, `${id}.md`);
-	const fileContents = fs.readFileSync(fullPath, "utf8");
+	const fullPath = path.join("quotes", `${id}.md`);
+	const fileContents = getFile(fullPath);
 
 	// Use gray-matter to parse the post metadata section
 	const matterResult = matter(fileContents);

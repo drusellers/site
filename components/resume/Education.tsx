@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkSquare } from "@fortawesome/pro-light-svg-icons";
-import { Education } from "@/lib/cms.resume";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { Education } from "@/lib/cms.resume";
 
 type Props = {
 	school: Education;

@@ -1,9 +1,7 @@
 import fs from "fs";
 import path from "path";
-import { getFile } from "@/lib/cms";
+import { getFile, getFiles } from "@/lib/cms";
 import { toMarkdown } from "@/lib/md";
-
-const postsDirectory = path.join(process.cwd(), "content", "values");
 
 type Value = {
 	id: string;
@@ -13,14 +11,13 @@ type Value = {
 };
 
 export function getValues(): Value[] {
-	// Get file names under /posts
-	const fileNames = fs.readdirSync(postsDirectory);
-	return fileNames.map((fileName) => {
+	const files = getFiles("values");
+	return files.map((file) => {
 		// Remove ".md" from file name to get id
-		const id = fileName.replace(/\.md$/, "");
+		const id = file.slug;
 
 		// Read markdown file as string
-		const fileContents = getFile(`values/${fileName}`);
+		const fileContents = getFile(file.path);
 		const md = toMarkdown(fileContents);
 
 		// Combine the data with the id
@@ -34,7 +31,7 @@ export function getValues(): Value[] {
 }
 
 export function getAllValuesIds() {
-	const fileNames = fs.readdirSync(postsDirectory);
+	const values = getValues();
 
 	// Returns an array that looks like this:
 	// [
@@ -49,10 +46,10 @@ export function getAllValuesIds() {
 	//     }
 	//   }
 	// ]
-	return fileNames.map((fileName) => {
+	return values.map((value) => {
 		return {
 			params: {
-				id: fileName.replace(/\.md$/, ""),
+				id: value.id,
 			},
 		};
 	});

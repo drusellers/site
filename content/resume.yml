@@ -26,7 +26,7 @@ employers:
           - Led zero-downtime migration between ERP systems while maintaining feature delivery
           - Designed API abstractions to decouple front-end and ERP dependencies
           - Enabled parallel operation of legacy and new systems during transition
-      - title: "Project: Showroom"
+      - title: "Retail Sales Platform Modernization"
         start: April 2023
         end: July 2024
         description:
@@ -34,8 +34,11 @@ employers:
             Building on the success of the digital sinage project, we developed a new streamlined ERP front end 
             in Nuxt.js for Showroom sales staff that integrated with Entra ID. To accomplish this we extended the
             previous API to include their ERP, and Bloomreach Customer outreach tooling.
-        bullets: []
-      - title: "Project: Endless Aisle"
+        bullets:
+          - Designed Nuxt.js front-end integrated with Entra ID and Bloomreach
+          - Extended core APIs to support new ERP workflows
+          - Improved sales-floor reliability and deployment velocity
+      - title: "Digital Signage System Rehabilitation"
         start: April 2022
         end: April 2023
         description:
@@ -44,7 +47,10 @@ employers:
             extended down times, and inaccurate information. We converted it to a .NET API, with 
             a Nuxt.js front-end. This allowed us to quickly bring the application to a point where new 
             features could be deployed.
-        bullets: []
+        bullets:
+          - Re-architected unstable on-prem system into .NET API + Nuxt front-end
+          - Reduced downtime and restored data accuracy
+          - Established foundation for future feature development
   - employer: Pursuit
     url: https://pursuit.us
     url_label: pursuit.us
@@ -54,12 +60,17 @@ employers:
         end: Nov 2025
         description:
           - >
-            Worked with the engineering team to build out and grow the search infrastructure
-            to support searching web crawled data containing public sector information.
-          - > 
-            Learned a lot about web crawling, searching for documents that keyed on the primary
-            toponym (the "Bethel" in "Bethel Volunteer Fire Department") and other complexities in
-            dealing with 2nd and 3rd order government bodies.
+            Worked on core search infrastructure supporting large-scale web-crawled public sector data,
+            improving discoverability of government entities and related documents.
+          - >
+            Focused on entity resolution and relevance challenges, including matching organizations
+            by primary toponyms and handling ambiguous naming across state and local agencies.
+          - >
+            Collaborated with data ingestion and platform teams to improve indexing pipelines and
+            query behavior as data volume and coverage expanded.
+          - >
+            Contributed production code and operational improvements to systems responsible for
+            search accuracy and performance at scale.
         bullets: []
 #  - employer: Message Aid
 #    url: https://messageaid.com

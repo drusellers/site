@@ -8,9 +8,16 @@ export type VideoProps = {
 	loom?: string;
 };
 
-export function getFiles(dir: string): string[] {
+export type FileName = {
+	path: string;
+	slug: string;
+};
+
+export function getFiles(dir: string): FileName[] {
 	const fileNames = fs.readdirSync(path.join(contentDirectory, dir));
-	return fileNames.filter((n) => !n.startsWith("_"));
+	return fileNames
+		.filter((n) => !n.startsWith("_"))
+		.map((n) => ({ slug: n.replace(/\.md$/, ""), path: path.join(dir, n) }));
 }
 
 export function getFile(file: string): string {

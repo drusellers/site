@@ -1,10 +1,7 @@
-import fs from "fs";
-import path from "path";
+import path from "node:path";
 import { parseISO } from "date-fns";
-import { getFiles } from "./cms";
+import { getFile, getFiles } from "./cms";
 import { toMarkdown } from "./md";
-
-const postsDirectory = path.join(process.cwd(), "content/posts");
 
 export type VideoProps = {
 	youtube?: string;
@@ -32,11 +29,10 @@ export function getSortedPostsData(): PostHeader[] {
 
 	const allPostsData = fileNames.map((fileName) => {
 		// Remove ".md" from file name to get id
-		const id = fileName.replace(/\.md$/, "");
+		const id = fileName.slug;
 
 		// Read markdown file as string
-		const fullPath = path.join(postsDirectory, fileName);
-		const fileContents = fs.readFileSync(fullPath, "utf8");
+		const fileContents = getFile(fileName.path);
 
 		const md = toMarkdown(fileContents, {});
 
@@ -99,7 +95,7 @@ export function getTagData(tag) {
 }
 
 export function getAllPostIds(): { params: { id: string } }[] {
-	const fileNames = fs.readdirSync(postsDirectory);
+	const files = getFiles("posts");
 
 	// Returns an array that looks like this:
 	// [
@@ -114,15 +110,13 @@ export function getAllPostIds(): { params: { id: string } }[] {
 	//     }
 	//   }
 	// ]
-	return fileNames
-		.filter((n) => !n.startsWith("_"))
-		.map((fileName) => {
-			return {
-				params: {
-					id: fileName.replace(/\.md$/, ""),
-				},
-			};
-		});
+	return files.map((file) => {
+		return {
+			params: {
+				id: file.slug,
+			},
+		};
+	});
 }
 
 export type PostData = {
@@ -152,8 +146,8 @@ export async function getPostData(id): Promise<PostData> {
 		format = "text";
 	}
 
-	const fullPath = path.join(postsDirectory, `${id}.md`);
-	const fileContents = fs.readFileSync(fullPath, "utf8");
+	const fullPath = path.join("posts", `${id}.md`);
+	const fileContents = getFile(fullPath);
 
 	const md = toMarkdown(fileContents, {});
 

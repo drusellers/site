@@ -1,12 +1,8 @@
-import fs from "fs";
-import path from "path";
 import YAML from "yaml";
-
-const dataDirectory = path.join(process.cwd(), "content");
+import { getFile } from "@/lib/cms";
 
 export function getAllegoryData() {
-	const fullPath = path.join(dataDirectory, "allegory.yml");
-	const fileContents = fs.readFileSync(fullPath, "utf8");
+	const fileContents = getFile("allegory.yml");
 	const data = YAML.parse(fileContents);
 
 	return data;

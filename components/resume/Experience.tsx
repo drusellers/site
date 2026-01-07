@@ -1,11 +1,12 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkSquare } from "@fortawesome/pro-light-svg-icons";
-import Markdoc from "@markdoc/markdoc";
-import { Employer } from "@/lib/cms.resume";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { Employer } from "@/lib/cms.resume";
+import { toMarkdown } from "@/lib/md";
 
 type Props = {
 	job: Employer;
 };
+
 export default function Experience({ job }: Props) {
 	return (
 		<div key={job.employer} className="ml-6 space-y-3">
@@ -32,19 +33,24 @@ export default function Experience({ job }: Props) {
 							</div>
 						</div>
 
-						{role.description.map((d, i) => {
-							const ast = Markdoc.parse(d);
-							const content = Markdoc.transform(ast);
-							const html = Markdoc.renderers.html(content);
+						{role.description.map((d) => {
+							const md = toMarkdown(d);
 
 							return (
 								<div
-									key={i}
+									key={d}
 									className="ml-6"
-									dangerouslySetInnerHTML={{ __html: html }}
+									// biome-ignore lint/security/noDangerouslySetInnerHtml: this is how it works
+									dangerouslySetInnerHTML={{ __html: md.html }}
 								/>
 							);
 						})}
+
+						<ul>
+							{role.bullets.map((b) => {
+								return <li key={b}>{b}</li>;
+							})}
+						</ul>
 					</div>
 				);
 			})}
