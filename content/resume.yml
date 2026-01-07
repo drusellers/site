@@ -10,10 +10,21 @@ summary: >
 
 employers:
   - employer: A Curious Mind
-    url: https://acuriousmind.com
+    url: https://acuriousmind.com/
     url_label: acuriousmind.com
     roles:
-      - title: "ERP Migration & Platform Continuity"
+      - title: Principal Consultant
+        start: April 2022
+        end: Present
+        description:
+          - >
+            Provided hands-on technical leadership to product organizations needing to
+            stabilize production systems, modernize architectures, and improve delivery
+            reliability during periods of growth and platform transition.
+
+        bullets: [ ]
+    engagements:
+      - name: "ERP Migration & Platform Continuity"
         start: July 2024
         end: Present
         description:
@@ -26,7 +37,7 @@ employers:
           - Led zero-downtime migration between ERP systems while maintaining feature delivery
           - Designed API abstractions to decouple front-end and ERP dependencies
           - Enabled parallel operation of legacy and new systems during transition
-      - title: "Retail Sales Platform Modernization"
+      - name: "Retail Sales Platform Modernization"
         start: April 2023
         end: July 2024
         description:
@@ -38,7 +49,7 @@ employers:
           - Designed Nuxt.js front-end integrated with Entra ID and Bloomreach
           - Extended core APIs to support new ERP workflows
           - Improved sales-floor reliability and deployment velocity
-      - title: "Digital Signage System Rehabilitation"
+      - name: "Digital Signage System Rehabilitation"
         start: April 2022
         end: April 2023
         description:
@@ -95,18 +106,18 @@ employers:
         end: March 2022
         description:
           - >
-            Working closely with the CEO and Head of Sales we developed a pricing model that allowed 
-            us to take advantage of our new automated provisioning process leading to a better understanding
-            of our cost model, and our customers needs.
+            Built on prior platform automation to evolve infrastructure services into
+            repeatable, productized offerings for customers running large-scale search workloads.
           - >
-            Worked closely with the Head of Sales to build out a unique product offering
-            that would help companies better manage their search infrastructure. In the process
-            of working with the Head of Sales we were able to increase the average deal size
-            from $500/mth to $8,000/mth
-          - > 
-            Worked closely with the CEO to explore various modern ways to run a business including
-            the deployment of a 4 day work week, aggressively limiting the number of meetings and 
-            exploring options for async communication.
+            Partnered with engineering and sales to design service packages aligned with
+            operational cost models and customer performance requirements.
+          - >
+            Helped mature company operating practices, including experimentation with
+            async-first workflows, reduced meeting load, and a four-day work week to
+            improve focus and delivery.
+          - >
+            Acted as executive sponsor for infrastructure and reliability initiatives
+            supporting customer production systems.
         bullets: []
 
       -
@@ -115,21 +126,21 @@ employers:
         end: July 2020
         description:
           - >
-            I choose this opportunity because it would allow me to explore a position
-            in a company's leadership. For years I've been reading books on business
-            strategy and leadership. I was now in a position to both exercise that
-            knowledge and realize just how much I had to learn.
+            Led automation of customer cluster provisioning, reducing deployment time from
+            approximately two days to under 15 minutes.
           - >
-            The first task was to automate the process of provisioning our customer's clusters.
-            The project successfully reduced the time for custom clusters from two days to 15 minutes.
+            Designed and implemented scalable infrastructure workflows that enabled growth
+            from roughly 200 to over 8,000 servers across AWS and GCP with no increase in
+            operations headcount.
           - >
-            Building on that success, we leveraged that process to scale from 200 machines
-            to over 8,000 servers in AWS and GCP with no increase in head count.
-          - > 
-            During this time I dived deep into how search engines work. Even going so far as to 
-            contribute some simple features to the [Tantivy](https://github.com/quickwit-oss/tantivy) library. This gave me a fundamental
-            understanding of inverted indicies. Which removed another "magical" layer of how computers
-            work.
+            Worked closely with engineering teams supporting hosted search platforms,
+            gaining deep exposure to search indexing, performance tuning, and reliability concerns.
+          - >
+            Contributed to open-source search tooling ([Tantivy](https://github.com/quickwit-oss/tantivy)) and developed a practical
+            understanding of inverted index internals and relevance tradeoffs in production systems.
+          - >
+            Coordinated across engineering, operations, and support to ensure
+            reliable customer-facing production systems.
         bullets: []
 
   -
@@ -143,17 +154,20 @@ employers:
         end: March 2017
         description:
           - >
-            While at MAG, I worked with a distributed team located across the country
-            to build a multi-tenant fulfillment layer on top of two different ERP
-            systems allowing the heterogeneous environment of a $1 billion multi-divison
-            company to transition to the new ERP as it made business sense.
+            Served as technical lead on a multi-tenant fulfillment platform integrating
+            two separate ERP systems across multiple business units in a $1B multi-division enterprise.
           - >
-            I choose this opportunity because it would allow me to reexplore the larger
-            Enterprise Architecture concepts that only show up in large companies.
-            Additionally, it would build on top of my fulfillment domain knowledge
-            that I started with V23 Athletics and Amplifier. Lastly, I would
-            have the pleasure of finally working with some [long](https://twitter.com/dahlbyk)
-            time [friends](https://twitter.com/TimBarcz).
+            Designed abstraction layers that allowed divisions to transition to the new ERP
+            incrementally, without forcing synchronized migrations or disrupting order fulfillment.
+          - >
+            Collaborated with distributed engineering teams and business stakeholders to
+            align technical architecture with operational and supply-chain requirements.
+          - >
+            Established integration patterns and service contracts that reduced coupling
+            between downstream systems and ERP implementations.
+          - >
+            Supported high-volume order fulfillment and inventory workflows
+            critical to daily operations across multiple divisions.
         bullets: []
 archived_employers:
   -
@@ -248,8 +262,9 @@ education:
     minor: with a minor in Economics
 activities:
   - Presenter at local, regional, and international conferences on software development practices
+  - Local Tutor to Code Camp participants
   - Recognized as a INETA Community Champion Q2 2010 for my OSS work
   - Avid contributor to and maintainer of open source projects
   - Member of local .Net user groups.
-  - Trustee to the Zeta Chi Fraternity 2005 - 2011
-  - Member of the Baker University Alumni Board 2007-2011
+#  - Trustee to the Zeta Chi Fraternity 2005 - 2011
+#  - Member of the Baker University Alumni Board 2007-2011

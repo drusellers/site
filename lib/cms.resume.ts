@@ -1,6 +1,6 @@
 import YAML from "yaml";
-import { getFile } from "@/lib/cms";
 import * as z from "zod";
+import { getFile } from "@/lib/cms";
 
 const RoleSchema = z.object({
 	title: z.string(),
@@ -11,11 +11,20 @@ const RoleSchema = z.object({
 });
 export type Role = z.infer<typeof RoleSchema>;
 
+const EngagementSchema = z.object({
+	name: z.string(),
+	start: z.string(),
+	end: z.string(),
+	description: z.array(z.string()),
+});
+export type Engagement = z.infer<typeof EngagementSchema>;
+
 const EmployerSchema = z.object({
 	employer: z.string(),
 	url: z.optional(z.string()),
 	url_label: z.optional(z.string()),
 	roles: z.array(RoleSchema),
+	engagements: z.optional(z.array(EngagementSchema)),
 });
 export type Employer = z.infer<typeof EmployerSchema>;
 

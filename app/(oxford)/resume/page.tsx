@@ -1,17 +1,17 @@
-import Experience from "@/components/oxford/Experience";
-import PageTitle from "@/components/oxford/PageTitle";
-import Education from "@/components/oxford/Education";
-import PrintSection from "@/components/oxford/PrintSection";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faLocationPin,
 	faPaperPlaneTop,
 } from "@fortawesome/pro-light-svg-icons";
-import ResumeSection from "@/components/resume/ResumeSection";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NakedMarkdown } from "@/components/Markdown";
-import { yearsOfExperience } from "@/lib/util";
-import Archived from "@/components/resume/Archived";
+import Archived from "@/components/oxford/Archived";
+import Education from "@/components/oxford/Education";
+import Experience from "@/components/oxford/Experience";
+import PageTitle from "@/components/oxford/PageTitle";
+import PrintSection from "@/components/oxford/PrintSection";
+import ResumeSection from "@/components/oxford/ResumeSection";
 import { getResumeData } from "@/lib/cms.resume";
+import { yearsOfExperience } from "@/lib/util";
 
 export default function ResumeUI() {
 	const resumeData = getResumeData();
@@ -19,7 +19,7 @@ export default function ResumeUI() {
 	return (
 		<div
 			className={
-				"flex flex-col pl-8 pt-9 print:pt-2 gap-y-12 print:gap-y-4 pr-4"
+				"flex flex-col pl-8 pt-9 print:pt-2 gap-y-8 print:gap-y-4 pr-4"
 			}
 		>
 			<PageTitle className={"print:hidden"}>Resume</PageTitle>
@@ -71,8 +71,8 @@ export default function ResumeUI() {
 			{/* Activities */}
 			<ResumeSection title={"Community Activities"}>
 				<div className={"flex flex-col space-y-4"}>
-					{resumeData.activities.map((a, i) => {
-						return <div key={i}>{a}</div>;
+					{resumeData.activities.map((a) => {
+						return <div key={a}>{a}</div>;
 					})}
 				</div>
 			</ResumeSection>
