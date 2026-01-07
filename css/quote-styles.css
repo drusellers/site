@@ -1,105 +1,103 @@
 .quote {
-  container-type: inline-size;
+	container-type: inline-size;
 }
 
 /* handle nested content */
 .quote p {
-  /* f5 */
-  font-size: 1rem;
+	/* f5 */
+	font-size: 1rem;
 
-  /* lh-copy */
-  line-height: 1.5;
+	/* lh-copy */
+	line-height: 1.5;
 
-  /* measure */
-  max-width: 30em;
+	/* measure */
+	max-width: 30em;
 
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 .quote > p:first-child {
-  /* mt0-ns */
-  margin-top: 0;
+	/* mt0-ns */
+	margin-top: 0;
 }
 
 .quote h1 {
-  font-size: 2rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+	font-size: 2rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 .quote h2 {
-  font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 
 .quote ul,
 .quote ol {
-  line-height: 1.5;
+	line-height: 1.5;
 }
 
 .quote a {
-  transition: color 0.15s ease-in;
+	transition: color 0.15s ease-in;
 }
 
 .quote table {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 .quote blockquote {
-  border-left: 3px solid #357edd;
-  padding-left: 1rem;
-  margin-left: 0;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  margin-right: 0.5rem;
+	border-left: 3px solid #357edd;
+	padding-left: 1rem;
+	margin-left: 0;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	margin-right: 0.5rem;
 }
 
 .quote blockquote p {
-  /* 1rem = 16 px */
+	/* 1rem = 16 px */
 
-  font-size: 1rem;
+	font-size: 1rem;
 
-  @container (width > 10rem) {
-    font-size: 1.25rem;
-  }
+	@container (width > 10rem) {
+		font-size: 1.25rem;
+	}
 
-  /* measure */
-  max-width: 21em;
+	/* measure */
+	max-width: 21em;
 }
 
 .quote blockquote p:last-child {
-  margin: 0;
+	margin: 0;
 }
 
 .quote blockquote p cite {
-  font-size: 0.75rem;
+	font-size: 0.75rem;
 }
 
 .quote blockquote + p {
-  margin-top: 1.5rem;
+	margin-top: 1.5rem;
 }
 
 .quote em {
-  margin-right: 0.1rem;
+	margin-right: 0.1rem;
 }
 
 .quote ul,
 .quote ol {
-  padding: 0;
-  max-width: 30em;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+	padding: 0;
+	max-width: 30em;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 .quote ul {
-  list-style-type: disc;
+	list-style-type: disc;
 }
 .quote li {
-  display: list-item;
+	display: list-item;
 }
 
 .quote li:before {
-  color: rgba(0, 0, 0, 0.3);
+	color: rgba(0, 0, 0, 0.3);
 }
-
-

@@ -1,11 +1,11 @@
 .dds-search-results {
-  /* from tachyons - ba b--black-10 shadow-5 cf */
-  position: absolute;
-  width: 700px;
-  background: white;
-  left: 0;
-  top: 40px;
-  /* max-height: 75vh; */
-  z-index: 100;
-  border-width: 1px;
+	/* from tachyons - ba b--black-10 shadow-5 cf */
+	position: absolute;
+	width: 700px;
+	background: white;
+	left: 0;
+	top: 40px;
+	/* max-height: 75vh; */
+	z-index: 100;
+	border-width: 1px;
 }

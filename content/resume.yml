@@ -3,19 +3,17 @@ title: Resume
 startYear: 2001
 layout: resume
 summary: >
-  Engineer with over {% $years %} years of broad technical and business experience.
-  Has held roles in Operations, Sales, and Finance in addition to the traditional application
-  development roles around cloud infrastructure, development, and technical leadership.
-#summary: >
-#  Application developer with over 20 years of broad business and technical
-#  expertise. Experience is focused on building and architecting distributed
-#  .Net applications
+  Engineering leader and architect with {% $years %}+ years building and scaling product systems in growth-stage 
+  companies. Specializes in stabilizing fragile architectures, modernizing platforms, and raising engineering standards 
+  through hands-on technical leadership and mentoring. Most effective in product organizations with established market 
+  fit that are scaling teams and infrastructure.
+
 employers:
   - employer: A Curious Mind
     url: https://acuriousmind.com
-    urllabel: acuriousmind.com
+    url_label: acuriousmind.com
     roles:
-      - title: "Project: ERP Migration"
+      - title: "ERP Migration & Platform Continuity"
         start: July 2024
         end: Present
         description:
@@ -24,6 +22,10 @@ employers:
             system, on the old ERP, and transitioned to the new ERP with no downtime while continuing to ship
             new functionality at the same time. We also added on another API client that needed to help expose
             customer quotes in their Adobe Commerce Edge implementation.
+        bullets:
+          - Led zero-downtime migration between ERP systems while maintaining feature delivery
+          - Designed API abstractions to decouple front-end and ERP dependencies
+          - Enabled parallel operation of legacy and new systems during transition
       - title: "Project: Showroom"
         start: April 2023
         end: July 2024
@@ -32,6 +34,7 @@ employers:
             Building on the success of the digital sinage project, we developed a new streamlined ERP front end 
             in Nuxt.js for Showroom sales staff that integrated with Entra ID. To accomplish this we extended the
             previous API to include their ERP, and Bloomreach Customer outreach tooling.
+        bullets: []
       - title: "Project: Endless Aisle"
         start: April 2022
         end: April 2023
@@ -41,9 +44,10 @@ employers:
             extended down times, and inaccurate information. We converted it to a .NET API, with 
             a Nuxt.js front-end. This allowed us to quickly bring the application to a point where new 
             features could be deployed.
+        bullets: []
   - employer: Pursuit
     url: https://pursuit.us
-    urllabel: pursuit.us
+    url_label: pursuit.us
     roles:
       - title: Search Engineer
         start: May 2025
@@ -56,9 +60,10 @@ employers:
             Learned a lot about web crawling, searching for documents that keyed on the primary
             toponym (the "Bethel" in "Bethel Volunteer Fire Department") and other complexities in
             dealing with 2nd and 3rd order government bodies.
+        bullets: []
 #  - employer: Message Aid
 #    url: https://messageaid.com
-#    urllabel: messageaid.com
+#    url_label: messageaid.com
 #    roles:
 #      - title: Founder
 #        start: April 2022
@@ -71,7 +76,7 @@ employers:
   -
     employer: One More Cloud, Inc.
     url: https://omc.io
-    urllabel: omc.io
+    url_label: omc.io
     roles:
       -
         title: President & Chief Operations Officer
@@ -91,6 +96,7 @@ employers:
             Worked closely with the CEO to explore various modern ways to run a business including
             the deployment of a 4 day work week, aggressively limiting the number of meetings and 
             exploring options for async communication.
+        bullets: []
 
       -
         title: Vice President of Operations
@@ -113,11 +119,12 @@ employers:
             contribute some simple features to the [Tantivy](https://github.com/quickwit-oss/tantivy) library. This gave me a fundamental
             understanding of inverted indicies. Which removed another "magical" layer of how computers
             work.
+        bullets: []
 
   -
     employer: Motorsport Aftermarket Group
     url: https://maggroup.com
-    urllabel: maggroup.com
+    url_label: maggroup.com
     roles:
       -
         title: Software Architect II
@@ -136,6 +143,7 @@ employers:
             that I started with V23 Athletics and Amplifier. Lastly, I would
             have the pleasure of finally working with some [long](https://twitter.com/dahlbyk)
             time [friends](https://twitter.com/TimBarcz).
+        bullets: []
 archived_employers:
   -
     employer: V23 Athletics
@@ -152,10 +160,11 @@ archived_employers:
             and sometimes boring decisions. How will that impact the company's bottom
             line? What all do we REALLY need? Its was a great process of exploring
             and understanding all aspects of running a business.
+        bullets: []
   -
     employer: Amplifier
     url: https://amplifier.com
-    urllabel: amplifier.com
+    url_label: amplifier.com
     roles:
       -
         title: Senior Software Engineer
@@ -170,10 +179,11 @@ archived_employers:
             the 'real' world. Amplifier ships products around the world and having actual
             people and physical plants involved in the process brings about new and unique
             challenges.
+        bullets: []
   -
     employer: Dovetail Software
     url: https://dovetailsoftware.com
-    urllabel: dovetailsoftware.com
+    url_label: dovetailsoftware.com
     roles:
       -
         title: Senior Software Engineer
@@ -190,10 +200,11 @@ archived_employers:
             to software development quality, an intense focus on testing, and compositional
             programming. I was pushed to grow as a developer, and in return I was able to
             bring the architectural and people skills from my former position.
+        bullets: []
   -
     employer: Federal Home Loan Bank of Topeka
     url: https://fhlbtopeka.com/
-    urllabel: fhlbtopeka.com
+    url_label: fhlbtopeka.com
     roles:
       -
         title: Solution Architect
@@ -214,11 +225,12 @@ archived_employers:
             explain technical concepts in terms that CXOs and VPs could understand, while at
             the same time making sure technical decisions were in lock step with the business’s
             long term goals.
+        bullets: []
 education:
   -
     school: Baker University
     url: https://www.bakeru.edu/
-    urllabel: bakeru.edu
+    url_label: bakeru.edu
     start: Fall 1997
     end: Spring 2001
     major: Bachelors of Arts in International Business

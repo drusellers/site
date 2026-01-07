@@ -1,67 +1,62 @@
 {
-  "name": "dru",
-  "version": "1.0.0",
-  "description": "Static site generated via [Hugo](https://gohugo.io/)",
-  "main": "get-content.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "b": "webpack --config ./webpack.config.js",
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "format": "prettier --write \"{app,components,pages,lib}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md,mdx}\"",
-    "format:check": "prettier --check '{app,components,pages,lib}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md,mdx}'",
-    "lint": "eslint --fix './{app,components,pages,lib}/**/*.{ts,js,tsx}'",
-    "lint:check": "eslint './{app,components,pages,lib}/**/*.{ts,js,tsx}'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/drusellers/site.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/drusellers/site/issues"
-  },
-  "homepage": "https://github.com/drusellers/site#readme",
-  "devDependencies": {
-    "@eslint/eslintrc": "^3.2.0",
-    "@eslint/js": "^9.16.0",
-    "@types/node": "^25.0.3",
-    "@types/react": "^19",
-    "eslint": "^9.16.0",
-    "eslint-config-next": "^16.0.0",
-    "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.7.0",
-    "typescript": "^5.4.5",
-    "@tailwindcss/postcss": "^4.0.7"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-pro": "^7.0.1",
-    "@fortawesome/fontawesome-svg-core": "^7.0.1",
-    "@fortawesome/free-brands-svg-icons": "^7.0.1",
-    "@fortawesome/pro-light-svg-icons": "^7.0.1",
-    "@fortawesome/pro-solid-svg-icons": "^7.0.1",
-    "@fortawesome/react-fontawesome": "^3.0.2",
-    "@markdoc/markdoc": "^0.5.0",
-    "@mdx-js/mdx": "^3.1.0",
-    "@tailwindcss/forms": "^0.5.7",
-    "@tailwindcss/typography": "^0.5.12",
-    "autoprefixer": "^10.4.19",
-    "date-fns": "^4.1.0",
-    "gray-matter": "^4.0.3",
-    "highlight.js": "^11",
-    "next": "^16.0.0",
-    "postcss": "^8.4.38",
-    "postcss-preset-env": "^10.0.0",
-    "react": "^19",
-    "react-dom": "^19",
-    "react-hotkeys-hook": "^5.0.0",
-    "remark": "^15.0.1",
-    "remark-gfm": "^4.0.0",
-    "remark-html": "^16.0.1",
-    "tailwindcss": "^4.0.7",
-    "use-debounce": "^10.0.0",
-    "yaml": "^2.4.1"
-  }
+	"name": "dru",
+	"version": "1.0.0",
+	"description": "Static site generated via [Hugo](https://gohugo.io/)",
+	"main": "get-content.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"b": "webpack --config ./webpack.config.js",
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"format": "prettier --write \"{app,components,pages,lib}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md,mdx}\"",
+		"format:check": "prettier --check '{app,components,pages,lib}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md,mdx}'",
+		"fmt": "npx biome format --write"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/drusellers/site.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/drusellers/site/issues"
+	},
+	"homepage": "https://github.com/drusellers/site#readme",
+	"devDependencies": {
+		"@biomejs/biome": "^2.2.0",
+		"@tailwindcss/postcss": "^4.0.7",
+		"@types/node": "^25.0.3",
+		"@types/react": "^19",
+		"typescript": "^5.4.5"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-pro": "^7.0.1",
+		"@fortawesome/fontawesome-svg-core": "^7.0.1",
+		"@fortawesome/free-brands-svg-icons": "^7.0.1",
+		"@fortawesome/pro-light-svg-icons": "^7.0.1",
+		"@fortawesome/pro-solid-svg-icons": "^7.0.1",
+		"@fortawesome/react-fontawesome": "^3.0.2",
+		"@markdoc/markdoc": "^0.5.0",
+		"@mdx-js/mdx": "^3.1.0",
+		"@tailwindcss/forms": "^0.5.7",
+		"@tailwindcss/typography": "^0.5.12",
+		"autoprefixer": "^10.4.19",
+		"date-fns": "^4.1.0",
+		"gray-matter": "^4.0.3",
+		"highlight.js": "^11",
+		"next": "^16.0.0",
+		"postcss": "^8.4.38",
+		"postcss-preset-env": "^10.0.0",
+		"react": "^19",
+		"react-dom": "^19",
+		"react-hotkeys-hook": "^5.0.0",
+		"remark": "^15.0.1",
+		"remark-gfm": "^4.0.0",
+		"remark-html": "^16.0.1",
+		"tailwindcss": "^4.0.7",
+		"use-debounce": "^10.0.0",
+		"yaml": "^2.4.1",
+		"zod": "^4.3.5"
+	}
 }

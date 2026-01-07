@@ -1,62 +1,62 @@
 {
-  "settings": {
-    "number_of_shards": 1,
-    "number_of_replicas": 0
-  },
-  "mappings": {
-    "properties": {
-      "suggest": {
-        "type": "completion",
-        "preserve_position_increments": false
-      },
-      "title": {
-        "type": "text",
-        "store": true
-      },
-      "description": {
-        "type": "text",
-        "store": true
-      },
-      "summary": {
-        "type": "text",
-        "store": true
-      },
-      "content": {
-        "type": "text"
-      },
-      "keywords": {
-        "type": "text"
-      },
-      "kind": {
-        "type": "keyword"
-      },
-      "section": {
-        "type": "keyword"
-      },
-      "type": {
-        "type": "keyword"
-      },
-      "permalink": {
-        "type": "keyword"
-      },
-      "url": {
-        "type": "keyword",
-        "store": true
-      },
-      "tags": {
-        "type": "keyword"
-      },
-      "categories": {
-        "type": "keyword"
-      },
-      "date": {
-        "type": "date",
-        "format": "strict_date_optional_time||epoch_millis"
-      },
-      "publishdate": {
-        "type": "date",
-        "format": "strict_date_optional_time||epoch_millis"
-      }
-    }
-  }
+	"settings": {
+		"number_of_shards": 1,
+		"number_of_replicas": 0
+	},
+	"mappings": {
+		"properties": {
+			"suggest": {
+				"type": "completion",
+				"preserve_position_increments": false
+			},
+			"title": {
+				"type": "text",
+				"store": true
+			},
+			"description": {
+				"type": "text",
+				"store": true
+			},
+			"summary": {
+				"type": "text",
+				"store": true
+			},
+			"content": {
+				"type": "text"
+			},
+			"keywords": {
+				"type": "text"
+			},
+			"kind": {
+				"type": "keyword"
+			},
+			"section": {
+				"type": "keyword"
+			},
+			"type": {
+				"type": "keyword"
+			},
+			"permalink": {
+				"type": "keyword"
+			},
+			"url": {
+				"type": "keyword",
+				"store": true
+			},
+			"tags": {
+				"type": "keyword"
+			},
+			"categories": {
+				"type": "keyword"
+			},
+			"date": {
+				"type": "date",
+				"format": "strict_date_optional_time||epoch_millis"
+			},
+			"publishdate": {
+				"type": "date",
+				"format": "strict_date_optional_time||epoch_millis"
+			}
+		}
+	}
 }

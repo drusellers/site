@@ -1,66 +1,66 @@
-'use client'
+"use client";
 
-import { usePathname } from 'next/navigation'
-import { classNames } from '@/lib/util'
+import { usePathname } from "next/navigation";
+import { classNames } from "@/lib/util";
 
 type Props = {
-  prev?: {
-    title: string
-    href: string
-  }
-  next?: {
-    title: string
-    href: string
-  }
-}
+	prev?: {
+		title: string;
+		href: string;
+	};
+	next?: {
+		title: string;
+		href: string;
+	};
+};
 
 export function NextPrevButtons({ prev, next }: Props) {
-  const pathname = usePathname()
+	const pathname = usePathname();
 
-  if (pathname === '/about') return null
-  if (pathname === '/resume') return null
-  if (pathname === '/iron') return null
+	if (pathname === "/about") return null;
+	if (pathname === "/resume") return null;
+	if (pathname === "/iron") return null;
 
-  // - /posts
-  // - /values
-  // - /quotes
+	// - /posts
+	// - /values
+	// - /quotes
 
-  return (
-    <div
-      className={
-        'border-t border-[#C6D3D5] flex flex-row divide-x divide-[#C6D3D5] justify-between'
-      }
-    >
-      <Tile tile={prev} mode={'prev'} />
-      <Tile tile={next} mode={'next'} />
-    </div>
-  )
+	return (
+		<div
+			className={
+				"border-t border-[#C6D3D5] flex flex-row divide-x divide-[#C6D3D5] justify-between"
+			}
+		>
+			<Tile tile={prev} mode={"prev"} />
+			<Tile tile={next} mode={"next"} />
+		</div>
+	);
 }
 
 function Tile({
-  tile,
-  mode,
+	tile,
+	mode,
 }: {
-  tile?: { title: string; href: string }
-  mode: 'prev' | 'next'
+	tile?: { title: string; href: string };
+	mode: "prev" | "next";
 }) {
-  const classes = classNames(
-    'flex-1 px-6 py-4',
-    mode === 'prev' ? '' : 'text-right'
-  )
+	const classes = classNames(
+		"flex-1 px-6 py-4",
+		mode === "prev" ? "" : "text-right",
+	);
 
-  if (tile)
-    return (
-      <div className={classes}>
-        <div className={'uppercase'}>{mode}</div>
-        <div>{tile.title}</div>
-      </div>
-    )
+	if (tile)
+		return (
+			<div className={classes}>
+				<div className={"uppercase"}>{mode}</div>
+				<div>{tile.title}</div>
+			</div>
+		);
 
-  return (
-    <div className={classes}>
-      <div> </div>
-      <div> </div>
-    </div>
-  )
+	return (
+		<div className={classes}>
+			<div> </div>
+			<div> </div>
+		</div>
+	);
 }

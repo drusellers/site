@@ -5,7 +5,7 @@
 .hljs-keyword,
 .hljs-builtin,
 .hljs-deletion {
-    color: #E0EBE9;
+	color: #e0ebe9;
 }
 
 .language-text,
@@ -13,14 +13,14 @@
 .language-shell,
 .language-csharp,
 .language-yaml {
-    color: #E0EBE9;
+	color: #e0ebe9;
 }
 
 .hljs {
-    color: #E0EBE9;
-    padding: --spacing(4) --spacing(2);
+	color: #e0ebe9;
+	padding: --spacing(4) --spacing(2);
 }
 
 pre.not-prose code.hljs {
-    padding: 0;
+	padding: 0;
 }

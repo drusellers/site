@@ -1,8 +1,8 @@
 {
-  "files.associations": {
-    "*.html": "gohtml",
-    "*.ndjson": "gotemplate"
-  },
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+	"files.associations": {
+		"*.html": "gohtml",
+		"*.ndjson": "gotemplate"
+	},
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"typescript.enablePromptUseWorkspaceTsdk": true
 }

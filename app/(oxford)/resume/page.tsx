@@ -1,84 +1,81 @@
-import { getResumeData } from '@/lib/data'
-import Experience from '@/components/oxford/Experience'
-import PageTitle from '@/components/oxford/PageTitle'
-import Education from '@/components/oxford/Education'
-import { ReactNode } from 'react'
-import PrintSection from '@/components/oxford/PrintSection'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Experience from "@/components/oxford/Experience";
+import PageTitle from "@/components/oxford/PageTitle";
+import Education from "@/components/oxford/Education";
+import PrintSection from "@/components/oxford/PrintSection";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faLocationPin,
-  faPaperPlaneTop,
-} from '@fortawesome/pro-light-svg-icons'
-import ResumeSection from '@/components/resume/ResumeSection'
-import Markdown, { NakedMarkdown } from '@/components/Markdown'
-import { yearsOfExperience } from '@/lib/util'
-import Archived from '@/components/resume/Archived'
+	faLocationPin,
+	faPaperPlaneTop,
+} from "@fortawesome/pro-light-svg-icons";
+import ResumeSection from "@/components/resume/ResumeSection";
+import { NakedMarkdown } from "@/components/Markdown";
+import { yearsOfExperience } from "@/lib/util";
+import Archived from "@/components/resume/Archived";
+import { getResumeData } from "@/lib/cms.resume";
 
 export default function ResumeUI() {
-  const resumeData = getResumeData()
+	const resumeData = getResumeData();
 
-  return (
-    <div
-      className={
-        'flex flex-col pl-8 pt-9 print:pt-2 gap-y-12 print:gap-y-4 pr-4'
-      }
-    >
-      <PageTitle className={'print:hidden'}>Resume</PageTitle>
-      <PrintSection>
-        <div className={'flex flex-col'}>
-          <div className={'font-bold'}>Dru Sellers</div>
-          <div className={'flex justify-between'}>
-            <div className={'flex gap-x-2 items-center'}>
-              <FontAwesomeIcon icon={faPaperPlaneTop} />
-              dru@drusellers.com
-            </div>
-            {/*<div className={"flex gap-x-2 items-center"}>*/}
-            {/*  <FontAwesomeIcon icon={faMobileNotch} />*/}
-            {/*  785-840-7234*/}
-            {/*</div>*/}
-            <div className={'flex gap-x-2 items-center'}>
-              <FontAwesomeIcon icon={faLocationPin} />
-              Austin, TX
-            </div>
-          </div>
-        </div>
-      </PrintSection>
+	return (
+		<div
+			className={
+				"flex flex-col pl-8 pt-9 print:pt-2 gap-y-12 print:gap-y-4 pr-4"
+			}
+		>
+			<PageTitle className={"print:hidden"}>Resume</PageTitle>
+			<PrintSection>
+				<div className={"flex flex-col"}>
+					<div className={"font-bold"}>Dru Sellers</div>
+					<div className={"flex justify-between"}>
+						<div className={"flex gap-x-2 items-center"}>
+							<FontAwesomeIcon icon={faPaperPlaneTop} />
+							dru@drusellers.com
+						</div>
+						{/*<div className={"flex gap-x-2 items-center"}>*/}
+						{/*  <FontAwesomeIcon icon={faMobileNotch} />*/}
+						{/*  785-840-7234*/}
+						{/*</div>*/}
+						<div className={"flex gap-x-2 items-center"}>
+							<FontAwesomeIcon icon={faLocationPin} />
+							Austin, TX
+						</div>
+					</div>
+				</div>
+			</PrintSection>
 
-      <ResumeSection title={'Intro'}>
-        <NakedMarkdown variables={{years: yearsOfExperience()}}>
-          {resumeData.summary}
-        </NakedMarkdown>
-      </ResumeSection>
+			<ResumeSection title={"Intro"}>
+				<NakedMarkdown variables={{ years: yearsOfExperience() }}>
+					{resumeData.summary}
+				</NakedMarkdown>
+			</ResumeSection>
 
-      {/* Experience */}
-      <ResumeSection title={'Experience'}>
-        {resumeData.employers.map((j) => {
-          return <Experience key={j.employer} job={j} />
-        })}
-        <Archived count={resumeData.archived_employers.length}>
-          {resumeData.archived_employers.map((j) => {
-            return <Experience key={j.employer} job={j} />
-          })}
-        </Archived>
-      </ResumeSection>
+			{/* Experience */}
+			<ResumeSection title={"Experience"}>
+				{resumeData.employers.map((j) => {
+					return <Experience key={j.employer} job={j} />;
+				})}
+				<Archived count={resumeData.archived_employers.length}>
+					{resumeData.archived_employers.map((j) => {
+						return <Experience key={j.employer} job={j} />;
+					})}
+				</Archived>
+			</ResumeSection>
 
-      {/* Education */}
-      <ResumeSection title={'Education'}>
-        {resumeData.education.map((j) => {
-          return <Education key={j.school} school={j} />
-        })}
-      </ResumeSection>
+			{/* Education */}
+			<ResumeSection title={"Education"}>
+				{resumeData.education.map((j) => {
+					return <Education key={j.school} school={j} />;
+				})}
+			</ResumeSection>
 
-      {/* Activities */}
-      <ResumeSection title={'Community Activities'}>
-        <div className={'flex flex-col space-y-4'}>
-          {resumeData.activities.map((a, i) => {
-            return <div key={i}>{a}</div>
-          })}
-        </div>
-      </ResumeSection>
-    </div>
-  )
+			{/* Activities */}
+			<ResumeSection title={"Community Activities"}>
+				<div className={"flex flex-col space-y-4"}>
+					{resumeData.activities.map((a, i) => {
+						return <div key={i}>{a}</div>;
+					})}
+				</div>
+			</ResumeSection>
+		</div>
+	);
 }
-
-

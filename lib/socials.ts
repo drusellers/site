@@ -1,9 +1,9 @@
 export interface SocialMedia {
-  name: string
+	name: string;
 }
 
 export const socials: SocialMedia[] = [
-  {
-    name: 'Bob',
-  },
-]
+	{
+		name: "Bob",
+	},
+];
