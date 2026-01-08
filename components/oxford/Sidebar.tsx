@@ -1,9 +1,9 @@
-import Logo from "@/components/logo";
-import { navItems } from "@/lib/nav";
 import Link from "next/link";
-import Social from "@/components/Socials";
+import Logo from "@/components/logo";
 import { NextPrevButtons } from "@/components/oxford/NextPrevButtons";
+import Social from "@/components/Socials";
 import { getAbout } from "@/lib/cms.about";
+import { navItems } from "@/lib/nav";
 
 export default async function Sidebar() {
 	const about = getAbout();
@@ -17,6 +17,7 @@ export default async function Sidebar() {
 					</div>
 					<div
 						className={"leading-[140%] text-[#2B4459]"}
+						// biome-ignore lint/security/noDangerouslySetInnerHtml: that's the whole point
 						dangerouslySetInnerHTML={{ __html: about.sideBar }}
 					/>
 				</div>

@@ -1,6 +1,6 @@
-import React from "react";
-import Sidebar from "@/components/oxford/Sidebar";
+import type React from "react";
 import Footer from "@/components/oxford/Footer";
+import Sidebar from "@/components/oxford/Sidebar";
 
 type Props = {
 	children: React.ReactNode;

@@ -2,9 +2,8 @@
 title: About
 img: /images/planning.jpg
 sideBar: |
-  My name is Dru Sellers, and I'm a technologist that is also passionate about
-  the design and operations of a business. I originally went to college to study
-  business because, as my Dad said, "everyone needs business people."
+  My name is Dru Sellers. I’m an engineering leader and architect that focuses on building and modernizing product systems in growing companies, with an emphasis on reliability, scalability, and strong engineering practices.
+
 ---
 
 My name is Dru Sellers, and I'm a technologist that is also passionate about
