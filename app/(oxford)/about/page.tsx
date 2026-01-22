@@ -1,9 +1,9 @@
 import type { Metadata, ResolvingMetadata } from "next";
-import type { Twitter } from "next/dist/lib/metadata/types/twitter-types";
 import Image from "next/image";
 import PageTitle from "@/components/oxford/PageTitle";
 import { getAbout } from "@/lib/cms.about";
-import { BASE_URL, DEFAULT_IMAGE } from "@/lib/consts";
+import { BASE_URL } from "@/lib/consts";
+import { buildMetadata } from "@/lib/metadata";
 import { resolveUrl } from "@/lib/util";
 
 export async function generateMetadata(
@@ -12,41 +12,17 @@ export async function generateMetadata(
 ): Promise<Metadata> {
 	const bio = getAbout();
 
-	const title = bio.title;
-	const description = bio.description;
-	const url = `${BASE_URL}/about`;
-
-	const parentMetadata = await parent;
-	const imageUrl = resolveUrl(bio.img) ?? DEFAULT_IMAGE;
-	return {
-		title,
-		description,
-		openGraph: {
-			...parentMetadata.openGraph,
-			title,
-			description,
-			url,
-			type: "article",
+	return buildMetadata(
+		{
+			title: bio.title,
+			description: bio.description,
+			url: `${BASE_URL}/about`,
+			imageUrl: resolveUrl(bio.img),
 			publishedTime: bio.date,
 			tags: bio.tags,
-			images: [
-				{
-					url: imageUrl,
-					width: 600,
-					height: 312,
-					alt: title,
-				},
-			],
 		},
-		twitter: {
-			site: parentMetadata.twitter?.site ?? undefined,
-			creator: parentMetadata.twitter?.creator ?? undefined,
-			card: "summary_large_image",
-			title,
-			description,
-			images: [imageUrl],
-		} satisfies Twitter,
-	};
+		await parent,
+	);
 }
 export default function About() {
 	const bio = getAbout();

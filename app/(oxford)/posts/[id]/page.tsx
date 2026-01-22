@@ -1,10 +1,10 @@
 import type { Metadata, ResolvingMetadata } from "next";
-import type { Twitter } from "next/dist/lib/metadata/types/twitter-types";
 import PageTitle from "@/components/oxford/PageTitle";
 import PostMetadata from "@/components/oxford/PostMetadata";
 import PostContent from "@/components/PostContent";
 import { getPostData } from "@/lib/cms.posts";
-import { BASE_URL, DEFAULT_IMAGE } from "@/lib/consts";
+import { BASE_URL } from "@/lib/consts";
+import { buildMetadata } from "@/lib/metadata";
 
 type Props = {
 	params: Promise<{ id: string }>;
@@ -17,42 +17,17 @@ export async function generateMetadata(
 	const id = (await params).id;
 	const post = await getPostData(id);
 
-	const title = post.title;
-	const description =
-		post.description || `${post.contentPlain.slice(0, 155)}...`;
-	const url = `${BASE_URL}/posts/${id}`;
-
-	const parentMetadata = await parent;
-
-	return {
-		title,
-		description,
-		openGraph: {
-			...parentMetadata.openGraph,
-			title,
-			description,
-			url,
-			type: "article",
+	return buildMetadata(
+		{
+			title: post.title,
+			description:
+				post.description || `${post.contentPlain.slice(0, 155)}...`,
+			url: `${BASE_URL}/posts/${id}`,
 			publishedTime: post.date,
 			tags: post.tags,
-			images: [
-				{
-					url: DEFAULT_IMAGE,
-					width: 600,
-					height: 312,
-					alt: title,
-				},
-			],
 		},
-		twitter: {
-			site: parentMetadata.twitter?.site ?? undefined,
-			creator: parentMetadata.twitter?.creator ?? undefined,
-			card: "summary_large_image",
-			title,
-			description,
-			images: [DEFAULT_IMAGE],
-		} satisfies Twitter,
-	};
+		await parent,
+	);
 }
 
 export default async function Post({ params }: Props) {

@@ -3,7 +3,7 @@ import { toMarkdown } from "@/lib/md";
 import { yearsOfExperience } from "@/lib/util";
 
 type AboutProps = {
-	title?: string;
+	title: string;
 	preview?: string;
 	html: string;
 	img: string;
@@ -24,7 +24,7 @@ export function getAbout(): AboutProps {
 	const sidebar = toMarkdown(md.frontMatter.sideBar);
 
 	return {
-		title: md.frontMatter.title || null,
+		title: md.frontMatter.title,
 		preview: md.frontMatter.preview || null,
 		img: md.frontMatter.img || null,
 		date: md.frontMatter.date || null,
