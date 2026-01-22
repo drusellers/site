@@ -1,10 +1,10 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import "../css/index.css";
-import localFont from "next/font/local";
-import { Open_Sans, Space_Grotesk } from "next/font/google";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { Open_Sans, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import React from "react";
+import type React from "react";
 import TailwindDebug from "@/components/TailwindDebug";
 
 config.autoAddCss = false;
@@ -26,7 +26,7 @@ const spaceG = Space_Grotesk({
 
 export const metadata: Metadata = {
 	title: "Dru Sellers",
-	authors: [{ name: "Dru Sellers", url: "https://drusellers.com" }],
+	authors: [{ name: "Dru Sellers", url: "https://drusellers.com/" }],
 	description: "Dru's thoughts",
 	icons: [{ rel: "icon", url: "/images/favicon.png" }],
 	openGraph: {
@@ -43,6 +43,10 @@ export const metadata: Metadata = {
 			},
 		],
 		locale: "en-US",
+	},
+	twitter: {
+		site: "Dru Sellers",
+		creator: "Dru Sellers",
 	},
 };
 

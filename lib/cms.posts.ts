@@ -131,6 +131,7 @@ export type PostData = {
 	date: string;
 	title: string;
 	subtitle: string;
+	description: string;
 	tags: string[];
 	format: "text" | "html";
 	series?: {
@@ -167,6 +168,7 @@ export async function getPostData(id): Promise<PostData> {
 		date: md.frontMatter.date,
 		video: md.frontMatter.video || null,
 		subtitle: md.frontMatter.subtitle,
+		description: md.frontMatter.description,
 		tags: md.frontMatter.tags,
 		series: md.frontMatter.series,
 		format,
