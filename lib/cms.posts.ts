@@ -194,3 +194,42 @@ export function getSeries(name: string | undefined): PostHeader[] {
 			}
 		});
 }
+
+export interface PostSibling {
+	title: string;
+	href: string;
+}
+
+export interface PostSiblings {
+	nextPost?: PostSibling;
+	prevPost?: PostSibling;
+}
+
+export async function getSiblingPosts(slug: string): Promise<PostSiblings> {
+	const posts = getSortedPostsData();
+	const slugs = posts.map((p) => p.id);
+	const index = slugs.indexOf(slug);
+
+	let nextPost: PostSibling | undefined = undefined;
+	if (index !== 0) {
+		const next = posts[index - 1];
+		nextPost = {
+			title: next.title,
+			href: `/posts/${next.id}`,
+		};
+	}
+
+	let prevPost: PostSibling | undefined = undefined;
+	if (slugs.length - 1 >= index + 1) {
+		const prev = posts[index + 1];
+		prevPost = {
+			title: prev.title,
+			href: `/posts/${prev.id}`,
+		};
+	}
+
+	return {
+		nextPost,
+		prevPost,
+	};
+}

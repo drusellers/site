@@ -2,7 +2,8 @@ import type { Metadata, ResolvingMetadata } from "next";
 import PageTitle from "@/components/oxford/PageTitle";
 import PostMetadata from "@/components/oxford/PostMetadata";
 import PostContent from "@/components/PostContent";
-import { getPostData } from "@/lib/cms.posts";
+import PostSiblings from "@/components/oxford/PostSiblings";
+import { getPostData, getSiblingPosts } from "@/lib/cms.posts";
 import { BASE_URL } from "@/lib/consts";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -20,8 +21,7 @@ export async function generateMetadata(
 	return buildMetadata(
 		{
 			title: post.title,
-			description:
-				post.description || `${post.contentPlain.slice(0, 155)}...`,
+			description: post.description || `${post.contentPlain.slice(0, 155)}...`,
 			url: `${BASE_URL}/posts/${id}`,
 			publishedTime: post.date,
 			tags: post.tags,
@@ -33,6 +33,7 @@ export async function generateMetadata(
 export default async function Post({ params }: Props) {
 	const id = (await params).id;
 	const postData = await getPostData(id);
+	const siblings = await getSiblingPosts(id);
 
 	return (
 		<div className={"flex flex-col pl-8 pt-9 gap-y-4"}>
@@ -43,6 +44,7 @@ export default async function Post({ params }: Props) {
 				</div>
 				<div className={"col-span-4"}>
 					<PostContent postData={postData} />
+					<PostSiblings prev={siblings.prevPost} next={siblings.nextPost} />
 				</div>
 				<div className={"col-span-1"}></div>
 			</div>
