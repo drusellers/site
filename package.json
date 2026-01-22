@@ -47,7 +47,6 @@
 		"highlight.js": "^11",
 		"next": "^16.0.0",
 		"postcss": "^8.4.38",
-		"postcss-preset-env": "^10.0.0",
 		"react": "^19",
 		"react-dom": "^19",
 		"react-hotkeys-hook": "^5.0.0",

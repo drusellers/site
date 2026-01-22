@@ -1,6 +1,6 @@
 ---
 title: "Indifference"
-date: '2026-01-22'
+date: '2026-01-02'
 categories: AI
 tags:
   - AI
