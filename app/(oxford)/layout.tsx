@@ -1,4 +1,5 @@
 import type React from "react";
+import { DevUnfurlLink } from "@/components/DevUnfurlLink";
 import Footer from "@/components/oxford/Footer";
 import Sidebar from "@/components/oxford/Sidebar";
 
@@ -29,6 +30,7 @@ export default function Layout({ children }: Props) {
 					className={"hidden md:flex flex-none w-[270px] print:hidden"}
 				></div>
 			</div>
+			<DevUnfurlLink />
 		</div>
 	);
 }

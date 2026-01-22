@@ -3,7 +3,9 @@ title: About
 img: /images/planning.jpg
 sideBar: |
   My name is Dru Sellers. I’m an engineering leader and architect that focuses on building and modernizing product systems in growing companies, with an emphasis on reliability, scalability, and strong engineering practices.
-
+date: 2026-01-01
+description: >
+  Engineering leader and architect helping growing companies modernize systems while building strong engineering foundations.
 ---
 
 My name is Dru Sellers, and I'm a technologist that is also passionate about

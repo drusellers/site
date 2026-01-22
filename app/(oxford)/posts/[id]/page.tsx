@@ -4,13 +4,11 @@ import PageTitle from "@/components/oxford/PageTitle";
 import PostMetadata from "@/components/oxford/PostMetadata";
 import PostContent from "@/components/PostContent";
 import { getPostData } from "@/lib/cms.posts";
+import { BASE_URL, DEFAULT_IMAGE } from "@/lib/consts";
 
 type Props = {
 	params: Promise<{ id: string }>;
 };
-
-const BASE_URL = "https://drusellers.com";
-const DEFAULT_IMAGE = `${BASE_URL}/images/dru-serious-2x600.png`;
 
 export async function generateMetadata(
 	{ params }: Props,

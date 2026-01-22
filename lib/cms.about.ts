@@ -8,6 +8,9 @@ type AboutProps = {
 	html: string;
 	img: string;
 	sideBar: string;
+	date: string | undefined;
+	tags: string[];
+	description: string;
 };
 
 export function getAbout(): AboutProps {
@@ -24,7 +27,10 @@ export function getAbout(): AboutProps {
 		title: md.frontMatter.title || null,
 		preview: md.frontMatter.preview || null,
 		img: md.frontMatter.img || null,
+		date: md.frontMatter.date || null,
 		html: md.html,
 		sideBar: sidebar.html,
+		tags: [],
+		description: md.frontMatter.description,
 	};
 }
