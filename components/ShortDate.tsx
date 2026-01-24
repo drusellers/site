@@ -1,12 +1,12 @@
-import { parseISO, format } from "date-fns";
+import { format, parseISO } from "date-fns";
 
 type Props = {
 	dateString?: string;
 };
 
 export default function ShortDate({ dateString }: Props) {
-	if (dateString == undefined) {
-		return <></>;
+	if (dateString === undefined) {
+		return null;
 	}
 
 	let date = parseISO("2022-01-01");

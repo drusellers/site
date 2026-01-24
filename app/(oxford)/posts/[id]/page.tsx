@@ -3,6 +3,7 @@ import { RenderHtml } from "@/components/Markdown";
 import PageTitle from "@/components/oxford/PageTitle";
 import PostMetadata from "@/components/oxford/PostMetadata";
 import PostSiblings from "@/components/oxford/PostSiblings";
+import TwoColumnGrid from "@/components/oxford/TwoColumnGrid";
 import { getPostData, getSiblingPosts } from "@/lib/cms.posts";
 import { BASE_URL } from "@/lib/consts";
 import { buildMetadata } from "@/lib/metadata";
@@ -38,16 +39,10 @@ export default async function Post({ params }: Props) {
 	return (
 		<div className={"flex flex-col pl-8 pt-9 gap-y-4"}>
 			<PageTitle>{postData.title}</PageTitle>
-			<div className={"grid grid-cols-8 gap-x-4"}>
-				<div className={"col-span-3 text-left md:text-right"}>
-					<PostMetadata postData={postData} />
-				</div>
-				<div className={"col-span-5 lg:col-span-4 pr-4 lg:pr-0"}>
-					<RenderHtml>{postData.contentHtml}</RenderHtml>
-					<PostSiblings prev={siblings.prevPost} next={siblings.nextPost} />
-				</div>
-				<div className={"hidden lg:col-span-1"}></div>
-			</div>
+			<TwoColumnGrid sidebar={<PostMetadata postData={postData} />}>
+				<RenderHtml>{postData.contentHtml}</RenderHtml>
+				<PostSiblings prev={siblings.prevPost} next={siblings.nextPost} />
+			</TwoColumnGrid>
 		</div>
 	);
 }

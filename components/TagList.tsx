@@ -5,7 +5,7 @@ type Props = {
 };
 
 export default function TagList({ tags }: Props) {
-	if (tags.length === 0) return <></>;
+	if (tags.length === 0) return null;
 
 	return (
 		<ul className="list">

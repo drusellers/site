@@ -6,7 +6,7 @@ type Props = {
 
 export default function DisplayDate({ dateString }: Props) {
 	if (dateString === undefined) {
-		return <></>;
+		return null;
 	}
 
 	const date = parseISO(dateString);

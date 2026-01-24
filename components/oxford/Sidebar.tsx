@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import Social from "@/components/Socials";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 import { getAbout } from "@/lib/cms.about";
 import { navItems } from "@/lib/nav";
 
@@ -46,6 +47,7 @@ export default async function Sidebar() {
 						<Social platform="work" username="drusellers" />
 					</div>
 					<div className="text-sm text-text-secondary">Austin, TX</div>
+					<ThemeToggle />
 				</div>
 			</div>
 		</div>

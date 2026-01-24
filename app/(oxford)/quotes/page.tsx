@@ -1,7 +1,7 @@
 import Link from "next/link";
-import DateTitle from "@/components/dateTitle";
+import DateTitle from "@/components/DateTitle";
 import PageLayout from "@/components/oxford/PageLayout";
-import YearHeading from "@/components/yearHeading";
+import YearHeading from "@/components/YearHeading";
 import { getSortedQuotesData, type Quote } from "@/lib/cms.quotes";
 
 export default function Index() {

@@ -1,12 +1,12 @@
+import type { Metadata, ResolvingMetadata } from "next";
+import PageLayout from "@/components/oxford/PageLayout";
+import Quote from "@/components/Quote";
+import YouTube from "@/components/YouTube";
 import {
 	getAllQuotesIds,
 	getQuoteData,
 	getSiblingQuotes,
 } from "@/lib/cms.quotes";
-import PageLayout from "@/components/oxford/PageLayout";
-import type { Metadata, ResolvingMetadata } from "next";
-import Quote from "@/components/Quote";
-import YouTube from "@/components/YouTube";
 
 type PageParams = {
 	params: Promise<{

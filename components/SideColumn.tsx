@@ -1,8 +1,8 @@
 import type React from "react";
-import DisplayDate from "@/components/displayDate";
-import Stats from "@/components/stats";
-import TagList from "@/components/tagList";
-import TitleSubtitle from "@/components/titleSubtitle";
+import DisplayDate from "@/components/DisplayDate";
+import Stats from "@/components/Stats";
+import TagList from "@/components/TagList";
+import TitleSubtitle from "@/components/TitleSubtitle";
 
 type Props = {
 	title: string;

@@ -1,5 +1,7 @@
-import { getAtx } from "@/lib/cms.atx";
+import { RenderHtml } from "@/components/Markdown";
+import OneColumnGrid from "@/components/oxford/OneColumnGrid";
 import PageTitle from "@/components/oxford/PageTitle";
+import { getAtx } from "@/lib/cms.atx";
 
 export default function AtxPage() {
 	const atx = getAtx();
@@ -8,15 +10,9 @@ export default function AtxPage() {
 		<div className={"flex flex-col pl-8 pt-9 gap-y-4"}>
 			<PageTitle>ATX</PageTitle>
 
-			<div className={"grid grid-cols-8 gap-x-4"}>
-				<div className={"col-span-3 text-right"}></div>
-				<div className={"col-span-5"}>
-					<div
-						className={"prose"}
-						dangerouslySetInnerHTML={{ __html: atx.html }}
-					/>
-				</div>
-			</div>
+			<OneColumnGrid>
+				<RenderHtml>{atx.html}</RenderHtml>
+			</OneColumnGrid>
 		</div>
 	);
 }

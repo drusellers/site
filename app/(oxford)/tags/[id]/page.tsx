@@ -1,7 +1,7 @@
-import { getTagData } from "@/lib/cms.posts";
-import YearHeading from "@/components/yearHeading";
-import DateTitle from "@/components/dateTitle";
+import DateTitle from "@/components/DateTitle";
 import PageTitle from "@/components/oxford/PageTitle";
+import YearHeading from "@/components/YearHeading";
+import { getTagData } from "@/lib/cms.posts";
 
 export default async function Tag({ params }) {
 	const postData = await getTagData(params.id);

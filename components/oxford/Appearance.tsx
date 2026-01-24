@@ -1,5 +1,5 @@
-import ShortDate from "./shortDate";
 import Link from "next/link";
+import ShortDate from "../ShortDate";
 
 type Props = {
 	date: string;

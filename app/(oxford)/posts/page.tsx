@@ -1,9 +1,10 @@
-import DateTitle from "@/components/dateTitle";
+import DateTitle from "@/components/DateTitle";
 import PageTitle from "@/components/oxford/PageTitle";
-import YearHeading from "@/components/yearHeading";
+import TwoColumnGrid from "@/components/oxford/TwoColumnGrid";
+import YearHeading from "@/components/YearHeading";
 import { getSortedPostsData } from "@/lib/cms.posts";
 
-export default function Posts({}) {
+export default function Posts() {
 	// group by year
 	// then sort by date
 	const allPosts = groupBy(getSortedPostsData(), "year");
@@ -12,34 +13,35 @@ export default function Posts({}) {
 		<div className={"flex flex-col pl-8 pt-9 gap-y-4"}>
 			<PageTitle>Posts</PageTitle>
 
-			<div className={"grid grid-cols-8 gap-x-4"}>
-				<div className={"col-span-3 text-right"}></div>
-				<div className={"col-span-5"}>
-					{Object.keys(allPosts)
-						.reverse()
-						.map((year) => {
-							return (
-								<div key={year} className="mb-8">
-									<YearHeading year={year} className={"text-text-secondary"} />
-									<div className="mt-2 space-y-1">
-										{allPosts[year].map((q) => {
-											return (
-												<DateTitle
-													key={q.id}
-													date={q.date}
-													href={`/posts/${q.id}`}
-													title={q.title}
-												/>
-											);
-										})}
-									</div>
+			<TwoColumnGrid sidebar={<Sidebar />}>
+				{Object.keys(allPosts)
+					.reverse()
+					.map((year) => {
+						return (
+							<div key={year} className="mb-8">
+								<YearHeading year={year} className={"text-text-secondary"} />
+								<div className="mt-2 space-y-1">
+									{allPosts[year].map((q) => {
+										return (
+											<DateTitle
+												key={q.id}
+												date={q.date}
+												href={`/posts/${q.id}`}
+												title={q.title}
+											/>
+										);
+									})}
 								</div>
-							);
-						})}
-				</div>
-			</div>
+							</div>
+						);
+					})}
+			</TwoColumnGrid>
 		</div>
 	);
+}
+
+function Sidebar() {
+	return null;
 }
 
 function groupBy(items, key) {

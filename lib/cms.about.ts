@@ -2,7 +2,7 @@ import { getFile } from "@/lib/cms";
 import { toMarkdown } from "@/lib/md";
 import { yearsOfExperience } from "@/lib/util";
 
-type AboutProps = {
+export type AboutProps = {
 	title: string;
 	preview?: string;
 	html: string;

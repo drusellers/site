@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import type { VideoProps } from "@/lib/cms.posts";
 import { toNakedMarkdown } from "@/lib/md";
-import DisplayDate from "../displayDate";
+import DisplayDate from "../DisplayDate";
 
 type Props = {
 	id: string;

@@ -2,8 +2,8 @@ import { faCircleDashed } from "@fortawesome/pro-light-svg-icons";
 import { faCircle } from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import DisplayDate from "@/components/displayDate";
-import Stats from "@/components/stats";
+import DisplayDate from "@/components/DisplayDate";
+import Stats from "@/components/Stats";
 import { getSeries, type PostData, type PostHeader } from "@/lib/cms.posts";
 import { classNames } from "@/lib/util";
 

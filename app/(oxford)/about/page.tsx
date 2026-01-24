@@ -1,7 +1,8 @@
 import type { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import PageTitle from "@/components/oxford/PageTitle";
-import { getAbout } from "@/lib/cms.about";
+import TwoColumnGrid from "@/components/oxford/TwoColumnGrid";
+import { type AboutProps, getAbout } from "@/lib/cms.about";
 import { BASE_URL } from "@/lib/consts";
 import { buildMetadata } from "@/lib/metadata";
 import { resolveUrl } from "@/lib/util";
@@ -30,24 +31,26 @@ export default function About() {
 	return (
 		<div className={"flex flex-col pl-8 pr-8 lg:pr-0 pt-9 gap-y-4"}>
 			<PageTitle>About</PageTitle>
-			<div className={"grid grid-cols-1 lg:grid-cols-7 gap-x-4"}>
-				<div className={"lg:col-span-3 text-right"}>
-					<Image
-						src={bio.img}
-						width={2048}
-						height={1365}
-						alt={"Coffee, yum."}
-					/>
-				</div>
-				<div className={"md:col-span-3"}>
-					<div className={"text-text-primary"}>Hello 👋</div>
-					<div
-						className={"prose prose-drusellers"}
-						// biome-ignore lint/security/noDangerouslySetInnerHtml: this is the whole point
-						dangerouslySetInnerHTML={{ __html: bio.html }}
-					></div>
-				</div>
-			</div>
+			<TwoColumnGrid sidebar={<Sidebar bio={bio} />}>
+				<div className={"text-text-primary"}>Hello 👋</div>
+				<div
+					className={"prose prose-drusellers"}
+					// biome-ignore lint/security/noDangerouslySetInnerHtml: this is the whole point
+					dangerouslySetInnerHTML={{ __html: bio.html }}
+				></div>
+			</TwoColumnGrid>
 		</div>
+	);
+}
+
+function Sidebar({ bio }: { bio: AboutProps }) {
+	return (
+		<Image
+			src={bio.img}
+			width={2048}
+			height={1365}
+			alt={"Coffee, yum."}
+			className={"dark:rounded-lg"}
+		/>
 	);
 }

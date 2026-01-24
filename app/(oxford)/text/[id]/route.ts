@@ -1,11 +1,11 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { getPostData } from "@/lib/cms.posts";
 
 type Props = {
 	params: Promise<{ id: string }>;
 };
 
-export async function GET(request: NextRequest, { params }: Props) {
+export async function GET({ params }: Props) {
 	const id = (await params).id;
 	const postData = await getPostData(id);
 

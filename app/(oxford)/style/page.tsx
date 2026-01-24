@@ -1,12 +1,12 @@
 import PageTitle from "@/components/oxford/PageTitle";
+import TwoColumnGrid from "@/components/oxford/TwoColumnGrid";
 
 export default function Style() {
 	return (
 		<div className={"flex flex-col pl-8 pt-9 gap-y-4"}>
 			<PageTitle>Style Guide</PageTitle>
-			<div className={"grid grid-cols-7 gap-x-4"}>
-				<div className={"col-span-3 text-right"}></div>
-				<div className={"col-span-3 prose"}>
+			<TwoColumnGrid>
+				<div className={"prose prose-drusellers"}>
 					<h2>Brand Introduction</h2>
 					<p>Serious</p>
 					<p>
@@ -88,6 +88,10 @@ export default function Style() {
 					<h1>4. Do&apos;s and Dont&apos;s</h1>
 					<p>Words we do like / Words we don&apos;t like</p>
 				</div>
+			</TwoColumnGrid>
+			<div className={"grid grid-cols-7 gap-x-4"}>
+				<div className={"col-span-3 text-right"}></div>
+				<div className={"col-span-3 prose"}></div>
 			</div>
 		</div>
 	);

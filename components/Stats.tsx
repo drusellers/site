@@ -4,7 +4,7 @@ type Props = {
 };
 
 export default function Stats({ wordCount, readingTime }: Props) {
-	if (wordCount == undefined) return <></>;
+	if (wordCount === undefined) return null;
 
 	return (
 		<div>

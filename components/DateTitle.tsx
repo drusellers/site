@@ -1,11 +1,12 @@
-import ShortDate from "./shortDate";
 import Link from "next/link";
+import ShortDate from "./ShortDate";
 
 type Props = {
 	date: string;
 	title: string;
 	href: string;
 };
+
 export default function DateTitle({ date, title, href }: Props) {
 	return (
 		<div>

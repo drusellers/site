@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import AppearanceDisplay from "@/components/appearance";
+import AppearanceDisplay from "@/components/oxford/Appearance";
 import PageLayout from "@/components/oxford/PageLayout";
-import YearHeading from "@/components/yearHeading";
+import YearHeading from "@/components/YearHeading";
 import {
 	type Appearance,
 	getSortedAppearancesData,
