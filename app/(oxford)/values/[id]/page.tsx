@@ -1,5 +1,5 @@
-import { getValues, getValueData } from "@/lib/cms.values";
 import PageTitle from "@/components/oxford/PageTitle";
+import { getValueData, getValues } from "@/lib/cms.values";
 
 export async function generateStaticParams() {
 	const allValues = getValues();
@@ -27,7 +27,8 @@ export default async function Post({ params }: Props) {
 					<div className="nested nested-copy-line-height nested-links nested-copy-separator">
 						<div className="pa4">
 							<div
-								className="f5 f4-m f3-l lh-copy measure mt0 prose"
+								className="f5 f4-m f3-l lh-copy measure mt0 prose prose-drusellers"
+								// biome-ignore lint/security/noDangerouslySetInnerHtml: that's the whole point
 								dangerouslySetInnerHTML={{ __html: postData.html }}
 							/>
 						</div>

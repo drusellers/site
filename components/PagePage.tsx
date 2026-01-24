@@ -1,7 +1,7 @@
-import TitleSubtitle from "./titleSubtitle";
+import DisplayDate from "./displayDate";
 import Stats from "./stats";
-import Date from "./date";
 import TagList from "./tagList";
+import TitleSubtitle from "./titleSubtitle";
 
 type Props = {
 	title: string;
@@ -27,7 +27,7 @@ export default function PagePage({
 			<div className="my-2 sm:my-6 space-y-4 px-6 sm:w-1/3 sm:border-t-4 sm:border-black sm:pt-6">
 				<TitleSubtitle title={title} subtitle={subtitle} />
 				<Stats wordCount={wordCount} readingTime={readingTime} />
-				<Date dateString={date} />
+				<DisplayDate dateString={date} />
 				<TagList tags={tags || []} />
 			</div>
 			<div className="my-2 sm:my-6 px-6 w-full">

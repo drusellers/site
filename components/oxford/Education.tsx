@@ -1,6 +1,6 @@
-import { Education } from "@/lib/cms.resume";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/pro-light-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { Education } from "@/lib/cms.resume";
 
 type Props = {
 	school: Education;
@@ -12,7 +12,7 @@ export default function EducationUI({ school }: Props) {
 	return (
 		<div>
 			<div className={"flex flex-row justify-between"}>
-				<div className={"font-bold text-2xl"}>{e.school}</div>
+				<div className={"font-bold text-2xl text-text-primary"}>{e.school}</div>
 				<div>
 					<a
 						href={e.url}
@@ -31,10 +31,10 @@ export default function EducationUI({ school }: Props) {
 
 			<div className={"flex justify-between"}>
 				<div className={"flex flex-col"}>
-					<div>{e.major}</div>
-					<div className={"font-light"}>{e.minor}</div>
+					<div className={"text-text-primary"}>{e.major}</div>
+					<div className={"text-text-secondary"}>{e.minor}</div>
 				</div>
-				<div>
+				<div className={"text-text-primary"}>
 					{e.start} - {e.end}
 				</div>
 			</div>

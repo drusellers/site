@@ -1,10 +1,10 @@
-import { parseISO, format } from "date-fns";
+import { format, parseISO } from "date-fns";
 
 type Props = {
 	dateString?: string;
 };
 
-export default function Date({ dateString }: Props) {
+export default function DisplayDate({ dateString }: Props) {
 	if (dateString === undefined) {
 		return <></>;
 	}

@@ -40,9 +40,9 @@ export default function About() {
 					/>
 				</div>
 				<div className={"md:col-span-3"}>
-					<div>Hello 👋</div>
+					<div className={"text-text-primary"}>Hello 👋</div>
 					<div
-						className={"prose"}
+						className={"prose prose-drusellers"}
 						// biome-ignore lint/security/noDangerouslySetInnerHtml: this is the whole point
 						dangerouslySetInnerHTML={{ __html: bio.html }}
 					></div>

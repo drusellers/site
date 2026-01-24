@@ -58,9 +58,9 @@ type Props = {
 // them.
 export default function Layout({ children }: Props) {
 	return (
-		<html lang={"en"} className={``}>
+		<html lang={"en"} className={`dark`}>
 			<body
-				className={`${osans.variable} ${humane.variable} ${spaceG.variable} bg-oxford-100`}
+				className={`${osans.variable} ${humane.variable} ${spaceG.variable} bg-page-background`}
 			>
 				{children}
 				<TailwindDebug />

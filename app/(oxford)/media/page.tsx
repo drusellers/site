@@ -1,8 +1,11 @@
+import type { Metadata } from "next";
+import AppearanceDisplay from "@/components/appearance";
 import PageLayout from "@/components/oxford/PageLayout";
 import YearHeading from "@/components/yearHeading";
-import AppearanceDisplay from "@/components/appearance";
-import { Appearance, getSortedAppearancesData } from "@/lib/cms.appearances";
-import { Metadata } from "next";
+import {
+	type Appearance,
+	getSortedAppearancesData,
+} from "@/lib/cms.appearances";
 
 export const metadata: Metadata = {
 	title: "Media | Dru Sellers",
@@ -29,7 +32,7 @@ export default function Page() {
 					.map((year) => {
 						return (
 							<div key={year} className="mb-8">
-								<YearHeading year={year} />
+								<YearHeading year={year} className={"text-text-secondary"} />
 								<div className={"mt-2 space-y-1"}>
 									{groupedItems[year].map((item) => {
 										return (

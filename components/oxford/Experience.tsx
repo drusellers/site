@@ -12,7 +12,9 @@ export default function Experience({ job }: Props) {
 	return (
 		<div className={"flex flex-col space-y-2"}>
 			<div className={"flex flex-row justify-between"}>
-				<div className={"font-bold text-2xl"}>{job.employer}</div>
+				<div className={"font-bold text-2xl text-text-primary"}>
+					{job.employer}
+				</div>
 				<div className={"flex items-end"}>
 					{job.url ? (
 						<a
@@ -40,8 +42,10 @@ function Roles({ job }: { job: Employer }) {
 				return (
 					<div key={r.title} className={"flex flex-col gap-y-1 pl-4"}>
 						<div className={"flex flex-row justify-between"}>
-							<div className={"font-semibold text-md"}>{r.title}</div>
-							<div className={"font-light text-sm"}>
+							<div className={"font-semibold text-md text-text-primary"}>
+								{r.title}
+							</div>
+							<div className={"text-text-primary text-sm"}>
 								{r.start} - {r.end}
 							</div>
 						</div>
@@ -51,6 +55,7 @@ function Roles({ job }: { job: Employer }) {
 								return (
 									<div
 										key={d}
+										className={"prose prose-drusellers"}
 										// biome-ignore lint/security/noDangerouslySetInnerHtml: that's the whole point
 										dangerouslySetInnerHTML={{ __html: toMarkdown(d).html }}
 									/>
@@ -59,7 +64,11 @@ function Roles({ job }: { job: Employer }) {
 						</div>
 						<ul>
 							{r.bullets.map((b) => {
-								return <li key={b}>{b}</li>;
+								return (
+									<li key={b} className={"text-text-primary"}>
+										{b}
+									</li>
+								);
 							})}
 						</ul>
 					</div>
@@ -74,7 +83,7 @@ function Engagements({ job }: Props) {
 
 	return (
 		<div className={"flex flex-col gap-y-1 pl-4"}>
-			<h5 className={"font-semibold text-md"}>Engagements</h5>
+			<h5 className={"font-semibold text-md text-text-primary"}>Engagements</h5>
 
 			{job.engagements.map((e) => {
 				return <EngagementUI key={e.name} engagement={e} />;

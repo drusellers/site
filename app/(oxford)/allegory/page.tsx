@@ -1,35 +1,23 @@
-import { getAllegoryData } from "@/lib/data";
-import { remark } from "remark";
-import html from "remark-html";
 import PageTitle from "@/components/oxford/PageTitle";
+import { getAllegoryData } from "@/lib/cms.allegory";
+import { toMarkdown } from "@/lib/md";
 
-const _platoClassNames = "font-semibold";
-const _glauconClassNames = "font-semibold";
-
-export default function Allegory({}) {
+export default function Allegory() {
 	const data = getAllegoryData();
-
-	async function processNote(p) {
-		if (p.characterNote) {
-			const x = await remark().use(html).process(p.characterNote);
-			const y = x.toString().replace("<p>", "").replace("</p>", "");
-			p.characterNote = ` (${y})`;
-		}
-	}
-
-	data.prose.forEach(processNote);
 
 	return (
 		<div className={"flex flex-col pl-8 pt-9 gap-y-4"}>
 			<PageTitle>Allegory of the Cave</PageTitle>
 
 			<div className={"grid grid-cols-8 gap-x-4"}>
-				<div className={"col-span-3 text-right"}></div>
-				<div className={"col-span-5"}>
+				<div className={"col-span-1 text-right"}></div>
+				<div className={"col-span-6"}>
 					<div className="allegory">
 						<header className="mb-6">
-							<h1 className="font-heading text-3xl">The Republic - Book VII</h1>
-							<h3 className="pr-4">
+							<h1 className="text-text-primary text-3xl">
+								The Republic - Book VII
+							</h1>
+							<h3 className="pr-4 text-text-primary">
 								by Plato{" "}
 								<small>
 									via{" "}
@@ -43,21 +31,25 @@ export default function Allegory({}) {
 							{data.prose.map((s, i) => {
 								let note = <></>;
 								if (s.characterNote) {
+									const md = toMarkdown(s.characterNote);
 									note = (
-										<small
-											dangerouslySetInnerHTML={{ __html: s.characterNote }}
+										<div
+											className={"text-xs text-text-secondary"}
+											// biome-ignore lint/security/noDangerouslySetInnerHtml: that's the point
+											dangerouslySetInnerHTML={{ __html: md.html }}
 										/>
 									);
 								}
 								return (
+									// biome-ignore lint/suspicious/noArrayIndexKey: this is static
 									<dl key={i}>
 										<dt
-											className={`font-semibold ${i > 1 ? "text-gray-400" : ""}`}
+											className={`flex items-baseline gap-4 font-semibold ${i > 1 ? "text-text-primary" : "text-text-secondary"}`}
 										>
 											{s.character}
 											{note}
 										</dt>
-										<dd className="pl-4">{s.content}</dd>
+										<dd className="pl-4 text-text-primary">{s.content}</dd>
 									</dl>
 								);
 							})}
@@ -79,6 +71,7 @@ export default function Allegory({}) {
 						</footer>
 					</div>
 				</div>
+				<div className={"col-span-1"}></div>
 			</div>
 		</div>
 	);

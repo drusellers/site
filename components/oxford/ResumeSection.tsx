@@ -11,7 +11,7 @@ export default function ResumeSection({
 		<div className={"grid grid-cols-8 print:grid-cols-1 gap-x-4 pr-4"}>
 			<div
 				className={
-					"col-span-3 print:col-span-1 text-right print:text-left uppercase font-bold leading-8"
+					"col-span-3 print:col-span-1 text-right print:text-left uppercase font-bold leading-8 text-text-primary"
 				}
 			>
 				{title}

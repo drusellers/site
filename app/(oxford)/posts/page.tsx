@@ -1,7 +1,7 @@
-import { getSortedPostsData } from "@/lib/cms.posts";
-import YearHeading from "@/components/yearHeading";
 import DateTitle from "@/components/dateTitle";
 import PageTitle from "@/components/oxford/PageTitle";
+import YearHeading from "@/components/yearHeading";
+import { getSortedPostsData } from "@/lib/cms.posts";
 
 export default function Posts({}) {
 	// group by year
@@ -20,7 +20,7 @@ export default function Posts({}) {
 						.map((year) => {
 							return (
 								<div key={year} className="mb-8">
-									<YearHeading year={year} />
+									<YearHeading year={year} className={"text-text-secondary"} />
 									<div className="mt-2 space-y-1">
 										{allPosts[year].map((q) => {
 											return (

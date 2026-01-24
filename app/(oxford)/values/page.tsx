@@ -1,6 +1,6 @@
-import { getValues } from "@/lib/cms.values";
 import Link from "next/link";
 import PageTitle from "@/components/oxford/PageTitle";
+import { getValues } from "@/lib/cms.values";
 
 export default function Values() {
 	const allValues = getValues();
@@ -17,7 +17,9 @@ export default function Values() {
 								<Link href={`/values/${v.id}`} className={"text-xl"}>
 									{v.title}
 								</Link>
-								<div className={"text-light text-gray-600"}>{v.preview}</div>
+								<div className={"font-body-text text-text-secondary"}>
+									{v.preview}
+								</div>
 							</div>
 						);
 					})}

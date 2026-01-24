@@ -1,7 +1,7 @@
 import type { Metadata, ResolvingMetadata } from "next";
+import { RenderHtml } from "@/components/Markdown";
 import PageTitle from "@/components/oxford/PageTitle";
 import PostMetadata from "@/components/oxford/PostMetadata";
-import PostContent from "@/components/PostContent";
 import PostSiblings from "@/components/oxford/PostSiblings";
 import { getPostData, getSiblingPosts } from "@/lib/cms.posts";
 import { BASE_URL } from "@/lib/consts";
@@ -42,11 +42,11 @@ export default async function Post({ params }: Props) {
 				<div className={"col-span-3 text-left md:text-right"}>
 					<PostMetadata postData={postData} />
 				</div>
-				<div className={"col-span-4"}>
-					<PostContent postData={postData} />
+				<div className={"col-span-5 lg:col-span-4 pr-4 lg:pr-0"}>
+					<RenderHtml>{postData.contentHtml}</RenderHtml>
 					<PostSiblings prev={siblings.prevPost} next={siblings.nextPost} />
 				</div>
-				<div className={"col-span-1"}></div>
+				<div className={"hidden lg:col-span-1"}></div>
 			</div>
 		</div>
 	);

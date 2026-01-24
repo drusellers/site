@@ -1,9 +1,9 @@
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilm } from "@fortawesome/pro-light-svg-icons";
-import Date from "./date";
-import { VideoProps } from "@/lib/cms.posts";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+import type { VideoProps } from "@/lib/cms.posts";
 import { toNakedMarkdown } from "@/lib/md";
+import DisplayDate from "./displayDate";
 
 type Props = {
 	id: string;
@@ -35,7 +35,7 @@ export default function Post({ id, title, description, video, date }: Props) {
 					"align-center flex flex-row justify-start text-sm text-gray-500"
 				}
 			>
-				<Date dateString={date} />
+				<DisplayDate dateString={date} />
 			</div>
 		</div>
 	);

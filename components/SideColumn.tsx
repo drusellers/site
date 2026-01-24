@@ -1,8 +1,8 @@
-import TitleSubtitle from "@/components/titleSubtitle";
+import type React from "react";
+import DisplayDate from "@/components/displayDate";
 import Stats from "@/components/stats";
-import Date from "@/components/date";
 import TagList from "@/components/tagList";
-import React from "react";
+import TitleSubtitle from "@/components/titleSubtitle";
 
 type Props = {
 	title: string;
@@ -27,7 +27,7 @@ export default function SideColumn({
 		<div className="my-2 sm:my-6 space-y-4 mx-6 sm:border-t-4 sm:border-black sm:pt-6">
 			<TitleSubtitle title={title} subtitle={subtitle} />
 			<Stats wordCount={wordCount} readingTime={readingTime} />
-			<Date dateString={date} />
+			<DisplayDate dateString={date} />
 			<TagList tags={tags || []} />
 			{children}
 		</div>

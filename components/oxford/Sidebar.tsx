@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Logo from "@/components/logo";
-import { NextPrevButtons } from "@/components/oxford/NextPrevButtons";
+import Logo from "@/components/Logo";
 import Social from "@/components/Socials";
 import { getAbout } from "@/lib/cms.about";
 import { navItems } from "@/lib/nav";
@@ -10,13 +9,13 @@ export default async function Sidebar() {
 
 	return (
 		<div className={"flex flex-col justify-between h-screen"}>
-			<div className={"flex flex-col divide-[#C6D3D5] divide-y"}>
+			<div className={"flex flex-col divide-layout-divider divide-y"}>
 				<div className={"flex flex-col space-y-3 px-6 py-4"}>
 					<div>
 						<Logo width={190} height={64} />
 					</div>
 					<div
-						className={"leading-[140%] text-[#2B4459]"}
+						className={"leading-[140%] text-text-secondary"}
 						// biome-ignore lint/security/noDangerouslySetInnerHtml: that's the whole point
 						dangerouslySetInnerHTML={{ __html: about.sideBar }}
 					/>
@@ -46,11 +45,9 @@ export default async function Sidebar() {
 						<Social platform="reddit" username="drusellers" />
 						<Social platform="work" username="drusellers" />
 					</div>
-					<div className="text-gray-400">Austin, TX</div>
+					<div className="text-sm text-text-secondary">Austin, TX</div>
 				</div>
 			</div>
-
-			<NextPrevButtons />
 		</div>
 	);
 }

@@ -1,11 +1,10 @@
-import { getSeries, PostData, PostHeader } from "@/lib/cms.posts";
-import Date from "@/components/date";
-import React from "react";
-import Stats from "@/components/stats";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle } from "@fortawesome/pro-solid-svg-icons";
 import { faCircleDashed } from "@fortawesome/pro-light-svg-icons";
+import { faCircle } from "@fortawesome/pro-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import DisplayDate from "@/components/displayDate";
+import Stats from "@/components/stats";
+import { getSeries, type PostData, type PostHeader } from "@/lib/cms.posts";
 import { classNames } from "@/lib/util";
 
 type Props = {
@@ -16,9 +15,9 @@ export default function PostMetadata({ postData }: Props) {
 	const items = getSeries(postData.series?.name);
 
 	return (
-		<div className={"flex flex-col font-light pt-[2px]"}>
+		<div className={"flex flex-col text-text-secondary pt-[2px]"}>
 			<div className={"font-light"}>
-				<Date dateString={postData.date} />
+				<DisplayDate dateString={postData.date} />
 			</div>
 			<div className={"flex flex-row justify-start md:justify-end"}>
 				<Stats

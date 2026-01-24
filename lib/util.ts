@@ -1,6 +1,6 @@
 import { BASE_URL } from "@/lib/consts";
 
-export function classNames(...classes: string[]) {
+export function classNames(...classes: Array<string | undefined | null>) {
 	return classes.filter(Boolean).join(" ");
 }
 

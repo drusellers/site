@@ -1,8 +1,7 @@
-import { getPostData, getSortedPostsData } from "@/lib/cms.posts";
-import React from "react";
+import { RenderHtml } from "@/components/Markdown";
 import PageTitle from "@/components/oxford/PageTitle";
 import PostMetadata from "@/components/oxford/PostMetadata";
-import PostContent from "@/components/PostContent";
+import { getPostData, getSortedPostsData } from "@/lib/cms.posts";
 
 export default async function Home() {
 	const posts = getSortedPostsData();
@@ -16,7 +15,7 @@ export default async function Home() {
 					<PostMetadata postData={postData} />
 				</div>
 				<div className={"col-span-8 md:col-span-4"}>
-					<PostContent postData={postData} />
+					<RenderHtml>{postData.contentHtml}</RenderHtml>
 				</div>
 				<div className={"col-span-8 md:col-span-1"}></div>
 			</div>

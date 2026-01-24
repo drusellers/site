@@ -7,13 +7,13 @@ export default function Iron() {
 			<div className={"grid grid-cols-7 gap-x-4"}>
 				<div
 					className={
-						"col-span-7 md:col-span-3 text-left md:text-right flex flex-col pb-6 md:pb-0"
+						"text-text-primary col-span-7 md:col-span-3 text-left md:text-right flex flex-col pb-6 md:pb-0"
 					}
 				>
 					<div>By Henry Rollins</div>
 				</div>
 				<div className={"col-span-7 md:col-span-3"}>
-					<div className="prose">
+					<div className="prose prose-drusellers">
 						<p>
 							I believe that the definition of definition is reinvention. To not
 							be like your parents. To not be like your friends. To be yourself.

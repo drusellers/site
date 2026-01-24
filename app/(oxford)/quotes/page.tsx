@@ -1,8 +1,8 @@
-import { getSortedQuotesData, Quote } from "@/lib/cms.quotes";
-import YearHeading from "@/components/yearHeading";
-import DateTitle from "@/components/dateTitle";
 import Link from "next/link";
+import DateTitle from "@/components/dateTitle";
 import PageLayout from "@/components/oxford/PageLayout";
+import YearHeading from "@/components/yearHeading";
+import { getSortedQuotesData, type Quote } from "@/lib/cms.quotes";
 
 export default function Index() {
 	// group by year
@@ -27,7 +27,7 @@ export default function Index() {
 					.map((year) => {
 						return (
 							<div key={year} className="mb-8">
-								<YearHeading year={year} />
+								<YearHeading year={year} className={"text-text-secondary"} />
 								<div className={"mt-2 space-y-1"}>
 									{groupedQuotes[year].map((q) => {
 										return (

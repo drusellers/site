@@ -1,9 +1,7 @@
 import path from "node:path";
 import { parseISO } from "date-fns";
-import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
 import { getFile, getFiles } from "@/lib/cms";
+import { toMarkdown } from "@/lib/md";
 
 export interface Quote {
 	title: string;
@@ -33,16 +31,15 @@ export function getSortedQuotesData(): Quote[] {
 		// Read markdown file as string
 		const fileContents = getFile(file.path);
 
-		// Use gray-matter to parse the post metadata section
-		const matterResult = matter(fileContents);
+		const md = toMarkdown(fileContents, {});
 
-		const year = parseISO(matterResult.data.date).getFullYear();
+		const year = parseISO(md.frontMatter.date).getFullYear();
 
 		// Combine the data with the id
 		return {
 			id,
 			year: year,
-			...matterResult.data,
+			...md.frontMatter,
 		} as Quote;
 	});
 
@@ -88,20 +85,15 @@ export async function getQuoteData(id): Promise<Quote> {
 	const fullPath = path.join("quotes", `${id}.md`);
 	const fileContents = getFile(fullPath);
 
-	// Use gray-matter to parse the post metadata section
-	const matterResult = matter(fileContents);
+	const md = toMarkdown(fileContents, {});
 
-	// Use remark to convert markdown into HTML string
-	const processedContent = await remark()
-		.use(html)
-		.process(matterResult.content);
-	const contentHtml = processedContent.toString();
+	const contentHtml = md.html;
 
 	// Combine the data with the id and contentHtml
 	return {
 		id,
 		contentHtml,
-		...matterResult.data,
+		...md.frontMatter,
 		href: `/quotes/${id}`,
 	} as Quote;
 }

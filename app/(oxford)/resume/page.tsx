@@ -25,7 +25,7 @@ export default function ResumeUI() {
 			<PageTitle className={"print:hidden"}>Resume</PageTitle>
 			<PrintSection>
 				<div className={"flex flex-col"}>
-					<div className={"font-bold"}>Dru Sellers</div>
+					<div className={"font-bold text-text-primary"}>Dru Sellers</div>
 					<div className={"flex justify-between"}>
 						<div className={"flex gap-x-2 items-center"}>
 							<FontAwesomeIcon icon={faPaperPlaneTop} />
@@ -72,7 +72,11 @@ export default function ResumeUI() {
 			<ResumeSection title={"Community Activities"}>
 				<div className={"flex flex-col space-y-4"}>
 					{resumeData.activities.map((a) => {
-						return <div key={a}>{a}</div>;
+						return (
+							<div key={a} className={"text-text-primary"}>
+								{a}
+							</div>
+						);
 					})}
 				</div>
 			</ResumeSection>
