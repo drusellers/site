@@ -1,5 +1,6 @@
 "use client";
 
+import { faLightbulb, faLightbulbOn } from "@fortawesome/pro-light-svg-icons";
 import { faMoon, faSun } from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTheme } from "next-themes";
@@ -70,10 +71,8 @@ export default function ThemeToggle() {
 		>
 			{/* Track background with gradient */}
 			<div
-				className={`absolute inset-0 rounded-sm transition-all duration-300 ${
-					isDark
-						? "bg-gradient-to-r from-blue-600 to-blue-400"
-						: "bg-gradient-to-r from-orange-400 to-yellow-300"
+				className={`absolute inset-0 rounded-sm transition-all duration-300 bg-linear-to-r ${
+					isDark ? "from-blue-600 to-blue-400" : "from-orange-400 to-yellow-300"
 				} opacity-20`}
 			/>
 
@@ -85,7 +84,7 @@ export default function ThemeToggle() {
 			>
 				{/* Icons inside the thumb */}
 				<FontAwesomeIcon
-					icon={faSun}
+					icon={faLightbulbOn}
 					className={`absolute w-3 h-3 text-orange-500 transition-all duration-300 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${
 						isDark
 							? "opacity-0 scale-0 rotate-90"
@@ -93,7 +92,7 @@ export default function ThemeToggle() {
 					}`}
 				/>
 				<FontAwesomeIcon
-					icon={faMoon}
+					icon={faLightbulb}
 					className={`absolute w-3 h-3 text-blue-600 transition-all duration-300 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${
 						isDark
 							? "opacity-100 scale-100 rotate-0"
