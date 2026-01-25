@@ -75,11 +75,25 @@
 		opacity: 1;
 	}
 
+	/* Smooth theme transitions for color-dependent elements */
+	html, body {
+		transition: background-color var(--dds-theme-transition-duration) ease-in-out;
+	}
+	
+	* {
+		transition: color var(--dds-theme-transition-duration) ease-in-out,
+					border-color var(--dds-theme-transition-duration) ease-in-out,
+					background-color var(--dds-theme-transition-duration) ease-in-out;
+	}
+
 	:root {
 		/* Font variables injected by next/font in layout.tsx */
 		--font-humane: "humane";
 		--font-open-sans: "open sans";
 		--font-space-g: "space grotesk";
+
+		/* Theme transition duration */
+		--dds-theme-transition-duration: 0.3s;
 
 		--bg-page: var(--color-bluetide-light-50);
 
@@ -97,6 +111,19 @@
 		--quote-border-color: var(--color-success-500);
 
 		--text-headings-color: var(--color-bluetide-light-800);
+
+		/* Theme toggle colors */
+		--dds-toggle-track-light: var(--color-oxford-200);
+		--dds-toggle-track-dark: var(--color-oxford-600);
+		--dds-toggle-gradient-light: linear-gradient(to right, rgb(251 146 60), rgb(253 224 71));
+		--dds-toggle-gradient-dark: linear-gradient(to right, rgb(37 99 235), rgb(96 165 250));
+		--dds-toggle-thumb-bg: rgb(255 255 255);
+		--dds-toggle-icon-light: rgb(249 115 22);
+		--dds-toggle-icon-dark: rgb(37 99 235);
+		--dds-toggle-glow-light: rgb(253 186 116);
+		--dds-toggle-glow-dark: rgb(96 165 250);
+		--dds-toggle-pulse-light: rgb(253 186 116);
+		--dds-toggle-pulse-dark: rgb(96 165 250);
 	}
 
 	.dark {
@@ -116,6 +143,19 @@
 		--quote-border-color: var(--color-success-600);
 
 		--text-headings-color: var(--color-bluetide-dark-400);
+
+		/* Theme toggle colors - dark mode */
+		--dds-toggle-track-light: var(--color-oxford-600);
+		--dds-toggle-track-dark: var(--color-oxford-200);
+		--dds-toggle-gradient-light: linear-gradient(to right, rgb(253 186 116), rgb(253 224 71));
+		--dds-toggle-gradient-dark: linear-gradient(to right, rgb(37 99 235), rgb(96 165 250));
+		--dds-toggle-thumb-bg: rgb(255 255 255);
+		--dds-toggle-icon-light: rgb(249 115 22);
+		--dds-toggle-icon-dark: rgb(37 99 235);
+		--dds-toggle-glow-light: rgb(253 186 116);
+		--dds-toggle-glow-dark: rgb(96 165 250);
+		--dds-toggle-pulse-light: rgb(253 186 116);
+		--dds-toggle-pulse-dark: rgb(96 165 250);
 	}
 
 	body {
@@ -126,6 +166,11 @@
 		/*background: radial-gradient(ellipse at top, #ECE9E6, transparent),*/
 		/*radial-gradient(ellipse at bottom, #fff, transparent);*/
 		font-family: var(--font-body-text), "sans-serif";
+		
+		/* Smooth theme transitions */
+		transition: 
+			background-color var(--dds-theme-transition-duration) ease-in-out,
+			color var(--dds-theme-transition-duration) ease-in-out;
 	}
 
 
@@ -135,6 +180,7 @@
 		font-family: var(--font-body-text), "sans-serif";
 		text-decoration: underline;
 		text-underline-offset: 2px;
+		transition: color var(--dds-theme-transition-duration) ease-in-out;
 	}
 
 	a:not(:is(:hover, :focus)) {
