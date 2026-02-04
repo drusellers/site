@@ -7,7 +7,9 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { ThemeProvider } from "next-themes";
 import type React from "react";
 import TailwindDebug from "@/components/TailwindDebug";
+import ThemeLoader from "@/components/ThemeLoader";
 import ThemeScript from "@/components/ThemeScript";
+import { buildMetadata } from "@/lib/cms.metadata";
 
 config.autoAddCss = false;
 
@@ -26,31 +28,7 @@ const spaceG = Space_Grotesk({
 	variable: "--font-space-g",
 });
 
-export const metadata: Metadata = {
-	title: "Dru Sellers",
-	authors: [{ name: "Dru Sellers", url: "https://drusellers.com/" }],
-	description: "Dru's thoughts",
-	icons: [{ rel: "icon", url: "/images/favicon.png" }],
-	openGraph: {
-		title: "Dru Sellers",
-		siteName: "Dru Sellers",
-		description: "Personal website for Dru Sellers",
-		url: "https://drusellers.com",
-		authors: "Dru Sellers",
-		images: [
-			{
-				url: "https://drusellers.com/images/dru-serious-2x600.png",
-				width: 600,
-				height: 312,
-			},
-		],
-		locale: "en-US",
-	},
-	twitter: {
-		site: "Dru Sellers",
-		creator: "Dru Sellers",
-	},
-};
+export const metadata: Metadata = buildMetadata({});
 
 type Props = {
 	children: React.ReactNode;
@@ -68,6 +46,7 @@ export default function Layout({ children }: Props) {
 				className={`${osans.variable} ${humane.variable} ${spaceG.variable} bg-page-background`}
 			>
 				<ThemeProvider>
+					<ThemeLoader />
 					{children}
 					<TailwindDebug />
 				</ThemeProvider>

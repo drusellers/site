@@ -6,7 +6,6 @@ import {
 	SlackCard,
 	TwitterCard,
 } from "@/components/designSystem/UnfurlCards";
-import ThemeLoader from "@/components/ThemeLoader";
 import { parseMetadata, type UnfurlMetadata } from "@/lib/unfurl";
 
 type Props = {
@@ -61,7 +60,6 @@ export default async function UnfurlPage({ searchParams }: Props) {
 
 	return (
 		<>
-			<ThemeLoader />
 			<div className="min-h-screen bg-page-background p-8">
 				<div className="max-w-6xl mx-auto">
 					<h1 className="text-3xl font-bold text-text-page-title mb-2">
