@@ -1,7 +1,6 @@
 ---
 title: 'Composing Application Styles'
 date: '2016-11-05'
-categories: architecture
 tags:
   - architecture
 withStats: true

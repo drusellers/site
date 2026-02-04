@@ -1,7 +1,7 @@
 ---
 title: 'Get Things Done'
 date: '2014-11-11'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Henry Rollins

@@ -1,7 +1,7 @@
 ---
 title: 'Yield and Overcome'
 date: '2011-11-28'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Tao-te Ching

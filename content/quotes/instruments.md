@@ -1,7 +1,7 @@
 ---
 title: 'Instruments'
 date: '2017-08-29'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Rich Hickey

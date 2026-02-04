@@ -1,7 +1,7 @@
 ---
 title: 'Dare Mighty Things'
 date: '2012-01-16'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Theodore Roosevelt

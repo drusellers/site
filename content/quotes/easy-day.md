@@ -1,7 +1,7 @@
 ---
 title: 'Easy Day'
 date: '2012-04-28'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Unknown

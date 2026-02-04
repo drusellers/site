@@ -1,7 +1,7 @@
 ---
 title: 'Ready to Win'
 date: '2020-12-27'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Antiope (Wonder Woman 84)

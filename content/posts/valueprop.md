@@ -2,7 +2,8 @@
 layout: post
 title: 'The Value of the Value Proposition'
 date: '2013-06-12'
-categories: business
+tags:
+  - business
 disqus_id: d106b9a3-938d-49cb-b129-921e8a9d9414
 withStats: true
 aliases: ['/business/2013/06/12/valueprop.html']

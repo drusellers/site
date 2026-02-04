@@ -1,7 +1,7 @@
 ---
 title: 'Fighting Weight'
 date: '2022-08-01'
-categories: quotes
+category: quotes
 tags:
 - Quotes
 author: Josh Billings

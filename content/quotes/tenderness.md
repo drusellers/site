@@ -1,7 +1,7 @@
 ---
 title: 'Tenderness'
 date: '2025-09-15'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Otis Redding

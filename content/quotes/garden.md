@@ -1,7 +1,7 @@
 ---
 title: 'Warrior in a garden'
 date: '2015-12-22'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Unknown

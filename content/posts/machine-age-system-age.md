@@ -1,7 +1,6 @@
 ---
 title: 'Machine Age vs System Age'
 date: '2018-12-22'
-categories: notes
 tags:
   - notes
   - books

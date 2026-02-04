@@ -1,5 +1,5 @@
+import type { ReactNode } from "react";
 import PageTitle from "@/components/oxford/PageTitle";
-import React, { ReactNode } from "react";
 
 type Props = {
 	title: string;

@@ -1,7 +1,7 @@
 ---
 title: 'Greatest Glory'
 date: '2011-12-12'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Nelson Mandela

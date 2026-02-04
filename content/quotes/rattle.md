@@ -1,7 +1,7 @@
 ---
 title: 'Rattle the bars'
 date: '2022-10-31'
-categories: quotes
+category: quotes
 tags:
 - Quotes
 author: Alain de Botton

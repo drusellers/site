@@ -3,7 +3,6 @@ title: 'Terms'
 subtitle: 'The Atom of Search'
 date: '2019-05-18'
 tags: ['search']
-categories: 'search'
 withStats: true
 description: >
   In my attempt to learn more about full text search I'm going

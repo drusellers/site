@@ -1,7 +1,7 @@
 ---
 title: 'Dive Deep'
 date: '2021-06-29'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Alexander den Heijer

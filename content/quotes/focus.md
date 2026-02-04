@@ -1,7 +1,7 @@
 ---
 title: 'Focus'
 date: '2011-10-15'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Steve Jobs

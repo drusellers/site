@@ -1,7 +1,7 @@
 ---
 title: 'Focus on the process'
 date: '2011-06-12'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Think Twice, pg 133

@@ -1,7 +1,7 @@
 ---
 title: 'Make the Cut'
 date: '2013-06-24'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Gym Jones

@@ -1,7 +1,7 @@
 ---
 title: 'Fight is won'
 date: '2011-12-19'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Muhammad Ali

@@ -1,7 +1,7 @@
 ---
 title: 'Fucking Up'
 date: '2012-09-05'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Henry Rollins

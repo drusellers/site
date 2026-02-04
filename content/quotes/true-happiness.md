@@ -1,7 +1,7 @@
 ---
 title: 'True Happiness'
 date: '2019-01-13'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Seneca

@@ -7,7 +7,7 @@ export interface Quote {
 	title: string;
 	id: string;
 	date: string;
-	categories: string;
+	category: string;
 	tags: string[];
 	author: string;
 	author_link: string;
@@ -81,7 +81,7 @@ export function getAllQuotesIds(): { params: { id: string } }[] {
 	});
 }
 
-export async function getQuoteData(id): Promise<Quote> {
+export async function getQuoteData(id: string): Promise<Quote> {
 	const fullPath = path.join("quotes", `${id}.md`);
 	const fileContents = getFile(fullPath);
 
@@ -98,7 +98,7 @@ export async function getQuoteData(id): Promise<Quote> {
 	} as Quote;
 }
 
-export async function getSiblingQuotes(slug): Promise<QuoteSiblings> {
+export async function getSiblingQuotes(slug: string): Promise<QuoteSiblings> {
 	const posts = getSortedQuotesData();
 	const slugs = posts.map((p) => p.id);
 	const index = slugs.indexOf(slug);

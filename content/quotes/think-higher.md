@@ -1,7 +1,7 @@
 ---
 title: 'Think Higher'
 date: '2012-12-10'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Elie Wiesel

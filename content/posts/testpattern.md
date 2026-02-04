@@ -1,7 +1,6 @@
 ---
 title: 'Greasy Testing'
 date: '2013-12-09'
-categories: testing
 tags:
   - testing
 disqus_id: 612fe097-a8e3-4ebb-aa31-b54ae4501783

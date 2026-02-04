@@ -1,7 +1,7 @@
 ---
 title: 'Good'
 date: '2015-12-31'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Jocko Willnik

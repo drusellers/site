@@ -1,7 +1,7 @@
 ---
 title: 'Smile Back'
 date: '2024-03-29'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Marcus Aurelius (Gladiator)

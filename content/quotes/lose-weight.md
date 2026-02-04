@@ -1,7 +1,7 @@
 ---
 title: 'Losing Weight'
 date: '2011-06-12'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Me

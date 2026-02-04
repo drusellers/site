@@ -1,7 +1,7 @@
 ---
 title: 'Be at War'
 date: '2012-01-16'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Benjamin Franklin

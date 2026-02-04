@@ -1,7 +1,7 @@
 ---
 title: 'Breaking the mold'
 date: '2012-09-05'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Christmas Abbot

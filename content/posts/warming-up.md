@@ -2,7 +2,7 @@
 layout: post
 title: 'Warming up'
 date: '2013-06-08'
-categories:
+tags:
   - random
   - post
 disqus_id: ff81e2ae-56a6-4749-8f57-728f6851b740

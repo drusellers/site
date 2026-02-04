@@ -1,7 +1,7 @@
 ---
 title: 'Daily Decrease'
 date: '2011-06-06'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Bruce Lee

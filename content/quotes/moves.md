@@ -1,7 +1,7 @@
 ---
 title: 'Moves'
 date: '2015-08-02'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Aikido

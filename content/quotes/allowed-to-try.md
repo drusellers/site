@@ -1,7 +1,7 @@
 ---
 title: 'Allowed to Try'
 date: '2022-12-29'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Morgan Harper Nichols

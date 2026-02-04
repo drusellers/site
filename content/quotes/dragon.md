@@ -1,7 +1,7 @@
 ---
 title: 'Dragon'
 date: '2020-02-16'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Brian Andreas

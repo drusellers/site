@@ -1,7 +1,8 @@
 ---
 title: 'What is Software Architecture?'
 date: '2017-01-28'
-categories: Architecture
+tags:
+  - Architecture
 published: false
 disqus_id: 150e5c91-183a-42a5-8a03-a60e01b20851
 withStats: true

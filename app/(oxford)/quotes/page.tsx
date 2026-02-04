@@ -2,7 +2,8 @@ import Link from "next/link";
 import DateTitle from "@/components/DateTitle";
 import PageLayout from "@/components/oxford/PageLayout";
 import YearHeading from "@/components/YearHeading";
-import { getSortedQuotesData, type Quote } from "@/lib/cms.quotes";
+import { getSortedQuotesData } from "@/lib/cms.quotes";
+import { groupBy } from "@/lib/util";
 
 export default function Index() {
 	// group by year
@@ -45,15 +46,5 @@ export default function Index() {
 					})}
 			</article>
 		</PageLayout>
-	);
-}
-
-function groupBy(items: Quote[], key: string) {
-	return items.reduce(
-		(result, item) => ({
-			...result,
-			[item[key]]: [...(result[item[key]] || []), item],
-		}),
-		{},
 	);
 }

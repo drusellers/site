@@ -1,7 +1,7 @@
 ---
 title: 'Knowing'
 date: '2020-02-12'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Bruce Lee

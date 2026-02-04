@@ -6,7 +6,7 @@ import { BASE_URL } from "@/lib/consts";
 import { buildMetadata } from "@/lib/metadata";
 
 export async function generateMetadata(
-	_,
+	_: unknown,
 	parent: ResolvingMetadata,
 ): Promise<Metadata> {
 	return buildMetadata(

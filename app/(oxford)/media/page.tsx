@@ -6,6 +6,7 @@ import {
 	type Appearance,
 	getSortedAppearancesData,
 } from "@/lib/cms.appearances";
+import { groupBy } from "@/lib/util";
 
 export const metadata: Metadata = {
 	title: "Media | Dru Sellers",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
 	const allItems = getSortedAppearancesData();
-	const groupedItems = groupBy(allItems, "year");
+	const groupedItems = groupBy<Appearance>(allItems, "year");
 
 	return (
 		<PageLayout title={"Media"} sidebar={<Sidebar />}>
@@ -51,19 +52,6 @@ export default function Page() {
 					})}
 			</article>
 		</PageLayout>
-	);
-}
-
-function groupBy(
-	items: Appearance[],
-	key: string,
-): Record<string, Appearance[]> {
-	return items.reduce(
-		(result, item) => ({
-			...result,
-			[item[key]]: [...(result[item[key]] || []), item],
-		}),
-		{},
 	);
 }
 

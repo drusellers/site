@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/metadata";
 import { resolveUrl } from "@/lib/util";
 
 export async function generateMetadata(
-	_,
+	_: unknown,
 	parent: ResolvingMetadata,
 ): Promise<Metadata> {
 	const bio = getAbout();

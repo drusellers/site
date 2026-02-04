@@ -1,16 +1,28 @@
 import DateTitle from "@/components/DateTitle";
 import PageTitle from "@/components/oxford/PageTitle";
 import YearHeading from "@/components/YearHeading";
-import { getTagData } from "@/lib/cms.posts";
+import { getAllTagIds, getTagData } from "@/lib/cms.posts";
+import { groupBy } from "@/lib/util";
 
-export default async function Tag({ params }) {
-	const postData = await getTagData(params.id);
+type Props = {
+	params: Promise<{ id: string }>;
+};
+export async function generateStaticParams() {
+	const tagIds = getAllTagIds();
+
+	return tagIds.map((t) => ({
+		id: t.params.id,
+	}));
+}
+
+export default async function Tag({ params }: Props) {
+	const { id } = await params;
+	const postData = getTagData(id);
 	const allPosts = groupBy(postData.posts, "year");
-	const tag = params.id;
 
 	return (
 		<div className={"flex flex-col pl-8 pt-9 gap-y-4"}>
-			<PageTitle>{tag}</PageTitle>
+			<PageTitle>{id}</PageTitle>
 			<div className={"grid grid-cols-7 gap-x-4"}>
 				<div className={"col-span-3 text-right"}></div>
 				<div className={"col-span-3"}>
@@ -38,15 +50,5 @@ export default async function Tag({ params }) {
 				</div>
 			</div>
 		</div>
-	);
-}
-
-function groupBy(items, key) {
-	return items.reduce(
-		(result, item) => ({
-			...result,
-			[item[key]]: [...(result[item[key]] || []), item],
-		}),
-		{},
 	);
 }

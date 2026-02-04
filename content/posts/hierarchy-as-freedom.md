@@ -1,7 +1,6 @@
 ---
 title: 'Hierachy as Freedom'
 date: '2020-12-21'
-categories: business
 tags:
   - management
 disqus_id: 3B0078F6-6802-43B7-B73F-7543BF167E62

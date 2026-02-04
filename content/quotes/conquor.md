@@ -1,7 +1,7 @@
 ---
 title: 'Conquer'
 date: '2024-09-01'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Buddha

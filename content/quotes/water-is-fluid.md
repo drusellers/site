@@ -1,7 +1,7 @@
 ---
 title: 'Water is fluid'
 date: '2011-05-30'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Lao-tzu

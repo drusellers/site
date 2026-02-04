@@ -1,7 +1,7 @@
 ---
 title: 'Years of Struggle'
 date: '2020-01-04'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Sigmund Freud

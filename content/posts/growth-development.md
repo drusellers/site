@@ -1,7 +1,6 @@
 ---
 title: 'Growth vs Development'
 date: '2019-04-23'
-categories: notes
 draft: true
 tags:
   - notes

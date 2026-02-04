@@ -1,7 +1,7 @@
 ---
 title: 'Easier'
 date: '2015-12-23'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 disqus_id: 5ffcaa7d-4e80-4b36-8c84-b3aee9499e3b

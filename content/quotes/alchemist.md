@@ -1,7 +1,7 @@
 ---
 title: 'Alchemist'
 date: '2013-01-06'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: The Power of Now

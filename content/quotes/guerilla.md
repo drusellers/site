@@ -1,7 +1,7 @@
 ---
 title: 'Guerrilla Warfare'
 date: '2024-04-01'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Enemy of the State

@@ -1,7 +1,7 @@
 ---
 title: 'Deepest Fear'
 date: '2011-12-29'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Nelson Mandela

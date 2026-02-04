@@ -1,7 +1,7 @@
 ---
 title: 'Friends'
 date: '2020-02-09'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Habeeb Akande

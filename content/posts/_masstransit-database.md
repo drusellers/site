@@ -1,7 +1,6 @@
 ---
 title: "MassTransit's Database Transport"
 date: '2024-10-29'
-categories: MassTransit
 tags:
   - MassTransit
 disqus_id: a771f096-4124-4ea3-88db-a3be6adf4265

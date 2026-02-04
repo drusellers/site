@@ -1,7 +1,7 @@
 ---
 title: 'Fate'
 date: '2019-07-29'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Carl Jung

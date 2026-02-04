@@ -1,7 +1,7 @@
 ---
 title: 'Enemies'
 date: '2024-04-07'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: A gamer

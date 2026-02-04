@@ -1,7 +1,7 @@
 ---
 title: 'Amateur'
 date: '2012-08-08'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Socarates

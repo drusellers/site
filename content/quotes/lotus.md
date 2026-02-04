@@ -1,7 +1,7 @@
 ---
 title: 'Remember the Lotus Flower'
 date: '2019-09-28'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Clayton Micallef

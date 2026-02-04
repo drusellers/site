@@ -1,7 +1,7 @@
 ---
 title: 'Seen Further'
 date: '2011-06-01'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Isaac Newton

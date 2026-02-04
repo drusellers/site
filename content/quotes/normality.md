@@ -1,7 +1,7 @@
 ---
 title: 'Normality'
 date: '2020-10-31'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Vincent van Gogh

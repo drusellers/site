@@ -1,7 +1,7 @@
 ---
 title: 'Old Ideas'
 date: '2018-01-08'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Greg Young

@@ -1,7 +1,6 @@
 ---
 title: 'Agentic Approach'
 date: '2026-01-22'
-categories: AI
 tags:
   - AI
 disqus_id: e42cc3d5-b91b-455c-8efc-9ead07198948

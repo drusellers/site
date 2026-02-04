@@ -1,7 +1,7 @@
 ---
 title: 'Wealth of Knowledge'
 date: '2014-01-02'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Peter Schwartz

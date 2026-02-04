@@ -1,27 +1,32 @@
 import path from "node:path";
 import { parseISO } from "date-fns";
+import * as z from "zod";
 import { getFile, getFiles } from "./cms";
 import { toMarkdown } from "./md";
+export const VideoSchema = z.object({
+	youtube: z.optional(z.string()),
+	loom: z.optional(z.string()),
+});
 
-export type VideoProps = {
-	youtube?: string;
-	loom?: string;
-};
+export type VideoProps = z.infer<typeof VideoSchema>;
 
-export type PostHeader = {
-	id: string;
-	year: number;
-	draft: boolean;
-	date: string;
-	tags: string[];
-	video?: VideoProps;
-	title: string;
-	description: string;
-	series?: {
-		name: string;
-		order: number;
-	};
-};
+export const PostHeaderSchema = z.object({
+	id: z.string(),
+	year: z.number(),
+	draft: z.optional(z.boolean()),
+	date: z.string(),
+	tags: z.array(z.string()),
+	video: z.optional(VideoSchema),
+	title: z.string(),
+	description: z.optional(z.string()),
+	series: z.optional(
+		z.object({
+			name: z.string(),
+			order: z.number(),
+		}),
+	),
+});
+export type PostHeader = z.infer<typeof PostHeaderSchema>;
 
 export function getSortedPostsData(): PostHeader[] {
 	// Get file names under /posts
@@ -38,12 +43,19 @@ export function getSortedPostsData(): PostHeader[] {
 
 		const year = parseISO(md.frontMatter.date).getFullYear();
 
+		const tags = (md.frontMatter.tags || []).map((t: string) =>
+			t.toLowerCase(),
+		);
+
 		// Combine the data with the id
-		return {
+		const ph = {
 			id,
 			year: year,
 			...md.frontMatter,
-		} as PostHeader;
+			tags,
+		};
+
+		return PostHeaderSchema.parse(ph);
 	});
 
 	const nonDrafts = allPostsData.filter((d) => !d.draft);
@@ -62,8 +74,9 @@ export function getAllTags(): { [tag: string]: number } {
 	return getSortedPostsData()
 		.flatMap((p) => p.tags)
 		.filter((t) => t != null)
+		.map((t) => t.toLowerCase())
 		.sort()
-		.reduce((a, t) => {
+		.reduce((a: Record<string, number>, t) => {
 			if (a[t] === undefined) {
 				a[t] = 0;
 			}
@@ -83,7 +96,7 @@ export function getAllTagIds() {
 	return [...uniqueTags].map((t) => ({ params: { id: t } }));
 }
 
-export function getTagData(tag) {
+export function getTagData(tag: string) {
 	const postsByTag = getSortedPostsData().filter((p) =>
 		(p.tags || []).includes(tag),
 	);
@@ -110,6 +123,7 @@ export function getAllPostIds(): { params: { id: string } }[] {
 	//     }
 	//   }
 	// ]
+
 	return files.map((file) => {
 		return {
 			params: {
@@ -140,7 +154,7 @@ export type PostData = {
 	};
 };
 
-export async function getPostData(id): Promise<PostData> {
+export async function getPostData(id: string): Promise<PostData> {
 	let format: "text" | "html" = "html";
 	if (id.endsWith(".txt")) {
 		id = id.substring(0, id.length - 4);
@@ -210,7 +224,7 @@ export async function getSiblingPosts(slug: string): Promise<PostSiblings> {
 	const slugs = posts.map((p) => p.id);
 	const index = slugs.indexOf(slug);
 
-	let nextPost: PostSibling | undefined = undefined;
+	let nextPost: PostSibling | undefined;
 	if (index !== 0) {
 		const next = posts[index - 1];
 		nextPost = {
@@ -219,7 +233,7 @@ export async function getSiblingPosts(slug: string): Promise<PostSiblings> {
 		};
 	}
 
-	let prevPost: PostSibling | undefined = undefined;
+	let prevPost: PostSibling | undefined;
 	if (slugs.length - 1 >= index + 1) {
 		const prev = posts[index + 1];
 		prevPost = {

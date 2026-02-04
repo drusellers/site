@@ -4,13 +4,21 @@ import PageTitle from "@/components/oxford/PageTitle";
 import PostMetadata from "@/components/oxford/PostMetadata";
 import PostSiblings from "@/components/oxford/PostSiblings";
 import TwoColumnGrid from "@/components/oxford/TwoColumnGrid";
-import { getPostData, getSiblingPosts } from "@/lib/cms.posts";
+import { getAllPostIds, getPostData, getSiblingPosts } from "@/lib/cms.posts";
 import { BASE_URL } from "@/lib/consts";
 import { buildMetadata } from "@/lib/metadata";
 
 type Props = {
 	params: Promise<{ id: string }>;
 };
+
+export async function generateStaticParams() {
+	const ids = getAllPostIds();
+
+	return ids.map((t) => ({
+		id: t.params.id,
+	}));
+}
 
 export async function generateMetadata(
 	{ params }: Props,

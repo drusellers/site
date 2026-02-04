@@ -1,7 +1,7 @@
 ---
 title: 'Pebble'
 date: '2025-08-26'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Muhammad Ali

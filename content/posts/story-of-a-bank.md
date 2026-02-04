@@ -3,7 +3,7 @@ title: 'Story of a Bank'
 subtitle: 'A pen, notepad, and 4 data points'
 date: '2018-08-03'
 tags: []
-categories: []
+
 withStats: true
 description: >
   Looking for key abstractions can lead to powerful insights.

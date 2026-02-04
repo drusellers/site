@@ -1,7 +1,7 @@
 ---
 title: 'Meet Halfway'
 date: '2023-03-25'
-categories: quotes
+category: quotes
 tags:
 - Quotes
 author: Michael Pollan

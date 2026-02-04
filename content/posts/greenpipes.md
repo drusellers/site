@@ -2,7 +2,6 @@
 title: 'Green Pipes'
 subtitle: 'Welcome to the green'
 date: '2016-10-30'
-categories: greenpipes
 tags:
   - green-pipes
 disqus_id: 6bb5bfc7-56d2-493a-9faf-e9bd678f190f

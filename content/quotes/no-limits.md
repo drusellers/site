@@ -1,7 +1,7 @@
 ---
 title: 'No Limits'
 date: '2011-07-01'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Unknown

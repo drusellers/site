@@ -1,7 +1,6 @@
 ---
 title: "MassTransit's Database Job Support"
 date: '2024-10-29'
-categories: MassTransit
 tags:
   - MassTransit
 disqus_id: 6b442c31-4def-41b7-b021-35576a9eb460

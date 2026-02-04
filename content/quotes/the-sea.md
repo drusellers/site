@@ -1,7 +1,7 @@
 ---
 title: 'Endless'
 date: '2005-05-01'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Antoine de Saint-Exupéry

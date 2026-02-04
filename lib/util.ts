@@ -1,3 +1,4 @@
+import type { Appearance } from "@/lib/cms.appearances";
 import { BASE_URL } from "@/lib/consts";
 
 export function classNames(...classes: Array<string | undefined | null>) {
@@ -12,4 +13,18 @@ export function yearsOfExperience(): number {
 
 export function resolveUrl(path: string): string {
 	return `${BASE_URL}${path}`;
+}
+
+export function groupBy<T>(items: T[], key: keyof T): Record<string, T[]> {
+	return items.reduce(
+		(result: Record<string, T[]>, item) => {
+			const k = String(item[key]);
+			if (!result[k]) {
+				result[k] = [];
+			}
+			result[k].push(item);
+			return result;
+		},
+		{} as Record<string, T[]>,
+	);
 }

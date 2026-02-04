@@ -3,6 +3,7 @@ import PageTitle from "@/components/oxford/PageTitle";
 import TwoColumnGrid from "@/components/oxford/TwoColumnGrid";
 import YearHeading from "@/components/YearHeading";
 import { getSortedPostsData } from "@/lib/cms.posts";
+import { groupBy } from "@/lib/util";
 
 export default function Posts() {
 	// group by year
@@ -42,14 +43,4 @@ export default function Posts() {
 
 function Sidebar() {
 	return null;
-}
-
-function groupBy(items, key) {
-	return items.reduce(
-		(result, item) => ({
-			...result,
-			[item[key]]: [...(result[item[key]] || []), item],
-		}),
-		{},
-	);
 }

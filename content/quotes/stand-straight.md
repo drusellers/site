@@ -1,7 +1,7 @@
 ---
 title: 'Stand Straight'
 date: '2021-07-04'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Marcus Aurelius

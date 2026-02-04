@@ -1,7 +1,6 @@
 ---
 title: "Indifference"
 date: '2026-01-02'
-categories: AI
 tags:
   - AI
 disqus_id: a2055757-09a6-4bc3-94ae-6b37884b05d0

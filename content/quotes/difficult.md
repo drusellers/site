@@ -1,7 +1,7 @@
 ---
 title: 'Difficult'
 date: '2012-11-13'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Seneca

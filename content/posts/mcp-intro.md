@@ -1,7 +1,6 @@
 ---
 title: "Bug"
 date: '2025-04-10'
-categories: AI
 tags:
   - AI
 disqus_id: a2ca080d-a976-47f5-81df-a4637ff4b562

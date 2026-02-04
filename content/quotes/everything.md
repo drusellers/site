@@ -1,7 +1,7 @@
 ---
 title: 'Everything'
 date: '2013-09-16'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Pablo Picasso

@@ -1,7 +1,7 @@
 ---
 title: 'Power'
 date: '2018-09-09'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Erich Fromm

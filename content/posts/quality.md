@@ -1,9 +1,9 @@
 ---
 title: 'Quality'
 date: '2025-03-29'
-categories: thoughts
 tags:
   - strategy
+  - thoughts
 disqus_id: c65e1c09-6224-4b5d-9a31-026538b3349d
 aliases: []
 toc: true

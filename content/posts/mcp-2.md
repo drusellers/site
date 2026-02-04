@@ -1,7 +1,6 @@
 ---
 title: 'Joys of the Edge'
 date: '2025-04-24'
-categories: AI
 tags:
   - AI
   - dotnet

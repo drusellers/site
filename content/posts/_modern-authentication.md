@@ -1,7 +1,6 @@
 ---
 title: 'Modern Authentication'
 date: '2024-05-08'
-categories: strategy
 tags:
   - strategy
 disqus_id: 79da5ccd-ed2d-4f16-89e5-1c0fd0910df1

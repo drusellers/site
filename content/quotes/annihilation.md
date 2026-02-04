@@ -1,7 +1,7 @@
 ---
 title: 'Annihilation'
 date: '2021-05-02'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Pema Chödrön

@@ -1,7 +1,7 @@
 ---
 title: 'Go Home'
 date: '2023-01-10'
-categories: quotes
+category: quotes
 tags:
 - Quotes
 author: Henry Rollins

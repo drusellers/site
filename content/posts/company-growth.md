@@ -4,7 +4,7 @@ subtitle: "How does a company's growth affect its future?"
 date: '2018-08-01'
 tags:
   - business
-categories: []
+
 withStats: true
 description: >
   How can a model of company growth assist you in

@@ -1,7 +1,7 @@
 ---
 title: 'Great ideas can happen'
 date: '2022-12-14'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Simon Sinek

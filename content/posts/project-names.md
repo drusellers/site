@@ -1,9 +1,9 @@
 ---
 title: 'Boring Names are Fun'
 date: '2025-03-31'
-categories: thoughts
 tags:
   - strategy
+  - thoughts
 disqus_id: 2f2c100b-c4a0-4d6c-b28c-cc83908982be
 aliases: []
 toc: true

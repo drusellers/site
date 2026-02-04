@@ -1,7 +1,6 @@
 ---
 title: 'Adopting Change'
 date: '2019-04-10'
-categories: strategy
 tags:
   - strategy
 disqus_id: d74948dc-627e-4125-92fd-9293ec09affa

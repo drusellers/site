@@ -3,7 +3,6 @@ title: 'Being aware of the G/L'
 subtitle: 'What I learned working on ERP and a 3PL taught me'
 date: '2019-01-01'
 tags: []
-categories: []
 withStats: true
 draft: true
 description: >

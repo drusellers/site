@@ -1,7 +1,7 @@
 ---
 title: 'Muffins'
 date: '1999-09-22'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Josh Lyman

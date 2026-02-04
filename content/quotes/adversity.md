@@ -1,7 +1,7 @@
 ---
 title: 'Adversity'
 date: '2020-09-01'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Josh Billings

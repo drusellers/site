@@ -1,7 +1,6 @@
 ---
 title: 'Tension'
 date: '2025-04-29'
-categories: thoughts
 tags:
   - strategy
 disqus_id: 854e8c23-e47d-4fb4-a948-81018c484df5

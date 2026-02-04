@@ -1,7 +1,6 @@
 ---
 title: "1Password Run"
 date: '2026-01-02'
-categories: ops
 tags:
   - ops
 disqus_id: 019b5c93-c2f3-717d-b274-d4a1ecd0540e

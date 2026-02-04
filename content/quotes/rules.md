@@ -1,7 +1,7 @@
 ---
 title: 'Rules'
 date: '2013-07-05'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Chuck Yeager

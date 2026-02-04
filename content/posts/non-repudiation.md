@@ -1,7 +1,6 @@
 ---
 title: 'Non-Repudiation'
 date: '2018-09-23'
-categories: patterns
 tags:
   - patterns
 withStats: true

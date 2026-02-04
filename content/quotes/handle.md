@@ -1,7 +1,7 @@
 ---
 title: 'Handle'
 date: '1995-09-15'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Joey Hackers

@@ -1,7 +1,7 @@
 ---
 title: 'No Number One'
 date: '2012-10-03'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Bruce Lee

@@ -222,13 +222,6 @@ const ColorPalette: React.FC = () => {
 		setTimeout(() => setCopiedColor(""), 2000);
 	};
 
-	const handleKeyDown = (event: React.KeyboardEvent, text: string) => {
-		if (event.key === "Enter" || event.key === " ") {
-			event.preventDefault();
-			copyToClipboard(text);
-		}
-	};
-
 	const groupedColors = colors.reduce(
 		(acc, color) => {
 			const key = color.name;

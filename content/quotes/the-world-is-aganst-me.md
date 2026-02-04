@@ -1,7 +1,7 @@
 ---
 title: 'The world'
 date: '2014-08-12'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Unknown

@@ -1,7 +1,7 @@
 ---
 title: 'Decisions'
 date: '2023-12-31'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Stefan Tilkov

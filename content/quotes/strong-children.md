@@ -1,7 +1,7 @@
 ---
 title: 'Strong Children'
 date: '2012-04-03'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Frederick Douglass

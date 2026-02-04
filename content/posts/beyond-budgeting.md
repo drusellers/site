@@ -1,7 +1,6 @@
 ---
 title: 'Beyond Budgeting (2019Q3)'
 date: '2019-07-20'
-categories: strategy
 tags:
   - strategy
   - business

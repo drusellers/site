@@ -1,7 +1,6 @@
 ---
 title: "Agentifying my Code Bases"
 date: '2026-01-25'
-categories: ai
 tags:
   - ai
 disqus_id: 074f76ff-b330-4f70-8b47-00c55c13d806

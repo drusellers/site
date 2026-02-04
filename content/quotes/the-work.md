@@ -1,7 +1,7 @@
 ---
 title: 'The Joy is in the Work'
 date: '2023-08-02'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Lupe fiasco

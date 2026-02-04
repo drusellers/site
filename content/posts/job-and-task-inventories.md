@@ -1,7 +1,6 @@
 ---
 title: 'Job and Task Inventories'
 date: '2020-01-31'
-categories: business
 tags: [tricks]
 disqus_id: 72195025-ca9c-4258-a4a9-6dec29137d7d
 withStats: true

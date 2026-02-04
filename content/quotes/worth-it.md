@@ -1,7 +1,7 @@
 ---
 title: 'Worth It'
 date: '2013-06-20'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Art Williams

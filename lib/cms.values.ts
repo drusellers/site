@@ -1,5 +1,3 @@
-import fs from "fs";
-import path from "path";
 import { getFile, getFiles } from "@/lib/cms";
 import { toMarkdown } from "@/lib/md";
 

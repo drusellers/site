@@ -4,7 +4,7 @@ subtitle: 'A choice'
 date: '2020-01-15'
 tags:
   - strategy
-categories: []
+
 withStats: true
 description: >
   Yo, look. Strategy

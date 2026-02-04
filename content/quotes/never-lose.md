@@ -1,7 +1,7 @@
 ---
 title: 'Never Lose'
 date: '2018-01-08'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Unknown (via [Instagram](https://www.instagram.com/p/BAH42kIxxx1/))

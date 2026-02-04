@@ -1,7 +1,7 @@
 ---
 title: 'Embody'
 date: '2024-11-14'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Epictetus

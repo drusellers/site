@@ -1,7 +1,7 @@
 ---
 title: 'Lost Friend'
 date: '2020-10-01'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Tupac Shakur

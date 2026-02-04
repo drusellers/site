@@ -1,7 +1,7 @@
 ---
 title: 'Anemoia'
 date: '2024-12-31'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Carson Mccullers

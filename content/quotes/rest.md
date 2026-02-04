@@ -1,7 +1,7 @@
 ---
 title: 'Rest'
 date: '2022-11-01'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: '@doc_amen on Instagram'

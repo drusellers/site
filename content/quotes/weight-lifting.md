@@ -1,7 +1,7 @@
 ---
 title: 'Lifting the Impossible'
 date: '2014-10-22'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Chasers Holmes

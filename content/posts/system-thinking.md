@@ -3,7 +3,7 @@ title: 'System Thinking'
 subtitle: 'Its never as simple as we make it.'
 date: '2018-08-03'
 tags: []
-categories: []
+
 withStats: true
 description: >
   Looking for key abstractions can lead to powerful insights.

@@ -1,7 +1,7 @@
 ---
 title: 'Curiosity'
 date: '2022-07-31'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Albert Einstein

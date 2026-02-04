@@ -1,7 +1,7 @@
 ---
 title: 'Moments'
 date: '2023-06-06'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Dan Millman

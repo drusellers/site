@@ -1,7 +1,6 @@
 ---
 title: 'Implementing Agile'
 date: '2022-10-09'
-categories: business
 tags:
   - business
   - beyond budgeting

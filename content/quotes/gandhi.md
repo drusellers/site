@@ -1,7 +1,7 @@
 ---
 title: 'Dangerous'
 date: '2011-09-14'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Humilitas by John Dickson

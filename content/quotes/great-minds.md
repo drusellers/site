@@ -1,7 +1,7 @@
 ---
 title: 'Great minds'
 date: '2011-12-26'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Eleanor Roosevelt

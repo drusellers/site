@@ -1,7 +1,7 @@
 ---
 title: 'A Room without Books'
 date: '2020-01-02'
-categories: quotes
+category: quotes
 tags:
   - Quotes
 author: Marcus Tullius Cicero

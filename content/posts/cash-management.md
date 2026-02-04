@@ -1,7 +1,6 @@
 ---
 title: 'Cash Management (2019Q4)'
 date: '2019-10-06'
-categories: business
 tags:
   - business
   - beyond budgeting
