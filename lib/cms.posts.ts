@@ -108,26 +108,12 @@ export function getTagData(tag: string) {
 }
 
 export function getAllPostIds(): { params: { id: string } }[] {
-	const files = getFiles("posts");
+	const posts = getSortedPostsData();
 
-	// Returns an array that looks like this:
-	// [
-	//   {
-	//     params: {
-	//       id: 'ssg-ssr'
-	//     }
-	//   },
-	//   {
-	//     params: {
-	//       id: 'pre-rendering'
-	//     }
-	//   }
-	// ]
-
-	return files.map((file) => {
+	return posts.map((post) => {
 		return {
 			params: {
-				id: file.slug,
+				id: post.id,
 			},
 		};
 	});
