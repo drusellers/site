@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import {
 	DiscordCard,
 	IMessageCard,
@@ -29,7 +30,10 @@ function extractPath(input: string): string {
 async function fetchMetadata(
 	input: string,
 ): Promise<{ metadata: UnfurlMetadata; html: string } | { error: string }> {
-	const baseUrl = "http://localhost:3000";
+	const headersList = await headers();
+	const host = headersList.get("host") || "localhost:3000";
+	const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
+	const baseUrl = `${protocol}://${host}`;
 	const path = extractPath(input);
 	const fullUrl = `${baseUrl}${path.startsWith("/") ? path : `/${path}`}`;
 
