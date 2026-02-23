@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { classNames } from "@/lib/util";
 import type { PostSibling } from "@/lib/cms.posts";
+import { classNames } from "@/lib/util";
 
 type Props = {
 	prev?: PostSibling;
@@ -10,9 +10,11 @@ type Props = {
 export default function PostSiblings({ prev, next }: Props) {
 	return (
 		<div
-			className={
-				"border-t border-[#C6D3D5] flex flex-row divide-x divide-[#C6D3D5] justify-between mt-8"
-			}
+			className={classNames(
+				"mt-8 flex flex-row  justify-between",
+				"border-t border-layout-divider",
+				"divide-x divide-layout-divider",
+			)}
 		>
 			<Tile tile={prev} mode={"prev"} />
 			<Tile tile={next} mode={"next"} />
@@ -23,20 +25,16 @@ export default function PostSiblings({ prev, next }: Props) {
 function Tile({ tile, mode }: { tile?: PostSibling; mode: "prev" | "next" }) {
 	const baseClasses = classNames(
 		"flex-1 px-6 py-4",
+		"text-link-color hover:text-link-color-hover",
+		"bg-block-color hover:bg-block-color-hover transition-colors",
 		mode === "prev" ? "" : "text-right",
 	);
 
 	if (tile) {
 		return (
-			<Link
-				href={tile.href}
-				className={classNames(
-					baseClasses,
-					"hover:bg-gray-50 transition-colors",
-				)}
-			>
+			<Link href={tile.href} className={baseClasses}>
 				<div className={"uppercase text-xs text-gray-500"}>{mode}</div>
-				<div className={"text-gray-900"}>{tile.title}</div>
+				<div>{tile.title}</div>
 			</Link>
 		);
 	}
