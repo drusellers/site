@@ -14,7 +14,7 @@ For the last week or two I've been heads down using LLMs to write more of my cod
 
 Now that I'm pushing the LLM's to write more of my code, I end up spending a lot more time writing out the various specifications of the features that I want completed. I started by working with the LLM to write documents to something like `plans/NEW_PLAN_46.md` this was working pretty well, but then I wanted a bit more structure so I started using front matter, then it started to get annoying coming up with plan names. I know that `opencode` and others have a concept of plans that can be stored but it wasn't the workflow I was looking for. That's when I started trying to use `beads` and `docket` to do what I wanted.
 
-I started with `docket` because it was a bit smaller and I could wrap my head around it faster. However, I quickly found myself fighting little decisions in my specific ways of using it so I fired up my third project that would be largely written by LLM's - which is `pebbles` - my own personal take on this "issue management for agents" type tooling. Right now its really a way for me to capture ideas, review them, and then fire off the work. At some point I may see the value in the other tools and switch back to them but right now its giving me a lot of value in organizing my own workflow.
+I started with `docket` because it was a bit smaller and I could wrap my head around it faster. However, I quickly found myself fighting little decisions in my specific ways of using it so I fired up my third project that would be largely written by LLM's - which is `pebbles` - my own personal take on this "issue management for agents" type tooling. Right now it's really a way for me to capture ideas, review them, and then fire off the work. At some point I may see the value in the other tools and switch back to them but right now I'm enjoying thinking about my own workflow and how I can turbocharge it.
 
 ## Workflow
 Right now as I'm going through and thinking of things I can quickly switch to my shell and log some issues.
@@ -34,7 +34,7 @@ I've also added a bulk intake command that looks like
 cat SESSION_NOTES.md | pebbles intake
 ```
 
-which will then create a bunch of issues for me based on those notes. I'm still playing around with this, and finding my way but its definitely the direction I want to pursue. I could also see this working off of a Linear or Jira ticket as well.
+which will then create a bunch of issues for me based on those notes. I'm still playing around with this, and finding my way but these commands are definitely the direction I want to pursue. I could also see this working off of a Linear or Jira ticket as well.
 
 Right now all of these issues are stored inside the git repository, so in order for them to flow to git worktree I do need to commit them which is a minor annoyance - but I've seen a few different approaches to get around this. I'm sure I'll settle on one at some point.
 

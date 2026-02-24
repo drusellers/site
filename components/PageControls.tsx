@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useHotkeys } from "react-hotkeys-hook";
 import { useRouter } from "next/navigation";
+import { useHotkeys } from "react-hotkeys-hook";
 
 type Params = {
 	prevHref?: string;
@@ -38,11 +38,16 @@ type ButtonParams = {
 };
 
 function PageButton({ href, text }: ButtonParams) {
-	if (href == undefined) return <></>;
+	if (href === undefined) return <></>;
 
 	return (
 		<div className={"px-4 py-2 bg-oxford-100 rounded-sm"}>
-			<Link href={href}>{text}</Link>
+			<Link
+				href={href}
+				className="text-oxford-900 hover:text-oxford-700 font-medium"
+			>
+				{text}
+			</Link>
 		</div>
 	);
 }
