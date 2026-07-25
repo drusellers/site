@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "Next: $(npx next --version)"
-
 npm install
 npm run build
 

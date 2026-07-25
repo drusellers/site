@@ -1,12 +1,14 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { useRouterState } from "@tanstack/react-router";
 import Button from "@/components/ui/Button";
 
 export function DevUnfurlLink() {
-	const pathname = usePathname();
+	const pathname = useRouterState({
+		select: (state) => state.location.pathname,
+	});
 
-	if (process.env.NODE_ENV !== "development") {
+	if (!import.meta.env.DEV) {
 		return null;
 	}
 

@@ -1,5 +1,8 @@
-import { type RenderableTreeNode, type Schema, Tag } from "@markdoc/markdoc";
+import Markdoc from "@markdoc/markdoc";
+import type { RenderableTreeNode, Schema } from "@markdoc/markdoc";
 import { classNames } from "@/lib/util";
+
+const { Tag } = Markdoc;
 
 export const callout: Schema = {
 	render: "div",

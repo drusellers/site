@@ -33,7 +33,7 @@ const fonts: FontDefinition[] = [
 	{
 		name: "Open Sans",
 		variable: "var(--font-open-sans)",
-		source: "Google Font loaded via Next.js optimization",
+		source: "Google Font loaded via @fontsource-variable/open-sans",
 		description:
 			"Chosen for body text due to its excellent readability and neutral personality. Open Sans performs well across different screen sizes and provides comfortable reading experience for longer content.",
 		family: "Open Sans",

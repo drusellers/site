@@ -1,13 +1,14 @@
-import Link from "next/link";
+import Link from "@/components/AppLink";
 import Logo from "@/components/Logo";
 import Social from "@/components/Socials";
 import ThemeToggle from "@/components/ui/ThemeToggle";
-import { getAbout } from "@/lib/cms.about";
 import { navItems } from "@/lib/nav";
 
-export default async function Sidebar() {
-	const about = getAbout();
+type Props = {
+	sideBarHtml: string;
+};
 
+export default function Sidebar({ sideBarHtml }: Props) {
 	return (
 		<div className={"flex flex-col justify-between h-screen"}>
 			<div className={"flex flex-col divide-layout-divider divide-y"}>
@@ -18,7 +19,7 @@ export default async function Sidebar() {
 					<div
 						className={"leading-[140%] text-text-secondary"}
 						// biome-ignore lint/security/noDangerouslySetInnerHtml: that's the whole point
-						dangerouslySetInnerHTML={{ __html: about.sideBar }}
+						dangerouslySetInnerHTML={{ __html: sideBarHtml }}
 					/>
 				</div>
 				<div className={"px-6 py-4"}>

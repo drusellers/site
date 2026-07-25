@@ -1,6 +1,6 @@
 import { faFilm } from "@fortawesome/pro-light-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
+import Link from "@/components/AppLink";
 import type { VideoProps } from "@/lib/cms.posts";
 import { toNakedMarkdown } from "@/lib/md";
 import DisplayDate from "../DisplayDate";

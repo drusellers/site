@@ -8,11 +8,14 @@
 	"files": {
 		"ignoreUnknown": false,
 		"includes": [
-			"app/**/*.ts",
-			"app/**/*.tsx",
+			"src/**/*.ts",
+			"src/**/*.tsx",
+			"!src/routeTree.gen.ts",
+			"components/**/*.ts",
 			"components/**/*.tsx",
 			"biome.json",
-			"lib/**/*.ts"
+			"lib/**/*.ts",
+			"vite.config.ts"
 		]
 	},
 	"formatter": {

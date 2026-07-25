@@ -1,9 +1,14 @@
 # Personal Website
 
-Static site generated via [Astro](https://astro.build/)
+Personal site built with [TanStack Start](https://tanstack.com/start), React, and Tailwind CSS.
 
-CSS Framework: [Tailwind](https://tailwindcss.com/)
+Content lives in `content/` as Markdown and YAML.
 
-## Articles of Inspiration / Techniques
+## Development
 
-https://thirty-five.com/overengineered-anchoring
+```bash
+npm run dev
+npm run build
+npm run typecheck
+npm run fmt
+```

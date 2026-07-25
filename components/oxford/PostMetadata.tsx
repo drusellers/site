@@ -1,19 +1,18 @@
 import { faCircleDashed } from "@fortawesome/pro-light-svg-icons";
 import { faCircle } from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
+import Link from "@/components/AppLink";
 import DisplayDate from "@/components/DisplayDate";
 import Stats from "@/components/Stats";
-import { getSeries, type PostData, type PostHeader } from "@/lib/cms.posts";
+import type { PostData, PostHeader } from "@/lib/cms.posts";
 import { classNames } from "@/lib/util";
 
 type Props = {
 	postData: PostData;
+	seriesItems?: PostHeader[];
 };
 
-export default function PostMetadata({ postData }: Props) {
-	const items = getSeries(postData.series?.name);
-
+export default function PostMetadata({ postData, seriesItems = [] }: Props) {
 	return (
 		<div className={"flex flex-col text-text-secondary pt-[2px]"}>
 			<div className={"font-light"}>
@@ -25,7 +24,7 @@ export default function PostMetadata({ postData }: Props) {
 					readingTime={postData.readingTime}
 				/>
 			</div>
-			<SeriesItems current={postData} items={items} />
+			<SeriesItems current={postData} items={seriesItems} />
 		</div>
 	);
 }

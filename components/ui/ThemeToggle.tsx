@@ -2,8 +2,8 @@
 
 import { faLightbulb, faLightbulbOn } from "@fortawesome/pro-light-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { useTheme } from "@/components/theme";
 
 export default function ThemeToggle() {
 	const { theme, setTheme, systemTheme } = useTheme();

@@ -1,10 +1,10 @@
 [build]
-  publish = ".next"
-[context.branch-deploy]
-  command = "bin/build -b \"${DEPLOY_PRIME_URL}\""
+  command = "NITRO_PRESET=netlify npm run build"
+  publish = "dist"
 
-[context.deploy-preview]
-  command = "bin/build --buildFuture -b \"${DEPLOY_PRIME_URL}\""
+[dev]
+  command = "npm run dev"
+  port = 3000
 
 # every html page needs this
 [[headers]]
@@ -13,6 +13,11 @@
   Link = [
     "</images/logo.svg>; rel=preload; as=image"
   ]
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+  Cache-Control = "max-age=31536000, immutable"
 
 [[headers]]
   for = "/images/*.svg"
@@ -25,14 +30,14 @@
   Cache-Control = "max-age=31536000"
 
 [[headers]]
-  for = "/js/*.js"
-  [headers.values]
-  Cache-Control = "max-age=31536000"
-
-[[headers]]
   for = "/css/*.css"
   [headers.values]
   Cache-Control = "max-age=31536000"
+
+[[redirects]]
+  from = "/austin"
+  to = "/atx"
+  status = 301
 
 [[redirects]]
   from = "/greenpipes/2016/10/30/greenpipes.html"

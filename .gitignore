@@ -7,3 +7,10 @@ data/manifest.json
 yarn-error.log
 .idea
 out
+
+# Local Netlify folder
+.netlify
+
+dist
+.output
+.tanstack

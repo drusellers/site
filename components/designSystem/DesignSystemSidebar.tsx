@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/AppLink";
 import Logo from "@/components/Logo";
 import Social from "@/components/Socials";
 

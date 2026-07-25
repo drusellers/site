@@ -1,22 +1,22 @@
 "use client";
 
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "@tanstack/react-router";
 import { useHotkeys } from "react-hotkeys-hook";
+import Link from "@/components/AppLink";
 
 type Params = {
 	prevHref?: string;
 	nextHref?: string;
 };
 export default function PageControls({ prevHref, nextHref }: Params) {
-	const router = useRouter();
+	const navigate = useNavigate();
 
 	useHotkeys("leftArrow", () => {
-		if (prevHref) router.push(prevHref);
+		if (prevHref) navigate({ to: prevHref });
 	});
 
 	useHotkeys("rightArrow", () => {
-		if (nextHref) router.push(nextHref);
+		if (nextHref) navigate({ to: nextHref });
 	});
 
 	return (

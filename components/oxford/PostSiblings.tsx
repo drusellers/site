@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/AppLink";
 import type { PostSibling } from "@/lib/cms.posts";
 import { classNames } from "@/lib/util";
 

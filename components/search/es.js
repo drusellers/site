@@ -1,4 +1,5 @@
-const URL = process.env.NEXT_PUBLIC_ES_READ_URL;
+const URL =
+	import.meta.env.VITE_ES_READ_URL ?? import.meta.env.NEXT_PUBLIC_ES_READ_URL;
 
 function getQuery(query) {
 	return {

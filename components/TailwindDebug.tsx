@@ -1,11 +1,13 @@
 "use client";
 
 // sits inside the chrome
+import { useRouterState } from "@tanstack/react-router";
 import { Suspense, useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
 
 function InnerTailwindDebug() {
-	const qs = useSearchParams();
+	const searchStr = useRouterState({
+		select: (state) => state.location.searchStr,
+	});
 	const [width, setWidth] = useState(0);
 
 	useEffect(() => {
@@ -23,7 +25,7 @@ function InnerTailwindDebug() {
 		};
 	}, []);
 
-	if (!qs.has("tw")) {
+	if (!new URLSearchParams(searchStr).has("tw")) {
 		return null;
 	}
 

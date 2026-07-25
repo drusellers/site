@@ -9,12 +9,13 @@ export default function ThemeScript() {
               var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
               var resolvedTheme = theme === 'system' ? systemTheme : theme || systemTheme;
               
+              var body = document.body;
               if (resolvedTheme === 'dark') {
                 document.documentElement.classList.add('dark');
-                document.body.classList.add('dark');
+                if (body) body.classList.add('dark');
               } else {
                 document.documentElement.classList.remove('dark');
-                document.body.classList.remove('dark');
+                if (body) body.classList.remove('dark');
               }
             }
             

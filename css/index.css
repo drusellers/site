@@ -1,9 +1,18 @@
-@import "tailwindcss";
+@import "tailwindcss" source("../");
+@import "@fontsource-variable/open-sans";
+@import "@fontsource-variable/space-grotesk";
 @import "./quote-styles.css" layer(components);
 @import "./sidenote.css" layer(components);
 @import "./highlight.css" layer(components);
 @plugin "@tailwindcss/typography";
 @variant dark (&:where(.dark, .dark *));
+
+@font-face {
+    font-family: "Humane";
+    src: url("/fonts/Humane-VF.ttf") format("truetype");
+    font-weight: 100 900;
+    font-display: swap;
+}
 
 @theme {
     /* palette */
@@ -47,9 +56,9 @@
     --color-warning-600: #7b6d4c;
 
     /* fonts */
-    --font-page-title: var(--font-humane, "humane");
-    --font-heading: var(--font-space-g, "space grotesk");
-    --font-body-text: var(--font-open-sans, "open sans");
+    --font-page-title: var(--font-humane, "Humane");
+    --font-heading: var(--font-space-g, "Space Grotesk");
+    --font-body-text: var(--font-open-sans, "Open Sans");
 
     /* components */
     --grid-cols-2cols: "1fr 2fr";
@@ -88,10 +97,10 @@
     }
 
     :root {
-        /* Font variables injected by next/font in layout.tsx */
-        --font-humane: "humane";
-        --font-open-sans: "open sans";
-        --font-space-g: "space grotesk";
+        /* Font variables used by the app shell */
+        --font-humane: "Humane";
+        --font-open-sans: "Open Sans Variable";
+        --font-space-g: "Space Grotesk Variable";
 
         /* Theme transition duration */
         --dds-theme-transition-duration: 0.3s;
