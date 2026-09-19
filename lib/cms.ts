@@ -1,7 +1,10 @@
-import fs from "node:fs";
-import path from "node:path";
+const contentFiles = import.meta.glob<string>("../content/**/*", {
+	eager: true,
+	import: "default",
+	query: "?raw",
+});
 
-const contentDirectory = path.join(process.cwd(), "content");
+const contentPathPrefix = "../content/";
 
 export type VideoProps = {
 	youtube?: string;
@@ -14,13 +17,30 @@ export type FileName = {
 };
 
 export function getFiles(dir: string): FileName[] {
-	const fileNames = fs.readdirSync(path.join(contentDirectory, dir));
-	return fileNames
-		.filter((n) => !n.startsWith("_"))
-		.map((n) => ({ slug: n.replace(/\.md$/, ""), path: path.join(dir, n) }));
+	const directoryPrefix = `${contentPathPrefix}${dir}/`;
+
+	return Object.keys(contentFiles)
+		.filter((file) => {
+			if (!file.startsWith(directoryPrefix)) return false;
+			return !file.slice(directoryPrefix.length).startsWith("_");
+		})
+		.sort()
+		.map((file) => {
+			const relativePath = file.slice(contentPathPrefix.length);
+			const name = file.slice(directoryPrefix.length);
+			return {
+				slug: name.replace(/\.md$/, ""),
+				path: relativePath,
+			};
+		});
 }
 
 export function getFile(file: string): string {
-	const fullPath = path.join(contentDirectory, file);
-	return fs.readFileSync(fullPath, "utf8");
+	const content = contentFiles[`${contentPathPrefix}${file}`];
+
+	if (content === undefined) {
+		throw new Error(`Content file not found: ${file}`);
+	}
+
+	return content;
 }

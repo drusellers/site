@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# Configure NVM
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-nvm use
-
-npm run dev

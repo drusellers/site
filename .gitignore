@@ -10,6 +10,7 @@ out
 
 # Local Netlify folder
 .netlify
+.wrangler
 
 dist
 .output

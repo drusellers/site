@@ -1,4 +1,3 @@
-import path from "node:path";
 import { parseISO } from "date-fns";
 import * as z from "zod";
 import { getFile, getFiles } from "./cms";
@@ -147,7 +146,7 @@ export async function getPostData(id: string): Promise<PostData> {
 		format = "text";
 	}
 
-	const fullPath = path.join("posts", `${id}.md`);
+	const fullPath = `posts/${id}.md`;
 	const fileContents = getFile(fullPath);
 
 	const md = toMarkdown(fileContents, {});

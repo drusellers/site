@@ -1,0 +1,39 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "drusellers-site",
+	"main": ".output/server/index.mjs",
+	"compatibility_date": "2026-08-13",
+	"compatibility_flags": ["nodejs_compat"],
+	"workers_dev": false,
+	"no_bundle": true,
+	"rules": [
+		{
+			"type": "ESModule",
+			"globs": ["**/*.mjs", "**/*.js"]
+		}
+	],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".output/public",
+		"not_found_handling": "none"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"env": {
+		"stg": {
+			"name": "drusellers-site-stg",
+			"workers_dev": true
+		},
+		"prd": {
+			"name": "drusellers-site-prd",
+			"workers_dev": false,
+			"routes": [
+				{
+					"pattern": "drusellers.com",
+					"custom_domain": true
+				}
+			]
+		}
+	}
+}
