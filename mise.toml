@@ -13,3 +13,6 @@ run = "npm run dev"
 
 [tasks.fmt]
 run = "npm run fmt"
+
+[tasks."deploy:prd"]
+run = "npm run deploy:prd"
